@@ -1,4 +1,4 @@
-import { Input, Select } from '@/shared';
+import { Button, Input, Select } from '@/shared';
 
 export const FormRegister = () => {
   return (
@@ -12,7 +12,11 @@ export const FormRegister = () => {
               <Input label="Фамилия*" variant="outline" />
               <Input label="Имя*" variant="outline" />
             </div>
-            <Input className="md:w-[393px]" label="Отчество" variant="outline" />
+            <Input
+              className="md:w-[393px]"
+              label="Отчество"
+              variant="outline"
+            />
             <div className="grid grid-cols-2 gap-4 py-5">
               <Select
                 label="Пол*"
@@ -46,6 +50,17 @@ export const FormRegister = () => {
               type="password"
             />
           </div>
+        </div>
+        <div className="flex justify-center">
+          <Button variant="auth" showRightArrowIcon={true}>
+            Зарегистрироваться
+          </Button>
+        </div>
+        <div className="flex justify-center">
+          <p className="text-[#6B7280] text-sm">У вас есть аккаунт?</p>
+        </div>
+        <div className="flex justify-center">
+          <Button variant="outlineSecondary">Войти в систему</Button>
         </div>
       </div>
     </div>

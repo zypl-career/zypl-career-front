@@ -2,7 +2,7 @@ import * as React from 'react';
 import { cn } from '@/shared/utils';
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
-import { GlassesIcon } from '@/shared';
+import { GlassesIcon, RightArrowIcon } from '@/shared';
 
 import type { TVariantType, TSizeType, TButtonProps } from '.';
 
@@ -17,6 +17,9 @@ const buttonVariants = cva(
         outline:
           'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
         secondary: 'bg-white text-purple-900 hover:bg-secondary/80',
+        auth: 'bg-purple-800 rounded-2xl font-[600] text-white w-full md:w-[400px] transform transition-transform duration-200 active:scale-95',
+        outlineSecondary:
+          'border border-[#9CA3AF] text-[#4B5563] bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full md:w-[400px] transform transition-transform duration-200 active:scale-95',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
       },
@@ -36,7 +39,7 @@ const buttonVariants = cva(
 
 const Button = React.forwardRef<
   HTMLButtonElement,
-  TButtonProps & { showGlassesIcon?: boolean }
+  TButtonProps & { showGlassesIcon?: boolean; showRightArrowIcon?: boolean }
 >(
   (
     {
@@ -44,6 +47,7 @@ const Button = React.forwardRef<
       variant,
       size,
       showGlassesIcon = false,
+      showRightArrowIcon = false,
       asChild = false,
       children,
       ...props
@@ -57,7 +61,11 @@ const Button = React.forwardRef<
         ref={ref}
         {...props}
       >
-        {showGlassesIcon && <GlassesIcon className="mr-2" />} {children}
+        {showGlassesIcon && <GlassesIcon className="mr-2" />}
+        {children}
+        {showRightArrowIcon && (
+          <RightArrowIcon className="ml-2 animate-moveRight" />
+        )}
       </Comp>
     );
   },

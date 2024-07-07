@@ -14,5 +14,7 @@ export type TVariantType =
   | 'outline'
   | 'secondary'
   | 'ghost'
-  | 'link';
+  | 'link'
+  | 'auth'
+  | 'outlineSecondary';
 export type TSizeType = 'default' | 'sm' | 'lg' | 'icon';
