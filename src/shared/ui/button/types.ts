@@ -17,5 +17,6 @@ export type TVariantType =
   | 'link'
   | 'auth'
   | 'outlineSecondary'
-  | 'status';
+  | 'status'
+    | 'login';
 export type TSizeType = 'default' | 'sm' | 'lg' | 'icon';
