@@ -23,7 +23,7 @@ const buttonVariants = cva(
         status:
           'bg-purple-800 rounded-2xl md:text-[20px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         login:
-          'border border-[#9CA3AF] text-[#4B5563] cursor-pointer  w-full bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full transform transition-transform duration-200 active:scale-110',
+          'border border-[#9CA3AF] text-[#4B5563] md:text-[20px]  cursor-pointer  w-full bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full transform transition-transform duration-200 active:scale-110',
         outlineSecondary:
           'border border-[#9CA3AF] text-[#4B5563] cursor-pointer  bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full md:w-[400px] transform transition-transform duration-200 active:scale-110',
         ghost: 'hover:bg-accent cursor-pointer  hover:text-accent-foreground',
