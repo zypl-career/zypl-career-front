@@ -12,6 +12,7 @@ const inputVariants = cva(
         default: 'border-none bg-background rounded-2xl',
         secondary: 'border-none bg-background rounded-xl',
         gray: 'bg-gray-100 border-none text-gray-700 rounded-2xl',
+        outline: 'border border-[#D1D5DB] rounded-md',
       },
     },
     defaultVariants: {

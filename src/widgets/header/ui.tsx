@@ -1,16 +1,15 @@
-import {Button, Input, LogoIcon, Select} from '@/shared';
+import { Button, LogoIcon, Select } from '@/shared';
 
 export const Header = () => {
   return (
-    <header className="fixed w-full bg-purple-800 py-5 md:px-20">
+    <header className=" w-full bg-purple-800 py-5 md:px-20">
       <div className="flex justify-between items-center px-5">
         <LogoIcon />
         <div className="flex items-center">
           <div className="hidden md:block">
-
-          <Button showGlassesIcon={true} variant="secondary" size="default">
-            Версия для слабовидящих
-          </Button>
+            <Button showGlassesIcon={true} variant="secondary" size="default">
+              Версия для слабовидящих
+            </Button>
           </div>
           <Select
             showFlagIcon={true}
