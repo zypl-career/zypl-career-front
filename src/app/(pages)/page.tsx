@@ -1,12 +1,9 @@
-import { Header } from '@/widgets';
-import { RegistrationUI } from '@/features';
-
 const HomePage = () => {
   return (
-    <>
-      <Header />
-      <RegistrationUI />
-    </>
+    <div className="overflow-x-hidden">
+      <p>Home page</p>
+    </div>
   );
 };
+
 export default HomePage;

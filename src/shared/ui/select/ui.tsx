@@ -4,7 +4,7 @@ import * as React from 'react';
 import { cn } from '@/shared/utils';
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
-import { ArrowDownIcon, RussianFlag } from '@/shared';
+import { ArrowDownIcon, RussianFlag, DropdownIcon } from '@/shared';
 
 import type { TVariantType, TSizeType, TSelectProps } from '.';
 
