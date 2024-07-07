@@ -1,5 +1,5 @@
 import { SuccessIcon, ExcellentIcon } from '@/shared';
-import { StatusCard } from '@/entities';
+import { PasswordRecovery, StatusCard } from '@/entities';
 
 const TestPage = () => {
   return (
@@ -16,6 +16,8 @@ const TestPage = () => {
           title="Отлично"
           message="Ваш пароль успешно изменен. Теперь вы можете войти в систему, используя новый пароль"
         />
+        <br />
+        <PasswordRecovery />
       </div>
     </div>
   );
