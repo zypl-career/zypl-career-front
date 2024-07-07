@@ -1,4 +1,4 @@
-import { Button, LogoIcon } from '@/shared';
+import { Button, LogoIcon, Select } from '@/shared';
 
 export const Header = () => {
   return (
@@ -8,6 +8,15 @@ export const Header = () => {
         <Button showGlassesIcon={true} variant="secondary" size="default">
           Версия для слабовидящих
         </Button>
+        <Select
+          showFlagIcon={true}
+          variant="secondary"
+          size="default"
+          className="ml-4"
+        >
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+        </Select>
       </div>
     </header>
   );
