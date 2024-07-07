@@ -14,12 +14,10 @@ export const Header = () => {
           <Select
             showFlagIcon={true}
             variant="secondary"
+            options={['Русский', 'Английсский']}
             size="default"
             className="ml-4"
-          >
-            <option value="ru">Русский</option>
-            <option value="en">English</option>
-          </Select>
+          />
         </div>
       </div>
     </header>

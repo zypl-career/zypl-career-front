@@ -9,15 +9,14 @@ import { ArrowDownIcon, RussianFlag } from '@/shared';
 import type { TVariantType, TSizeType, TSelectProps } from '.';
 
 const selectVariants = cva(
-  'inline-flex items-center justify-between rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex w-full items-center justify-between rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
         default: 'bg-primary text-primary-foreground hover:bg-primary/90',
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        outline:
-          'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+        outline: 'border border-[#D1D5DB] rounded-md',
         secondary: 'bg-purple-800 text-white hover:bg-purple-800 border-none',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
@@ -38,7 +37,7 @@ const selectVariants = cva(
 
 const Select = React.forwardRef<
   HTMLSelectElement,
-  TSelectProps & { showFlagIcon?: boolean }
+  TSelectProps & { showFlagIcon?: boolean; options: string[] }
 >(
   (
     {
@@ -48,6 +47,7 @@ const Select = React.forwardRef<
       showFlagIcon = false,
       asChild = false,
       children,
+      options = [],
       ...props
     },
     ref,
@@ -80,11 +80,16 @@ const Select = React.forwardRef<
           onClick={handleToggle}
           onBlur={handleBlur}
         >
+          {options.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
           {children}
         </Comp>
         <div
           className={cn(
-            'absolute right-[-2px] inset-y-0 flex items-center pointer-events-none transition-transform duration-300',
+            'absolute right-6 inset-y-0 flex items-center pointer-events-none transition-transform duration-300',
             {
               'rotate-180': isOpen,
             },
