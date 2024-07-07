@@ -2,6 +2,7 @@ import * as React from 'react';
 import { cn } from '@/shared/utils';
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
+import { GlassesIcon } from '@/shared';
 
 import type { TVariantType, TSizeType, TButtonProps } from '.';
 
@@ -15,8 +16,7 @@ const buttonVariants = cva(
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:
           'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-        secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+        secondary: 'bg-white text-purple-900 hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
       },
@@ -34,15 +34,33 @@ const buttonVariants = cva(
   },
 );
 
-const Button = React.forwardRef<HTMLButtonElement, TButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+const Button = React.forwardRef<
+  HTMLButtonElement,
+  TButtonProps & { showGlassesIcon?: boolean }
+>(
+  (
+    {
+      className,
+      variant,
+      size,
+      showGlassesIcon = false,
+      asChild = false,
+      children,
+      ...props
+    },
+    ref,
+  ) => {
     const Comp = asChild ? Slot : 'button';
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
-      />
+      >
+        {showGlassesIcon && <GlassesIcon className="mr-2" />}{' '}
+        {/* Adjust the className as needed */}
+        {children}
+      </Comp>
     );
   },
 );

@@ -5,6 +5,7 @@ import { buttonVariants } from '@/shared';
 export type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
+    showGlassesIcon?: boolean;
   };
 
 export type TVariantType =
