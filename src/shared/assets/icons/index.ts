@@ -5,6 +5,7 @@ import ArrowDownIcon from './arrow-down';
 import DropdownIcon from './dropdown';
 import RightArrowIcon from './right-arrow';
 import SuccessIcon from './success';
+import ExcellentIcon from './excellent';
 
 export {
   LogoIcon,
@@ -14,4 +15,5 @@ export {
   DropdownIcon,
   RightArrowIcon,
   SuccessIcon,
+  ExcellentIcon,
 };
