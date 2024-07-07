@@ -57,9 +57,7 @@ const Button = React.forwardRef<
         ref={ref}
         {...props}
       >
-        {showGlassesIcon && <GlassesIcon className="mr-2" />}{' '}
-        {/* Adjust the className as needed */}
-        {children}
+        {showGlassesIcon && <GlassesIcon className="mr-2" />} {children}
       </Comp>
     );
   },

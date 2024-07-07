@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import { cn } from '@/shared/utils';
 import { Slot } from '@radix-ui/react-slot';
@@ -16,7 +18,7 @@ const selectVariants = cva(
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline:
           'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-        secondary: 'bg-purple-800 text-white hover:bg-purple-800  border-none',
+        secondary: 'bg-purple-800 text-white hover:bg-purple-800 border-none',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
       },
@@ -50,13 +52,23 @@ const Select = React.forwardRef<
     },
     ref,
   ) => {
+    const [isOpen, setIsOpen] = React.useState(false);
     const Comp = asChild ? Slot : 'select';
+
+    const handleToggle = () => {
+      setIsOpen(!isOpen);
+    };
+
+    const handleBlur = () => {
+      setIsOpen(false);
+    };
+
     return (
       <div className={cn('relative', className)}>
         {showFlagIcon && (
-          <span className="absolute left-2 inset-y-0 flex items-center pointer-events-none">
+          <div className="absolute left-5 inset-y-0 flex items-center pointer-events-none">
             <RussianFlag />
-          </span>
+          </div>
         )}
         <Comp
           className={cn(
@@ -65,12 +77,21 @@ const Select = React.forwardRef<
           )}
           ref={ref}
           {...props}
+          onClick={handleToggle}
+          onBlur={handleBlur}
         >
           {children}
         </Comp>
-        <span className="absolute right-2 inset-y-0 flex items-center pointer-events-none">
+        <div
+          className={cn(
+            'absolute right-[-2px] inset-y-0 flex items-center pointer-events-none transition-transform duration-300',
+            {
+              'rotate-180': isOpen,
+            },
+          )}
+        >
           <ArrowDownIcon />
-        </span>
+        </div>
       </div>
     );
   },
