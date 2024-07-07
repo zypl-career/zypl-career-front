@@ -16,5 +16,6 @@ export type TVariantType =
   | 'ghost'
   | 'link'
   | 'auth'
-  | 'outlineSecondary';
+  | 'outlineSecondary'
+  | 'status';
 export type TSizeType = 'default' | 'sm' | 'lg' | 'icon';

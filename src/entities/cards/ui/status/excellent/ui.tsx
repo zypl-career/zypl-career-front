@@ -1,5 +1,3 @@
 export const StatusExcellent = () => {
-    return (
-        <div>asd</div>
-    );
+  return <div>asd</div>;
 };

@@ -1,6 +1,6 @@
 import { FC, SVGProps } from 'react';
 
-const CheckIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
+const SuccessIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     width="50"
     height="50"
@@ -33,4 +33,4 @@ const CheckIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
     />
   </svg>
 );
-export default CheckIcon;
+export default SuccessIcon;

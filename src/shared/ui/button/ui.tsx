@@ -18,6 +18,9 @@ const buttonVariants = cva(
           'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
         secondary: 'bg-white text-purple-900 hover:bg-secondary/80',
         auth: 'bg-purple-800 rounded-2xl font-[600] text-white w-full md:w-[400px] transform transition-transform duration-200 active:scale-110',
+
+        status:
+          'bg-purple-800 rounded-2xl font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         outlineSecondary:
           'border border-[#9CA3AF] text-[#4B5563] bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full md:w-[400px] transform transition-transform duration-200 active:scale-110',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
