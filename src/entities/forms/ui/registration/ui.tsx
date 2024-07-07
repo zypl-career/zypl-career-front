@@ -56,8 +56,12 @@ export const FormRegister = () => {
             Зарегистрироваться
           </Button>
         </div>
-        <div className="flex justify-center">
-          <p className="text-[#6B7280] text-sm">У вас есть аккаунт?</p>
+        <div className="flex justify-center items-center my-4">
+          <span className="w-20 border-t border-gray-300"></span>
+          <span className="text-[#6B7280] text-sm px-2">
+            У вас есть аккаунт?
+          </span>
+          <span className="w-20 border-t border-gray-300"></span>
         </div>
         <div className="flex justify-center">
           <Button variant="outlineSecondary">Войти в систему</Button>

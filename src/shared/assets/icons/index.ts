@@ -4,6 +4,7 @@ import RussianFlag from './russian-flag';
 import ArrowDownIcon from './arrow-down';
 import DropdownIcon from './dropdown';
 import RightArrowIcon from './right-arrow';
+import CheckIcon from './circle-check';
 
 export {
   LogoIcon,
@@ -12,4 +13,5 @@ export {
   ArrowDownIcon,
   DropdownIcon,
   RightArrowIcon,
+  CheckIcon
 };
