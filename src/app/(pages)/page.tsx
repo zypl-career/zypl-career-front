@@ -1,18 +1,22 @@
 'use client';
 
-import { Hero, Navbar, ToolsInspiration } from '@/entities';
-import { CareerIcon } from '@/shared';
+import { Hero, Navbar, toolsData, ToolsInspiration } from '@/entities';
 
 const HomePage = () => {
   return (
     <div className="overflow-x-hidden">
       <Navbar />
       <Hero />
-      <ToolsInspiration
-        Icons={CareerIcon}
-        title="Мой карерный путь"
-        description="Мы аккумулируем большое количество онлайн-курсов по различным направлениям, позволяя сравнивать их, и выбирать то, что вам нравится"
-      />
+      <div className="grid grid-cols-1 md:grid-cols-3">
+        {toolsData.map((tool, index) => (
+          <ToolsInspiration
+            key={index}
+            Icons={tool.Icons}
+            title={tool.title}
+            description={tool.description}
+          />
+        ))}
+      </div>
     </div>
   );
 };

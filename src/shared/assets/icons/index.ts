@@ -18,6 +18,7 @@ import CoursesIcon from './courses';
 import UniversityIcon from './university';
 import TrainingCentersIcon from './training-centers';
 import VideoIcon from './video';
+import ResourcesIcon from './resources';
 
 export {
   LogoIcon,
@@ -40,4 +41,5 @@ export {
   UniversityIcon,
   TrainingCentersIcon,
   VideoIcon,
+  ResourcesIcon,
 };
