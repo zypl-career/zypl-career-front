@@ -46,6 +46,7 @@ const buttonVariants = cva(
         lg: 'h-11 rounded-md px-8',
         icon: 'h-10 w-10',
         subscribe: 'w-full md:w-[212px] p-2',
+        followFuture: 'w-full md:w-[534px] p-2',
       },
     },
     defaultVariants: {

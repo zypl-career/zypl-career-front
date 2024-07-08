@@ -24,4 +24,10 @@ export type TVariantType =
   | 'register'
   | 'subscribe'
   | 'outlineCard';
-export type TSizeType = 'default' | 'sm' | 'lg' | 'icon' | 'subscribe';
+export type TSizeType =
+  | 'default'
+  | 'sm'
+  | 'lg'
+  | 'icon'
+  | 'subscribe'
+  | 'followFuture';
