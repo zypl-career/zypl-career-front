@@ -2,7 +2,7 @@ import { toolsData, ToolsInspiration } from '@/entities';
 
 export const ToolsInspirationUI = () => {
   return (
-    <section>
+    <section className="my-10">
       <div className="mx-2 md:mx-24 my-5">
         <p className="text-3xl font-bold">Инструменты для вдохновения</p>
         <p className="my-2 md:w-[800px]">

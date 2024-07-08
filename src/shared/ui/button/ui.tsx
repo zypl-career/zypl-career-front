@@ -20,27 +20,30 @@ const buttonVariants = cva(
         outline:
           'border border-input bg-background cursor-pointer  hover:bg-accent hover:text-accent-foreground',
         purpleOutline:
-          'border border-[#371141]  rounded-2xl text-[#111827]  bg-background cursor-pointer  hover:text-accent-foreground  transform transition-transform duration-200 active:scale-110',
+          'border border-[#371141] rounded-2xl text-[#111827]  bg-background cursor-pointer  hover:text-accent-foreground  transform transition-transform duration-200 active:scale-110',
         secondary:
-          'bg-white text-purple-900 cursor-pointer  hover:bg-secondary/80',
-        auth: 'bg-purple-800 rounded-2xl cursor-pointer  font-[600] text-white w-full md:w-[400px] transform transition-transform duration-200 active:scale-110',
+          'bg-white text-purple-900 cursor-pointer hover:bg-secondary/80',
+        auth: 'bg-purple-800 rounded-2xl cursor-pointer font-[600] text-white w-full md:w-[400px] transform transition-transform duration-200 active:scale-110',
         status:
           'bg-purple-800 rounded-2xl md:text-[20px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         register:
           'bg-purple-800 rounded-2xl cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         login:
-          'border border-[#9CA3AF] text-[#4B5563] md:text-[20px]  cursor-pointer  w-full bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full transform transition-transform duration-200 active:scale-110',
+          'border border-[#9CA3AF] text-[#4B5563] md:text-[20px] cursor-pointer w-full bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full transform transition-transform duration-200 active:scale-110',
         outlineSecondary:
           'border border-[#9CA3AF] text-[#4B5563] cursor-pointer  bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full md:w-[400px] transform transition-transform duration-200 active:scale-110',
         ghost: 'hover:bg-accent cursor-pointer  hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 cursor-pointer  hover:underline',
         none: 'bg-none text-[#6B7280] font-bold md:text-[20px]',
+          subscribe:
+              ' bg-[#7E3794] rounded-3xl md:text-[17px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
       },
       size: {
         default: 'h-10 px-4 py-2',
         sm: 'h-9 rounded-md px-3',
         lg: 'h-11 rounded-md px-8',
         icon: 'h-10 w-10',
+        subscribe: 'w-full md:w-[212px] p-2',
       },
     },
     defaultVariants: {

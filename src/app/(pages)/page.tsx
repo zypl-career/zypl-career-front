@@ -1,6 +1,6 @@
 'use client';
 
-import { Hero, Navbar, ToolsInspirationUI } from '@/entities';
+import { CareerTips, Hero, Navbar, ToolsInspirationUI } from '@/entities';
 
 const HomePage = () => {
   return (
@@ -8,6 +8,7 @@ const HomePage = () => {
       <Navbar />
       <Hero />
       <ToolsInspirationUI />
+      <CareerTips />
     </div>
   );
 };

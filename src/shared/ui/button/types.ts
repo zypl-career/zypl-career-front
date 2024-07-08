@@ -21,5 +21,6 @@ export type TVariantType =
   | 'login'
   | 'none'
   | 'purpleOutline'
-  | 'register';
-export type TSizeType = 'default' | 'sm' | 'lg' | 'icon';
+  | 'register'
+    | 'subscribe';
+export type TSizeType = 'default' | 'sm' | 'lg' | 'icon' | 'subscribe';
