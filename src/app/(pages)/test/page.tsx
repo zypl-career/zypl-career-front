@@ -28,7 +28,6 @@ const TestPage = () => {
         <ChangePass />
         <br />
         <ConfirmPass />
-        <ToolsInspiration />
       </div>
     </div>
   );

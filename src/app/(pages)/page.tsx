@@ -1,3 +1,5 @@
+'use client';
+
 import { Hero, Navbar, ToolsInspiration } from '@/entities';
 import { CareerIcon } from '@/shared';
 
