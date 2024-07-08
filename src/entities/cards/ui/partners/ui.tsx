@@ -2,9 +2,19 @@ import Image from 'next/image';
 
 export const PartnersCard = ({ imageSrc, altText, text }) => {
   return (
-    <div className="flex items-center bg-white lg:w-[413px] lg:p-[32px] lg:gap-[24px] rounded-lg">
-      <Image src={imageSrc} alt={altText} height={100} width={100} />
-      <p className="text-gray-600 font-bold">{text}</p>
+    <div
+      className={`partner-card ${text ? 'flex-row' : 'flex-col'} flex items-center justify-center p-4 bg-white rounded-lg shadow-md`}
+    >
+      {text ? (
+        <div className="flex items-center gap-5 px-5">
+          <Image src={imageSrc} alt={altText} className="partner-image" />
+          <p className="partner-text text-lg font-semibold text-gray-700 mr-4">
+            {text}
+          </p>
+        </div>
+      ) : (
+        <Image src={imageSrc} alt={altText} className="partner-image my-auto" />
+      )}
     </div>
   );
 };
