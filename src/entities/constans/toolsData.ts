@@ -9,7 +9,7 @@ import {
   TrainingCentersIcon,
   VideoIcon,
 } from '@/shared';
-import { ToolsProps } from '@/entities/constans/types';
+import { ToolsProps } from '@/entities';
 
 export const toolsData: ToolsProps[] = [
   {

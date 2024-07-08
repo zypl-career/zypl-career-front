@@ -22,5 +22,6 @@ export type TVariantType =
   | 'none'
   | 'purpleOutline'
   | 'register'
-    | 'subscribe';
+  | 'subscribe'
+  | 'outlineCard';
 export type TSizeType = 'default' | 'sm' | 'lg' | 'icon' | 'subscribe';
