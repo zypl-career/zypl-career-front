@@ -9,7 +9,9 @@ export const ConfirmPass = () => {
       </p>
       <div className="py-5">
         <Password label="Пароль" variant="outline" />
-        <Password label="Подтвердите пароль" variant="outline" />
+        <div className="py-4">
+          <Password label="Подтвердите пароль" variant="outline" />
+        </div>
       </div>
       <Button variant="status" showRightArrowIcon={true}>
         Далее

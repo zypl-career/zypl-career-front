@@ -19,5 +19,7 @@ export type TVariantType =
   | 'outlineSecondary'
   | 'status'
   | 'login'
-  | 'none';
+  | 'none'
+  | 'purpleOutline'
+  | 'register';
 export type TSizeType = 'default' | 'sm' | 'lg' | 'icon';

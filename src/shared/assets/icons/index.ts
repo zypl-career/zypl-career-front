@@ -6,6 +6,10 @@ import DropdownIcon from './dropdown';
 import RightArrowIcon from './right-arrow';
 import SuccessIcon from './success';
 import ExcellentIcon from './excellent';
+import TajikFlagIcon from './tajik-flag';
+import AmericaFlagIcon from './america-flag';
+import SearchIcon from './search';
+import ArrowIcon from './arrow';
 
 export {
   LogoIcon,
@@ -16,4 +20,8 @@ export {
   RightArrowIcon,
   SuccessIcon,
   ExcellentIcon,
+  TajikFlagIcon,
+  AmericaFlagIcon,
+  SearchIcon,
+  ArrowIcon,
 };

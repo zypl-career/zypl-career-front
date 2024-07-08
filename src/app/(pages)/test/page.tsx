@@ -8,7 +8,7 @@ import {
 
 const TestPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen overflow-x-hidden">
       <div className="px-5 md:px-24 py-10">
         <StatusCard
           Icon={SuccessIcon}

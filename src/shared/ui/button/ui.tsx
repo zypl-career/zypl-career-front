@@ -1,8 +1,10 @@
+'use client';
+
 import * as React from 'react';
 import { cn } from '@/shared/utils';
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
-import { GlassesIcon, RightArrowIcon } from '@/shared';
+import { GlassesIcon, RightArrowIcon, ArrowIcon } from '@/shared';
 
 import type { TVariantType, TSizeType, TButtonProps } from '.';
 
@@ -17,11 +19,15 @@ const buttonVariants = cva(
           'bg-destructive cursor-pointer  text-destructive-foreground hover:bg-destructive/90',
         outline:
           'border border-input bg-background cursor-pointer  hover:bg-accent hover:text-accent-foreground',
+        purpleOutline:
+          'border border-[#371141]  rounded-2xl text-[#111827]  bg-background cursor-pointer  hover:text-accent-foreground  transform transition-transform duration-200 active:scale-110',
         secondary:
           'bg-white text-purple-900 cursor-pointer  hover:bg-secondary/80',
         auth: 'bg-purple-800 rounded-2xl cursor-pointer  font-[600] text-white w-full md:w-[400px] transform transition-transform duration-200 active:scale-110',
         status:
           'bg-purple-800 rounded-2xl md:text-[20px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
+        register:
+          'bg-purple-800 rounded-2xl cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         login:
           'border border-[#9CA3AF] text-[#4B5563] md:text-[20px]  cursor-pointer  w-full bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full transform transition-transform duration-200 active:scale-110',
         outlineSecondary:
@@ -46,7 +52,11 @@ const buttonVariants = cva(
 
 const Button = React.forwardRef<
   HTMLButtonElement,
-  TButtonProps & { showGlassesIcon?: boolean; showRightArrowIcon?: boolean }
+  TButtonProps & {
+    showGlassesIcon?: boolean;
+    showRightArrowIcon?: boolean;
+    showArrowIcon?: boolean;
+  }
 >(
   (
     {
@@ -55,6 +65,7 @@ const Button = React.forwardRef<
       size,
       showGlassesIcon = false,
       showRightArrowIcon = false,
+      showArrowIcon = false,
       asChild = false,
       children,
       ...props
@@ -73,6 +84,7 @@ const Button = React.forwardRef<
         {showRightArrowIcon && (
           <RightArrowIcon className="ml-2 animate-moveRight" />
         )}
+        {showArrowIcon && <ArrowIcon className="ml-2 animate-moveRight" />}
       </Comp>
     );
   },
