@@ -1,4 +1,4 @@
-import { Button, Input } from '@/shared';
+import { Button, Password } from '@/shared';
 
 export const ChangePass = () => {
   return (
@@ -8,7 +8,10 @@ export const ChangePass = () => {
         Мы отправили код подтверждения на вашу электронную почту
       </p>
       <div className="py-5">
-        <Input label="Код потдверждения" variant="outline" />
+        <Password label="Код потдверждения" variant="outline" />
+        <p className="text-gray-500 py-2 text-sm">
+          Повторная отправка через 43 сек
+        </p>
       </div>
       <Button variant="status" showRightArrowIcon={true}>
         Далее
