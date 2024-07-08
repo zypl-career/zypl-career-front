@@ -5,7 +5,7 @@ import { MoreCard } from '@/entities';
 
 export const CareerTips = () => {
   return (
-    <section className=" bg-[#F8F8F8]">
+    <section className="bg-[#F8F8F8]">
       <div className="flex flex-col md:px-24 md:flex-row justify-between">
         <div className="py-5 px-2  md:py-32">
           <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8">

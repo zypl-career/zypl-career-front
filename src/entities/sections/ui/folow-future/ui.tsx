@@ -10,9 +10,15 @@ export const FollowFuture = () => {
         Выполните задания, чтобы помочь определить ваши интересы, ценности и
         навыки. Посмотреть предлагаемые профессии и курсы.
       </p>
-      <Button variant="subscribe" showRightArrowIcon={true} size="followFuture">
-        Начните строить свой карьерный профиль
-      </Button>
+      <div className="pb-10">
+        <Button
+          variant="subscribe"
+          showRightArrowIcon={true}
+          size="followFuture"
+        >
+          Начните строить свой карьерный профиль
+        </Button>
+      </div>
     </section>
   );
 };

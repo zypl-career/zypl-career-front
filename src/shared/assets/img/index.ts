@@ -2,6 +2,22 @@ import HeroImg from './hero.svg';
 import PaperPlane from './paper-plane.svg';
 import Guide from './guide.svg';
 import GenderIgnore from './gender-ignore.svg';
-import ChoiceCourses from '@/shared/assets/img/choice-coureses.svg';
+import ChoiceCourses from './choice-coureses.svg';
+import Emblem from './emblem.svg';
+import Aflotoun from './aflotoun.svg';
+import Tajrupt from './tajrupt.svg';
+import Unicef from './uniсef.svg';
+import Flag from './flag.svg';
 
-export { HeroImg, PaperPlane, Guide, GenderIgnore, ChoiceCourses };
+export {
+  HeroImg,
+  PaperPlane,
+  Guide,
+  GenderIgnore,
+  ChoiceCourses,
+  Emblem,
+  Aflotoun,
+  Tajrupt,
+  Unicef,
+  Flag,
+};

@@ -5,6 +5,7 @@ import {
   FollowFuture,
   Hero,
   Navbar,
+  Partners,
   ToolsInspirationUI,
 } from '@/entities';
 
@@ -16,6 +17,7 @@ const HomePage = () => {
       <ToolsInspirationUI />
       <CareerTips />
       <FollowFuture />
+      <Partners />
     </div>
   );
 };
