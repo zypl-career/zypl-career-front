@@ -10,6 +10,14 @@ import TajikFlagIcon from './tajik-flag';
 import AmericaFlagIcon from './america-flag';
 import SearchIcon from './search';
 import ArrowIcon from './arrow';
+import CareerIcon from './career-profile';
+import ProfessionsIcon from './professions';
+import IndustriesIcon from './industries';
+import CareerArticlesIcon from './career-articles';
+import CoursesIcon from './courses';
+import UniversityIcon from './university';
+import TrainingCentersIcon from './training-centers';
+import VideoIcon from './video';
 
 export {
   LogoIcon,
@@ -24,4 +32,12 @@ export {
   AmericaFlagIcon,
   SearchIcon,
   ArrowIcon,
+  CareerIcon,
+  ProfessionsIcon,
+  IndustriesIcon,
+  CareerArticlesIcon,
+  CoursesIcon,
+  UniversityIcon,
+  TrainingCentersIcon,
+  VideoIcon,
 };

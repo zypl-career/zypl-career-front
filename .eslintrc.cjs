@@ -24,7 +24,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
     'prefer-const': 'error',
     'comma-dangle': ['error', 'always-multiline'],
-    'object-curly-spacing': ['error', 'always'],
+    'object-curly-spacing': ['warn', 'always'],
     'import/no-extraneous-dependencies': 'off',
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',

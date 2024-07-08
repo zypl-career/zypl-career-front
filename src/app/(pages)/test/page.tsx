@@ -4,6 +4,7 @@ import {
   ConfirmPass,
   PasswordRecovery,
   StatusCard,
+  ToolsInspiration,
 } from '@/entities';
 
 const TestPage = () => {
@@ -27,6 +28,7 @@ const TestPage = () => {
         <ChangePass />
         <br />
         <ConfirmPass />
+        <ToolsInspiration />
       </div>
     </div>
   );
