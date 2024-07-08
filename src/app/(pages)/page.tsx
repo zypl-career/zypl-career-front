@@ -1,9 +1,10 @@
-import { Navbar } from '@/entities';
+import { Hero, Navbar } from '@/entities';
 
 const HomePage = () => {
   return (
     <div className="overflow-x-hidden">
       <Navbar />
+      <Hero />
     </div>
   );
 };
