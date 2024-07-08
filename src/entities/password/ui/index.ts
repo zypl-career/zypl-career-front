@@ -1,1 +1,2 @@
-export * from './password-recovery';
+export * from './recovery';
+export * from './change';

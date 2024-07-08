@@ -1,5 +1,5 @@
 import { SuccessIcon, ExcellentIcon } from '@/shared';
-import { PasswordRecovery, StatusCard } from '@/entities';
+import { ChangePass, PasswordRecovery, StatusCard } from '@/entities';
 
 const TestPage = () => {
   return (
@@ -18,6 +18,8 @@ const TestPage = () => {
         />
         <br />
         <PasswordRecovery />
+        <br />
+        <ChangePass />
       </div>
     </div>
   );
