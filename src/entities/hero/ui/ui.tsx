@@ -15,7 +15,7 @@ export const Hero = () => {
         </p>
       </div>
       <div className="flex justify-center md:justify-end py-5 md:py-0">
-        <Image src={HeroImg} alt="hero" width={800} height={800} />
+        <HeroImg />
       </div>
     </div>
   );

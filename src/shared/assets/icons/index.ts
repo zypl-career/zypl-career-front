@@ -19,6 +19,12 @@ import UniversityIcon from './university.svg';
 import TrainingCentersIcon from './training-centers.svg';
 import VideoIcon from './video.svg';
 import ResourcesIcon from './resources.svg';
+import LogoFooter from './logo-footer.svg';
+import VkIcn from './vk.svg';
+import TelegramIcon from './telegram.svg';
+import InstagramIcon from './instagram.svg';
+import YoutubeIcon from './you-tube.svg';
+import FacebookIcon from './facebook.svg';
 
 export {
   LogoIcon,
@@ -42,4 +48,10 @@ export {
   TrainingCentersIcon,
   VideoIcon,
   ResourcesIcon,
+  LogoFooter,
+  VkIcn,
+  TelegramIcon,
+  InstagramIcon,
+  YoutubeIcon,
+  FacebookIcon,
 };

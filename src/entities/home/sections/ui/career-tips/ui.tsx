@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Button, Input, PaperPlane } from '@/shared';
 import { MoreCard, moreData } from '@/entities';
 
@@ -37,7 +36,7 @@ export const CareerTips = () => {
           </div>
         </div>
         <div className="flex justify-center py-5 md:py-14">
-          <Image src={PaperPlane} alt="hero" width={500} height={500} />
+          <PaperPlane />
         </div>
       </div>
 
