@@ -1,7 +1,9 @@
-export const footerData = [
+import { FooterItem } from '@/widgets';
+
+export const footerData: FooterItem[] = [
   {
     title: 'Узнайте о себе',
-    items: ['Мой карьерный профиль', 'Карьярные успехи'],
+    items: ['Мой карьерный профиль', 'Карьерные успехи'],
   },
   {
     title: 'Исследуйте возможности',
