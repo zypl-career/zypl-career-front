@@ -6,7 +6,9 @@ export const Navbar = () => {
     <nav className="px-5 bg-white md:px-24 py-4 flex justify-between border border-gray-200">
       <ul className="flex items-center gap-4">
         {NavbarData.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} className="text-gray-700 hover:text-gray-900">
+            <a href={item.link}>{item.title}</a>
+          </li>
         ))}
       </ul>
       <div className="flex items-center gap-2">
