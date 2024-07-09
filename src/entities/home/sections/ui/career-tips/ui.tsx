@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Button, Input, PaperPlane } from '@/shared';
-import { moreData } from '@/entities/constans/moreData';
-import { MoreCard } from '@/entities';
+import { MoreCard, moreData } from '@/entities';
 
 export const CareerTips = () => {
   return (
