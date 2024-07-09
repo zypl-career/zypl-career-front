@@ -8,6 +8,7 @@ import Aflotoun from './aflotoun.svg';
 import Tajrupt from './tajrupt.svg';
 import Unicef from './uniсef.svg';
 import Flag from './flag.svg';
+import Professions from './professions.svg';
 
 export {
   HeroImg,
@@ -20,4 +21,5 @@ export {
   Tajrupt,
   Unicef,
   Flag,
+  Professions,
 };

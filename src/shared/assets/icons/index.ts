@@ -25,6 +25,7 @@ import TelegramIcon from './telegram.svg';
 import InstagramIcon from './instagram.svg';
 import YoutubeIcon from './you-tube.svg';
 import FacebookIcon from './facebook.svg';
+import NextIcon from './next.svg';
 
 export {
   LogoIcon,
@@ -54,4 +55,5 @@ export {
   InstagramIcon,
   YoutubeIcon,
   FacebookIcon,
+  NextIcon,
 };
