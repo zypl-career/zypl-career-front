@@ -5,4 +5,4 @@ export * from './password';
 export * from './navbar';
 export * from './hero';
 export * from './cards';
-export * from './sections';
+export * from './home';

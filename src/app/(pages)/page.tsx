@@ -8,6 +8,7 @@ import {
   Partners,
   ToolsInspirationUI,
 } from '@/entities';
+import { Footer } from '@/widgets';
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
       <CareerTips />
       <FollowFuture />
       <Partners />
+      <Footer />
     </div>
   );
 };

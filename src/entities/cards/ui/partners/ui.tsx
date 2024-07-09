@@ -3,7 +3,7 @@ import Image from 'next/image';
 export const PartnersCard = ({ imageSrc, altText, text }) => {
   return (
     <div
-      className={`partner-card ${text ? 'flex-row' : 'flex-col'} flex items-center justify-center p-4 bg-white rounded-lg shadow-md`}
+      className={`partner-card ${text ? 'flex-row' : 'flex-col'} flex items-center justify-center bg-white m-2 lg:m-3 py-12 lg:py-[32px] rounded-lg shadow-md`}
     >
       {text ? (
         <div className="flex items-center gap-5 px-5">

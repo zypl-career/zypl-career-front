@@ -7,7 +7,6 @@ const LogoIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
     viewBox="0 0 150 40"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    {...props}
   >
     <g clipPath="url(#clip0_2290_22221)">
       <path
