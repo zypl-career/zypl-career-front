@@ -10,15 +10,15 @@ import {
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-gray-400 p-8">
+    <footer className="bg-gray-800 text-gray-400 py-8 px-8">
       <div className="flex lg:px-24 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {footerData.map((section, index) => (
-            <div key={index}>
+            <div className="lg:py-14" key={index}>
               <h3 className="text-white font-semibold mb-2 hover:underline cursor-pointer">
                 {section.title}
               </h3>
-              <ul>
+              <ul className="pb-20">
                 {section.items.map((item, idx) => (
                   <li key={idx} className="mb-1 hover:underline cursor-pointer">
                     {item}
@@ -29,8 +29,8 @@ export const Footer: React.FC = () => {
           ))}
         </div>
       </div>
-      <hr className="my-4" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="border-b border-gray-600"></div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-5">
         <div className="flex flex-col sm:flex-row sm:items-start">
           <LogoFooter />
           <p className="mt-2 sm:mt-0 sm:ml-2">
@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
           </p>
         </div>
         <div className="flex flex-col sm:flex-row  sm:justify-end gap-2">
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
             <VkIcn />
             <TelegramIcon />
             <InstagramIcon />
