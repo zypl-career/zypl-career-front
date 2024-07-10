@@ -1,6 +1,6 @@
 import { Industries } from '@/shared';
 
-export const IndustriesPartners = () => {
+export const IndustriesHero = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between bg-[#F8F8F8] px-20">
       <div className="py-5 px-2  md:py-32">
