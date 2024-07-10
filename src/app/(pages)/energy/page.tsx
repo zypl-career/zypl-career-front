@@ -1,4 +1,4 @@
-import { EnergyCards, HeroEnergy, Navbar, Review } from '@/entities';
+import { Activity, EnergyCards, HeroEnergy, Navbar, Review } from '@/entities';
 import { Footer } from '@/widgets';
 
 const EnergyPage = () => {
@@ -8,6 +8,7 @@ const EnergyPage = () => {
       <HeroEnergy />
       <EnergyCards />
       <Review />
+      <Activity />
       <Footer />
     </div>
   );
