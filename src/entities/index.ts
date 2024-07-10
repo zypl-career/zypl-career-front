@@ -8,3 +8,4 @@ export * from './home';
 export * from './professions';
 export * from './industries';
 export * from './agricultural-industry';
+export * from './energy';

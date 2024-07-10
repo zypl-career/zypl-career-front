@@ -26,6 +26,10 @@ import InstagramIcon from './instagram.svg';
 import YoutubeIcon from './you-tube.svg';
 import FacebookIcon from './facebook.svg';
 import NextIcon from './next.svg';
+import ArrowLeft from './arrow-left.svg';
+import MoneyIcon from './monet.svg';
+import SkillsLevelIcon from './skills-level.svg';
+import FutureGrowthIcon from './future-growth.svg';
 
 export {
   LogoIcon,
@@ -56,4 +60,8 @@ export {
   YoutubeIcon,
   FacebookIcon,
   NextIcon,
+  ArrowLeft,
+  MoneyIcon,
+  SkillsLevelIcon,
+  FutureGrowthIcon,
 };
