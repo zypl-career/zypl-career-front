@@ -6,3 +6,4 @@ export * from './hero';
 export * from './cards';
 export * from './home';
 export * from './professions';
+export * from './industries';

@@ -9,6 +9,7 @@ import Tajrupt from './tajrupt.svg';
 import Unicef from './uniсef.svg';
 import Flag from './flag.svg';
 import Professions from './professions.svg';
+import Industries from './industies.svg';
 
 export {
   HeroImg,
@@ -22,4 +23,5 @@ export {
   Unicef,
   Flag,
   Professions,
+  Industries,
 };
