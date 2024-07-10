@@ -10,6 +10,7 @@ import Unicef from './uniсef.svg';
 import Flag from './flag.svg';
 import Professions from './professions.svg';
 import Industries from './industies.svg';
+import AgriculturalIndustry from './agricultural-industry.svg';
 
 export {
   HeroImg,
@@ -24,4 +25,5 @@ export {
   Flag,
   Professions,
   Industries,
+  AgriculturalIndustry,
 };

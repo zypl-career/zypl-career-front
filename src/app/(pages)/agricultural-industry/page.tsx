@@ -1,5 +1,10 @@
 import { Footer } from '@/widgets';
-import { AgriculturalIndustryHero, BasicIndustry, Navbar } from '@/entities';
+import {
+  AgriculturalIndustryHero,
+  BasicIndustry,
+  CardsAgricultural,
+  Navbar,
+} from '@/entities';
 
 const AgriculturalIndustryPage = () => {
   return (
@@ -7,6 +12,7 @@ const AgriculturalIndustryPage = () => {
       <Navbar />
       <AgriculturalIndustryHero />
       <BasicIndustry />
+      <CardsAgricultural />
       <Footer />
     </div>
   );

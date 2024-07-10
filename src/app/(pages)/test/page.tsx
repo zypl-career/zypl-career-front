@@ -4,7 +4,6 @@ import {
   ConfirmPass,
   PasswordRecovery,
   StatusCard,
-  ToolsInspiration,
 } from '@/entities';
 
 const TestPage = () => {
