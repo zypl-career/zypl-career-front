@@ -11,6 +11,7 @@ import Flag from './flag.svg';
 import Professions from './professions.svg';
 import Industries from './industies.svg';
 import AgriculturalIndustry from './agricultural-industry.svg';
+import CareerArticles from './career-arcticles.svg';
 
 export {
   HeroImg,
@@ -26,4 +27,5 @@ export {
   Professions,
   Industries,
   AgriculturalIndustry,
+  CareerArticles,
 };
