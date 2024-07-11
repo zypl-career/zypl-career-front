@@ -1,9 +1,9 @@
-import { Guide, GenderIgnore, ChoiceCourses } from '@/shared';
-import { TCardMoreProps } from '@/entities';
+import {GenderIgnore, ChoiceCourses, CareerDecide, Tips} from '@/shared';
+import { TCardMoreProps} from '@/entities';
 
 export const moreDataCareer: TCardMoreProps[] = [
   {
-    imageSrc: Guide,
+    imageSrc: CareerDecide,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -27,7 +27,7 @@ export const moreDataCareer: TCardMoreProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: Tips,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,

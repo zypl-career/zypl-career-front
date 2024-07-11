@@ -1,5 +1,5 @@
-import { Guide, GenderIgnore, ChoiceCourses } from '@/shared';
 import { TCardData } from '@/entities';
+import { Guide, ChoiceCourses, GenderIgnore } from '@/shared';
 
 export const moreData: TCardData[] = [
   {
@@ -13,7 +13,7 @@ export const moreData: TCardData[] = [
   },
   {
     imageSrc: GenderIgnore,
-    imageAlt: 'guide',
+    imageAlt: 'gender ignore',
     imageHeight: 300,
     imageWidth: 470,
     title: 'Как игнорировать гендерную предвзятость в профессиях',
@@ -22,7 +22,7 @@ export const moreData: TCardData[] = [
   },
   {
     imageSrc: ChoiceCourses,
-    imageAlt: 'guide',
+    imageAlt: 'choice courses',
     imageHeight: 300,
     imageWidth: 470,
     title: 'Выбор предпочтений курса',

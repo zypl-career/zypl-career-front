@@ -1,9 +1,10 @@
 import { FC } from 'react';
+import Image from 'next/image';
 import { Button } from '@/shared';
 import { TMoreCardProps } from '@/entities';
 
 export const MoreCard: FC<TMoreCardProps> = ({
-  imageSrc: ImageComponent,
+  imageSrc,
   imageAlt,
   imageHeight,
   imageWidth,
@@ -13,7 +14,12 @@ export const MoreCard: FC<TMoreCardProps> = ({
 }) => {
   return (
     <div className="md:w-[413px] bg-white border border-gray-100 rounded-md">
-      <ImageComponent alt={imageAlt} />
+      <Image
+        src={imageSrc}
+        alt={imageAlt}
+        height={imageHeight}
+        width={imageWidth}
+      />
       <div className="md:px-5 px-2">
         <p className="font-bold md:text-xl pt-5">{title}</p>
         <div className="flex items-center justify-between pt-10 pb-4">

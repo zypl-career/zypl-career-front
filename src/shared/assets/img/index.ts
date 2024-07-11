@@ -1,8 +1,8 @@
 import HeroImg from './hero.svg';
 import PaperPlane from './paper-plane.svg';
-import Guide from './guide.svg';
-import GenderIgnore from './gender-ignore.svg';
-import ChoiceCourses from './choice-coureses.svg';
+import Guide from './guide.png';
+import GenderIgnore from './gender-ignore.png';
+import ChoiceCourses from './choice-coureses.png';
 import Emblem from './emblem.svg';
 import Aflotoun from './aflotoun.svg';
 import Tajrupt from './tajrupt.svg';
@@ -14,6 +14,11 @@ import AgriculturalIndustry from './agricultural-industry.svg';
 import CareerArticles from './career-arcticles.svg';
 import FutureWorkImg from './future-work.png';
 import CareerDecide from './career-decide.png';
+import Tips from './tips.png';
+import Work from './work.png';
+import PlaceWork from './place-work.png';
+import ChildCareer from './child-career.png';
+import Achivments from './achivments.png';
 
 export {
   HeroImg,
@@ -31,5 +36,10 @@ export {
   AgriculturalIndustry,
   CareerArticles,
   FutureWorkImg,
-  CareerDecide
+  CareerDecide,
+  Tips,
+  Work,
+  PlaceWork,
+  Achivments,
+  ChildCareer
 };
