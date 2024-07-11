@@ -13,6 +13,7 @@ import Industries from './industies.svg';
 import AgriculturalIndustry from './agricultural-industry.svg';
 import CareerArticles from './career-arcticles.svg';
 import FutureWorkImg from './future-work.png';
+import CareerDecide from './career-decide.png';
 
 export {
   HeroImg,
@@ -30,4 +31,5 @@ export {
   AgriculturalIndustry,
   CareerArticles,
   FutureWorkImg,
+  CareerDecide
 };

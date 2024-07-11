@@ -1,4 +1,9 @@
-import { FutureWork, HeroCareerArticles, Navbar } from '@/entities';
+import {
+  FutureWork,
+  HeroCareerArticles,
+  MoreCardSection,
+  Navbar,
+} from '@/entities';
 import { Footer } from '@/widgets';
 
 const CareerArticlesPage = () => {
@@ -7,6 +12,7 @@ const CareerArticlesPage = () => {
       <Navbar />
       <HeroCareerArticles />
       <FutureWork />
+      <MoreCardSection />
       <Footer />
     </div>
   );
