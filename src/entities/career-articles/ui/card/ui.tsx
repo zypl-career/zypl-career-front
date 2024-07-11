@@ -13,7 +13,7 @@ export const MoreCardCareerArticles: FC<TMoreCardProps> = ({
   buttonText,
 }) => {
   return (
-    <div className="md:w-[416px] bg-white border border-gray-100 shadow-lg rounded-xl my-2">
+    <div className="md:w-[416px] bg-white border border-gray-100 shadow-lg rounded-xl my-2  transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer my-5">
       <Image
         src={imageSrc}
         alt={imageAlt}
