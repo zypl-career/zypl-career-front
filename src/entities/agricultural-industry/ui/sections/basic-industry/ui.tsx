@@ -1,4 +1,5 @@
 import { AgriculturalIndustry } from '@/shared';
+import { CardsAgricultural } from '@/entities';
 
 export const BasicIndustry = () => {
   return (
@@ -7,7 +8,7 @@ export const BasicIndustry = () => {
         Основы отрасли
       </h3>
       <div className="flex justify-center">
-        <p className="lg:w-[846px]">
+        <p className="lg:w-[846px] text-sm sm:text-base lg:text-lg">
           Таджикистан является высокоразвитой аграрной страной, где сельское
           население составляет более 70%, а на сельское хозяйство приходится 60%
           занятости и около 20% ВВП в 2020 году. Как это типично для экономик,
@@ -49,10 +50,21 @@ export const BasicIndustry = () => {
         <AgriculturalIndustry />
       </div>
       <div className="flex justify-center lg:px-0">
-        <h2 className="font-bold text-2xl lg:w-[830px]">
+        <h2 className="font-bold text-2xl lg:w-[830px] text-center">
           Самые востребованные профессии в сельском хозяйстве, лесном хозяйстве
           и рыбной промышленности
         </h2>
+      </div>
+      <div className="lg:mx-52">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:px-0">
+          <CardsAgricultural title="Агрономы" />
+          <CardsAgricultural title="Животноводы" />
+          <CardsAgricultural title="Ветеринарные врачи" />
+          <CardsAgricultural title="Зоотехники" />
+          <CardsAgricultural title="Комбайнеры" />
+          <CardsAgricultural title="Агроинженеры" />
+          <CardsAgricultural title="Работники рыбных хозяйств" />
+        </div>
       </div>
     </div>
   );
