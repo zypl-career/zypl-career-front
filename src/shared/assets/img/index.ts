@@ -19,6 +19,23 @@ import Work from './work.png';
 import PlaceWork from './place-work.png';
 import ChildCareer from './child-career.png';
 import Achivments from './achivments.png';
+import Newspaper from './newspaper.png';
+import Interview from './interview.png';
+import NutritionServices from './nutrition-services.png';
+import AgriculturulCard from './agricultural-card.png';
+import ServicesArea from './services-area.png';
+import Construction from './construction.png';
+import Education from './education.png';
+import PowerSupply from './power-supply.png';
+import AdminServices from './admin-services.png';
+import FinancialServices from './financial-services.png';
+import MedicalCare from './medical-care.png';
+import Media from './media.png';
+import Production from './production.png';
+import Extraction from './extraction.png';
+import OthersServices from './others-services.png';
+import Science from './science.png';
+import Safety from './safety.png';
 
 export {
   HeroImg,
@@ -41,5 +58,22 @@ export {
   Work,
   PlaceWork,
   Achivments,
-  ChildCareer
+  ChildCareer,
+  Newspaper,
+  Interview,
+  NutritionServices,
+  AgriculturulCard,
+  ServicesArea,
+  Construction,
+  Education,
+  PowerSupply,
+  AdminServices,
+  FinancialServices,
+  MedicalCare,
+  Media,
+  Production,
+  Extraction,
+  OthersServices,
+  Science,
+  Safety,
 };

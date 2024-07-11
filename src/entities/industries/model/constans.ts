@@ -1,9 +1,26 @@
-import { Guide, GenderIgnore, ChoiceCourses } from '@/shared';
+import {
+  ChoiceCourses,
+  NutritionServices,
+  AdminServices,
+  AgriculturulCard,
+  ServicesArea,
+  Construction,
+  Education,
+  PowerSupply,
+  FinancialServices,
+  MedicalCare,
+  Media,
+  Production,
+  Extraction,
+  OthersServices,
+  Science,
+  Safety,
+} from '@/shared';
 import { TCardProps } from '@/entities';
 
 export const moreDataIndustries: TCardProps[] = [
   {
-    imageSrc: Guide,
+    imageSrc: NutritionServices,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -11,7 +28,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: GenderIgnore,
+    imageSrc: AdminServices,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -19,7 +36,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: AgriculturulCard,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -27,7 +44,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: ServicesArea,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -35,7 +52,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: Construction,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -43,7 +60,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: Education,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -51,7 +68,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: PowerSupply,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -60,7 +77,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: FinancialServices,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -68,7 +85,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: MedicalCare,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -76,7 +93,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: Media,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -84,7 +101,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: Production,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -92,7 +109,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: Extraction,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -100,7 +117,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: OthersServices,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -108,7 +125,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: Science,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,
@@ -116,7 +133,7 @@ export const moreDataIndustries: TCardProps[] = [
     buttonText: 'Подробнее',
   },
   {
-    imageSrc: ChoiceCourses,
+    imageSrc: Safety,
     imageAlt: 'guide',
     imageHeight: 300,
     imageWidth: 470,

@@ -4,5 +4,6 @@ export type TCardMoreProps = {
   imageHeight: number;
   imageWidth: number;
   title: string;
+  date: string;
   buttonText: string;
 };

@@ -6,7 +6,7 @@ export const CardSectionIndustries = () => {
       <p className="lg:px-24 py-5">
         Выберите интересующую вас отрасль, чтобы просмотреть ее профиль.
       </p>
-      <div className="grid grid-rows-1 md:grid-cols-3 px-5 lg:mx-20 md:mx-20 pb-4 lg:pb-10">
+      <div className="grid grid-rows-1 lg:grid-cols-3 md:grid-cols-2 px-5 lg:mx-20 md:mx-20 pb-4 lg:pb-10">
         {moreDataIndustries.map((card, index) => (
           <MoreCardIndustries
             key={index}
