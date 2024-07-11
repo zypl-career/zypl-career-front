@@ -34,6 +34,7 @@ import VkontakteIcon from './Vkontakte.svg';
 import TgIcon from './tg.svg';
 import InstaIcon from './insta.svg';
 import FacebookIcn from './facebook-icn.svg';
+import WarningIcon from './warning.svg';
 
 export {
   LogoIcon,
@@ -72,4 +73,5 @@ export {
   TgIcon,
   InstaIcon,
   FacebookIcn,
+  WarningIcon,
 };

@@ -36,6 +36,7 @@ import Extraction from './extraction.png';
 import OthersServices from './others-services.png';
 import Science from './science.png';
 import Safety from './safety.png';
+import Content from './content.png';
 
 export {
   HeroImg,
@@ -76,4 +77,5 @@ export {
   OthersServices,
   Science,
   Safety,
+  Content,
 };
