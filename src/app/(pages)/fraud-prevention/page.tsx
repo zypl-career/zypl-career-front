@@ -3,7 +3,7 @@ import { Footer } from '@/widgets';
 
 const FraudPreventionPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen overflow-x-hidden">
       <Navbar />
       <FraudPreventionsHero />
       <Footer />

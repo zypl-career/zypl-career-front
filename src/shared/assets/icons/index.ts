@@ -30,6 +30,10 @@ import ArrowLeft from './arrow-left.svg';
 import MoneyIcon from './monet.svg';
 import SkillsLevelIcon from './skills-level.svg';
 import FutureGrowthIcon from './future-growth.svg';
+import VkontakteIcon from './Vkontakte.svg';
+import TgIcon from './tg.svg';
+import InstaIcon from './insta.svg';
+import FacebookIcn from './facebook-icn.svg';
 
 export {
   LogoIcon,
@@ -64,4 +68,8 @@ export {
   MoneyIcon,
   SkillsLevelIcon,
   FutureGrowthIcon,
+  VkontakteIcon,
+  TgIcon,
+  InstaIcon,
+  FacebookIcn,
 };
