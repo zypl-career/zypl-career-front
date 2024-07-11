@@ -12,6 +12,7 @@ import Professions from './professions.svg';
 import Industries from './industies.svg';
 import AgriculturalIndustry from './agricultural-industry.svg';
 import CareerArticles from './career-arcticles.svg';
+import FutureWorkImg from './future-work.png';
 
 export {
   HeroImg,
@@ -28,4 +29,5 @@ export {
   Industries,
   AgriculturalIndustry,
   CareerArticles,
+  FutureWorkImg,
 };
