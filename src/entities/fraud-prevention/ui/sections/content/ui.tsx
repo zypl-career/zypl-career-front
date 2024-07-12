@@ -1,6 +1,6 @@
 'use client';
 
-import { Warn } from '@/entities';
+import { KeyFindings, Warn } from '@/entities';
 import Image from 'next/image';
 import { Content } from '@/shared';
 
@@ -26,7 +26,7 @@ export const FraudPreventionContent = () => {
         <h2 className="text-3xl font-bold lg:w-[800px] lg:pt-10 lg:pb-5">
           Проблема, с которой мы сталкиваемся: обман на онлайн-тесте
         </h2>
-        <p className="text-[#2B2B2B] lg:w-[970px] leading-8">
+        <p className="text-[#2B2B2B] leading-8">
           Существует очень популярный миф о том, что люди, оцениваемые в
           Интернете, с большей вероятностью обманывают. Это уже было
           сфальсифицировано в исследованиях, ориентированных на образование.
@@ -44,7 +44,7 @@ export const FraudPreventionContent = () => {
         <div className="lg:py-5 py-10 lg:px-0 px-2 ">
           <Warn />
         </div>
-        <div className="lg:w-[950px]">
+        <div className="">
           <h2 className="text-3xl font-bold py-5">
             Нечестное поведение по всему миру
           </h2>
@@ -88,12 +88,8 @@ export const FraudPreventionContent = () => {
         </div>
       </div>
       <div className="py-5">
-        <Image
-          src={Content}
-          alt="content"
-          className="lg:w-[950px] w-full lg:px-0 "
-        />
-        <div className="lg:w-[950px] text-[#2B2B2B]">
+        <Image src={Content} alt="content" className="w-full lg:px-0 " />
+        <div className="text-[#2B2B2B] leading-9">
           <p className="text-[#7E7E7E] py-5">
             Англосаксонские страны обычно выступают против строгого прокторинга,
             в то время как немецкоязычные принимают его.
@@ -121,6 +117,9 @@ export const FraudPreventionContent = () => {
             поколение, более готовое давать или принимать взятки.
           </p>
         </div>
+      </div>
+      <div>
+        <KeyFindings />
       </div>
     </div>
   );

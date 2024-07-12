@@ -1,7 +1,6 @@
 import {
   BadgeSection,
   MoreCardCareerArticles,
-  MoreCardIndustries,
   moreDataCareer,
 } from '@/entities';
 
