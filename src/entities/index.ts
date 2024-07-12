@@ -12,3 +12,4 @@ export * from './energy';
 export * from './career-articles';
 export * from './fraud-prevention';
 export * from './educational-institutions';
+export * from './general-info';
