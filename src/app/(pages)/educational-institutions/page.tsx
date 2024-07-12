@@ -1,4 +1,4 @@
-import { HeroEducational, Navbar } from '@/entities';
+import {HeroEducational, Navbar, UniversitySection} from '@/entities';
 import { Footer } from '@/widgets';
 
 const EnergyPage = () => {
@@ -6,6 +6,7 @@ const EnergyPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <HeroEducational />
+        <UniversitySection />
       <Footer />
     </div>
   );
