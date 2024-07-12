@@ -1,12 +1,18 @@
-import { GeneralInfoHero, GeneralInfoSection, Navbar } from '@/entities';
+import {
+  GeneralInfoContent,
+  GeneralInfoHero,
+  GeneralInfoSection,
+  Navbar,
+} from '@/entities';
 import { Footer } from '@/widgets';
 
 const GeneralInfoPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <GeneralInfoHero />
       <GeneralInfoSection />
+      <GeneralInfoContent />
       <Footer />
     </div>
   );
