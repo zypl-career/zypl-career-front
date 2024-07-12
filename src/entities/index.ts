@@ -13,3 +13,4 @@ export * from './career-articles';
 export * from './fraud-prevention';
 export * from './educational-institutions';
 export * from './general-info';
+export * from './resources-seekers';

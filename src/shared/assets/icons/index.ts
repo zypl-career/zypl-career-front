@@ -35,6 +35,7 @@ import TgIcon from './tg.svg';
 import InstaIcon from './insta.svg';
 import FacebookIcn from './facebook-icn.svg';
 import WarningIcon from './warning.svg';
+import DowloadIcon from './dowload.svg';
 
 export {
   LogoIcon,
@@ -74,4 +75,5 @@ export {
   InstaIcon,
   FacebookIcn,
   WarningIcon,
+  DowloadIcon,
 };
