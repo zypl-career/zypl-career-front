@@ -11,3 +11,4 @@ export * from './agricultural-industry';
 export * from './energy';
 export * from './career-articles';
 export * from './fraud-prevention';
+export * from './educational-institutions';

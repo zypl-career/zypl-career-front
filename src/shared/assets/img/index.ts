@@ -40,6 +40,7 @@ import Content from './content.png';
 import ArtisticDirectors from './artistic-directors.png';
 import Author from './author.png';
 import AdminDatabase from './admin-database.png';
+import Universities from './universities.png';
 
 export {
   HeroImg,
@@ -84,4 +85,5 @@ export {
   ArtisticDirectors,
   Author,
   AdminDatabase,
+  Universities,
 };
