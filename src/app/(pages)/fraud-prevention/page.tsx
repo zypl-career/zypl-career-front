@@ -1,6 +1,7 @@
 import {
   FraudPreventionContent,
   FraudPreventionsHero,
+  MoreCardSectionFraud,
   Navbar,
 } from '@/entities';
 import { Footer } from '@/widgets';
@@ -11,6 +12,7 @@ const FraudPreventionPage = () => {
       <Navbar />
       <FraudPreventionsHero />
       <FraudPreventionContent />
+      <MoreCardSectionFraud />
       <Footer />
     </div>
   );

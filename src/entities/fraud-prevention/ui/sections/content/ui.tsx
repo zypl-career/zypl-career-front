@@ -1,6 +1,9 @@
 'use client';
 
-import { KeyFindings, Warn } from '@/entities';
+import {
+  KeyFindings,
+  Warn
+} from '@/entities';
 import Image from 'next/image';
 import { Content } from '@/shared';
 

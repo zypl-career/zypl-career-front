@@ -37,6 +37,9 @@ import OthersServices from './others-services.png';
 import Science from './science.png';
 import Safety from './safety.png';
 import Content from './content.png';
+import ArtisticDirectors from './artistic-directors.png';
+import Author from './author.png';
+import AdminDatabase from './admin-database.png';
 
 export {
   HeroImg,
@@ -78,4 +81,7 @@ export {
   Science,
   Safety,
   Content,
+  ArtisticDirectors,
+  Author,
+  AdminDatabase,
 };
