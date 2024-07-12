@@ -1,12 +1,18 @@
-import {HeroEducational, Navbar, UniversitySection} from '@/entities';
+import {
+  HeroEducational,
+  Navbar,
+  NextSections,
+  UniversitySection,
+} from '@/entities';
 import { Footer } from '@/widgets';
 
 const EnergyPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen overflow-x-hidden">
       <Navbar />
       <HeroEducational />
-        <UniversitySection />
+      <UniversitySection />
+      <NextSections />
       <Footer />
     </div>
   );
