@@ -43,6 +43,7 @@ import AdminDatabase from './admin-database.png';
 import Universities from './universities.png';
 import GeneralInfo from './general-information.png';
 import ResourcesSeekers from './resources-seekers.png';
+import ModernSpecial from './modern-special.png';
 
 export {
   HeroImg,
@@ -90,4 +91,5 @@ export {
   Universities,
   GeneralInfo,
   ResourcesSeekers,
+  ModernSpecial,
 };
