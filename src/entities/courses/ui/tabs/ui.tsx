@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { TABS_DATA } from '@/entities';
+import { BADGES_DATA, TABS_DATA } from '@/entities';
 import { Badge } from '@/shared';
 
 export const TabsCourses = () => {
@@ -23,20 +23,9 @@ export const TabsCourses = () => {
       <div className="py-4 bg-white">
         {activeTab === 1 && (
           <div>
-            <Badge title="Все" />
-            <Badge title="ИКТ" />
-            <Badge title="Энергетика" />
-            <Badge title="Механика" />
-            <Badge title="Физика" />
-            <Badge title="Сохтмон" />
-            <Badge title="Агро" />
-            <Badge title="Экология" />
-            <Badge title="Гео" />
-            <Badge title="Истехсолот" />
-            <Badge title="Авиа" />
-            <Badge title="Механика" />
-            <Badge title="Математика" />
-            <Badge title="Кимиё" />
+            {BADGES_DATA.map((badge) => (
+              <Badge key={badge.id} title={badge.title} />
+            ))}
           </div>
         )}
         {activeTab === 2 && <div>Content for Библиотека курсов</div>}

@@ -1,4 +1,4 @@
-import { TabsCourses } from '@/entities';
+import { CardSection, TabsCourses } from '@/entities';
 
 export const CoursesHero = () => {
   return (
@@ -9,6 +9,7 @@ export const CoursesHero = () => {
         интересы и достижения.
       </p>
       <TabsCourses />
+      <CardSection />
     </div>
   );
 };

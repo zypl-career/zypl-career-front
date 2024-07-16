@@ -44,6 +44,15 @@ import Universities from './universities.png';
 import GeneralInfo from './general-information.png';
 import ResourcesSeekers from './resources-seekers.png';
 import ModernSpecial from './modern-special.png';
+import GeneralElectronics from './general-electronics.png';
+import OilandGas from './oiland-gas.png';
+import TrunkIndustry from './trunk-industry.png';
+import Corrosion from './corrosion.png';
+import TheretorialMechanics from './thereotheral-mechanocs.png';
+import LifeSafety from './life-safety.png';
+import Physics from './physics.png';
+import BasicsEngineering from './basics-engineering.png';
+import TechnicalSupport from './technical-support.png';
 
 export {
   HeroImg,
@@ -92,4 +101,13 @@ export {
   GeneralInfo,
   ResourcesSeekers,
   ModernSpecial,
+  GeneralElectronics,
+  OilandGas,
+  TrunkIndustry,
+  Corrosion,
+  TheretorialMechanics,
+  LifeSafety,
+  Physics,
+  BasicsEngineering,
+  TechnicalSupport,
 };
