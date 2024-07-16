@@ -15,3 +15,4 @@ export * from './educational-institutions';
 export * from './general-info';
 export * from './resources-seekers';
 export * from './modern-special';
+export * from './courses';
