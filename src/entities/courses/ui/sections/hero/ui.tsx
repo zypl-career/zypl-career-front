@@ -8,8 +8,9 @@ export const CoursesHero = () => {
         Изучите курсы, разработанные специально для вас и отражающие ваши
         интересы и достижения.
       </p>
-      <TabsCourses />
-      <CardSection />
+      <div className="my-5">
+        <TabsCourses />
+      </div>
     </div>
   );
 };

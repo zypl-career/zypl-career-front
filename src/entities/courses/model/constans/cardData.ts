@@ -4,9 +4,10 @@ import {
   GeneralElectronics,
   LifeSafety,
   OilandGas,
-  Physics, TechnicalSupport,
+  Physics,
+  TechnicalSupport,
   TheretorialMechanics,
-  TrunkIndustry
+  TrunkIndustry,
 } from '@/shared';
 import { TCardCoursesProps } from '..';
 

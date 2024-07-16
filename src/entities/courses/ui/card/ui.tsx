@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { TMoreCardProps } from '@/entities';
 import Image from 'next/image';
+import { ProgressBar, TCardCoursesProps } from '@/entities';
 
-export const CardCourses: FC<TMoreCardProps> = ({
+export const CardCourses: FC<TCardCoursesProps> = ({
   imageSrc,
   imageAlt,
   imageHeight,
@@ -16,11 +16,11 @@ export const CardCourses: FC<TMoreCardProps> = ({
         alt={imageAlt}
         height={imageHeight}
         width={imageWidth}
+        className="rounded-t-xl"
       />
-      <div className="md:px-5  px-2">
+      <div className="md:px-5 px-2">
         <p className="font-bold md:text-xl pt-5">{title}</p>
-        <div className="flex items-center justify-between pt-10 pb-4">
-        </div>
+        <ProgressBar />
       </div>
     </div>
   );

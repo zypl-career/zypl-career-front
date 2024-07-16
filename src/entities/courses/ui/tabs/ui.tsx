@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { BADGES_DATA, TABS_DATA } from '@/entities';
+import { BADGES_DATA, CardSection, TABS_DATA } from '@/entities';
 import { Badge } from '@/shared';
 
 export const TabsCourses = () => {
@@ -26,9 +26,12 @@ export const TabsCourses = () => {
             {BADGES_DATA.map((badge) => (
               <Badge key={badge.id} title={badge.title} />
             ))}
+            <CardSection />
           </div>
         )}
-        {activeTab === 2 && <div>Content for Библиотека курсов</div>}
+        {activeTab === 2 && (
+          <div> Здесь будет контенд для раздела "Библиотека курсов"</div>
+        )}
       </div>
     </div>
   );
