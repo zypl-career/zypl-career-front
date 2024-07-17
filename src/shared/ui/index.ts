@@ -4,3 +4,4 @@ export * from './input';
 export * from './password';
 export * from './badges';
 export * from './dowload';
+export * from './warn-content';
