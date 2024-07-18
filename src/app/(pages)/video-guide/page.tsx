@@ -1,6 +1,6 @@
 import { Navbar, VideoGuideHero } from '@/entities';
 import { Footer } from '@/widgets';
-import { VideoCardUI } from '@/features/video/ui';
+import { VideoCardUI } from '@/features';
 
 const VideoGuidePage = () => {
   return (

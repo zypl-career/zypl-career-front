@@ -1,12 +1,12 @@
-import {CareerProfileHero, Navbar, Tabs} from '@/entities';
+import { CareerProfileHero, Navbar, TabsContent } from '@/entities';
 import { Footer } from '@/widgets';
 
 const CareerProfilePage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <CareerProfileHero />
-      <Tabs />
+      <TabsContent />
       <Footer />
     </div>
   );
