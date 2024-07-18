@@ -1,9 +1,5 @@
-import {
-  ContentModernSpecial,
-  KeyFindingsSection,
-  ModernSpecialHero,
-  Navbar,
-} from '@/entities';
+import { ContentModernSpecial, ModernSpecialHero, Navbar } from '@/entities';
+import { Footer } from '@/widgets';
 
 export const ModernSpecialPage = () => {
   return (
@@ -11,6 +7,7 @@ export const ModernSpecialPage = () => {
       <Navbar />
       <ModernSpecialHero />
       <ContentModernSpecial />
+      <Footer />
     </div>
   );
 };

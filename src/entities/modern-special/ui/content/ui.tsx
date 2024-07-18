@@ -1,5 +1,5 @@
 import { WarnContent } from '@/shared';
-import { KeyFindingsSection } from '@/entities';
+import { ArticlesTheme, KeyFindingsSection } from '@/entities';
 import { TEXTS } from '.';
 
 export const ContentModernSpecial = () => {
@@ -34,6 +34,7 @@ export const ContentModernSpecial = () => {
       <div className="py-2">
         <KeyFindingsSection />
       </div>
+      <ArticlesTheme />
     </div>
   );
 };
