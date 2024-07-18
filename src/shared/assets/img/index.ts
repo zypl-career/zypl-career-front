@@ -53,6 +53,7 @@ import LifeSafety from './life-safety.png';
 import Physics from './physics.png';
 import BasicsEngineering from './basics-engineering.png';
 import TechnicalSupport from './technical-support.png';
+import VideoHero from './video-hero.png';
 
 export {
   HeroImg,
@@ -110,4 +111,5 @@ export {
   Physics,
   BasicsEngineering,
   TechnicalSupport,
+  VideoHero,
 };
