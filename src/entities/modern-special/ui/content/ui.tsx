@@ -31,7 +31,7 @@ export const ContentModernSpecial = () => {
           <span key={index}>{text}</span>
         ))}
       </p>
-      <div className="py-2">
+      <div className="py-10">
         <KeyFindingsSection />
       </div>
       <ArticlesTheme />
