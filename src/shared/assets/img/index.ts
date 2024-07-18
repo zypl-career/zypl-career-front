@@ -54,6 +54,9 @@ import Physics from './physics.png';
 import BasicsEngineering from './basics-engineering.png';
 import TechnicalSupport from './technical-support.png';
 import VideoHero from './video-hero.png';
+import Register from './register.png';
+import Login from './login.png';
+import MyCareer from './my-career.png';
 
 export {
   HeroImg,
@@ -112,4 +115,7 @@ export {
   BasicsEngineering,
   TechnicalSupport,
   VideoHero,
+  Register,
+  Login,
+  MyCareer,
 };

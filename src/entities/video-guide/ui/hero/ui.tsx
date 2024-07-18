@@ -1,7 +1,12 @@
+'use client';
+
+import { FC } from 'react';
 import { VideoHero } from '@/shared';
+import type { TVideoHeroProps } from '.';
+
 import Image from 'next/image';
 
-export const VideoGuideHero = () => {
+export const VideoGuideHero: FC<TVideoHeroProps> = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between bg-white lg:px-36">
       <div className="py-5 px-2 md:py-32">
@@ -15,7 +20,7 @@ export const VideoGuideHero = () => {
         </p>
       </div>
       <div className="lg:w-96 py-24  md:px-16 flex justify-center">
-        <Image src={VideoHero} alt="educational" />
+        <Image src={VideoHero} alt="video-hero" />
       </div>
     </div>
   );
