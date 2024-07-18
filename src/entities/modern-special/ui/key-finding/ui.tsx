@@ -1,8 +1,9 @@
-import * as React from 'react';
+import { FC } from 'react';
+
 import { KEY_FINDINGS } from '@/entities';
 import { KeyFindingsUI } from '@/shared';
 
-export const KeyFindingsSection: React.FC = () => {
+export const KeyFindingsSection: FC = () => {
   return (
     <div>
       {KEY_FINDINGS.map((finding, index) => (
