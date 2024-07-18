@@ -5,3 +5,4 @@ export * from './password';
 export * from './badges';
 export * from './dowload';
 export * from './warn-content';
+export * from './key-findings';

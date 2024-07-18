@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const ModernSpecialHero = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between bg-white lg:px-20">
+    <div className="flex flex-col md:flex-row justify-between bg-gray-100 lg:px-20">
       <div className="py-5 px-2  md:py-32">
         <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8">
           Какие специалисты нужны современному Таджикистану

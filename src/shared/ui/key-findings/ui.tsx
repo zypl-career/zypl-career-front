@@ -1,9 +1,10 @@
-export const KeyFindingsUI = ({ title, description, subtitle }) => {
+import { FC } from 'react';
+import type { TKeyFindingsProps } from '.';
+
+export const KeyFindingsUI: FC<TKeyFindingsProps> = ({ title, content }) => {
   return (
-    <div className="bg-[#F2F5F8] rounded-xl p-10">
+    <div className="bg-[#F2F5F8] rounded-xl">
       <h3 className="py-2 text-xl font-bold">{title}</h3>
-      <p className="font-bold">{subtitle}</p>
-      <p className="leading-9">{description}</p>
     </div>
   );
 };

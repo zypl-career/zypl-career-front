@@ -1,9 +1,10 @@
-import { TEXTS } from '.';
 import { WarnContent } from '@/shared';
+import { KeyFindingsSection } from '@/entities';
+import { TEXTS } from '.';
 
 export const ContentModernSpecial = () => {
   return (
-    <div className="lg:px-48">
+    <div className="px-5 lg:px-48">
       <div className="leading-9">
         <p className="py-4 text-[#2B2B2B]">{TEXTS.paragraph1}</p>
         <WarnContent title={TEXTS.warnContent1} />
@@ -21,10 +22,17 @@ export const ContentModernSpecial = () => {
           ))}
         </p>
       </div>
-      <div className="pb-2">
+      <div className="py-2 font-bold text-2xl">
         <WarnContent title={TEXTS.warnContent2} />
         <h2 className="py-2">{TEXTS.header2}</h2>
-        <WarnContent title={TEXTS.warnContent3} />
+      </div>
+      <p className="pb-2">
+        {TEXTS.warnContent3.split('\n').map((text, index) => (
+          <span key={index}>{text}</span>
+        ))}
+      </p>
+      <div className="py-2">
+        <KeyFindingsSection />
       </div>
     </div>
   );
