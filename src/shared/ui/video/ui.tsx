@@ -14,7 +14,11 @@ export const VideoCard: FC<TVideoProps> = ({
       <div className="bg-white border shadow py-8 rounded-xl">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-3 lg:gap-20 px-4 lg:px-20">
           <p>{description}</p>
-          <Image src={imageSrc} alt="image" className="w-full lg:w-96 cursor-pointer transform transition-transform duration-200 hover:scale-110" />
+          <Image
+            src={imageSrc}
+            alt="image"
+            className="w-full lg:w-96 cursor-pointer transform transition-transform duration-200 hover:scale-110"
+          />
         </div>
       </div>
     </div>

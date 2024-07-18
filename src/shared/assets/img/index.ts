@@ -57,6 +57,7 @@ import VideoHero from './video-hero.png';
 import Register from './register.png';
 import Login from './login.png';
 import MyCareer from './my-career.png';
+import CareerProfile from './career-profile.png';
 
 export {
   HeroImg,
@@ -118,4 +119,5 @@ export {
   Register,
   Login,
   MyCareer,
+  CareerProfile,
 };
