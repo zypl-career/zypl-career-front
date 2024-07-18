@@ -58,6 +58,9 @@ import Register from './register.png';
 import Login from './login.png';
 import MyCareer from './my-career.png';
 import CareerProfile from './career-profile.png';
+import Progress80 from './progressbar-80.png';
+import Progress68 from './progress-68.png';
+import Progress42 from './progress-42.png';
 
 export {
   HeroImg,
@@ -120,4 +123,7 @@ export {
   Login,
   MyCareer,
   CareerProfile,
+  Progress80,
+  Progress68,
+  Progress42
 };

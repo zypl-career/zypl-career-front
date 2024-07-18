@@ -1,14 +1,11 @@
 import { Button, TimeIcon } from '@/shared';
+import { cardFutureData } from '.';
 
 export const CardFuture = () => {
   return (
     <div className="bg-white py-5 px-5">
-      <h3 className="font-bold text-lg">Формируйте свое будущее</h3>
-      <p className="text-gray-600">
-        zypl.career предоставляет ресурсы для изучения карьерных путей и
-        инструментов для развития самопознания, чтобы помочь в принятии решений
-        о карьере.
-      </p>
+      <h3 className="font-bold text-lg">{cardFutureData.title}</h3>
+      <p className="text-gray-600">{cardFutureData.description}</p>
       <div className="pt-5 lg:pt-10 lg:flex items-center gap-2">
         <Button variant="subscribe" showRightArrowIcon={true} size="subscribe">
           Пройти тест

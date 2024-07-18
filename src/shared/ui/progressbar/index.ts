@@ -1,3 +1,3 @@
 export * from './ui';
-export * from './constans';
+export * from './styles';
 export type * from './types';
