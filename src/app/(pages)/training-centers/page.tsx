@@ -1,12 +1,11 @@
-import { CardsPartners, Navbar, PartnersHero } from '@/entities';
+import { Navbar, TrainingCenterHero } from '@/entities';
 import { Footer } from '@/widgets';
 
 const PartnersPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
-      <PartnersHero />
-      <CardsPartners />
+      <TrainingCenterHero />
       <Footer />
     </div>
   );

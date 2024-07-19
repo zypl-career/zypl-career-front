@@ -65,6 +65,16 @@ import AboutUs from './about-us.png';
 import Partners from './partners.png';
 import UnicefPartners from './unicef-partners.png';
 import China from './china.png';
+import TrainingCenters from './training-centers.png';
+import Ilmhona from './ilmhona.png';
+import Repititor from './repititor.png';
+import Lider from './lider.png';
+import Edgir from './edgir.png';
+import Qalam from './qalam.png';
+import CentralAsia from './central-asia.png';
+import AmericanSchool from './american-school.png';
+import CenterIct from './center-ict.png';
+import AlifAcademy from './alif-academy.png';
 
 export {
   HeroImg,
@@ -134,4 +144,14 @@ export {
   Partners,
   UnicefPartners,
   China,
+  TrainingCenters,
+  Ilmhona,
+  Repititor,
+  Lider,
+  Edgir,
+  Qalam,
+  CentralAsia,
+  AmericanSchool,
+  CenterIct,
+  AlifAcademy,
 };

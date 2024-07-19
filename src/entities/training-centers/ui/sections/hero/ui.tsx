@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { AboutUs } from '@/shared';
+import { TrainingCenters } from '@/shared';
 import { HERO_DATA } from '.';
 
-export const AboutUsHero = () => {
+export const TrainingCenterHero = () => {
   return (
     <section className="flex flex-col md:flex-row justify-between bg-white px-5">
       {HERO_DATA.map((hero, index) => (
@@ -19,7 +19,7 @@ export const AboutUsHero = () => {
         </div>
       ))}
       <div className="py-32 md:px-16">
-        <Image src={AboutUs} alt="about-us" />
+        <Image src={TrainingCenters} alt="about-us" />
       </div>
     </section>
   );
