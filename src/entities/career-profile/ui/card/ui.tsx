@@ -3,7 +3,7 @@ import { cardFutureData } from '.';
 
 export const CardFuture = () => {
   return (
-    <div className="bg-white py-5 px-5">
+    <div className="py-5 px-5 mt-8 p-4 bg-white shadow w-full lg:w-[580px] rounded-xl ">
       <h3 className="font-bold text-lg">{cardFutureData.title}</h3>
       <p className="text-gray-600">{cardFutureData.description}</p>
       <div className="pt-5 lg:pt-10 lg:flex items-center gap-2">

@@ -125,5 +125,5 @@ export {
   CareerProfile,
   Progress80,
   Progress68,
-  Progress42
+  Progress42,
 };

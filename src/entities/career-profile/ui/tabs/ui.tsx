@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { CardFuture } from '@/entities';
+import { Table } from '@/features';
 
 export const Tabs = () => {
   const [activeTab, setActiveTab] = useState('tests');
@@ -31,15 +32,8 @@ export const Tabs = () => {
           Результаты
         </div>
       </div>
-      <div className="mt-8 p-4 bg-white shadow w-full lg:w-[580px] rounded-xl">
-        {activeTab === 'tests' && <CardFuture />}
-        {activeTab === 'results' && (
-          <div>
-            <h2 className="text-xl font-bold mb-2">Таб 2</h2>
-            <p>Здесь содержимое для таба "Результаты".</p>
-          </div>
-        )}
-      </div>
+      {activeTab === 'tests' && <CardFuture />}
+      {activeTab === 'results' && <Table />}
     </div>
   );
 };
