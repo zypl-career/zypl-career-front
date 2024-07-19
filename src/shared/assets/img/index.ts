@@ -61,6 +61,7 @@ import CareerProfile from './career-profile.png';
 import Progress80 from './progressbar-80.png';
 import Progress68 from './progress-68.png';
 import Progress42 from './progress-42.png';
+import AboutUs from './about-us.png';
 
 export {
   HeroImg,
@@ -126,4 +127,5 @@ export {
   Progress80,
   Progress68,
   Progress42,
+  AboutUs,
 };
