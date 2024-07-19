@@ -30,4 +30,5 @@ export type TSizeType =
   | 'lg'
   | 'icon'
   | 'subscribe'
-  | 'followFuture';
+  | 'followFuture'
+  | 'cluster';

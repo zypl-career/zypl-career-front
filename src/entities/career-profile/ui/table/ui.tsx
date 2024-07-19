@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Button } from '@/shared';
 import { TABLE_DATA, type TResultsTableProps } from '.';
 
 import Image from 'next/image';
@@ -18,6 +19,11 @@ export const TableResults: FC<TResultsTableProps> = ({ title }) => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="py-4">
+        <Button variant="subscribe" size="cluster" showRightArrowIcon={true}>
+          Посмотреть подходящие професии
+        </Button>
       </div>
     </div>
   );
