@@ -19,3 +19,4 @@ export * from './courses';
 export * from './video-guide';
 export * from './career-profile';
 export * from './about-us';
+export * from './partners';

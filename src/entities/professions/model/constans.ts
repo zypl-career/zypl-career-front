@@ -1,8 +1,6 @@
-export interface Profession {
-  title: string;
-}
+import { TProfession } from '.';
 
-export const professions: Profession[] = [
+export const professions: TProfession[] = [
   { title: 'ИКТ' },
   { title: 'Механика' },
   { title: 'Сохтмон' },

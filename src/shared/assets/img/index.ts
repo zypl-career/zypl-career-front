@@ -62,6 +62,7 @@ import Progress80 from './progressbar-80.png';
 import Progress68 from './progress-68.png';
 import Progress42 from './progress-42.png';
 import AboutUs from './about-us.png';
+import Partners from './partners.png';
 
 export {
   HeroImg,
@@ -128,4 +129,5 @@ export {
   Progress68,
   Progress42,
   AboutUs,
+  Partners,
 };
