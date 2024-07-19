@@ -1,12 +1,12 @@
-import {CardsSection,  Navbar} from '@/entities';
+import { CardsSection, Navbar } from '@/entities';
 import { Footer } from '@/widgets';
-import {PartnersHero} from "@/entities/partners/ui/sections/hero";
+import { PartnersHero } from '@/entities/partners/ui/sections/hero';
 
 const PartnersPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
-        <PartnersHero />
+      <PartnersHero />
       <CardsSection />
       <Footer />
     </div>
