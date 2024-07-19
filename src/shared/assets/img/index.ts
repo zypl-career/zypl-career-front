@@ -63,6 +63,8 @@ import Progress68 from './progress-68.png';
 import Progress42 from './progress-42.png';
 import AboutUs from './about-us.png';
 import Partners from './partners.png';
+import UnicefPartners from './unicef-partners.png';
+import China from './china.png';
 
 export {
   HeroImg,
@@ -130,4 +132,6 @@ export {
   Progress42,
   AboutUs,
   Partners,
+  UnicefPartners,
+  China,
 };
