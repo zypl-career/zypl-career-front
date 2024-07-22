@@ -8,3 +8,4 @@ export * from './warn-content';
 export * from './key-findings';
 export * from './video';
 export * from './progressbar';
+export * from './radio';

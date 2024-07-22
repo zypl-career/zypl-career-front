@@ -23,7 +23,8 @@ export type TVariantType =
   | 'purpleOutline'
   | 'register'
   | 'subscribe'
-  | 'outlineCard';
+  | 'outlineCard'
+  | 'gray';
 export type TSizeType =
   | 'default'
   | 'sm'

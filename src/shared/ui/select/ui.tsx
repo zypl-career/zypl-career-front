@@ -37,7 +37,7 @@ const selectVariants = cva(
 
 const Select = React.forwardRef<
   HTMLSelectElement,
-  TSelectProps & { showFlagIcon?: boolean; options: string[] }
+  TSelectProps & { showFlagIcon?: boolean; options: string[]; label?: string }
 >(
   (
     {
@@ -48,6 +48,7 @@ const Select = React.forwardRef<
       asChild = false,
       children,
       options = [],
+      label,
       ...props
     },
     ref,
@@ -65,37 +66,54 @@ const Select = React.forwardRef<
 
     return (
       <div className={cn('relative', className)}>
+        {label && (
+          <label className="block mb-1 text-sm font-medium text-gray-700">
+            {label}
+          </label>
+        )}
         {showFlagIcon && (
           <div className="absolute left-5 inset-y-0 flex items-center pointer-events-none">
             <RussianFlag />
           </div>
         )}
-        <Comp
-          className={cn(
-            selectVariants({ variant, size, className }),
-            'appearance-none pl-10',
-          )}
-          ref={ref}
-          {...props}
-          onClick={handleToggle}
-          onBlur={handleBlur}
-        >
-          {options.map((option, index) => (
-            <option key={index} value={option}>
-              {option}
-            </option>
-          ))}
-          {children}
-        </Comp>
-        <div
-          className={cn(
-            'absolute right-6 inset-y-0 flex items-center pointer-events-none transition-transform duration-300',
-            {
-              'rotate-180': isOpen,
-            },
-          )}
-        >
-          <ArrowDownIcon />
+        <div className="relative">
+          <Comp
+            className={cn(
+              selectVariants({ variant, size, className }),
+              'appearance-none pl-10 pr-10',
+            )}
+            ref={ref}
+            {...props}
+            onClick={handleToggle}
+            onBlur={handleBlur}
+          >
+            {options.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+            {children}
+          </Comp>
+          <div
+            className={cn(
+              'absolute right-6 inset-y-0 flex items-center pointer-events-none transition-transform duration-300',
+              {
+                'rotate-180': isOpen,
+              },
+            )}
+          >
+            <DropdownIcon />
+          </div>
+          <div
+            className={cn(
+              'absolute right-6 inset-y-0 flex items-center pointer-events-none transition-transform duration-300',
+              {
+                'rotate-180': isOpen,
+              },
+            )}
+          >
+            <ArrowDownIcon />
+          </div>
         </div>
       </div>
     );
