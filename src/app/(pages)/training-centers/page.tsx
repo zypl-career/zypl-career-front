@@ -1,4 +1,9 @@
-import { Navbar, TrainingCenterHero } from '@/entities';
+import {
+  BadgesSection,
+  MoreCardTraining,
+  Navbar,
+  TrainingCenterHero,
+} from '@/entities';
 import { Footer } from '@/widgets';
 
 const PartnersPage = () => {
@@ -6,6 +11,9 @@ const PartnersPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <TrainingCenterHero />
+      <BadgesSection />
+      <p className="text-center font-semibold text-2xl">Душанбе</p>
+      <MoreCardTraining />
       <Footer />
     </div>
   );
