@@ -17,7 +17,7 @@ const selectVariants = cva(
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline: 'border border-[#D1D5DB] rounded-md',
-        secondary: 'bg-purple-800 text-white hover:bg-purple-800 border-none',
+        secondary: 'theme:bg-transparent theme:text-primary bg-purple-800 text-white hover:bg-purple-800 border-none',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
       },
@@ -67,6 +67,7 @@ const Select = React.forwardRef<
       <div className={cn('relative', className)}>
         {showFlagIcon && (
           <div className="absolute left-5 inset-y-0 flex items-center pointer-events-none">
+            {/*<img src= alt=""/>*/}
             <RussianFlag />
           </div>
         )}

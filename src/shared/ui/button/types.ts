@@ -1,11 +1,15 @@
 import * as React from 'react';
 import type { VariantProps } from 'class-variance-authority';
 import { buttonVariants } from '@/shared';
+import {ReactNode} from "react";
 
 export type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
-    showGlassesIcon?: boolean;
+    showRightArrowIcon?: boolean;
+    rounded?: TRounded;
+    startIcon?: ReactNode;
+    endIcon?: ReactNode;
   };
 
 export type TVariantType =
@@ -24,6 +28,7 @@ export type TVariantType =
   | 'register'
   | 'subscribe'
   | 'outlineCard';
+
 export type TSizeType =
   | 'default'
   | 'sm'
@@ -31,3 +36,10 @@ export type TSizeType =
   | 'icon'
   | 'subscribe'
   | 'followFuture';
+
+export type TRounded =
+  | 'default'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'full'

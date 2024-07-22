@@ -1,5 +1,5 @@
 import LogoIcon from './logo.svg';
-import GlassesIcon from './glasses.svg';
+import GlassesIcon from './glasses';
 import RussianFlag from './russian-flag.svg';
 import ArrowDownIcon from './arrow-down';
 import DropdownIcon from './dropdown';

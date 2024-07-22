@@ -1,25 +1,35 @@
-import { Button, LogoIcon, Select } from '@/shared';
+import { Button, cn, GlassesIcon, Logo, LogoIcon, Select, useTheme } from '@/shared';
+import { Themes } from "@/features/themes/ui";
 
 export const Header = () => {
+  const { theme } = useTheme();
   return (
-    <header className="w-full bg-purple-800 py-5 md:px-20">
-      <div className="flex justify-between items-center px-5">
-        <LogoIcon />
-        <div className="flex items-center">
-          <div className="hidden md:block">
-            <Button showGlassesIcon={true} variant="secondary" size="default">
-              Версия для слабовидящих
-            </Button>
+    <>
+      <Themes />
+      <header className={cn('w-full py-5 md:px-20', theme ? 'bg-primaryBg' : 'bg-purple-800')}>
+        <div className="flex justify-between items-center px-5">
+          <Logo className="theme:fill-primary" />
+          <div className="flex items-center not">
+            <div className="hidden md:block">
+              <Button
+                startIcon={<GlassesIcon className="theme:stroke-primaryBg stroke-purple-900" />}
+                variant="secondary"
+                size="default"
+                className="mt-2.5"
+              >
+                Версия для слабовидящих
+              </Button>
+            </div>
+            <Select
+              showFlagIcon
+              variant="secondary"
+              options={['Русский', 'Английсский']}
+              size="default"
+              className="ml-4"
+            />
           </div>
-          <Select
-            showFlagIcon={true}
-            variant="secondary"
-            options={['Русский', 'Английсский']}
-            size="default"
-            className="ml-4"
-          />
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
