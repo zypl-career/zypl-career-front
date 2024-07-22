@@ -38,6 +38,7 @@ import WarningIcon from './warning.svg';
 import DowloadIcon from './dowload.svg';
 import HamburgerIcon from './hamburger.svg';
 import UserIcon from './user.svg';
+import TimeIcon from './time.svg';
 
 export {
   LogoIcon,
@@ -80,4 +81,5 @@ export {
   DowloadIcon,
   HamburgerIcon,
   UserIcon,
+  TimeIcon,
 };

@@ -3,11 +3,11 @@ import PaperPlane from './paper-plane.svg';
 import Guide from './guide.png';
 import GenderIgnore from './gender-ignore.png';
 import ChoiceCourses from './choice-coureses.png';
-import Emblem from './emblem.svg';
-import Aflotoun from './aflotoun.svg';
-import Tajrupt from './tajrupt.svg';
-import Unicef from './uniсef.svg';
-import Flag from './flag.svg';
+import Emblem from './emblem.png';
+import Aflotoun from './aflotoun.png';
+import Tajrupt from './tajrupt.png';
+import Unicef from './unicef.png';
+import Flag from './flag.png';
 import Professions from './professions.svg';
 import Industries from './industies.svg';
 import AgriculturalIndustry from './agricultural-industry.svg';
@@ -55,6 +55,28 @@ import BasicsEngineering from './basics-engineering.png';
 import TechnicalSupport from './technical-support.png';
 import Hero from './hero.png';
 import Logo from './logo-zypl';
+import VideoHero from './video-hero.png';
+import Register from './register.png';
+import Login from './login.png';
+import MyCareer from './my-career.png';
+import CareerProfile from './career-profile.png';
+import Progress80 from './progressbar-80.png';
+import Progress68 from './progress-68.png';
+import Progress42 from './progress-42.png';
+import AboutUs from './about-us.png';
+import Partners from './partners.png';
+import UnicefPartners from './unicef-partners.png';
+import China from './china.png';
+import TrainingCenters from './training-centers.png';
+import Ilmhona from './ilmhona.png';
+import Repititor from './repititor.png';
+import Lider from './lider.png';
+import Edgir from './edgir.png';
+import Qalam from './qalam.png';
+import CentralAsia from './central-asia.png';
+import AmericanSchool from './american-school.png';
+import CenterIct from './center-ict.png';
+import AlifAcademy from './alif-academy.png';
 
 export {
   Logo,
@@ -114,4 +136,26 @@ export {
   Physics,
   BasicsEngineering,
   TechnicalSupport,
+  VideoHero,
+  Register,
+  Login,
+  MyCareer,
+  CareerProfile,
+  Progress80,
+  Progress68,
+  Progress42,
+  AboutUs,
+  Partners,
+  UnicefPartners,
+  China,
+  TrainingCenters,
+  Ilmhona,
+  Repititor,
+  Lider,
+  Edgir,
+  Qalam,
+  CentralAsia,
+  AmericanSchool,
+  CenterIct,
+  AlifAcademy,
 };

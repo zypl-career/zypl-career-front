@@ -1,5 +1,5 @@
 export type ToolsProps = {
-  Icons: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  Icons: any;
   title: string;
   description: string;
 };

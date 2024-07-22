@@ -45,8 +45,9 @@ const buttonVariants = cva(
         sm: 'h-9 rounded-md px-3',
         lg: 'h-11 rounded-md px-8',
         icon: 'h-10 w-10',
-        subscribe: 'w-full md:w-[212px] p-2',
+        subscribe: 'w-full lg:w-[212px] p-2',
         followFuture: 'w-full md:w-[534px] p-2',
+        cluster: 'w-full lg:w-[376px] p-2',
       },
       rounded: {
         default: 'rounded',

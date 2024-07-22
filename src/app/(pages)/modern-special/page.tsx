@@ -1,10 +1,13 @@
-import { ModernSpecialHero, Navbar } from '@/entities';
+import { ContentModernSpecial, ModernSpecialHero, Navbar } from '@/entities';
+import { Footer } from '@/widgets';
 
 export const ModernSpecialPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <ModernSpecialHero />
+      <ContentModernSpecial />
+      <Footer />
     </div>
   );
 };

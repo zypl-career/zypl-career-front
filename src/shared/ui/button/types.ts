@@ -43,3 +43,5 @@ export type TRounded =
   | 'md'
   | 'lg'
   | 'full'
+  | 'followFuture'
+  | 'cluster';
