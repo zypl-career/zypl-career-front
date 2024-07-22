@@ -21,3 +21,4 @@ export * from './career-profile';
 export * from './about-us';
 export * from './partners';
 export * from './training-centers';
+export * from './repetitor';

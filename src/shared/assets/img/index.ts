@@ -75,6 +75,7 @@ import CentralAsia from './central-asia.png';
 import AmericanSchool from './american-school.png';
 import CenterIct from './center-ict.png';
 import AlifAcademy from './alif-academy.png';
+import RepetitorMain from './repeititor-main.png';
 
 export {
   HeroImg,
@@ -154,4 +155,5 @@ export {
   AmericanSchool,
   CenterIct,
   AlifAcademy,
+  RepetitorMain,
 };
