@@ -2,7 +2,7 @@ import { cardData } from '@/entities';
 
 export const CardValue = () => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 w-96">
+    <div className="bg-white rounded-lg border p-4 px-10 w-96">
       <div className="flex flex-col space-y-4">
         {cardData.map((item) => (
           <div key={item.id}>

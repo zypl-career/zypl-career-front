@@ -1,0 +1,331 @@
+import {
+  DislikeGray,
+  LikeGray,
+  NeutralGrayIcon,
+  RatherDislikeGrayIcon,
+  VeryLikeGrayIcon,
+} from '@/shared';
+
+import type { TFeedbackOption } from '.';
+
+export const feedbackOptions: TFeedbackOption[] = [
+  {
+    id: 1,
+    text: 'Барои ягон корхона буҷет тартиб додан',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 2,
+    text: 'Пешбарии ҳуҷҷатгузории корхона/бизнес',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 3,
+    text: 'Фоизи қарзро ҳисоб кардан.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 4,
+    text: 'Калиди барқии ламапаро насб кардан.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 5,
+    text: 'Мотосиклхо ва велосипедхоро таъмир кардан',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 6,
+    text: 'Дар гурӯҳи мусиқӣ суруд хондан ё асбоб навохтан',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 7,
+    text: 'Навъи мусиқии дӯстдоштаи худро омӯхтан.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 8,
+    text: 'Нархи хуроквории ба ҳам монандро муқоиса   кардан  ва қарор кунед',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 9,
+    text: 'Таълим бо кӯдакон',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 10,
+    text: 'Таъмири қубурҳои обгузар',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 11,
+    text: 'Кор бо ҷавонон дар машғулиятҳои берун аз   дарсӣ.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 12,
+    text: 'Дарахтон ё буттаҳоро ба тартиб даровардан',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 13,
+    text: 'Бифаҳмед',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 14,
+    text: 'Тарҳрезии либосҳо.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 15,
+    text: 'Одамонро барои анҷом додани кор ҳавасманд кардан.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 16,
+    text: 'Омӯзиши таъсири радиатсионӣ.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 17,
+    text: 'Дар бораи касе ё чизе шеър нависед.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 18,
+    text: 'Суханронӣ барои    ҳавасмандкунии одамон.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 19,
+    text: 'Дар вохӯрии олимон иштирок кардан.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 20,
+    text: 'Ҷадвали муомилоти тиҷоратиро тартиб додан',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 21,
+    text: 'Роҳбари ягон ташкилот будан.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 22,
+    text: 'Кор бо калонсолон аз оилаҳои дигар',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 23,
+    text: 'Дастгирии беморон дар беморхона.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 24,
+    text: 'Ба сифати роҳбари клуб ё ташкилот хизмат   кардан.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 25,
+    text: 'Дигаронро бовар кунонед',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 26,
+    text: 'Дар як ҳуҷра рафҳо/мебели нав насб кардан',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 27,
+    text: 'Асбоби вайроншударо таъмир кардан.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 28,
+    text: 'Дар бораи комьёбихои охирини илм ва техника   шинос шудан.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+  {
+    id: 28,
+    text: 'Тарҳрезии саҳна барои пьеса/драма/ё   банаворгирии клип.',
+    icons: [
+      DislikeGray,
+      RatherDislikeGrayIcon,
+      NeutralGrayIcon,
+      LikeGray,
+      VeryLikeGrayIcon,
+    ],
+  },
+];
