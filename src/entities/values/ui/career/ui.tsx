@@ -1,4 +1,4 @@
-import { CardValue } from '@/entities';
+import { CardValue, FeedbackValues } from '@/entities';
 import { careerValuesContent } from '.';
 
 export const CareerValues = () => {
@@ -10,6 +10,7 @@ export const CareerValues = () => {
         <div className="text-gray-600">
           <p>{careerValuesContent.description}</p>
         </div>
+        <FeedbackValues />
       </div>
     </section>
   );
