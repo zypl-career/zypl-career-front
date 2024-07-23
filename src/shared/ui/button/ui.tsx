@@ -32,13 +32,14 @@ const buttonVariants = cva(
           'border border-[#9CA3AF] text-[#4B5563] md:text-[20px] cursor-pointer w-full bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full transform transition-transform duration-200 active:scale-110',
         outlineSecondary:
           'border border-[#9CA3AF] text-[#4B5563] cursor-pointer  bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full md:w-[400px] transform transition-transform duration-200 active:scale-110',
-        ghost: 'hover:bg-accent cursor-pointer  hover:text-accent-foreground',
+        ghost: 'text-gray-600 font-semibold',
         link: 'text-primary underline-offset-4 cursor-pointer  hover:underline',
         none: 'bg-none text-[#6B7280] font-bold md:text-[20px]',
         subscribe:
           ' bg-[#7E3794] rounded-3xl md:text-[17px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         outlineCard:
           'border border-[#D7D7D7] text-[#6B7280] cursor-pointer  bg-background font-[600] hover:text-accent-foreground rounded-3xl md:w-[115px] transform transition-transform duration-200 active:scale-110',
+        gray: 'bg-gray-200 text-gray-700 py-2 px-4 rounded transform transition-transform duration-200 active:scale-110',
       },
       size: {
         default: 'h-10 px-4 py-2',

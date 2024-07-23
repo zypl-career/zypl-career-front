@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { WarningIcon } from '@/shared';
+
 import type { TWarnContentProps } from '.';
 
 export const WarnContent: FC<TWarnContentProps> = ({ title }) => {
