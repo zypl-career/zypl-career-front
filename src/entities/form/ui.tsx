@@ -2,7 +2,7 @@ import { Button, Input, RadioGroup, RadioGroupItem, Select } from '@/shared';
 
 export const FormInfo = () => {
   return (
-    <div className="bg-white py-8 px-7 max-w-md mx-auto rounded-lg border my-10">
+    <div className="bg-white py-8 px-7 max-w-md mx-2 lg:mx-auto md:mx-auto rounded-lg border my-10 ">
       <p className="font-semibold mb-4 pb-3 border-b">
         Чтобы предоставить вам наилучшие рекомендации, пожалуйста, ответьте на
         несколько вопросов:

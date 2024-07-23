@@ -22,3 +22,4 @@ export * from './about-us';
 export * from './partners';
 export * from './training-centers';
 export * from './repetitor';
+export * from './values/ui/card';

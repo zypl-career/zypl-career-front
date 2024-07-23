@@ -67,7 +67,7 @@ const Select = React.forwardRef<
     return (
       <div className={cn('relative', className)}>
         {label && (
-          <label className="block mb-1 text-sm font-medium text-gray-700">
+          <label className="block mb-1 text-sm font-semibold text-gray-700">
             {label}
           </label>
         )}
