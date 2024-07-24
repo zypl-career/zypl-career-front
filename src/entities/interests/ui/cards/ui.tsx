@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import { CARDS_DATA_INTERES } from '.';
+import { Button } from '@/shared';
 
 export const CardsInteres = () => {
   return (
-    <section className="px-10 lg:px-80 pb-40">
+    <section className="px-10 lg:px-80 ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 cursor-pointer ">
         {CARDS_DATA_INTERES.map((card, index) => (
           <div
@@ -18,6 +19,20 @@ export const CardsInteres = () => {
             </h2>
           </div>
         ))}
+      </div>
+
+      <div className="flex flex-col sm:flex-row items-center mt-8 mb-40">
+        <Button variant="ghost" className="order-2 sm:order-1">
+          Отменить
+        </Button>
+        <Button
+          variant="subscribe"
+          showRightArrowIcon={true}
+          size="subscribe"
+          className="order-1 sm:order-2"
+        >
+          Продолжить
+        </Button>
       </div>
     </section>
   );
