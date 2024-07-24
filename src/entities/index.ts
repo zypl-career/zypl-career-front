@@ -25,3 +25,4 @@ export * from './repetitor';
 export * from './values';
 export * from './interests';
 export * from './values-surveys';
+export * from './questionnaire-values';

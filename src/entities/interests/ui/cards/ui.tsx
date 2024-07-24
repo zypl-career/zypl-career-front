@@ -20,7 +20,6 @@ export const CardsInteres = () => {
           </div>
         ))}
       </div>
-
       <div className="flex flex-col sm:flex-row items-center mt-8 mb-40">
         <Button variant="ghost" className="order-2 sm:order-1">
           Отменить

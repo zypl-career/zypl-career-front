@@ -1,8 +1,7 @@
-import { FeedbackValues } from '@/entities';
 import { VALUES_SURVEYS_DATA } from '.';
 import { CardValue } from '@/shared';
 
-export const ValuesSurveysHead = () => {
+export const QuestionnaireValuesHead = () => {
   return (
     <section className="flex gap-5 py-8 lg:px-20">
       <CardValue />
