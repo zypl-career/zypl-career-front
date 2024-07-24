@@ -1,6 +1,5 @@
-import { Navbar } from '@/entities';
+import { CardsInteres, InterestsHead, Navbar } from '@/entities';
 import { Footer } from '@/widgets';
-import { CardsInteres, InterestsHead } from '@/entities/interests';
 
 const InterestsPage = () => {
   return (
