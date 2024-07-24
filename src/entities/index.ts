@@ -23,3 +23,6 @@ export * from './partners';
 export * from './training-centers';
 export * from './repetitor';
 export * from './values';
+export * from './interests';
+export * from './values-surveys';
+export * from './questionnaire-values';

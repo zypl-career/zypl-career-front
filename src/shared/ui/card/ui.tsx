@@ -1,4 +1,4 @@
-import { cardData } from '@/entities';
+import { cardData } from '.';
 
 export const CardValue = () => {
   return (

@@ -41,7 +41,7 @@ import UserIcon from './user.svg';
 import TimeIcon from './time.svg';
 import DislikeIcon from './dislike.svg';
 import DislikeOrangeIcon from './dislike-orange.svg';
-import NeutralIcon from './neutral.svg';
+import NeutralIcon from '../img/neutral.svg';
 import LikeIcon from './like.svg';
 import VeryLikeIcon from './very-like.svg';
 import DislikeGray from './dislike-gray.svg';
