@@ -10,3 +10,4 @@ export * from './video';
 export * from './progressbar';
 export * from './radio';
 export * from './card';
+export * from './radio-group';
