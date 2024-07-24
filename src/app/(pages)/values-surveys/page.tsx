@@ -1,4 +1,4 @@
-import { CardValuesSurveys, Navbar, ValuesSurveysHead } from '@/entities';
+import { MainValuesSureys, Navbar, ValuesSurveysHead } from '@/entities';
 import { Footer } from '@/widgets';
 
 const ValuesSurveyPage = () => {
@@ -6,7 +6,7 @@ const ValuesSurveyPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <ValuesSurveysHead />
-      <CardValuesSurveys />
+      <MainValuesSureys />
       <Footer />
     </div>
   );
