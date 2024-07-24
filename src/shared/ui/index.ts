@@ -9,3 +9,4 @@ export * from './key-findings';
 export * from './video';
 export * from './progressbar';
 export * from './radio';
+export * from './card';

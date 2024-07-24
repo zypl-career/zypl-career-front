@@ -76,6 +76,28 @@ import AmericanSchool from './american-school.png';
 import CenterIct from './center-ict.png';
 import AlifAcademy from './alif-academy.png';
 import RepetitorMain from './repeititor-main.png';
+import Chemistry from './chemistry.png';
+import Electronics from './electronics.png';
+import Botany from './botany.png';
+import Photo from './photo.png';
+import MeetingWork from './meeting-work.png';
+import СompanyManagement from './сompany-management.png';
+import Family from './family.png';
+import PhysicalEducation from './physical-education.png';
+import Doctor from './doctor.png';
+import Music from './music.png';
+import WorkingWood from './working-wood.png';
+import ScienceInteres from './science2.png';
+import PhysicsInteres from './physics2.png';
+import Institution from './institution.png';
+import Painting from './painting.png';
+import Rights from './rights.png';
+import Babysitter from './babysitter.png';
+import Electrician from './electrician.png';
+import Metre from './metre.png';
+import GroupsMusic from './groups-music.png';
+import Agent from './agent.png';
+import Mechanic from './mechanic.png';
 
 export {
   HeroImg,
@@ -156,4 +178,26 @@ export {
   CenterIct,
   AlifAcademy,
   RepetitorMain,
+  Chemistry,
+  Electronics,
+  Botany,
+  Photo,
+  MeetingWork,
+  СompanyManagement,
+  Family,
+  PhysicalEducation,
+  Doctor,
+  Music,
+  WorkingWood,
+  ScienceInteres,
+  PhysicsInteres,
+  Institution,
+  Painting,
+  Rights,
+  Babysitter,
+  Electrician,
+  Metre,
+  GroupsMusic,
+  Agent,
+  Mechanic,
 };

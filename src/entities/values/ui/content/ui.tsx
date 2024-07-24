@@ -1,3 +1,4 @@
+import { Button } from '@/shared';
 import { feedbackOptions } from '.';
 
 export const FeedbackContent = () => {
@@ -24,6 +25,19 @@ export const FeedbackContent = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex flex-col sm:flex-row items-center my-8">
+        <Button variant="ghost" className="order-2 sm:order-1">
+          Отменить
+        </Button>
+        <Button
+          variant="subscribe"
+          showRightArrowIcon={true}
+          size="subscribe"
+          className="order-1 sm:order-2"
+        >
+          Продолжить
+        </Button>
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
-import { FeedbackContent, Navbar } from '@/entities';
+import { CareerValues, FeedbackContent, Navbar } from '@/entities';
 import { Footer } from '@/widgets';
-import { CareerValues } from '@/entities/values';
 
 const VideoGuidePage = () => {
   return (
