@@ -26,3 +26,4 @@ export * from './values';
 export * from './interests';
 export * from './values-surveys';
 export * from './questionnaire-values';
+export * from './choosing-values';
