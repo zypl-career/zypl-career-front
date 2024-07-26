@@ -28,3 +28,5 @@ export * from './values-surveys';
 export * from './questionnaire-values';
 export * from './choosing-values';
 export * from './your-result';
+export * from './professions-you';
+export * from './sociology';
