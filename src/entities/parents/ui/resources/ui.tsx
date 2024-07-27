@@ -1,4 +1,4 @@
-import { CardSectionIndustries } from '@/entities';
+import { CardSectionIndustries, CardSectionParents } from '@/entities';
 
 export const ResourcesParents = () => {
   return (
@@ -8,7 +8,7 @@ export const ResourcesParents = () => {
         Откройте для себя ресурсы, призванные помочь вашим детям повысить
         осведомленность о карьерном росте.
       </p>
-      <CardSectionIndustries />
+      <CardSectionParents />
     </div>
   );
 };
