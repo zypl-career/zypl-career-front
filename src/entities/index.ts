@@ -31,3 +31,4 @@ export * from './your-result';
 export * from './professions-you';
 export * from './sociology';
 export * from './parents';
+export * from './teachers';

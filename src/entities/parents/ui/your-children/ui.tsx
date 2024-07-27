@@ -2,7 +2,7 @@ import { NextCard } from '@/entities';
 
 export const YourChildren = () => {
   return (
-    <div className="px-5 lg:px-28">
+    <div className="py-10 px-5 lg:px-28">
       <h3 className="font-semibold text-2xl">Ваши дети</h3>
       <p className="text-gray-600">
         Пожалуйста, выберите ученика, чтобы ознакомиться с результатами его
