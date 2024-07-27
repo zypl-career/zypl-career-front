@@ -1,7 +1,7 @@
-import { VALUES_SURVEYS_DATA } from '.';
+import { VALUES_SURVEYS_DATA } from './index';
 import { CardValue } from '@/shared';
 
-export const ValuesSurveysHead = () => {
+export const ChoosingValuesHead = () => {
   return (
     <section className="flex gap-5 py-8 lg:px-20">
       <CardValue />
