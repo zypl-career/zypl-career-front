@@ -98,6 +98,8 @@ import Metre from './metre.png';
 import GroupsMusic from './groups-music.png';
 import Agent from './agent.png';
 import Mechanic from './mechanic.png';
+import Teacher from './teachers.png';
+import Parents from './parents.png';
 
 export {
   HeroImg,
@@ -200,4 +202,6 @@ export {
   GroupsMusic,
   Agent,
   Mechanic,
+  Teacher,
+  Parents,
 };
