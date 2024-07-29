@@ -1,7 +1,7 @@
 export const BADGES_DATA = [
   { id: 1, title: 'Все' },
   { id: 2, title: 'ИКТ' },
-  { id: 3, title: 'Энергетика' },
+  { id: 3, title: 'гетика' },
   { id: 4, title: 'Механика' },
   { id: 5, title: 'Физика' },
   { id: 6, title: 'Сохтмон' },

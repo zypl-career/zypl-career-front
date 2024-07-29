@@ -37,7 +37,7 @@ export const Input = React.forwardRef<HTMLInputElement, TInputProps>(
     return (
       <div className="relative flex flex-col">
         {label && labelPosition === 'top' && (
-          <label className="mb-1 text-sm text-[#374151] theme:text-primary font-medium">
+          <label className="mb-1 text-sm text-[#374151] theme:text-primary font-semibold">
             {label}
           </label>
         )}

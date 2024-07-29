@@ -1,6 +1,8 @@
+import { FC } from 'react';
 import { Button } from '@/shared';
+import { TStatusProps } from '@/entities';
 
-export const StatusCard = ({ Icon, title, message }) => {
+export const StatusCard: FC<TStatusProps> = ({ Icon, title, message }) => {
   return (
     <div className="py-5 bg-white w-[300px] md:w-[360px] rounded-md">
       <div className="flex justify-center">

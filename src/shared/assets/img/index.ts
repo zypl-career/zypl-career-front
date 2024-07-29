@@ -3,11 +3,11 @@ import PaperPlane from './paper-plane.svg';
 import Guide from './guide.png';
 import GenderIgnore from './gender-ignore.png';
 import ChoiceCourses from './choice-coureses.png';
-import Emblem from './emblem.svg';
-import Aflotoun from './aflotoun.svg';
-import Tajrupt from './tajrupt.svg';
-import Unicef from './uniсef.svg';
-import Flag from './flag.svg';
+import Emblem from './emblem.png';
+import Aflotoun from './aflotoun.png';
+import Tajrupt from './tajrupt.png';
+import Unicef from './unicef.png';
+import Flag from './flag.png';
 import Professions from './professions.svg';
 import Industries from './industies.svg';
 import AgriculturalIndustry from './agricultural-industry.svg';
@@ -55,6 +55,65 @@ import BasicsEngineering from './basics-engineering.png';
 import TechnicalSupport from './technical-support.png';
 import Hero from './hero.png';
 import Logo from './logo-zypl';
+import VideoHero from './video-hero.png';
+import Register from './register.png';
+import Login from './login.png';
+import MyCareer from './my-career.png';
+import CareerProfile from './career-profile.png';
+import Progress80 from './progressbar-80.png';
+import Progress68 from './progress-68.png';
+import Progress42 from './progress-42.png';
+import AboutUs from './about-us.png';
+import Partners from './partners.png';
+import UnicefPartners from './unicef-partners.png';
+import China from './china.png';
+import TrainingCenters from './training-centers.png';
+import Ilmhona from './ilmhona.png';
+import Repititor from './repititor.png';
+import Lider from './lider.png';
+import Edgir from './edgir.png';
+import Qalam from './qalam.png';
+import CentralAsia from './central-asia.png';
+import AmericanSchool from './american-school.png';
+import CenterIct from './center-ict.png';
+import AlifAcademy from './alif-academy.png';
+import RepetitorMain from './repeititor-main.png';
+import Chemistry from './chemistry.png';
+import Electronics from './electronics.png';
+import Botany from './botany.png';
+import Photo from './photo.png';
+import MeetingWork from './meeting-work.png';
+import СompanyManagement from './сompany-management.png';
+import Family from './family.png';
+import PhysicalEducation from './physical-education.png';
+import Doctor from './doctor.png';
+import Music from './music.png';
+import WorkingWood from './working-wood.png';
+import ScienceInteres from './science2.png';
+import PhysicsInteres from './physics2.png';
+import Institution from './institution.png';
+import Painting from './painting.png';
+import Rights from './rights.png';
+import Babysitter from './babysitter.png';
+import Electrician from './electrician.png';
+import Metre from './metre.png';
+import GroupsMusic from './groups-music.png';
+import Agent from './agent.png';
+import Mechanic from './mechanic.png';
+import Teacher from './teachers.png';
+import Parents from './parents.png';
+import Follow from './follow.png';
+import Development from './development.png';
+import Preparation from './preparation.png';
+import Mentoring from './mentoring.png';
+import Achievement from './achievement.png';
+import Internship from './internship.png';
+import CompilationTechniques from './compilation-techniques.png';
+import TimeManagement from './time-management.png';
+import BasicsEntrepreneurship from './basics-entrepreneurship.png';
+import PracticalSkills from './practical-skills.png';
+import CareerProspects from './career-prospects.png';
+import InfoDiff from './info-diff.png';
 
 export {
   Logo,
@@ -114,4 +173,63 @@ export {
   Physics,
   BasicsEngineering,
   TechnicalSupport,
+  VideoHero,
+  Register,
+  Login,
+  MyCareer,
+  CareerProfile,
+  Progress80,
+  Progress68,
+  Progress42,
+  AboutUs,
+  Partners,
+  UnicefPartners,
+  China,
+  TrainingCenters,
+  Ilmhona,
+  Repititor,
+  Lider,
+  Edgir,
+  Qalam,
+  CentralAsia,
+  AmericanSchool,
+  CenterIct,
+  AlifAcademy,
+  RepetitorMain,
+  Chemistry,
+  Electronics,
+  Botany,
+  Photo,
+  MeetingWork,
+  СompanyManagement,
+  Family,
+  PhysicalEducation,
+  Doctor,
+  Music,
+  WorkingWood,
+  ScienceInteres,
+  PhysicsInteres,
+  Institution,
+  Painting,
+  Rights,
+  Babysitter,
+  Electrician,
+  Metre,
+  GroupsMusic,
+  Agent,
+  Mechanic,
+  Teacher,
+  Parents,
+  Follow,
+  Development,
+  Preparation,
+  Mentoring,
+  Achievement,
+  Internship,
+  CompilationTechniques,
+  TimeManagement,
+  BasicsEntrepreneurship,
+  PracticalSkills,
+  CareerProspects,
+  InfoDiff,
 };

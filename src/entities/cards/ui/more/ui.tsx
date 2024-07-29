@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import { Button } from '@/shared';
-import { TMoreCardProps } from '@/entities';
+import type { TMoreCardProps } from '.';
 
 export const MoreCard: FC<TMoreCardProps> = ({
   imageSrc,

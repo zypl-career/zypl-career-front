@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import { DowloadIcon } from '@/shared';
-import { TDownloadButtonProps } from '.';
+import type { TDownloadButtonProps } from '.';
 
-export const DownloadButton: React.FC<TDownloadButtonProps> = ({
+export const DownloadButton: FC<TDownloadButtonProps> = ({
   fileSize,
   fileType,
 }) => {

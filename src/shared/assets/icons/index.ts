@@ -38,6 +38,18 @@ import WarningIcon from './warning.svg';
 import DowloadIcon from './dowload.svg';
 import HamburgerIcon from './hamburger.svg';
 import UserIcon from './user.svg';
+import TimeIcon from './time.svg';
+import DislikeIcon from './dislike.svg';
+import DislikeOrangeIcon from './dislike-orange.svg';
+import NeutralIcon from '../img/neutral.svg';
+import LikeIcon from './like.svg';
+import VeryLikeIcon from './very-like.svg';
+import DislikeGray from './dislike-gray.svg';
+import RatherDislikeGrayIcon from './rather-dislike-gray.svg';
+import NeutralGrayIcon from './neutral-gray.svg';
+import LikeGray from './like-gray.svg';
+import VeryLikeGrayIcon from './very-like-gray.svg';
+import LeftArrowIcon from './left-arrow.svg';
 
 export {
   LogoIcon,
@@ -80,4 +92,16 @@ export {
   DowloadIcon,
   HamburgerIcon,
   UserIcon,
+  TimeIcon,
+  DislikeIcon,
+  DislikeOrangeIcon,
+  NeutralIcon,
+  LikeIcon,
+  VeryLikeIcon,
+  DislikeGray,
+  RatherDislikeGrayIcon,
+  NeutralGrayIcon,
+  LikeGray,
+  VeryLikeGrayIcon,
+  LeftArrowIcon,
 };

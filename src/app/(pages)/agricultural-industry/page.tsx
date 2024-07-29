@@ -7,7 +7,6 @@ const AgriculturalIndustryPage = () => {
       <Navbar />
       <AgriculturalIndustryHero />
       <BasicIndustry />
-
       <Footer />
     </div>
   );
