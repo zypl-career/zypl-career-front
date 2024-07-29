@@ -8,6 +8,10 @@ export type ImageSrc =
   | typeof Unicef;
 
 export type TPartnerProps = {
+  data: TPartner[]
+};
+
+export type TPartner = {
   imageSrc: ImageSrc;
   altText: string;
   text?: string;

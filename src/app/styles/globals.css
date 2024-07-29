@@ -88,6 +88,16 @@
   --bg-primary: #9DD1FF;
 }
 
+.theme-black {
+  --color-primary: #fff;
+  --bg-primary: #000;
+}
+
+.theme-white {
+  --color-primary: #000;
+  --bg-primary: #fff;
+}
+
 .theme {
   --primary: var(--color-primary);
   --primaryBg: var(--bg-primary);

@@ -9,7 +9,7 @@ import { ArrowIcon } from '@/shared';
 import type { TVariantType, TSizeType, TButtonProps } from '.';
 
 const buttonVariants = cva(
-  'inline-flex gap-2 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  ' inline-flex gap-2 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
@@ -36,7 +36,7 @@ const buttonVariants = cva(
         link: 'text-primary underline-offset-4 cursor-pointer  hover:underline',
         none: 'bg-none text-[#6B7280] font-bold md:text-[20px]',
         subscribe:
-          ' bg-[#7E3794] rounded-3xl md:text-[17px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
+          'theme:bg-primaryBg theme:border-primary bg-[#7E3794] rounded-3xl md:text-[17px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         outlineCard:
           'border border-[#D7D7D7] text-[#6B7280] cursor-pointer  bg-background font-[600] hover:text-accent-foreground rounded-3xl md:w-[115px] transform transition-transform duration-200 active:scale-110',
       },

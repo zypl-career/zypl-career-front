@@ -7,6 +7,7 @@ export type TSelectProps = Omit<React.SelectHTMLAttributes<HTMLSelectElement>, '
     asChild?: boolean;
     showFlagIcon?: boolean;
     size?: TSizeType;
+    label?: string;
   };
 
 export type TVariantType =

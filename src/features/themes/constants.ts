@@ -1,5 +1,16 @@
 export const themes = [
   {
+    theme: 'black',
+    color: '#fff',
+    bg: '#000',
+    border: '#fff'
+  },
+  {
+    theme: 'white',
+    color: '#000',
+    bg: '#fff',
+  },
+  {
     theme: 'blue',
     color: '#063462',
     bg: '#9DD1FF',

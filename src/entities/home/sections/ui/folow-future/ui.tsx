@@ -13,9 +13,10 @@ export const FollowFuture = () => {
         </p>
         <div className="pb-10">
           <Button
-            variant="subscribe"
             showRightArrowIcon
-            size="followFuture"
+            rounded="full"
+            variant="register"
+            className="w-auto self-baseline"
           >
             Начните строить свой карьерный профиль
           </Button>

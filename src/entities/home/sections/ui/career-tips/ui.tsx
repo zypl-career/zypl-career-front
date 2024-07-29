@@ -9,10 +9,10 @@ export const CareerTips = () => {
           <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8">
             Советы по карьере
           </p>
-          <p className="font-bold text-gray-600 py-2">
+          <p className="font-bold text-gray-600 py-2 theme:text-primary">
             Получайте информацию о карьере прямо на свой почтовый ящик
           </p>
-          <p className="md:w-[800px] text-gray-500">
+          <p className="md:w-[800px] text-gray-500 theme:text-primary">
             Будьте на шаг впереди! Зарегистрируйте учетную запись myfuture и
             установите флажок, чтобы получать актуальную информацию о карьере о
             профессиях, курсах, карьерных путях, выборе предметов, днях открытых
@@ -29,6 +29,7 @@ export const CareerTips = () => {
                 showRightArrowIcon
                 variant="default"
                 size="subscribe"
+                rounded="full"
               >
                 Подписаться
               </Button>
