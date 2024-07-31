@@ -17,7 +17,7 @@ export const professions: TProfession[] = [
   { title: 'Таърих, хукук ва дин' },
   { title: 'Биология' },
   { title: 'Психлогия' },
-  { title: 'гетика' },
+  { title: 'Энергетика' },
   { title: 'Физика' },
   { title: 'Гео' },
   { title: 'Тиб' },

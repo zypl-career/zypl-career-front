@@ -100,6 +100,18 @@ import Agent from './agent.png';
 import Mechanic from './mechanic.png';
 import Teacher from './teachers.png';
 import Parents from './parents.png';
+import Follow from './follow.png';
+import Development from './development.png';
+import Preparation from './preparation.png';
+import Mentoring from './mentoring.png';
+import Achievement from './achievement.png';
+import Internship from './internship.png';
+import CompilationTechniques from './compilation-techniques.png';
+import TimeManagement from './time-management.png';
+import BasicsEntrepreneurship from './basics-entrepreneurship.png';
+import PracticalSkills from './practical-skills.png';
+import CareerProspects from './career-prospects.png';
+import InfoDiff from './info-diff.png';
 
 export {
   HeroImg,
@@ -204,4 +216,16 @@ export {
   Mechanic,
   Teacher,
   Parents,
+  Follow,
+  Development,
+  Preparation,
+  Mentoring,
+  Achievement,
+  Internship,
+  CompilationTechniques,
+  TimeManagement,
+  BasicsEntrepreneurship,
+  PracticalSkills,
+  CareerProspects,
+  InfoDiff,
 };

@@ -6,4 +6,5 @@ export type TCardMoreProps = {
   title: string;
   date: string;
   buttonText: string;
+  link?: string;
 };

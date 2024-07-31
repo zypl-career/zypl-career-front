@@ -1,6 +1,6 @@
-import { CardSectionIndustries, CardSectionParents } from '@/entities';
+import { CardSectionTeachers } from '@/entities';
 
-export const ResourcesParents = () => {
+export const ResourcesTeachers = () => {
   return (
     <div className="px-5 lg:px-28">
       <h3 className="font-bold text-2xl">Ресурсы для родителей</h3>
@@ -8,7 +8,7 @@ export const ResourcesParents = () => {
         Откройте для себя ресурсы, призванные помочь вашим детям повысить
         осведомленность о карьерном росте.
       </p>
-      <CardSectionParents />
+      <CardSectionTeachers />
     </div>
   );
 };

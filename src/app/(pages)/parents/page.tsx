@@ -1,7 +1,10 @@
-import { Navbar, ParentsHero } from '@/entities';
+import {
+  Navbar,
+  ParentsHero,
+  ResourcesParents,
+  YourChildren,
+} from '@/entities';
 import { Footer } from '@/widgets';
-import { YourChildren } from '@/entities/parents/ui/your-children/ui';
-import { ResourcesParents } from '@/entities/parents/ui/resources';
 
 const PartnersPage = () => {
   return (

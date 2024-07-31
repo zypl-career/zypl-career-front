@@ -5,4 +5,5 @@ export type TCardProps = {
   imageWidth: number;
   title: string;
   buttonText: string;
+  link?: string;
 };
