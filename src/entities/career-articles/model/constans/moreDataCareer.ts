@@ -20,6 +20,7 @@ export const moreDataCareer: TCardMoreProps[] = [
     title: 'Краткое руководство по принятию карьерных решений',
     date: '1 сентября',
     buttonText: 'Подробнее',
+    link: '/fraud-prevention',
   },
   {
     imageSrc: GenderIgnore,
