@@ -1,4 +1,5 @@
 import { toolsData, ToolsInspiration } from '@/entities';
+import Link from 'next/link';
 
 export const ToolsInspirationUI = () => {
   return (
@@ -13,12 +14,13 @@ export const ToolsInspirationUI = () => {
       <div className="mx-2 md:mx-0">
         <div className="grid grid-cols-1 md:grid-cols-3 md:px-24">
           {toolsData.map((tool, index) => (
-            <ToolsInspiration
-              key={index}
-              Icons={tool.Icons}
-              title={tool.title}
-              description={tool.description}
-            />
+            <Link href={tool.link} key={index}>
+              <ToolsInspiration
+                Icons={tool.Icons}
+                title={tool.title}
+                description={tool.description}
+              />
+            </Link>
           ))}
         </div>
       </div>

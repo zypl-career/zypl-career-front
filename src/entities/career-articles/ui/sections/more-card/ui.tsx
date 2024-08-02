@@ -15,15 +15,15 @@ export const MoreCardSection = () => {
         {moreDataCareer.map((card, index) =>
           card.link ? (
             <Link href={card.link} key={index}>
-                <MoreCardCareerArticles
-                  imageSrc={card.imageSrc}
-                  imageAlt={card.imageAlt}
-                  imageHeight={card.imageHeight}
-                  imageWidth={card.imageWidth}
-                  title={card.title}
-                  date={card.date}
-                  buttonText={card.buttonText}
-                />
+              <MoreCardCareerArticles
+                imageSrc={card.imageSrc}
+                imageAlt={card.imageAlt}
+                imageHeight={card.imageHeight}
+                imageWidth={card.imageWidth}
+                title={card.title}
+                date={card.date}
+                buttonText={card.buttonText}
+              />
             </Link>
           ) : (
             <MoreCardCareerArticles
