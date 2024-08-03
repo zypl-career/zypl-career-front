@@ -2,6 +2,7 @@ import { SuccessIcon, ExcellentIcon } from '@/shared';
 import {
   ChangePass,
   ConfirmPass,
+  ModalUI,
   PasswordRecovery,
   StatusCard,
 } from '@/entities';
@@ -27,6 +28,7 @@ const TestPage = () => {
         <ChangePass />
         <br />
         <ConfirmPass />
+        <ModalUI />
       </div>
     </div>
   );
