@@ -1,4 +1,5 @@
 import { HeroImg } from '@/shared';
+import Image from 'next/image';
 
 export const Hero = () => {
   return (
@@ -14,7 +15,7 @@ export const Hero = () => {
         </p>
       </div>
       <div className="flex justify-center md:justify-end py-5 md:py-0">
-        <HeroImg />
+        <Image src={HeroImg} alt="hero" />
       </div>
     </div>
   );
