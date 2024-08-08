@@ -8,41 +8,53 @@ export const FormRegister = () => {
         <div className="mb-4">
           <h3 className="text-xl font-semibold mb-2">Персональные данные</h3>
           <div className="">
-            <div className="grid grid-cols-2 gap-4 py-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-5">
               <Input label="Фамилия*" variant="outline" />
               <Input label="Имя*" variant="outline" />
             </div>
             <Input
-              className="md:w-[393px]"
+              className="w-full md:w-[393px]"
               label="Отчество"
               variant="outline"
             />
-            <div className="grid grid-cols-2 gap-4 py-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-5">
               <Select
                 label="Пол*"
                 options={['Мужской', 'Женский']}
                 variant="outline"
                 className="mt-3"
               />
-              <Input label="Возраст" variant="outline" />
+              <div className="lg:mt-6">
+                <Input label="Возраст" variant="outline" />
+              </div>
             </div>
-            <Input className="md:w-[393px]" label="Район" variant="outline" />
-            <div className="grid grid-cols-2 gap-4 py-5">
+            <Input
+              className="w-full md:w-[393px]"
+              label="Район"
+              variant="outline"
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-5">
               <Select
                 label="Тип занятости"
                 options={['Полная', 'Частичная']}
                 variant="outline"
                 className="mt-3"
               />
-              <Input label="Школа" variant="outline" />
+              <div className="lg:mt-6">
+                <Input label="Школа" variant="outline" />
+              </div>
             </div>
           </div>
         </div>
 
         <div className="mb-4">
           <h3 className="text-xl font-semibold mb-2">Безопасность</h3>
-          <Input className="md:w-[393px]" label="Email*" variant="outline" />
-          <div className="grid grid-cols-2 gap-4 py-5">
+          <Input
+            className="w-full md:w-[393px]"
+            label="Email*"
+            variant="outline"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-5">
             <Input label="Пароль*" variant="outline" type="password" />
             <Input
               label="Подтвердите пароль*"
