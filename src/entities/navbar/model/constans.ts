@@ -5,6 +5,6 @@ export const NavbarData: TNavbarItem[] = [
   { title: 'Студенты', link: '/students' },
   { title: 'Учителя и практикующие профессию', link: '/teachers' },
   { title: 'Родители', link: '/parents' },
-  { title: 'О нас', link: '/about' },
+  { title: 'О нас', link: '/about-us' },
   { title: 'Партнеры', link: '/partners' },
 ];

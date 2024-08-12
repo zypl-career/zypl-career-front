@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavbarData } from '@/entities';
-import {Button, SearchIcon, HamburgerIcon, UserIcon, useTheme, cn} from '@/shared';
+import { Button, SearchIcon, HamburgerIcon, UserIcon } from '@/shared';
+import Link from "next/link";
 
 export const Navbar = () => {
-  const { theme } = useTheme()
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -27,7 +27,7 @@ export const Navbar = () => {
               key={index}
               className="text-gray-700 hover:text-gray-900 theme:text-primary"
             >
-              <a href={item.link}>{item.title}</a>
+              <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
         </ul>
@@ -42,7 +42,7 @@ export const Navbar = () => {
             >
               {NavbarData.map((item, index) => (
                 <li key={index} className="text-gray-700 hover:text-gray-900">
-                  <a href={item.link}>{item.title}</a>
+                  <Link href={item.link}>{item.title}</Link>
                 </li>
               ))}
             </motion.ul>

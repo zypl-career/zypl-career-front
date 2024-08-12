@@ -5,10 +5,10 @@ import { Parents } from '@/shared';
 
 export const ParentsHero = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between bg-white lg:px-36">
+    <div className="flex flex-col md:flex-row justify-between bg-white lg:px-36 theme:bg-primaryBg theme:text-primary theme:border theme:border-primary">
       <div className="py-5 px-2 md:py-32">
         <p className="text-2xl md:text-5xl font-bold md:pb-8">Родители</p>
-        <p className="text-gray-600">
+        <p className="text-gray-600 theme:text-primary">
           Мы собрали информацию, инструменты и статьи, которые помогут вам
           помочь своему ребенку узнать о мире труда и изучить карьеру.
         </p>

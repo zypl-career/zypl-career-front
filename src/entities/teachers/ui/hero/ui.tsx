@@ -5,12 +5,12 @@ import { Teacher } from '@/shared';
 
 export const TeachersHero = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between bg-white lg:px-36">
+    <div className="flex flex-col md:flex-row justify-between bg-white lg:px-36 theme:bg-primaryBg theme:text-primary theme:border-b theme:border-primary">
       <div className="py-5 px-2 md:py-32">
         <p className="text-2xl md:text-5xl font-bold md:pb-8">
           Учителя и практикующие профессию
         </p>
-        <p className="text-gray-600">
+        <p className="text-gray-600 theme:text-primary">
           Эти ресурсы могут быть использованы преподавателями и специалистами по
           профориентации для поддержки карьерного роста учащихся. Помогите
           учащимся осознать себя и свои возможности, изучить варианты карьерного

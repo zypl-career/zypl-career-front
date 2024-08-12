@@ -9,12 +9,12 @@ import { ArrowIcon } from '@/shared';
 import type { TVariantType, TSizeType, TButtonProps } from './types';
 
 const buttonVariants = cva(
-  ' inline-flex gap-2 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'theme:bg-primaryBg theme:text-primary theme:border theme:border-primary inline-flex gap-2 items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
         default:
-          'theme:bg-primary theme:text-primaryBg text-primary-foreground  cursor-pointer hover:bg-primary/90',
+          'bg-purple-800 theme:bg-primary theme:text-primaryBg text-primary-foreground cursor-pointer hover:bg-primary/90',
         destructive:
           'bg-destructive cursor-pointer text-destructive-foreground hover:bg-destructive/90',
         outline:
@@ -25,7 +25,7 @@ const buttonVariants = cva(
           'theme:bg-primary theme:text-primaryBg bg-white text-purple-900 cursor-pointer hover:bg-secondary/80',
         auth: 'bg-purple-800 rounded-2xl cursor-pointer font-[600] text-white w-full md:w-[400px] transform transition-transform duration-200 active:scale-110',
         status:
-          'bg-purple-800 rounded-2xl md:text-[20px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
+          ' bg-purple-800 rounded-2xl md:text-[20px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         register:
           'theme:bg-primary theme:text-primaryBg bg-purple-800 rounded-2xl cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         login:
@@ -38,7 +38,7 @@ const buttonVariants = cva(
         subscribe:
           'theme:bg-primaryBg theme:border-primary bg-[#7E3794] rounded-3xl md:text-[17px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         outlineCard:
-          'border border-[#D7D7D7] text-[#6B7280] cursor-pointer bg-background font-[600] hover:text-accent-foreground rounded-3xl md:w-[115px] transform transition-transform duration-200 active:scale-110',
+          'theme:border-primary theme:text-primary theme:bg-primaryBg border border-[#D7D7D7] text-[#6B7280] cursor-pointer bg-background font-[600] hover:text-accent-foreground rounded-3xl md:w-[115px] transform transition-transform duration-200 active:scale-110',
         gray: 'bg-gray-200 text-gray-700 py-2 px-4 rounded transform transition-transform duration-200 active:scale-110',
         white:
           'border border-[#D1D5DB] bg-white px-4 py-2 rounded-3xl lg:w-[114px] flex items-center justify-center',
@@ -96,7 +96,12 @@ const Button = React.forwardRef<
         {children}
         {endIcon}
         {showRightArrowIcon ? (
-          <ArrowIcon className="ml-2 animate-moveRight" />
+          <ArrowIcon
+            className={cn(
+              'ml-2 animate-moveRight fill-white theme:fill-primaryBg',
+              { 'fill-black': variant !== 'default' }
+            )}
+          />
         ) : null}
       </Comp>
     );

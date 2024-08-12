@@ -3,11 +3,11 @@ import { partnerCards } from '.';
 
 export const CardsPartners = () => {
   return (
-    <div className="grid gap-11 p-5 grid-cols-1 lg:grid-cols-2 lg:px-20 pt-16 pb-28 cursor-pointer">
+    <div className="grid gap-11 p-5 grid-cols-1 lg:grid-cols-2 lg:px-20 pt-16 pb-28 cursor-pointer theme:bg-primaryBg theme:text-primary theme:border theme:border-primary">
       {partnerCards.map((card, index) => (
         <div
           key={index}
-          className="flex flex-col items-center justify-center rounded-lg py-16 shadow-lg bg-white  transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl text-center"
+          className="flex flex-col items-center justify-center rounded-lg py-16 shadow-lg bg-white transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl text-center theme:bg-primaryBg theme:border theme:border-primary"
         >
           <Image src={card.image} alt={card.alt} height={200} width={200} />
           {card.description && (

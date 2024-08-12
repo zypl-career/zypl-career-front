@@ -1,14 +1,14 @@
 export const themes = [
   {
+    theme: 'white',
+    color: '#000',
+    bg: '#fff',
+  },
+  {
     theme: 'black',
     color: '#fff',
     bg: '#000',
     border: '#fff'
-  },
-  {
-    theme: 'white',
-    color: '#000',
-    bg: '#fff',
   },
   {
     theme: 'blue',

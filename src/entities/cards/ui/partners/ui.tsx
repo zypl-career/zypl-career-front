@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import type { TPartnersCardProps } from '.';
+import {cn} from "@/shared";
 
 export const PartnersCard: FC<TPartnersCardProps> = ({
   imageSrc,
@@ -9,7 +10,10 @@ export const PartnersCard: FC<TPartnersCardProps> = ({
 }) => {
   return (
     <div
-      className={`partner-card ${text ? 'flex-row' : 'flex-col'} flex items-center justify-center bg-white m-2 lg:m-3 py-12 lg:py-[32px] rounded-lg shadow-md`}
+      className={cn(
+        'partner-card flex items-center justify-center bg-white m-2 lg:m-3 py-12 lg:py-[32px] rounded-lg shadow-md',
+        text ? 'flex-row' : 'flex-col'
+      )}
     >
       {text ? (
         <div className="flex items-center gap-5 px-10">
