@@ -1,4 +1,5 @@
-import { MORE_DATA_PARENTS, MoreCardIndustries } from '@/entities';
+import { MoreCardIndustries } from '@/entities';
+import { MORE_DATA_PARENTS } from './constants';
 
 export const CardSectionTeachers = () => {
   return (

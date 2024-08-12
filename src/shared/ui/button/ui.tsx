@@ -47,6 +47,7 @@ const buttonVariants = cva(
         default: 'h-10 px-4 py-2',
         sm: 'h-9 rounded-md px-3',
         lg: 'h-11 rounded-md px-8',
+        md: 'w-full lg:w-[381px] p-2',
         icon: 'h-10 w-10',
         subscribe: 'w-full lg:w-[212px] p-2',
         followFuture: 'w-full md:w-[534px] p-2',

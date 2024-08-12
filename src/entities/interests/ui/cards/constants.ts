@@ -22,7 +22,7 @@ import {
   Agent,
   Mechanic,
 } from '@/shared';
-import type { TCardDataInters } from '.';
+import type { TCardDataInters } from './types';
 
 export const CARDS_DATA_INTERES: TCardDataInters[] = [
   { src: Chemistry, title: 'Химия' },

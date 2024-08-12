@@ -12,7 +12,7 @@ export type TPartnerProps = {
 };
 
 export type TPartner = {
-  imageSrc: ImageSrc;
+  imageSrc: ImageSrc | string;
   altText: string;
   text?: string;
 };

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { partnerCards } from '.';
+import { partnerCards } from './constants';
 
 export const CardsPartners = () => {
   return (

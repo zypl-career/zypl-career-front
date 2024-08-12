@@ -21,7 +21,7 @@ export const FileSave = () => {
                   <div className="flex items-center space-x-2">
                     <DownloadButton
                       fileType="Word"
-                      fileSize={template.wordSize}
+                      fileSize={+template.wordSize}
                     />
                   </div>
                 </td>
@@ -29,7 +29,7 @@ export const FileSave = () => {
                   <div className="flex items-center space-x-2">
                     <DownloadButton
                       fileType="PDF"
-                      fileSize={template.pdfSize}
+                      fileSize={+template.pdfSize}
                     />
                   </div>
                 </td>

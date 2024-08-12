@@ -42,6 +42,7 @@ export const moreDataIndustries: TCardProps[] = [
     imageWidth: 470,
     title: 'Сельское хозяйство, лесоводство и рыболовство',
     buttonText: 'Подробнее',
+    link: '/agricultural-industry',
   },
   {
     imageSrc: ServicesArea,

@@ -50,6 +50,7 @@ import NeutralGrayIcon from './neutral-gray.svg';
 import LikeGray from './like-gray.svg';
 import VeryLikeGrayIcon from './very-like-gray.svg';
 import LeftArrowIcon from './left-arrow.svg';
+import WarnIcon from './warn.svg';
 
 export {
   LogoIcon,
@@ -104,4 +105,5 @@ export {
   LikeGray,
   VeryLikeGrayIcon,
   LeftArrowIcon,
+  WarnIcon,
 };

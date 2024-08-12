@@ -1,4 +1,4 @@
-import HeroImg from './hero.svg';
+import HeroImg from './hero.png';
 import PaperPlane from './paper-plane.svg';
 import Guide from './guide.png';
 import GenderIgnore from './gender-ignore.png';

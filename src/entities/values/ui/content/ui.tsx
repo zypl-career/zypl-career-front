@@ -1,5 +1,5 @@
 import { Button } from '@/shared';
-import { feedbackOptions } from '.';
+import { feedbackOptions } from './constants';
 
 export const FeedbackContent = () => {
   return (
@@ -13,12 +13,12 @@ export const FeedbackContent = () => {
             <div className="text-container flex flex-col sm:flex-row items-center justify-between">
               <div className="text-gray-700">{option.text}</div>
               <div className="icons-container flex space-x-2 mt-4 sm:mt-0">
-                {option.icons.map((Icon, index) => (
+                {option.icons.map((el, index) => (
                   <div
                     key={index}
                     className="text-2xl transition-transform transform hover:scale-110 focus:outline-none"
                   >
-                    <Icon />
+                    {el}
                   </div>
                 ))}
               </div>
