@@ -1,5 +1,5 @@
-import { NextCard, professions } from '@/entities';
 import Link from 'next/link';
+import { NextCard, professions } from '@/entities';
 
 export const CardsSection = () => {
   return (
