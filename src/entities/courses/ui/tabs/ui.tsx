@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { BADGES_DATA, CardSection, TABS_DATA } from '@/entities';
+import { CardSection } from '@/entities';
 import { Badge } from '@/shared';
+import { BADGES_DATA, TABS_DATA } from '../../model';
 
 export const TabsCourses = () => {
   const [activeTab, setActiveTab] = useState(TABS_DATA[0].id);

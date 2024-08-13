@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { TrainingCenters } from '@/shared';
-import { HERO_DATA } from '.';
+import { HERO_DATA } from './constants';
 
 export const TrainingCenterHero = () => {
   return (

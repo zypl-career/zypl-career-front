@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin'
 
 const config = {
   darkMode: ['class'],
@@ -20,7 +21,7 @@ const config = {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
+          DEFAULT: 'var(--primary)',
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
@@ -59,6 +60,7 @@ const config = {
           800: '#632C73',
           900: '#371141',
         },
+        primaryBg: 'var(--primaryBg)',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -86,7 +88,12 @@ const config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    plugin(({ addVariant }) => {
+      addVariant('theme', '.theme &')
+    })
+  ],
 } satisfies Config;
 
 export default config;

@@ -4,6 +4,6 @@ export type TMoreCardProps = {
   imageHeight: number;
   imageWidth: number;
   title: string;
-  date: string;
+  date?: string;
   buttonText: string;
 };

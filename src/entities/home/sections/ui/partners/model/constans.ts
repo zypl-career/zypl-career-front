@@ -1,7 +1,7 @@
 import { Aflotoun, Emblem, Flag, Tajrupt, Unicef } from '@/shared';
-import { TPartnerProps } from '@/entities';
+import { TPartner } from '@/entities';
 
-export const partnersData: TPartnerProps[] = [
+export const partnersData: TPartner[] = [
   {
     imageSrc: Emblem,
     altText: 'emblem',

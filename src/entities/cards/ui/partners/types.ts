@@ -1,5 +1,7 @@
+import { ImageSrc } from "@/entities";
+
 export type TPartnersCardProps = {
-  imageSrc: string;
+  imageSrc: ImageSrc | string;
   altText: string;
   text?: string;
 };

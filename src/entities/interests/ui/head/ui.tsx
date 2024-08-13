@@ -1,4 +1,4 @@
-import { careerValuesContent } from '.';
+import { careerValuesContent } from './constants';
 import { CardValue } from '@/shared';
 
 export const InterestsHead = () => {

@@ -1,4 +1,5 @@
-import { MoreCardCareerArticles, TRAINING_CARD_DATA } from '@/entities';
+import { MoreCardCareerArticles } from '@/entities';
+import { TRAINING_CARD_DATA } from './constants';
 
 export const MoreCardTraining = () => {
   return (

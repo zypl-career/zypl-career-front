@@ -1,5 +1,5 @@
 import { NextEducational } from '@/entities';
-import { Button } from '@/shared';
+import { ArrowIcon, Button } from '@/shared';
 import { titles } from '.';
 
 export const ContentProfessions = () => {
@@ -27,10 +27,10 @@ export const ContentProfessions = () => {
         </div>
       </div>
       <div className="flex items-center space-x-4">
-        <Button variant="white" showLeftArrowIcon={true}>
+        <Button variant="white" startIcon={<ArrowIcon />}>
           Previous
         </Button>
-        <Button variant="white" showArrowIcon={true}>
+        <Button variant="white" endIcon={<ArrowIcon />}>
           Next
         </Button>
       </div>

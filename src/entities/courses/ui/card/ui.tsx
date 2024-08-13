@@ -20,7 +20,7 @@ export const CardCourses: FC<TCardCoursesProps> = ({
       />
       <div className="md:px-5 px-2">
         <p className="font-bold md:text-xl pt-5">{title}</p>
-        <ProgressBar />
+        <ProgressBar progress={5} />
       </div>
     </div>
   );

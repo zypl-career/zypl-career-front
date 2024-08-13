@@ -2,8 +2,8 @@ import { missionContent } from '.';
 
 export const OurMissions = () => {
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-gray-100 pt-10 pb-40 px-5 lg:px-28">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full">
+    <section className="flex flex-col items-center justify-center min-h-screen bg-gray-100 pt-10 pb-40 px-5 lg:px-28 theme:bg-primaryBg theme:text-primary theme:border theme:border-primary">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full theme:bg-primaryBg theme:border-primary theme:border">
         <h2 className="text-2xl font-bold mb-4">Наша миссия</h2>
         <p>
           {missionContent.mission.split('\n').map((line, index) => (

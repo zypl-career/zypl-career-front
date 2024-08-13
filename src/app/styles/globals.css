@@ -1,3 +1,5 @@
+@import "./themes.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -74,3 +76,37 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.theme-green {
+  --color-primary: #A9E446;
+  --bg-primary: #3B2716;
+}
+
+.theme-blue {
+  --color-primary: #063462;
+  --bg-primary: #9DD1FF;
+}
+
+.theme-black {
+  --color-primary: #fff;
+  --bg-primary: #000;
+}
+
+.theme-white {
+  --color-primary: #000;
+  --bg-primary: #fff;
+}
+
+.theme {
+  --primary: var(--color-primary);
+  --primaryBg: var(--bg-primary);
+}
+
+.theme img {
+  @apply grayscale
+}
+
+/*.theme path {*/
+/*  stroke: var(--primaryBg);*/
+/*}*/

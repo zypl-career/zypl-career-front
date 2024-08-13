@@ -1,4 +1,4 @@
-import { VALUES_SURVEYS_DATA } from '.';
+import { VALUES_SURVEYS_DATA } from './constants';
 import { CardValue } from '@/shared';
 
 export const QuestionnaireValuesHead = () => {

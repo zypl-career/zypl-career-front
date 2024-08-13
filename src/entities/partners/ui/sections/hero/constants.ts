@@ -1,4 +1,4 @@
-import type { THeroData } from '.';
+import type { THeroData } from './types';
 
 export const HERO_DATA: THeroData[] = [
   {

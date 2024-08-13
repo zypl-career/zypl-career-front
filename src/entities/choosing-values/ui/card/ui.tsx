@@ -1,5 +1,5 @@
 import { RadioGroupCard } from '@/shared';
-import { LABELS_VALUES_CHOOSING } from '.';
+import { LABELS_VALUES_CHOOSING } from './constants';
 
 export const CardChoosingValues = () => {
   return (

@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 export type TFeedbackOption = {
   id: number;
   text: string;
-  icons: any;
+  icons: ReactNode[];
 };
