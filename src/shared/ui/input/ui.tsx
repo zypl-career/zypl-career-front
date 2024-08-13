@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 import { cn } from '@/shared';
 import { cva } from 'class-variance-authority';

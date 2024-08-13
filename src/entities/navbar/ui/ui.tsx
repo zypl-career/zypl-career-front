@@ -65,7 +65,9 @@ export const Navbar = () => {
           rounded="full"
           showRightArrowIcon
         >
-          Войти
+          <Link href="/login">
+            Войти
+          </Link>
         </Button>
       </div>
     </nav>

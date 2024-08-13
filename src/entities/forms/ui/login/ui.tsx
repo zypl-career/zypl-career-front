@@ -1,6 +1,38 @@
-import { Button, Input } from '@/shared';
+'use client';
+
+import { redirect } from 'next/navigation';
+import { Button, Form, FormControl, FormField, FormItem, FormMessage, Input, PasswordInput } from '@/shared';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { useSignIn } from "./services";
+import { SignInSchema } from "./schema";
+import { TSignIn } from "./types";
 
 export const LoginForm = () => {
+  const form = useForm<TSignIn>({
+    resolver: zodResolver(SignInSchema),
+    defaultValues: {
+      password: '',
+      email: '',
+    },
+  });
+
+  const signIn = useSignIn();
+
+  const onSubmit = (data: TSignIn) => {
+    signIn.mutate(data, {
+      onError: () => {
+        form.setError('password', {
+          type: 'custom',
+          message: 'Неверный логин или пароль',
+        });
+      },
+      onSuccess: () => {
+        redirect('/');
+      },
+    });
+  };
+
   return (
     <div className="flex justify-center py-10 theme:bg-primaryBg theme:text-primary">
       <div className="md:w-[408px] bg-white rounded-md px-5 theme:bg-primaryBg theme:border theme:border-primary">
@@ -9,31 +41,54 @@ export const LoginForm = () => {
           Пожалуйста, войдите в систему, используя свою учетную запись
           zypl.career
         </p>
-        <div className="py-5">
-          <div>
-            <Input label="Email*" variant="outline" />
-            <div className="relative">
-              <Input label="Пароль*" variant="outline" />
-              <p className="theme:text-primary absolute right-0 top-16 mt-2 text-sm text-[#4B5563] underline cursor-pointer transform transition-transform duration-200 active:scale-95">
-                Забыли пароль?
-              </p>
-            </div>
-          </div>
-          <div className="py-10">
-            <Button variant="status" showRightArrowIcon>
-              Войти
-            </Button>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="py-5">
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      variant="outline"
+                      label="Email*"
+                      type="email"
+                      placeholder="Введите почту"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <PasswordInput label="Пароль*" variant="outline" placeholder="Введите пароль" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="py-10">
+              <Button variant="status" showRightArrowIcon>
+                Войти
+              </Button>
 
-            <div className="flex justify-center items-center my-4">
-              <span className="w-20 border-t border-gray-300"></span>
-              <span className="text-[#6B7280] text-sm px-2 theme:text-primary">
-                У вас нет аккаунта?
-              </span>
-              <span className="w-20 border-t border-gray-300"></span>
+              <div className="flex justify-center items-center my-4">
+                <span className="w-20 border-t border-gray-300"></span>
+                <span className="text-[#6B7280] text-sm px-2 theme:text-primary">
+                  У вас нет аккаунта?
+                </span>
+                <span className="w-20 border-t border-gray-300"></span>
+              </div>
+              <Button variant="login">Зарегистрироваться</Button>
             </div>
-            <Button variant="login">Зарегистрироваться</Button>
-          </div>
-        </div>
+          </form>
+        </Form>
       </div>
     </div>
   );
