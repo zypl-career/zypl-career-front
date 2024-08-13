@@ -6,7 +6,7 @@ import {
   VeryLikeGrayIcon,
 } from '@/shared';
 
-import type { TFeedbackOption } from '.';
+import type { TFeedbackOption } from './types';
 
 export const feedbackOptions: TFeedbackOption[] = [
   {

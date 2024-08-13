@@ -1,2 +1,2 @@
-export type * from './badgeTypes';
-export type * from './activityTypes';
+// export type * from './badgeTypes';
+// export type * from './activityTypes';

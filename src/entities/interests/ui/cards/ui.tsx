@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { CARDS_DATA_INTERES } from '.';
+import { CARDS_DATA_INTERES } from './constants';
 import { Button } from '@/shared';
 
 export const CardsInteres = () => {

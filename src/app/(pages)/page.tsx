@@ -5,7 +5,7 @@ import {
   FollowFuture,
   Hero,
   Navbar,
-  Partners,
+  Partners, partnersData,
   ToolsInspirationUI,
 } from '@/entities';
 import { Footer } from '@/widgets';
@@ -18,7 +18,7 @@ const HomePage = () => {
       <ToolsInspirationUI />
       <CareerTips />
       <FollowFuture />
-      <Partners />
+      <Partners data={partnersData} />
       <Footer />
     </div>
   );

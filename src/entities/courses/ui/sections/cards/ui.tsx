@@ -1,4 +1,5 @@
-import { CARD_COURSES_DATA, CardCourses } from '@/entities';
+import { CardCourses } from '@/entities';
+import { CARD_COURSES_DATA } from '@/entities/courses/model';
 
 export const CardSection = () => {
   return (
@@ -12,6 +13,8 @@ export const CardSection = () => {
             imageHeight={card.imageHeight}
             imageWidth={card.imageWidth}
             title={card.title}
+            buttonText="Подробнее"
+            progress={5}
           />
         ))}
       </div>

@@ -1,5 +1,5 @@
 import { Aflotoun, China, Emblem, Tajrupt, UnicefPartners } from '@/shared';
-import { TPartnerCard } from '.';
+import { TPartnerCard } from './types';
 
 export const partnerCards: TPartnerCard[] = [
   {

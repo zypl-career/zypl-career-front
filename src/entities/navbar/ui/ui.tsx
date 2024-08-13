@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavbarData } from '@/entities';
 import { Button, SearchIcon, HamburgerIcon, UserIcon } from '@/shared';
+import Link from "next/link";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,15 +14,20 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="px-5 bg-white md:px-24 py-4 flex justify-between items-center border border-gray-200 relative">
+    <nav
+      className="bg-white px-5 md:px-24 py-4 flex justify-between items-center relative border border-gray-200 theme:border-primary theme:bg-primaryBg"
+    >
       <div className="flex items-center gap-4">
         <div className="block md:hidden cursor-pointer" onClick={toggleMenu}>
           <HamburgerIcon />
         </div>
         <ul className="flex-col md:flex-row lg:items-center gap-4 md:gap-8 hidden md:flex">
           {NavbarData.map((item, index) => (
-            <li key={index} className="text-gray-700 hover:text-gray-900">
-              <a href={item.link}>{item.title}</a>
+            <li
+              key={index}
+              className="text-gray-700 hover:text-gray-900 theme:text-primary"
+            >
+              <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
         </ul>
@@ -36,7 +42,7 @@ export const Navbar = () => {
             >
               {NavbarData.map((item, index) => (
                 <li key={index} className="text-gray-700 hover:text-gray-900">
-                  <a href={item.link}>{item.title}</a>
+                  <Link href={item.link}>{item.title}</Link>
                 </li>
               ))}
             </motion.ul>
@@ -47,18 +53,21 @@ export const Navbar = () => {
         <div className="w-[24px] h-[24px] cursor-pointer flex md:hidden">
           <SearchIcon />
         </div>
-        <div className="w-[24px] h-[24px] cursor-pointer flex md:hidden">
+        <div className="w-[24px] h-[24px] cursor-pointer flex md:hidden bg-background">
           <UserIcon />
         </div>
-        <Button className="lg:block hidden" variant="register">
+        <Button className="lg:block hidden" variant="register" rounded="full">
           Зарегистрироваться
         </Button>
         <Button
           className="lg:flex hidden"
-          variant="purpleOutline"
-          showArrowIcon={true}
+          variant="outline"
+          rounded="full"
+          showRightArrowIcon
         >
-          Войти
+          <Link href="/login">
+            Войти
+          </Link>
         </Button>
       </div>
     </nav>

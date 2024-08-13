@@ -2,9 +2,9 @@ import { CardSectionTeachers } from '@/entities';
 
 export const ResourcesTeachers = () => {
   return (
-    <div className="px-5 lg:px-28">
+    <div className="px-5 lg:px-28 theme:bg-primaryBg theme:text-primary theme:border theme:border-primary">
       <h3 className="font-bold text-2xl">Ресурсы для родителей</h3>
-      <p className="text-gray-600">
+      <p className="text-gray-600 theme:text-primary">
         Откройте для себя ресурсы, призванные помочь вашим детям повысить
         осведомленность о карьерном росте.
       </p>

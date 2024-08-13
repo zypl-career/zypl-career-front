@@ -53,6 +53,8 @@ import LifeSafety from './life-safety.png';
 import Physics from './physics.png';
 import BasicsEngineering from './basics-engineering.png';
 import TechnicalSupport from './technical-support.png';
+import Hero from './hero.png';
+import Logo from './logo-zypl';
 import VideoHero from './video-hero.png';
 import Register from './register.png';
 import Login from './login.png';
@@ -114,6 +116,8 @@ import CareerProspects from './career-prospects.png';
 import InfoDiff from './info-diff.png';
 
 export {
+  Logo,
+  Hero,
   HeroImg,
   PaperPlane,
   Guide,

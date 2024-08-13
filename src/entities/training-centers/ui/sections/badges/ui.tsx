@@ -1,5 +1,5 @@
 import { Badge } from '@/shared';
-import { CITY_TITLES } from '.';
+import { CITY_TITLES } from './constants';
 
 export const BadgesSection = () => {
   return (

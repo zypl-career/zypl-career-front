@@ -13,7 +13,7 @@ export const YourResultDesc = () => {
         <hr className="bg-gray-900" />
       </div>
       <div>
-        <TableResults />
+        <TableResults title='table' />
       </div>
     </div>
   );
