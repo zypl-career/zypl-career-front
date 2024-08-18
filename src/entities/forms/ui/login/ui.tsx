@@ -7,8 +7,10 @@ import { useForm } from "react-hook-form";
 import { useSignIn } from "./services";
 import { SignInSchema } from "./schema";
 import { TSignIn } from "./types";
+import Link from 'next/link';
 
 export const LoginForm = () => {
+const router = useRouter();
   const form = useForm<TSignIn>({
     resolver: zodResolver(SignInSchema),
     defaultValues: {
@@ -28,7 +30,7 @@ export const LoginForm = () => {
         });
       },
       onSuccess: () => {
-        redirect('/');
+        router.push('/');
       },
     });
   };
@@ -73,7 +75,7 @@ export const LoginForm = () => {
                 </FormItem>
               )}
             />
-            <div className="py-10">
+            <div className="pt-10">
               <Button variant="status" showRightArrowIcon>
                 Войти
               </Button>
@@ -85,10 +87,14 @@ export const LoginForm = () => {
                 </span>
                 <span className="w-20 border-t border-gray-300"></span>
               </div>
-              <Button variant="login">Зарегистрироваться</Button>
             </div>
           </form>
         </Form>
+             <Link href={"/register"}>
+            <Button variant="login">
+             Зарегистрироваться
+            </Button>
+             </Link> 
       </div>
     </div>
   );
