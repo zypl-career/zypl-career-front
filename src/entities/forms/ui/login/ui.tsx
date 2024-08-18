@@ -8,9 +8,10 @@ import { useSignIn } from "./services";
 import { SignInSchema } from "./schema";
 import { TSignIn } from "./types";
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export const LoginForm = () => {
-const router = useRouter();
+  const router = useRouter();
   const form = useForm<TSignIn>({
     resolver: zodResolver(SignInSchema),
     defaultValues: {
