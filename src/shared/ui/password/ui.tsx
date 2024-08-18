@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { cn } from '@utlis';
+import { cn } from '@utils';
 import { cva } from 'class-variance-authority';
 
 import type { TVariantType, TInputProps } from './types';
