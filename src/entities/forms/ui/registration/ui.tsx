@@ -1,9 +1,8 @@
-"use client"
+'use client';
 
 import { Button, Form, FormControl, FormField, FormItem, FormMessage, Input, Select } from '@/shared';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { SignInSchema } from '../login/schema';
 import { SignUpSchema } from './schema';
 import { useSignUp } from './services';
 import { TSignUp } from './types';
@@ -12,31 +11,29 @@ import Link from 'next/link';
 import { genderList, roleList } from './consts';
 
 export const FormRegister = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   const form = useForm<TSignUp>({
     resolver: zodResolver(SignUpSchema),
     defaultValues: {
-      name:"",
-      surname: "",
-      gender: "male",
-      role: "student",
-      email: "",
-      password: "",
-      patronymic: "",
-      age: "",
-      district: "",
-      school: "",
-      confirmPassword: "",
+      name:'',
+      surname: '',
+      gender: 'male',
+      role: 'student',
+      email: '',
+      password: '',
+      patronymic: '',
+      age: '',
+      district: '',
+      school: '',
+      confirmPassword: '',
     },
   });
 
   const signIn = useSignUp();
 
-  const onSubmit = (data: TSignUp) => {
-    console.log(data);
-    
-    const mappedData = {...data,age:Number(data.age), role: roleList.find((r)=>r.name===data.role)?.id || "", gender:genderList.find((r)=>r.name===data.gender)?.id || "", }
+  const onSubmit = (data: TSignUp) => {    
+    const mappedData = { ...data,age:Number(data.age), role: roleList.find((r)=>r.name===data.role)?.id || '', gender:genderList.find((r)=>r.name===data.gender)?.id || '' };
     if(data.password!==data.confirmPassword){
      return form.setError('password', {
         type: 'custom',
@@ -44,8 +41,6 @@ export const FormRegister = () => {
       });
     }
     signIn.mutate(mappedData, {
-      onError: () => {
-      },
       onSuccess: () => {
         router.push('/');
       },
@@ -124,7 +119,7 @@ export const FormRegister = () => {
                   <FormControl>
                   <Select
                 label="Роле*"
-                options={['Студент', 'Учитель',"Родители"]}
+                options={['Студент', 'Учитель','Родители']}
                 variant="outline"
                 className="mt-3"
                 {...field}
@@ -143,7 +138,7 @@ export const FormRegister = () => {
                   <FormControl>
                   <Select
                 label="Пол*"
-                options={["Мужской" ,"Женский"]}
+                options={['Мужской' ,'Женский']}
                 variant="outline"
                 className="mt-3"
                 {...field}
@@ -222,7 +217,7 @@ export const FormRegister = () => {
                  className="w-full md:w-[393px]"
                  label="Email*"
                  variant="outline"
-                 type='email'
+                 type="email"
                  {...field}
                   />
                   </FormControl>
@@ -258,7 +253,7 @@ export const FormRegister = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <Button variant="auth" type='submit' showRightArrowIcon={true}>
+          <Button variant="auth" type="submit" showRightArrowIcon={true}>
             Зарегистрироваться
           </Button>
         </div>
@@ -274,7 +269,7 @@ export const FormRegister = () => {
       </form>
       </Form>
       <div className="flex justify-center">
-        <Link href={"/login"}>
+        <Link href={'/login'}>
           <Button variant="outlineSecondary">Войти в систему</Button>
         </Link>
         </div>

@@ -1,4 +1,4 @@
-import { CardQuestionnaireValues, CardValuesSurveys } from '@/entities';
+import { CardQuestionnaireValues } from '@/entities';
 import { Button } from '@/shared';
 
 export const MainQuestionnaireValues = () => {

@@ -6,7 +6,7 @@ export const useSignIn = () => {
   return useMutation<TToken, Error, TSignIn>({
     mutationFn: (form: TSignIn) => apiService.post('/user/login', form).then((response) => response?.data),
     onSuccess(data) {
-      localStorage.setItem('access', JSON.stringify(data))
+      localStorage.setItem('access', JSON.stringify(data));
       return data;
     },
   });

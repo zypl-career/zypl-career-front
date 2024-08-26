@@ -1,5 +1,5 @@
 import { PartnersCard, type TPartnerProps } from '@/entities';
-import { FC } from "react";
+import { FC } from 'react';
 
 export const Partners: FC<TPartnerProps> = ({ data }) => {
   return (

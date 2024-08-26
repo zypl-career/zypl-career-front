@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC, SVGProps } from 'react';
 
 const Glasses: FC<SVGProps<SVGSVGElement>> = ({ stroke, ...props }) => {
@@ -32,4 +33,4 @@ const Glasses: FC<SVGProps<SVGSVGElement>> = ({ stroke, ...props }) => {
   );
 };
 
-export default Glasses
+export default Glasses;

@@ -8,7 +8,7 @@ export const themes = [
     theme: 'black',
     color: '#fff',
     bg: '#000',
-    border: '#fff'
+    border: '#fff',
   },
   {
     theme: 'blue',
@@ -19,6 +19,6 @@ export const themes = [
     theme: 'green',
     color: '#A9E44D',
     bg: '#3B2716',
-    border: '#A9E44D'
+    border: '#A9E44D',
   },
-]
+];

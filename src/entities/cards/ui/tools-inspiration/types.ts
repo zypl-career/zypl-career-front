@@ -1,4 +1,4 @@
-import { FC, ReactNode, SVGProps } from 'react';
+import { FC, SVGProps } from 'react';
 
 export type ToolsInspirationProps = {
   Icons: FC<SVGProps<SVGSVGElement>>;

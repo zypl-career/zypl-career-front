@@ -6,5 +6,5 @@ export const LABELS_VALUES_CHOOSING = [
   'Primary vocational education (VET) or secondary vocational education (technical school)',
   'Higher Education (University, Conservatory, Academy) or Postgraduate',
   'Does not work due to limited physical ability or illness',
-  "I don't know / Rejection",
+  'I don\'t know / Rejection',
 ];

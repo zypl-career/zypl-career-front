@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { NextEducational } from '@/entities';
 import { ArrowIcon, Button } from '@/shared';
 import { titles } from '.';

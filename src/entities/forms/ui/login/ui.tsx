@@ -1,12 +1,11 @@
 'use client';
 
-import { redirect } from 'next/navigation';
 import { Button, Form, FormControl, FormField, FormItem, FormMessage, Input, PasswordInput } from '@ui';
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { useSignIn } from "./services";
-import { SignInSchema } from "./schema";
-import { TSignIn } from "./types";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { useSignIn } from './services';
+import { SignInSchema } from './schema';
+import { TSignIn } from './types';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -91,7 +90,7 @@ export const LoginForm = () => {
             </div>
           </form>
         </Form>
-             <Link href={"/register"}>
+             <Link href={'/register'}>
             <Button variant="login">
              Зарегистрироваться
             </Button>

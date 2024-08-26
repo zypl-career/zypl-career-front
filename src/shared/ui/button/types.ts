@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type { VariantProps } from 'class-variance-authority';
 import { buttonVariants } from '@/shared';
-import {ReactNode} from "react";
+import { ReactNode } from 'react';
 
 export type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {

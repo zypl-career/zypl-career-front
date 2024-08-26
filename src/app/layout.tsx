@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { ThemeProvider } from "@/shared";
-import ReactQueryProvider from "@/shared/providers/react-query";
+import { ThemeProvider } from '@/shared';
+import ReactQueryProvider from '@/shared/providers/react-query';
 import './styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });

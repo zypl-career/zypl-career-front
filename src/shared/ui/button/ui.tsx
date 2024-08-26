@@ -59,7 +59,7 @@ const buttonVariants = cva(
         md: 'rounded-xl',
         lg: 'rounded-2xl',
         full: 'rounded-full',
-      }
+      },
     },
     defaultVariants: {
       variant: 'default' as TVariantType,
@@ -100,7 +100,7 @@ const Button = React.forwardRef<
           <ArrowIcon
             className={cn(
               'ml-2 animate-moveRight fill-white theme:fill-primaryBg',
-              { 'fill-black': variant !== 'default' }
+              { 'fill-black': variant !== 'default' },
             )}
           />
         ) : null}

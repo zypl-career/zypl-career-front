@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavbarData } from '@/entities';
 import { Button, SearchIcon, HamburgerIcon, UserIcon } from '@/shared';
-import Link from "next/link";
+import Link from 'next/link';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -18,6 +18,8 @@ module.exports = {
   },
   plugins: ['react-refresh', '@typescript-eslint'],
   rules: {
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
     quotes: ['error', 'single'],
     semi: ['warn', 'always'],
     'no-console': 'warn',

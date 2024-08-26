@@ -30,7 +30,6 @@ export const Password = React.forwardRef<HTMLInputElement, TInputProps>(
       variant = 'default',
       label,
       labelPosition = 'top',
-      showSearchIcon = true,
       ...props
     },
     ref,

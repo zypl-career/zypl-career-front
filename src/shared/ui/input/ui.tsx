@@ -31,7 +31,6 @@ export const Input = React.forwardRef<HTMLInputElement, TInputProps>(
       variant = 'default',
       label,
       labelPosition = 'top',
-      showSearchIcon = true,
       ...props
     },
     ref,

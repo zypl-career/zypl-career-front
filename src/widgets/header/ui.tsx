@@ -1,5 +1,5 @@
-import { Button, cn, GlassesIcon, Logo, LogoIcon, Select, useTheme } from '@/shared';
-import { Themes } from "@/features/themes/ui";
+import { Button, cn, GlassesIcon, Logo, Select, useTheme } from '@/shared';
+import { Themes } from '@/features/themes/ui';
 
 export const Header = () => {
   const { theme } = useTheme();

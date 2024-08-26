@@ -1,4 +1,4 @@
-import { ImageSrc } from "@/entities";
+import { ImageSrc } from '@/entities';
 
 export type TPartnersCardProps = {
   imageSrc: ImageSrc | string;

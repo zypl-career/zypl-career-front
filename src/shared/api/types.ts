@@ -19,8 +19,8 @@ export type AxiosErrorHeaders = {
 export type AxiosErrorConfig = {
   transitional: Transitional
   adapter: string[]
-  transformRequest: any[]
-  transformResponse: any[]
+  transformRequest: unknown[]
+  transformResponse: unknown[]
   timeout: number
   xsrfCookieName: string
   xsrfHeaderName: string

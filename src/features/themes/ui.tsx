@@ -1,8 +1,8 @@
-import { useTheme } from "@/shared";
-import { themes } from "@/features/themes/constants";
+import { useTheme } from '@/shared';
+import { themes } from '@/features/themes/constants';
 
 export const Themes = () => {
-  const { setTheme } = useTheme()
+  const { setTheme } = useTheme();
   return (
     <div className="py-5 md:px-24 flex items-center justify-end gap-2 bg-[#1F2937]">
       <span className="text-white">

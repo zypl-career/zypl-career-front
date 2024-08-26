@@ -1,8 +1,6 @@
 import {
   MainChoosingValues,
-  MainQuestionnaireValues,
   Navbar,
-  QuestionnaireValuesHead,
 } from '@/entities';
 import { Footer } from '@/widgets';
 import { ChoosingValuesHead } from '@/entities/choosing-values/ui';

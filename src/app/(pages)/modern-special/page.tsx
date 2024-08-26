@@ -4,10 +4,10 @@ import { Footer } from '@/widgets';
 const ModernSpecialPage = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      {/* <Navbar />
+      <Navbar />
       <ModernSpecialHero />
       <ContentModernSpecial />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };

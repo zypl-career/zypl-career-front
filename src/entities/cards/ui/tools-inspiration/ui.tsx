@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, cloneElement, createElement } from 'react';
+import { FC, createElement } from 'react';
 import { ToolsInspirationProps } from '.';
 
 export const ToolsInspiration: FC<ToolsInspirationProps> = ({

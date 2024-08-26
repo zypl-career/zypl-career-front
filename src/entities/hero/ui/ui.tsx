@@ -1,5 +1,5 @@
 import { Hero as HeroImg } from '@/shared';
-import Image from "next/image";
+import Image from 'next/image';
 
 export const Hero = () => {
   return (
