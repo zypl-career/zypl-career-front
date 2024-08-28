@@ -1,6 +1,7 @@
 import { FC, SVGProps } from 'react';
 
 const RatherDislikeGrayIcon: FC<SVGProps<SVGSVGElement>> = ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   stroke,
   ...props
 }) => {

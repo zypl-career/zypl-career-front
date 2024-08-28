@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC, SVGProps } from 'react';
 
 const RightArrowIcon: FC<SVGProps<SVGSVGElement>> = ({ stroke, ...props }) => {

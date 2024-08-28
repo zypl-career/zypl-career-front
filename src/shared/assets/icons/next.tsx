@@ -1,5 +1,6 @@
 import { FC, SVGProps } from 'react';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const NextIcon: FC<SVGProps<SVGSVGElement>> = ({ stroke, ...props }) => {
   return (
     <svg
