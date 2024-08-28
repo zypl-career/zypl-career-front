@@ -1,5 +1,6 @@
 import { AgriculturalIndustry } from '@/shared';
 import { CardsAgricultural } from '@/entities';
+import Image from 'next/image';
 
 export const BasicIndustry = () => {
   return (
@@ -47,7 +48,13 @@ export const BasicIndustry = () => {
         </p>
       </div>
       <div className="lg:flex lg:justify-center py-5 lg:pb-10">
-        <AgriculturalIndustry />
+        <Image
+          src={AgriculturalIndustry}
+          alt="AgriculturalIndustry"
+          width={0}
+          height={0}
+          sizes="100vw"
+        />
       </div>
       <div className="flex justify-center lg:px-0">
         <h2 className="font-bold text-2xl lg:w-[830px] text-center">

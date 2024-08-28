@@ -1,5 +1,6 @@
 import { Button } from '@/shared';
 import { feedbackOptions } from './constants';
+import { createElement } from 'react';
 
 export const FeedbackContent = () => {
   return (
@@ -18,7 +19,7 @@ export const FeedbackContent = () => {
                     key={index}
                     className="text-2xl transition-transform transform hover:scale-110 focus:outline-none"
                   >
-                    {el}
+                    {createElement(el)}
                   </div>
                 ))}
               </div>

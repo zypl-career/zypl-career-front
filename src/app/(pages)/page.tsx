@@ -11,14 +11,13 @@ import { Footer } from '@/widgets';
 const HomePage = () => {
   return (
     <div className="overflow-x-hidden">
-      asd
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <ToolsInspirationUI />
-      {/* <CareerTips /> */}
-      {/* <FollowFuture /> */}
-      {/* <Partners data={partnersData} /> */}
-      {/* <Footer /> */}
+      <CareerTips />
+      <FollowFuture />
+      <Partners data={partnersData} />
+      <Footer />
     </div>
   );
 };

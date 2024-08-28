@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import { FC, SVGProps } from 'react';
 
 export type TFeedbackOption = {
   id: number;
   text: string;
-  icons: ReactNode[];
+  icons: FC<SVGProps<SVGSVGElement>>[];
 };
