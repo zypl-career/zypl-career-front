@@ -20,55 +20,55 @@ export const toolsData: ToolsProps[] = [
     link: '/career-profiles',
   },
   {
-    Icons: ProfessionsIcon,
+    Icons: CareerIcon,
     title: 'Профессии',
     description:
       'Изучите более 350 профессий, описывающих задачи, уровни квалификации и текущую информацию о рынке труда.',
     link: '/professions',
   },
   {
-    Icons: IndustriesIcon,
+    Icons: CareerIcon,
     title: 'Отрасли',
     description:
       'Доступ к важной информации (включая перспективы трудоустройства) по каждой отрасли.',
     link: '/industries',
   },
   {
-    Icons: CareerArticlesIcon,
+    Icons: CareerIcon,
     title: 'Карьерные статьи',
     description:
       'Откройте для себя практическую информацию для поддержки вашего карьерного исследования.',
     link: '/career-articles',
   },
   {
-    Icons: CoursesIcon,
+    Icons: CareerIcon,
     title: 'Курсы',
     description:
       'Откройте для себя курс, просмотрев текущие курсы высшего образования и профессионального образования и обучения.',
     link: '/courses',
   },
   {
-    Icons: UniversityIcon,
+    Icons: CareerIcon,
     title: 'Вузы и колледжи',
     description: 'Подбери вуз для успешной карьеры',
     link: '/educational-institutions',
   },
   {
-    Icons: ResourcesIcon,
+    Icons: CareerIcon,
     title: 'Ресурсы для соискателей',
     description:
       'Откройте для себя шаблоны резюме и сопроводительных писем и другие ресурсы, которые помогут вам найти и получить работу.',
     link: '/resources-seeker',
   },
   {
-    Icons: TrainingCentersIcon,
+    Icons: CareerIcon,
     title: 'Учебные центры',
     description:
       'Узнайте советы и рекомендации, прочитав реальные карьерные истории о личном опыте.',
     link: '/training-centers',
   },
   {
-    Icons: VideoIcon,
+    Icons: CareerIcon,
     title: 'Видео с руководством пользователя',
     description:
       'Просмотрите короткие видео, демонстрирующие ключевые разделы веб-сайта, чтобы узнать, как получить максимальную отдачу от моего будущего.',

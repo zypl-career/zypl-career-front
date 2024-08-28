@@ -6,7 +6,7 @@ import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
 import { ArrowDownIcon, RussianFlag, DropdownIcon } from '@/shared';
 
-import type { TVariantType, TSizeType, TSelectProps } from '.';
+import type { TVariantType, TSizeType, TSelectProps } from './types';
 
 const selectVariants = cva(
   'inline-flex w-full items-center justify-between rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',

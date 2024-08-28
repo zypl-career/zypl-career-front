@@ -1,5 +1,3 @@
-'use client';
-
 import {
   CareerTips,
   FollowFuture,
@@ -13,13 +11,14 @@ import { Footer } from '@/widgets';
 const HomePage = () => {
   return (
     <div className="overflow-x-hidden">
-      <Navbar />
+      asd
+      {/* <Navbar /> */}
       <Hero />
       <ToolsInspirationUI />
-      <CareerTips />
-      <FollowFuture />
-      <Partners data={partnersData} />
-      <Footer />
+      {/* <CareerTips /> */}
+      {/* <FollowFuture /> */}
+      {/* <Partners data={partnersData} /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

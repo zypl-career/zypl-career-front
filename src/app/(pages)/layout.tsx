@@ -1,16 +1,10 @@
-'use client';
+'use server';
+
 import { PropsWithChildren } from 'react';
-import { Header } from '@/widgets';
-import { cn, useTheme } from '@/shared';
+import { ThemesLayout } from '@/features/themes';
 
 const MainLayout = ({ children }: PropsWithChildren) => {
-  const { theme } = useTheme();
-  return (
-    <main className={cn({ [`theme theme-${theme}`]: theme })}>
-      <Header />
-      {children}
-    </main>
-  );
+  return children ? <ThemesLayout>{children}</ThemesLayout> : null;
 };
 
 export default MainLayout;

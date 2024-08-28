@@ -1,5 +1,9 @@
-import { useTheme } from '@/shared';
+'use client';
+
+import { cn, useTheme } from '@/shared';
 import { themes } from '@/features/themes/constants';
+import { ReactNode } from 'react';
+import { Header } from '@/widgets';
 
 export const Themes = () => {
   const { setTheme } = useTheme();
@@ -19,5 +23,15 @@ export const Themes = () => {
         </div>
       ))}
     </div>
+  );
+};
+
+export const ThemesLayout = ({ children }: { children: ReactNode }) => {
+  const { theme } = useTheme();
+  return (
+    <main className={cn({ [`theme theme-${theme}`]: theme })}>
+      <Header />
+      {children}
+    </main>
   );
 };

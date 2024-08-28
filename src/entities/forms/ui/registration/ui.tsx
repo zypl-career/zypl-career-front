@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Form, FormControl, FormField, FormItem, FormMessage, Input, Select } from '@/shared';
+import { Button, Form, FormControl, FormField, FormItem, FormMessage, Input, Select } from '@ui';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { SignUpSchema } from './schema';

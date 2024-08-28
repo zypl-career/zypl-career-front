@@ -1,4 +1,4 @@
-import { Button, Input, RadioGroup, RadioGroupItem, Select } from '@/shared';
+import { Button, Input, RadioGroup, RadioGroupItem, Select } from '@ui';
 
 export const FormInfo = () => {
   return (

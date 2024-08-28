@@ -1,5 +1,9 @@
-import { Button, cn, GlassesIcon, Logo, Select, useTheme } from '@/shared';
+import { Button, Select } from '@ui';
+import { cn } from '@utils';
 import { Themes } from '@/features/themes/ui';
+import { useTheme } from '@providers';
+import { Logo } from '@/shared';
+import { GlassesIcon } from 'lucide-react';
 
 export const Header = () => {
   const { theme } = useTheme();

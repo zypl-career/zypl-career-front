@@ -22,7 +22,8 @@
       "@/*": ["./src/*"],
       "@api": ["./src/shared/api"],
       "@ui": ["./src/shared/ui"],
-      "@utils": ["./src/shared/utils"]
+      "@utils": ["./src/shared/utils"],
+      "@providers": ["./src/shared/providers"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

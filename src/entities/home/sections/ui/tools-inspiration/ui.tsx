@@ -1,5 +1,9 @@
-import { toolsData, ToolsInspiration } from '@/entities';
+'use client';
+
+
 import Link from 'next/link';
+import { toolsData } from '.';
+import { ToolsInspiration } from '@/entities';
 
 export const ToolsInspirationUI = () => {
   return (

@@ -19,11 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <ReactQueryProvider>
-      <ThemeProvider>
-        <body className={inter.className}>{children}</body>
-      </ThemeProvider>
-    </ReactQueryProvider>
+      <ReactQueryProvider>
+        <ThemeProvider>
+          <body className={inter.className}>{children}</body>
+        </ThemeProvider>
+      </ReactQueryProvider>
     </html>
   );
 }
