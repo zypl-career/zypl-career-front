@@ -9,5 +9,5 @@ export const LABELS_QUESTION = [
   'Does not work due to limited physical ability or illness',
   'Retired',
   'Dead',
-  "I don't know / Rejection",
+  'I don t know / Rejection',
 ];
