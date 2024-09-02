@@ -14,9 +14,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav
-      className="bg-white px-5 md:px-24 py-4 flex justify-between items-center relative border border-gray-200 theme:border-primary theme:bg-primaryBg"
-    >
+    <nav className="bg-white px-5 md:px-24 py-4 flex justify-between items-center relative border border-gray-200 theme:border-primary theme:bg-primaryBg">
       <div className="flex items-center gap-4">
         <div className="block md:hidden cursor-pointer" onClick={toggleMenu}>
           <HamburgerIcon />
@@ -65,9 +63,7 @@ export const Navbar = () => {
           rounded="full"
           showRightArrowIcon
         >
-          <Link href="/login">
-            Войти
-          </Link>
+          <Link href="/login">Войти</Link>
         </Button>
       </div>
     </nav>

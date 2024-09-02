@@ -3,7 +3,8 @@ import {
   FollowFuture,
   Hero,
   Navbar,
-  Partners, partnersData,
+  Partners,
+  partnersData,
   ToolsInspirationUI,
 } from '@/entities';
 import { Footer } from '@/widgets';

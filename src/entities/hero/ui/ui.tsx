@@ -15,13 +15,7 @@ export const Hero = () => {
         </p>
       </div>
       <div className="flex justify-center md:justify-end py-5 md:py-0">
-        <Image
-          src={HeroImg}
-          alt="Hero"
-          width={0}
-          height={0}
-          sizes="100vw"
-        />
+        <Image src={HeroImg} alt="Hero" width={0} height={0} sizes="100vw" />
       </div>
     </div>
   );

@@ -14,7 +14,9 @@ export const PartnersHero = () => {
             <p className="text-2xl md:text-5xl font-bold md:pb-8">
               {hero.title}
             </p>
-            <p className="text-gray-600 theme:text-primary">{hero.description}</p>
+            <p className="text-gray-600 theme:text-primary">
+              {hero.description}
+            </p>
           </div>
         </div>
       ))}

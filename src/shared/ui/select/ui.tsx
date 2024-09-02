@@ -17,7 +17,8 @@ const selectVariants = cva(
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         outline: 'border border-[#D1D5DB] rounded-md',
-        secondary: 'theme:bg-transparent theme:text-primary bg-purple-800 text-white hover:bg-purple-800 border-none',
+        secondary:
+          'theme:bg-transparent theme:text-primary bg-purple-800 text-white hover:bg-purple-800 border-none',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary underline-offset-4 hover:underline',
       },

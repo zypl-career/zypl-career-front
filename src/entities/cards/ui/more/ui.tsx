@@ -24,7 +24,9 @@ export const MoreCard: FC<TMoreCardProps> = ({
         <p className="font-bold md:text-xl pt-5">{title}</p>
         <div className="flex items-center justify-between md:gap-20 pt-10 pb-4">
           <p className="text-gray-600 text-sm theme:text-primary">{date}</p>
-          <Button variant="outline" rounded="full">{buttonText}</Button>
+          <Button variant="outline" rounded="full">
+            {buttonText}
+          </Button>
         </div>
       </div>
     </div>

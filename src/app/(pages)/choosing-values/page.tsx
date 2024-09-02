@@ -1,7 +1,4 @@
-import {
-  MainChoosingValues,
-  Navbar,
-} from '@/entities';
+import { MainChoosingValues, Navbar } from '@/entities';
 import { Footer } from '@/widgets';
 import { ChoosingValuesHead } from '@/entities/choosing-values/ui';
 

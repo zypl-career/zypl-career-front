@@ -1,6 +1,15 @@
 'use client';
 
-import { Button, Form, FormControl, FormField, FormItem, FormMessage, Input, PasswordInput } from '@ui';
+import {
+  Button,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+  Input,
+  PasswordInput,
+} from '@ui';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useSignIn } from './services';
@@ -69,7 +78,12 @@ export const LoginForm = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <PasswordInput label="Пароль*" variant="outline" placeholder="Введите пароль" {...field} />
+                    <PasswordInput
+                      label="Пароль*"
+                      variant="outline"
+                      placeholder="Введите пароль"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -90,11 +104,9 @@ export const LoginForm = () => {
             </div>
           </form>
         </Form>
-             <Link href={'/register'}>
-            <Button variant="login">
-             Зарегистрироваться
-            </Button>
-             </Link> 
+        <Link href={'/register'}>
+          <Button variant="login">Зарегистрироваться</Button>
+        </Link>
       </div>
     </div>
   );
