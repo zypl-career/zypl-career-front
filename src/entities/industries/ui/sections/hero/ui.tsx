@@ -2,8 +2,11 @@ import { Industries } from '@/shared';
 
 export const IndustriesHero = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between bg-[#F8F8F8] px-20">
-      <div className="py-5 px-2  md:py-32">
+    <div className="flex flex-col md:flex-row justify-between bg-[#F8F8F8] lg:px-20 px-1">
+      <div className="lg:w-96 py-24 flex justify-center order-1 md:order-2">
+        <Industries />
+      </div>
+      <div className="py-5 px-2 md:py-32 order-2 md:order-1">
         <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8">
           Отрасли
         </p>
@@ -12,9 +15,6 @@ export const IndustriesHero = () => {
           Ознакомьтесь с обзорами отрасли, чтобы узнать больше о каждой отрасли,
           в том числе о ведущих профессиях и перспективах роста.
         </p>
-      </div>
-      <div className="lg:w-96 py-24">
-        <Industries />
       </div>
     </div>
   );

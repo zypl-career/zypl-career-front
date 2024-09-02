@@ -1,10 +1,13 @@
-import { Universities } from '@/shared';
 import Image from 'next/image';
+import { Universities } from '@/shared';
 
 export const HeroEducational = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between bg-white lg:px-36">
-      <div className="py-5 px-2 md:py-32">
+    <div className="flex flex-col md:flex-row justify-between bg-white px-1 lg:px-36">
+      <div className="lg:w-96 pt-24 lg:px-20 md:px-16 flex justify-center order-1 md:order-2">
+        <Image src={Universities} alt="educational" className="w-52 lg:w-96" />
+      </div>
+      <div className="py-5 px-2 md:py-32 order-2 md:order-1">
         <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8">
           Вузы и колледжи
         </p>
@@ -15,9 +18,6 @@ export const HeroEducational = () => {
           и институтов) и 70 образовательных учреждений среднего
           профессионального образования.
         </p>
-      </div>
-      <div className="lg:w-96 py-24 lg:px-20 md:px-16 flex justify-center">
-        <Image src={Universities} alt="educational" />
       </div>
     </div>
   );

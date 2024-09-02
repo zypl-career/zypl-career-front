@@ -2,7 +2,10 @@ import * as React from 'react';
 import type { VariantProps } from 'class-variance-authority';
 import { selectVariants } from '.';
 
-export type TSelectProps = Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size'> &
+export type TSelectProps = Omit<
+  React.SelectHTMLAttributes<HTMLSelectElement>,
+  'size'
+> &
   VariantProps<typeof selectVariants> & {
     asChild?: boolean;
     showFlagIcon?: boolean;

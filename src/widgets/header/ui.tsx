@@ -10,13 +10,20 @@ export const Header = () => {
   return (
     <>
       <Themes />
-      <header className={cn('w-full py-5 md:px-20', theme ? 'bg-primaryBg' : 'bg-purple-800')}>
+      <header
+        className={cn(
+          'w-full py-5 md:px-20',
+          theme ? 'bg-primaryBg' : 'bg-purple-800',
+        )}
+      >
         <div className="flex justify-between items-center px-5">
           <Logo className="theme:fill-primary" />
           <div className="flex items-center not">
             <div className="hidden md:block">
               <Button
-                startIcon={<GlassesIcon className="theme:stroke-primaryBg stroke-purple-900" />}
+                startIcon={
+                  <GlassesIcon className="theme:stroke-primaryBg stroke-purple-900" />
+                }
                 variant="secondary"
                 size="default"
                 className="mt-2.5"

@@ -1,4 +1,4 @@
-@import "./themes.css";
+@import './themes.css';
 
 @tailwind base;
 @tailwind components;
@@ -77,15 +77,14 @@
   }
 }
 
-
 .theme-green {
-  --color-primary: #A9E446;
-  --bg-primary: #3B2716;
+  --color-primary: #a9e446;
+  --bg-primary: #3b2716;
 }
 
 .theme-blue {
   --color-primary: #063462;
-  --bg-primary: #9DD1FF;
+  --bg-primary: #9dd1ff;
 }
 
 .theme-black {
@@ -104,7 +103,7 @@
 }
 
 .theme img {
-  @apply grayscale
+  @apply grayscale;
 }
 
 /*.theme path {*/

@@ -25,13 +25,7 @@ const inputVariants = cva(
 
 export const Password = React.forwardRef<HTMLInputElement, TInputProps>(
   (
-    {
-      className,
-      variant = 'default',
-      label,
-      labelPosition = 'top',
-      ...props
-    },
+    { className, variant = 'default', label, labelPosition = 'top', ...props },
     ref,
   ) => {
     const [showPassword, setShowPassword] = React.useState(false);

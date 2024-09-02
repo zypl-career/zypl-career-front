@@ -6,10 +6,13 @@ import { ThemeContext } from './context';
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   const [theme, setTheme] = useState<string>('');
 
-  const defaultValue = useMemo(() => ({
-    theme,
-    setTheme,
-  }), [theme]);
+  const defaultValue = useMemo(
+    () => ({
+      theme,
+      setTheme,
+    }),
+    [theme],
+  );
 
   return (
     <ThemeContext.Provider value={defaultValue}>

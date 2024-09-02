@@ -68,10 +68,8 @@ const buttonVariants = cva(
   },
 );
 
-const Button = React.forwardRef<
-  HTMLButtonElement,
-  TButtonProps>
-  ((
+const Button = React.forwardRef<HTMLButtonElement, TButtonProps>(
+  (
     {
       className,
       variant,
