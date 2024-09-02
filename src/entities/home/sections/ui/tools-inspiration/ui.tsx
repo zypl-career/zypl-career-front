@@ -15,7 +15,7 @@ export const ToolsInspirationUI = () => {
         </p>
       </div>
       <div className="mx-2 md:mx-0">
-        <div className="grid grid-cols-1 md:grid-cols-3 md:px-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:px-24 ">
           {toolsData.map((tool, index) => (
             <Link href={tool.link} key={index}>
               <ToolsInspiration
