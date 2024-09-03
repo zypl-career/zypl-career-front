@@ -7,7 +7,7 @@ import { ToolsInspiration } from '@/entities';
 export const ToolsInspirationUI = () => {
   return (
     <section className="py-10 theme:border theme:border-primary theme:bg-primaryBg theme:text-primary">
-      <div className="mx-2 md:mx-24 my-5">
+      <div className="container my-5">
         <p className="text-3xl font-bold">Инструменты для вдохновения</p>
         <p className="my-2 md:w-[800px]">
           Используйте наши инструменты, чтобы узнать свои интересы, ценности,
@@ -15,7 +15,7 @@ export const ToolsInspirationUI = () => {
         </p>
       </div>
       <div className="mx-2 md:mx-0">
-        <div className="grid grid-cols-1 md:grid-cols-3 md:px-24 ">
+        <div className="container grid grid-cols-1 md:grid-cols-3">
           {toolsData.map((tool, index) => (
             <Link href={tool.link} key={index}>
               <ToolsInspiration

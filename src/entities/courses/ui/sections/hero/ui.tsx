@@ -2,8 +2,8 @@ import { TabsCourses } from '@/entities';
 
 export const CoursesHero = () => {
   return (
-    <div className="lg:px-24 px-5">
-      <h2 className="text-3xl font-bold py-8 ">Курсы</h2>
+    <div className="container px-5">
+      <h2 className="text-3xl font-bold py-8">Курсы</h2>
       <p>
         Изучите курсы, разработанные специально для вас и отражающие ваши
         интересы и достижения.

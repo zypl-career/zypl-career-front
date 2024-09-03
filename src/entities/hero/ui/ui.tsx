@@ -4,7 +4,7 @@ import Image from 'next/image';
 export const Hero = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between bg-[#F8F8F8] theme:bg-primaryBg">
-      <div className="py-5 px-2 md:mx-24 md:py-32">
+      <div className="py-5 container md:mx-24 md:py-32">
         <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8 text-primary">
           Формируйте свое будущее
         </p>
@@ -14,8 +14,8 @@ export const Hero = () => {
           решений о карьере.
         </p>
       </div>
-      <div className="flex justify-center md:justify-end py-5 md:py-0">
-        <Image src={HeroImg} alt="Hero" width={0} height={0} sizes="100vw" />
+      <div className="flex justify-center md:justify-end py-5">
+        <Image src={HeroImg} alt="hero" />
       </div>
     </div>
   );
