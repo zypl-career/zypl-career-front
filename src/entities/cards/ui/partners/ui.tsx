@@ -11,20 +11,20 @@ export const PartnersCard: FC<TPartnersCardProps> = ({
   return (
     <div
       className={cn(
-        'partner-card flex items-center justify-center bg-white m-2 lg:m-3 py-12 lg:py-[32px] rounded-lg shadow-md',
+        'partner-card flex items-center justify-center bg-white m-2 lg:m-3 py-12 lg:py-[32px] rounded-lg shadow-md h-52',
         text ? 'flex-row' : 'flex-col',
       )}
     >
       {text ? (
-        <div className="flex items-center gap-5 px-10">
+        <div className="flex items-center gap-5 px-5 lg:px-10">
           <Image
             src={imageSrc}
             alt={altText}
             className="partner-image"
-            width={200}
-            height={200}
+            width={100}
+            height={100}
           />
-          <p className="partner-text text-lg font-semibold text-gray-700 mr-4">
+          <p className="partner-text font-semibold text-gray-700 mr-4">
             {text}
           </p>
         </div>
