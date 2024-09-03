@@ -9,7 +9,7 @@ export const HeroEducational = () => {
           <Image
             src={Universities}
             alt="educational"
-            className="w-52 lg:w-96"
+            className="w-52 lg:w-72 lg:h-72"
           />
         </div>
         <div className="py-5 md:py-32 order-2 md:order-1">

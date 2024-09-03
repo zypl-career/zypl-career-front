@@ -6,7 +6,11 @@ export const TrainingCenterHero = () => {
   return (
     <section className="flex flex-col md:flex-row justify-between bg-white px-1">
       <div className="pt-32 container order-1 md:order-2 flex justify-center">
-        <Image src={TrainingCenters} alt="about-us" className="w-52 lg:w-52" />
+        <Image
+          src={TrainingCenters}
+          alt="about-us"
+          className="w-52 lg:w-52 lg:h-52"
+        />
       </div>
       {HERO_DATA.map((hero, index) => (
         <div
