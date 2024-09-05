@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const ResourcesSeekersHero = () => {
   return (
-    <div className="bg-white">
+    <section className="bg-white">
       <div className="container flex flex-col md:flex-row justify-between">
         <div className="lg:w-96 pt-24 flex justify-center order-1 md:order-2">
           <Image
@@ -24,6 +24,6 @@ export const ResourcesSeekersHero = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

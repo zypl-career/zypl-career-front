@@ -17,7 +17,7 @@ export const FileSave = () => {
             {resumeTemplates.map((template, index) => (
               <tr key={index} className="border-t bg-white">
                 <td className="py-4 px-4 text-gray-700">{template.title}</td>
-                <td className="py-4 px-4">
+                <td className="py-4 px-1 lg:px-4">
                   <div className="flex items-center space-x-2">
                     <DownloadButton
                       fileType="Word"
