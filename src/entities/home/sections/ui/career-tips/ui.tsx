@@ -41,7 +41,7 @@ export const CareerTips = () => {
         </div>
       </div>
 
-      <div className="grid grid-rows-1 lg:grid-cols-3 md:grid-cols-2 px-5 lg:mx-20 md:mx-20 pb-4 lg:pb-10">
+      <div className="container grid grid-rows-1 lg:grid-cols-3 md:grid-cols-2 gap-24 pb-4 lg:pb-10">
         {moreData.map((card, index) => (
           <MoreCard
             key={index}
