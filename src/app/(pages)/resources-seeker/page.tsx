@@ -1,4 +1,9 @@
-import { FileSave, Navbar, ResourcesSeekersHero } from '@/entities';
+import {
+  FileSave,
+  MoreCardSection,
+  Navbar,
+  ResourcesSeekersHero,
+} from '@/entities';
 import { Footer } from '@/widgets';
 
 const ResourcesSeekerPage = () => {
@@ -6,7 +11,11 @@ const ResourcesSeekerPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <ResourcesSeekersHero />
-      <FileSave />
+      <div className="container">
+        <FileSave />
+        <FileSave />
+      </div>
+      <MoreCardSection />
       <Footer />
     </div>
   );

@@ -7,11 +7,11 @@ import Link from 'next/link';
 
 export const MoreCardSection = () => {
   return (
-    <div className="bg-white">
-      <div className="lg:mx-24 px-5 py-5 lg:pt-14">
+    <section className="bg-white">
+      <div className="container py-5 lg:pt-14">
         <BadgeSection />
       </div>
-      <div className="grid grid-rows-1 md:grid-cols-3 px-5 md:mx-20 pb-4 lg:pb-10">
+      <div className="grid grid-rows-1 md:grid-cols-3 px-5 container pb-4 lg:pb-10">
         {moreDataCareer.map((card, index) =>
           card.link ? (
             <Link href={card.link} key={index}>
@@ -39,6 +39,6 @@ export const MoreCardSection = () => {
           ),
         )}
       </div>
-    </div>
+    </section>
   );
 };

@@ -7,7 +7,7 @@ export const DownloadButton: FC<TDownloadButtonProps> = ({
   fileType,
 }) => {
   return (
-    <div className="flex items-center px-3 py-1 bg-[#F9FAFB] border border-[#DADADD] rounded-full">
+    <div className="flex items-center px-3 py-1 bg-[#F9FAFB] cursor-pointer border border-[#DADADD] rounded-full">
       <DowloadIcon />
       <span className="ml-2 text-sm font-medium">
         ({fileType} {fileSize})
