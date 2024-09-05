@@ -5,8 +5,8 @@ import { HERO_DATA } from './constants';
 export const AboutUsHero = () => {
   return (
     <section className="flex flex-col md:flex-row justify-between bg-white px-5 theme:bg-primaryBg theme:text-primary theme:border theme:border-primary">
-      <div className="order-1 md:order-2 py-32 md:px-16">
-        <Image src={AboutUs} alt="about-us" />
+      <div className="order-1 md:order-2 py-32 md:px-16 flex justify-center">
+        <Image src={AboutUs} alt="about-us" className="w-52 h-52" />
       </div>
       {HERO_DATA.map((hero, index) => (
         <div

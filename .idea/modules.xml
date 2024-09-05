@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/zypl-career-front.iml" filepath="$PROJECT_DIR$/.idea/zypl-career-front.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/zypl.iml" filepath="$PROJECT_DIR$/.idea/zypl.iml" />
     </modules>
   </component>
 </project>
