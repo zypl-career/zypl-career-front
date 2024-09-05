@@ -12,12 +12,7 @@ export const FollowFuture = () => {
           навыки. Посмотреть предлагаемые профессии и курсы.
         </p>
         <div className="pb-10">
-          <Button
-            showRightArrowIcon
-            rounded="full"
-            variant="register"
-            className="w-auto self-baseline"
-          >
+          <Button showRightArrowIcon variant="default" rounded="full">
             Начните строить свой карьерный профиль
           </Button>
         </div>

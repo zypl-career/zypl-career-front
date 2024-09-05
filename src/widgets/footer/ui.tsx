@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { footerData } from '@/widgets';
 import {
   FacebookIcon,
@@ -8,7 +9,7 @@ import {
   YoutubeIcon,
 } from '@/shared';
 
-export const Footer: React.FC = () => {
+export const Footer: FC = () => {
   return (
     <footer className="bg-gray-800 text-gray-400 py-8 px-8 theme:bg-primaryBg theme:text-primary">
       <div className="flex lg:px-24 ">
@@ -21,7 +22,11 @@ export const Footer: React.FC = () => {
               <ul className="pb-20">
                 {section.items.map((item, idx) => (
                   <li key={idx} className="mb-1 hover:underline cursor-pointer">
-                    {item}
+                    {item.link ? (
+                      <a href={item.link}>{item.label}</a>
+                    ) : (
+                      item.label
+                    )}
                   </li>
                 ))}
               </ul>
@@ -37,15 +42,17 @@ export const Footer: React.FC = () => {
             &copy; 2024. zypl.career. Все права защищены
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row  sm:justify-end gap-2">
+        <div className="flex flex-row  sm:justify-end gap-2">
           <div className="flex gap-2 items-center">
+            <p className="mt-2 sm:mt-0 md:order-1">
+              Пользовательское соглашение
+            </p>
             <VkIcn />
             <TelegramIcon />
             <InstagramIcon />
             <YoutubeIcon />
             <FacebookIcon />
           </div>
-          <p className="mt-2 sm:mt-0">Пользовательское соглашение</p>
         </div>
       </div>
     </footer>

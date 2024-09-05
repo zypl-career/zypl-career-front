@@ -1,5 +1,5 @@
-import { Hero as HeroImg } from '@/shared';
 import Image from 'next/image';
+import { Button, Hero as HeroImg, TimeIcon } from '@/shared';
 
 export const Hero = () => {
   return (
@@ -13,9 +13,38 @@ export const Hero = () => {
           инструментов для развития самопознания, чтобы помочь в принятии
           решений о карьере.
         </p>
+        <div className="hidden md:flex gap-2 py-5">
+          <Button
+            showRightArrowIcon
+            variant="default"
+            size="subscribe"
+            rounded="full"
+          >
+            Пройти тест
+          </Button>
+          <div className="flex items-center justify-center gap-1 py-2">
+            <TimeIcon />
+            <p className="font-thin">Займет около часа</p>
+          </div>
+        </div>
       </div>
       <div className="flex justify-center md:justify-end py-5">
         <Image src={HeroImg} alt="hero" />
+      </div>
+      <div className="container flex md:hidden flex-col items-center gap-2 py-5">
+        <Button
+          showRightArrowIcon
+          variant="default"
+          size="subscribe"
+          rounded="full"
+          className="w-full md:w-auto text-center"
+        >
+          Пройти тест
+        </Button>
+        <div className="flex items-center justify-center gap-1 py-2">
+          <TimeIcon />
+          <p className="font-thin">Займет около часа</p>
+        </div>
       </div>
     </div>
   );
