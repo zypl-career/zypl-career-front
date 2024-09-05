@@ -1,19 +1,29 @@
-import { FooterItem } from '@/widgets';
+import { TFooterItem } from '@/widgets';
 
-export const footerData: FooterItem[] = [
+export const footerData: TFooterItem[] = [
   {
     title: 'Узнайте о себе',
-    items: ['Мой карьерный профиль', 'Карьерные успехи'],
+    items: [
+      { label: 'Мой карьерный профиль', link: '/career-profiles' },
+      { label: 'Карьерные успехи', link: '/' },
+    ],
   },
   {
     title: 'Исследуйте возможности',
-    items: ['Профессии', 'Курсы', 'Отрасли'],
+    items: [
+      { label: 'Профессии', link: '/professions' },
+      { label: 'Курсы', link: '/courses' },
+      { label: 'Отрасли', link: '/industries' },
+    ],
   },
   {
     title: 'Помощь другим',
     items: [
-      'Как учитель или практикующий профессию',
-      'Как родитель или опекун',
+      {
+        label: 'Как учитель или практикующий профессию',
+        link: '/teachers',
+      },
+      { label: 'Как родитель или опекун', link: '/parents' },
     ],
   },
 ];

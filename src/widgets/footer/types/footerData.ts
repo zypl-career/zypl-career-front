@@ -1,4 +1,4 @@
-export interface FooterItem {
+export type TFooterItem = {
   title: string;
-  items: string[];
-}
+  items: { label: string; link?: string }[];
+};
