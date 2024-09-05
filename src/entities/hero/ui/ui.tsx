@@ -29,7 +29,7 @@ export const Hero = () => {
         </div>
       </div>
       <div className="flex justify-center md:justify-end py-5">
-        <Image src={HeroImg} alt="hero" />
+        <Image src={HeroImg} alt="hero" className="lg:w-[1180px]" />
       </div>
       <div className="container flex md:hidden flex-col items-center gap-2 py-5">
         <Button
