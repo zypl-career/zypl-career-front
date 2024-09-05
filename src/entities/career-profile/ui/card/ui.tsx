@@ -12,7 +12,7 @@ export const CardFuture = () => {
         </Button>
         <div className="flex items-center justify-center gap-1 py-2">
           <TimeIcon />
-          <p className="font-thin">Займет около часа</p>
+          <p className="font-thin">Займет около 30-40 минут</p>
         </div>
       </div>
     </div>
