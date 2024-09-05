@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Button } from '@/shared';
 import { TMoreCardProps } from '@/entities';
+
 import Image from 'next/image';
 
 export const MoreCardFraudPrevention: FC<TMoreCardProps> = ({
