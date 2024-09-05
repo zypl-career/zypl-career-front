@@ -10,7 +10,7 @@ export const CardCourses: FC<TCardCoursesProps> = ({
   title,
 }) => {
   return (
-    <div className="md:w-[416px] bg-white border border-gray-200 rounded-xl transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer my-5">
+    <div className="md:w-[350px] bg-white border border-gray-200 rounded-xl transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer my-5">
       <Image
         src={imageSrc}
         alt={imageAlt}
