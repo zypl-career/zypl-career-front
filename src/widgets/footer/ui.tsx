@@ -42,15 +42,17 @@ export const Footer: FC = () => {
             &copy; 2024. zypl.career. Все права защищены
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row  sm:justify-end gap-2">
+        <div className="flex flex-row  sm:justify-end gap-2">
           <div className="flex gap-2 items-center">
+            <p className="mt-2 sm:mt-0 md:order-1">
+              Пользовательское соглашение
+            </p>
             <VkIcn />
             <TelegramIcon />
             <InstagramIcon />
             <YoutubeIcon />
             <FacebookIcon />
           </div>
-          <p className="mt-2 sm:mt-0">Пользовательское соглашение</p>
         </div>
       </div>
     </footer>
