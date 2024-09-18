@@ -12,7 +12,7 @@ export const MainQuestionnaireValues = () => {
   return (
     <div>
       <CardQuestionnaireValues onSelect={setDisableContinueButton} />
-      <div className="flex flex-col sm:flex-row items-center mt-8 mb-40 lg:px-80">
+      <div className="flex flex-col sm:flex-row items-center mt-8 mb-40">
         <Button variant="ghost" className="order-2 sm:order-1">
           Отменить
         </Button>
