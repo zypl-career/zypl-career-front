@@ -1,8 +1,8 @@
 'use client';
 
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { TestContext } from './context';
-import { getTest, saveTest } from '@/shared';
+import { saveTest } from '@/shared';
 import { TTestRequest } from '.';
 
 export const useTest = () => {
@@ -27,10 +27,6 @@ export const useTest = () => {
     saveTest(({ ...test, time_spent: time }));
     setTest(({ ...test, time_spent: time }));
   };
-
-  useEffect(() => {
-    setTest(getTest());
-  }, []);
 
   return { test, setTest, handleTestValue, handleTestInteraction, handleTestString, handleTestTime };
 };
