@@ -2,8 +2,8 @@ import { cardData } from '.';
 
 export const CardValue = () => {
   return (
-    <div className="bg-white rounded-lg border p-4 px-10 w-96">
-      <div className="flex flex-col space-y-4">
+    <div className="bg-white rounded-lg border p-4 px-10 w-96 self-baseline sticky top-5">
+      <div className="flex flex-col space-y-4 divide-y">
         {cardData.map((item) => (
           <div key={item.id}>
             <div className="flex items-center space-x-2 py-3">
@@ -16,7 +16,7 @@ export const CardValue = () => {
                 {item.title}
               </div>
             </div>
-            <hr className="border-gray-200" />
+            {/* <hr className="border-gray-200" /> */}
           </div>
         ))}
       </div>

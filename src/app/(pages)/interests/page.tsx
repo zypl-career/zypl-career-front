@@ -1,4 +1,4 @@
-import { CardsInteres, InterestsHead, Navbar } from '@/entities';
+import { InterestsHead, Navbar } from '@/entities';
 import { Footer } from '@/widgets';
 
 const InterestsPage = () => {
@@ -6,7 +6,6 @@ const InterestsPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <InterestsHead />
-      <CardsInteres />
       <Footer />
     </div>
   );

@@ -51,8 +51,16 @@ import LikeGray from './like-gray';
 import VeryLikeGrayIcon from './very-like-gray';
 import LeftArrowIcon from './left-arrow';
 import WarnIcon from './warn';
+import Economist from './economist.svg';
+import Geology from './Geology.svg';
+import Building from './Building.svg';
+import HelpSick from './help-sick-people-in-hospital.svg';
 
 export {
+  HelpSick,
+  Building,
+  Geology,
+  Economist,
   LogoIcon,
   GlassesIcon,
   RussianFlag,

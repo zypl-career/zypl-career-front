@@ -13,7 +13,7 @@ export const YourResultDesc = () => {
         <hr className="bg-gray-900" />
       </div>
       <div>
-        <TableResults title="table" />
+        <TableResults title="Подходящие кластеры" />
       </div>
     </div>
   );

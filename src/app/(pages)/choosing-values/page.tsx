@@ -1,4 +1,4 @@
-import { MainChoosingValues, Navbar } from '@/entities';
+import { Navbar } from '@/entities';
 import { Footer } from '@/widgets';
 import { ChoosingValuesHead } from '@/entities/choosing-values/ui';
 
@@ -7,7 +7,6 @@ const ChoosingValuesPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <ChoosingValuesHead />
-      <MainChoosingValues />
       <Footer />
     </div>
   );

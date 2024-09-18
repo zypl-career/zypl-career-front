@@ -1,5 +1,6 @@
 import { VALUES_SURVEYS_DATA } from '.';
 import { CardValue } from '@/shared';
+import { MainValuesSureys } from '..';
 
 export const ValuesSurveysHead = () => {
   return (
@@ -10,6 +11,7 @@ export const ValuesSurveysHead = () => {
         <div className="text-gray-600 pb-5 border-b border-b-gray-300">
           <p>{VALUES_SURVEYS_DATA.description}</p>
         </div>
+        <MainValuesSureys />
       </div>
     </section>
   );

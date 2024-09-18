@@ -1,5 +1,4 @@
 import {
-  MainQuestionnaireValues,
   Navbar,
   QuestionnaireValuesHead,
 } from '@/entities';
@@ -10,7 +9,6 @@ const QuestionnaireValuesPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <QuestionnaireValuesHead />
-      <MainQuestionnaireValues />
       <Footer />
     </div>
   );

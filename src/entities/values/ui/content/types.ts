@@ -5,3 +5,7 @@ export type TFeedbackOption = {
   text: string;
   icons: FC<SVGProps<SVGSVGElement>>[];
 };
+
+export type TFeedbackContentProps = {
+  onValueSelect: (value: number) => void;
+};

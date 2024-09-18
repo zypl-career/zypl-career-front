@@ -83,7 +83,7 @@ import Electronics from './electronics.png';
 import Botany from './botany.png';
 import Photo from './photo.png';
 import MeetingWork from './meeting-work.png';
-import СompanyManagement from './сompany-management.png';
+import CompanyManagement from './сompany-management.png';
 import Family from './family.png';
 import PhysicalEducation from './physical-education.png';
 import Doctor from './doctor.png';
@@ -92,7 +92,7 @@ import WorkingWood from './working-wood.png';
 import ScienceInteres from './science2.png';
 import PhysicsInteres from './physics2.png';
 import Institution from './institution.png';
-import Painting from './painting.png';
+import Art from './art.png';
 import Rights from './rights.png';
 import Babysitter from './babysitter.png';
 import Electrician from './electrician.png';
@@ -114,8 +114,26 @@ import BasicsEntrepreneurship from './basics-entrepreneurship.png';
 import PracticalSkills from './practical-skills.png';
 import CareerProspects from './career-prospects.png';
 import InfoDiff from './info-diff.png';
+import Shop from './shop.png';
+import Sounds from './sounds.png';
+import Painting from './Painting.png';
+import WorkInOffice from './work-in-office.png';
+import Forester from './Forester.png';
+import Nurse from './Nurse.png';
+import Electro from './electro.png';
+import Accountancy from './Accountancy.png';
+import ApproveHomeLoan from './approve-home-loan.png';
 
 export {
+  ApproveHomeLoan,
+  Accountancy,
+  Electro,
+  Nurse,
+  Forester,
+  WorkInOffice,
+  Painting,
+  Sounds,
+  Shop,
   Logo,
   Hero,
   HeroImg,
@@ -201,7 +219,7 @@ export {
   Botany,
   Photo,
   MeetingWork,
-  СompanyManagement,
+  CompanyManagement,
   Family,
   PhysicalEducation,
   Doctor,
@@ -210,7 +228,7 @@ export {
   ScienceInteres,
   PhysicsInteres,
   Institution,
-  Painting,
+  Art,
   Rights,
   Babysitter,
   Electrician,

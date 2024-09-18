@@ -1,4 +1,4 @@
-import { CareerValues, FeedbackContent, Navbar } from '@/entities';
+import { CareerValues, Navbar } from '@/entities';
 import { Footer } from '@/widgets';
 
 const VideoGuidePage = () => {
@@ -6,7 +6,6 @@ const VideoGuidePage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <CareerValues />
-      <FeedbackContent />
       <Footer />
     </div>
   );

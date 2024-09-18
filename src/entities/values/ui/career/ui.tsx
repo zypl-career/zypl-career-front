@@ -1,4 +1,4 @@
-import { FeedbackValues } from '@/entities';
+import { FeedbackContent, FeedbackValues } from '@/entities';
 import { careerValuesContent } from '.';
 import { CardValue } from '@/shared';
 
@@ -12,6 +12,7 @@ export const CareerValues = () => {
           <p>{careerValuesContent.description}</p>
         </div>
         <FeedbackValues />
+        <FeedbackContent />
       </div>
     </section>
   );

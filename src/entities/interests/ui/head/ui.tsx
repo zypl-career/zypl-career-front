@@ -1,3 +1,4 @@
+import { CardsInteres } from '..';
 import { careerValuesContent } from './constants';
 import { CardValue } from '@/shared';
 
@@ -15,6 +16,7 @@ export const InterestsHead = () => {
             Аз ин ду кадомеаш ба шумо писанд аст?
           </p>
         </div>
+        <CardsInteres />
       </div>
     </section>
   );
