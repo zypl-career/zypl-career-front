@@ -116,7 +116,7 @@ import CareerProspects from './career-prospects.png';
 import InfoDiff from './info-diff.png';
 import Shop from './shop.png';
 import Sounds from './sounds.png';
-import Painting from './Painting.png';
+import Painting from './painting.png';
 import WorkInOffice from './work-in-office.png';
 import Forester from './Forester.png';
 import Nurse from './Nurse.png';
