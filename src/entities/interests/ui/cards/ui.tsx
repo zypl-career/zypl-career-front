@@ -12,7 +12,9 @@ export const CardsInteres = () => {
   const router = useRouter();
   const [cards, setCards] = useState(CARDS_DATA_INTERES);
   const { handleTestInteraction } = useTest();
-  const disableContinue = cards.some(([left, right]) => !left.selected && !right.selected);
+  const disableContinue = cards.some(
+    ([left, right]) => !left.selected && !right.selected,
+  );
 
   const handleSelected = (
     left: TCardDataInters,
