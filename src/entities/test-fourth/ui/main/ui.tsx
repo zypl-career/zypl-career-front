@@ -1,6 +1,5 @@
 'use client';
 
-
 import { Button } from '@/shared';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';

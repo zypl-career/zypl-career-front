@@ -1,6 +1,4 @@
-import {
-  Navbar,
-} from '@/entities';
+import { Navbar } from '@/entities';
 import { QuestionnaireValuesHead } from '@/entities/test-fourth';
 import { Footer } from '@/widgets';
 

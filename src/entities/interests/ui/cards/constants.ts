@@ -79,7 +79,12 @@ export const CARDS_DATA_INTERES: TCardDataInters[][] = [
     },
   ],
   [
-    { selected: false, src: PhysicalEducation, title: 'Тарбияи ҷисмони', name: 'Physical training' },
+    {
+      selected: false,
+      src: PhysicalEducation,
+      title: 'Тарбияи ҷисмони',
+      name: 'Physical training',
+    },
     { selected: false, src: Doctor, title: 'Тиб', name: 'Doktor' },
   ],
   [
@@ -124,7 +129,12 @@ export const CARDS_DATA_INTERES: TCardDataInters[][] = [
     },
   ],
   [
-    { selected: false, src: Babysitter, title: 'Нигоҳубинӣ кудак', name: 'Child care' },
+    {
+      selected: false,
+      src: Babysitter,
+      title: 'Нигоҳубинӣ кудак',
+      name: 'Child care',
+    },
     {
       selected: false,
       src: Electrician,
@@ -142,7 +152,12 @@ export const CARDS_DATA_INTERES: TCardDataInters[][] = [
     },
   ],
   [
-    { selected: false, src: Agent, title: 'Агенти сайёҳӣ', name: 'Travel agent' },
+    {
+      selected: false,
+      src: Agent,
+      title: 'Агенти сайёҳӣ',
+      name: 'Travel agent',
+    },
     {
       selected: false,
       src: Mechanic,
@@ -151,7 +166,12 @@ export const CARDS_DATA_INTERES: TCardDataInters[][] = [
     },
   ],
   [
-    { selected: false, src: WorkInOffice, title: 'Кор дар офис', name: 'Work in the office' },
+    {
+      selected: false,
+      src: WorkInOffice,
+      title: 'Кор дар офис',
+      name: 'Work in the office',
+    },
     {
       selected: false,
       src: Painting,
@@ -178,7 +198,12 @@ export const CARDS_DATA_INTERES: TCardDataInters[][] = [
     },
   ],
   [
-    { selected: false, src: Accountancy, title: 'Муҳосибот', name: 'Accounting' },
+    {
+      selected: false,
+      src: Accountancy,
+      title: 'Муҳосибот',
+      name: 'Accounting',
+    },
     {
       selected: false,
       src: Geology,
@@ -196,7 +221,12 @@ export const CARDS_DATA_INTERES: TCardDataInters[][] = [
     },
   ],
   [
-    { selected: false, src: ApproveHomeLoan, title: 'Тасдиқӣ қарзи хона (ипотека)', name: 'Confirmation of a home loan (mortgage)' },
+    {
+      selected: false,
+      src: ApproveHomeLoan,
+      title: 'Тасдиқӣ қарзи хона (ипотека)',
+      name: 'Confirmation of a home loan (mortgage)',
+    },
     {
       selected: false,
       src: HelpSick,
