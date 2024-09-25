@@ -4,7 +4,7 @@ import { CardValue } from '@/shared';
 
 export const CareerValues = () => {
   return (
-    <section className="flex gap-5 py-8 lg:px-20">
+    <section className="container flex gap-5 py-8 lg:px-20">
       <CardValue />
       <div>
         <h2 className="font-bold text-2xl">{careerValuesContent.heading}</h2>
@@ -17,3 +17,4 @@ export const CareerValues = () => {
     </section>
   );
 };
+
