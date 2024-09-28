@@ -1,30 +1,28 @@
 'use client';
 
-import { createElement, useEffect, useMemo, useState } from 'react';
+import { createElement, useEffect, useMemo } from 'react';
 import { Button } from '@ui';
 import { feedbackOptions } from './constants';
 import { useTest } from '@/shared/providers/test-provider';
-import { cn, getTest } from '@/shared';
+import { cn } from '@utils';
 import { useRouter } from 'next/navigation';
 
 export const FeedbackContent = () => {
-  const [options, setOptions] = useState(feedbackOptions);
   const router = useRouter();
   const { test, handleTestValue } = useTest();
   const disableContinueButton = useMemo(() => test.first?.some((el) => el === 0), [test.first]);
 
   useEffect(() => {
     localStorage.setItem('timeStart', new Date().toString());
-    // setOptions(getTest().first);
   }, []);
   
   return (
     <div className="py-4">
       <div className="bg-white rounded-lg border p-6">
-        {options.map((option, index) => (
+        {feedbackOptions.map((option, index) => (
           <div
             key={option.id}
-            className={`py-4 ${index < options.length - 1 ? 'border-b' : ''}`}
+            className={`py-4 ${index < feedbackOptions.length - 1 ? 'border-b' : ''}`}
           >
             <div className="text-container flex flex-col sm:flex-row items-center justify-between">
               <div className="text-gray-700">{option.text}</div>

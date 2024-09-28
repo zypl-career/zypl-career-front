@@ -3,4 +3,10 @@ export type TCardItem = {
   title: string;
   borderColor: string;
   textColor: string;
+  active: boolean;
+  isDone: boolean;
+};
+
+export type TCardItemProps = {
+  data: TCardItem[];
 };

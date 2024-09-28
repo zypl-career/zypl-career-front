@@ -1,3 +1,3 @@
 export * from './ui';
-export * from './constans';
+export * from './constants';
 export type * from './types';
