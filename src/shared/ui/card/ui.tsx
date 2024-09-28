@@ -29,8 +29,7 @@ export const CardValue: FC<TCardItemProps> = ({ data = [] }) => {
                 {item.title}
               </div>
             </div>
-            {/* <hr className="border-gray-200" /> */}
-          </div>
+        </div>
         ))}
       </div>
     </div>

@@ -10,12 +10,15 @@ import { useRouter } from 'next/navigation';
 export const FeedbackContent = () => {
   const router = useRouter();
   const { test, handleTestValue } = useTest();
-  const disableContinueButton = useMemo(() => test.first?.some((el) => el === 0), [test.first]);
+  const disableContinueButton = useMemo(
+    () => test.first?.some((el) => el === 0),
+    [test.first],
+  );
 
   useEffect(() => {
     localStorage.setItem('timeStart', new Date().toString());
   }, []);
-  
+
   return (
     <div className="py-4">
       <div className="bg-white rounded-lg border p-6">
@@ -53,10 +56,10 @@ export const FeedbackContent = () => {
           Отменить
         </Button>
         <Button
-          variant="subscribe"
-          showRightArrowIcon={true}
-          size="subscribe"
+          showRightArrowIcon
+          variant="default"
           className="order-1 sm:order-2"
+          rounded="full"
           disabled={disableContinueButton}
           onClick={() => router.push('interests')}
         >

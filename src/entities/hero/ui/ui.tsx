@@ -14,14 +14,6 @@ export const Hero = () => {
           решений о карьере.
         </p>
         <div className="hidden md:flex gap-2 py-5">
-          <Button
-            showRightArrowIcon
-            variant="default"
-            size="subscribe"
-            rounded="full"
-          >
-            Пройти тест
-          </Button>
           <div className="flex items-center justify-center gap-1 py-2">
             <TimeIcon />
             <p className="font-thin">Займет около 30-40 минут</p>

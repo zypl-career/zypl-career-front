@@ -4,7 +4,11 @@ import { RadioGroup, RadioGroupCard } from '@/shared';
 import { LABELS } from '.';
 import { useTest } from '@/shared/providers/test-provider';
 
-export const CardValuesSurveys = ({ onSelect }: { onSelect: (value: string) => void }) => {
+export const CardValuesSurveys = ({
+  onSelect,
+}: {
+  onSelect: (value: string) => void;
+}) => {
   const { handleTestString } = useTest();
 
   const handleSelect = (value: string) => {

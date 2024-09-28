@@ -36,8 +36,6 @@ export const TestProvider: FC<PropsWithChildren> = ({ children }) => {
   );
 
   return (
-    <TestContext.Provider value={defaultValue}>
-      {children}
-    </TestContext.Provider>
+    <TestContext.Provider value={defaultValue}>{children}</TestContext.Provider>
   );
 };
