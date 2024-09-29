@@ -42,6 +42,14 @@ export const ForgotPasswordPassword: FC<TForgotComponentsProps> = ({
     }
   };
 
+  const handleBack = () => {
+    onDone({
+      message: '',
+      values: { ...values, newPassword: password.newPassword },
+      key: 'code',
+    });
+  };
+
   return (
     <div className="bg-white max-w-96 container rounded-md px-5 py-5">
       <h1 className="font-bold text-2xl mb-4">Сменить пароль</h1>
@@ -72,7 +80,7 @@ export const ForgotPasswordPassword: FC<TForgotComponentsProps> = ({
         >
           Сменить пароль
         </Button>
-        <Button variant="ghost">Назад</Button>
+        <Button variant="ghost" onClick={handleBack}>Назад</Button>
       </div>
     </div>
   );
