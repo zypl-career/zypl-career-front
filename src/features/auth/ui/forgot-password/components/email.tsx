@@ -2,6 +2,7 @@ import { Button, Input, toast } from '@ui';
 import { FC, useState } from 'react';
 import { TForgotComponentsProps } from './types';
 import { sendCode } from '../services';
+import Link from 'next/link';
 
 export const ForgotPasswordEmail: FC<TForgotComponentsProps> = ({ onDone }) => {
   const [email, setEmail] = useState('');
@@ -41,7 +42,9 @@ export const ForgotPasswordEmail: FC<TForgotComponentsProps> = ({ onDone }) => {
         >
           Далее
         </Button>
-        <Button variant="ghost">Назад</Button>
+        <Button variant="ghost" asChild>
+          <Link href="/auth/login">Назад</Link>
+        </Button>
       </div>
     </div>
   );

@@ -28,6 +28,14 @@ export const ForgotPasswordCode: FC<TForgotComponentsProps> = ({
     }
   };
 
+  const handleBack = () => {
+    onDone({
+      message: '',
+      values: { ...values, code },
+      key: 'email',
+    });
+  };
+
   return (
     <div className="bg-white max-w-96 container rounded-md px-5 py-5">
       <h1 className="font-bold text-2xl mb-4">Сменить пароль</h1>
@@ -50,7 +58,9 @@ export const ForgotPasswordCode: FC<TForgotComponentsProps> = ({
         >
           Далее
         </Button>
-        <Button variant="ghost">Назад</Button>
+        <Button variant="ghost" onClick={handleBack}>
+          Назад
+        </Button>
       </div>
       <p className="text-gray-500 text-sm">
         Повторная отправка через 43 сек <Timer defaultCount={60} />
