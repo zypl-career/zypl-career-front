@@ -30,7 +30,10 @@ export const ForgotPasswordPassword: FC<TForgotComponentsProps> = ({
       onDone({
         message,
         values: { ...values, newPassword: password.newPassword },
-        key: message === 'Password successfully changed' ? 'success' : 'newPassword',
+        key:
+          message === 'Password successfully changed'
+            ? 'success'
+            : 'newPassword',
       });
     } catch (error: any) {
       toast({ variant: 'error', title: error?.message });

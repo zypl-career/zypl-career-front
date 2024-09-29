@@ -2,7 +2,11 @@ import { CardsInteres } from '..';
 import { careerValuesContent } from './constants';
 import { CardValue, cardData } from '@/shared';
 
-const interestsCard = cardData.map(c => ({ ...c, isDone: c.id === '01', active: c.id === '02' }));
+const interestsCard = cardData.map((c) => ({
+  ...c,
+  isDone: c.id === '01',
+  active: c.id === '02',
+}));
 
 export const InterestsHead = () => {
   return (
