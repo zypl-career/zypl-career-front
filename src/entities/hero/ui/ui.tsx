@@ -19,7 +19,7 @@ export const Hero = () => {
           <ApproveTestModal />
           <div className="flex items-center justify-center gap-1 py-2">
             <TimeIcon />
-            <p className="font-thin">Займет около 30-40 минут</p>
+            <p className="font-thin">Займет около часа</p>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@ export const Hero = () => {
         </Button>
         <div className="flex items-center justify-center gap-1 py-2">
           <TimeIcon />
-          <p className="font-thin">Займет около 30-40 минут</p>
+          <p className="font-thin">Займет около часа</p>
         </div>
       </div>
     </div>

@@ -2,7 +2,11 @@ import { MainChoosingValues } from '..';
 import { VALUES_SURVEYS_DATA } from './constants';
 import { CardValue, cardData } from '@/shared';
 
-const choosingValuesCard = cardData.map((c, i) => ({ ...c, isDone: i < 2, active: c.id === '03' }));
+const choosingValuesCard = cardData.map((c, i) => ({
+  ...c,
+  isDone: i < 2,
+  active: c.id === '03',
+}));
 
 export const ChoosingValuesHead = () => {
   return (

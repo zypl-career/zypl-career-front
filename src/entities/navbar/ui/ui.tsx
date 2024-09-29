@@ -57,7 +57,11 @@ export const Navbar = () => {
         </div>
         {!isAuth ? (
           <>
-            <Button className="lg:block hidden" variant="register" rounded="full">
+            <Button
+              className="lg:block hidden"
+              variant="register"
+              rounded="full"
+            >
               Зарегистрироваться
             </Button>
             <Button

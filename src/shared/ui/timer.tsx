@@ -6,9 +6,13 @@ type TTimerProps = {
   defaultCount?: number;
   onDone?: () => void;
   onTick?: (count: number) => void;
-}
+};
 
-export const Timer: FC<TTimerProps> = ({ defaultCount = 10, onDone, onTick }) => {
+export const Timer: FC<TTimerProps> = ({
+  defaultCount = 10,
+  onDone,
+  onTick,
+}) => {
   const [count, setCount] = useState(defaultCount);
 
   useEffect(() => {
@@ -24,7 +28,7 @@ export const Timer: FC<TTimerProps> = ({ defaultCount = 10, onDone, onTick }) =>
       clearInterval(timer);
     }
     return () => clearInterval(timer);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count]);
 
   return count;

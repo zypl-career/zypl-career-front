@@ -2,7 +2,11 @@ import { VALUES_SURVEYS_DATA } from '.';
 import { CardValue, cardData } from '@/shared';
 import { MainValuesSureys } from '..';
 
-const valuesSurveysCard = cardData.map((c, i) => ({ ...c, isDone: i < 2, active: c.id === '03' }));
+const valuesSurveysCard = cardData.map((c, i) => ({
+  ...c,
+  isDone: i < 2,
+  active: c.id === '03',
+}));
 
 export const ValuesSurveysHead = () => {
   return (

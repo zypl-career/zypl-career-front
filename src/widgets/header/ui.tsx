@@ -34,7 +34,7 @@ export const Header = () => {
                 variant="secondary"
                 size="default"
                 className="mt-2.5"
-                onClick={() => setShowThemes(prev => !prev)}
+                onClick={() => setShowThemes((prev) => !prev)}
               >
                 Версия для слабовидящих
               </Button>

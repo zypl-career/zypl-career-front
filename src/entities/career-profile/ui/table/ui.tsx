@@ -15,10 +15,13 @@ export const TableResults: FC<TResultsTableProps> = ({ title }) => {
     const timeStart = new Date(localStorage.getItem('timeStart') || new Date());
     const timeEnd = new Date();
     handleTestTime(differenceInMinutes(timeStart, timeEnd));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const payload = useMemo(() => data?.payload?.sort((a, b) => b - a).map(p => +p.toFixed(2) * 100), [data?.payload]);
+  const payload = useMemo(
+    () => data?.payload?.sort((a, b) => b - a).map((p) => +p.toFixed(2) * 100),
+    [data?.payload],
+  );
 
   return (
     <div className="mt-8">

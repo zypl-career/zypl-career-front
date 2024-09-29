@@ -89,16 +89,13 @@ export const LoginForm = () => {
                 </FormItem>
               )}
             />
-            <div className="flex justify-end mt-8 mb-4 text-gray-600">
-              <Link href="forgot-password" className="underline">Забыли пароль?</Link>
-            </div>
-            <div className="">
-              <Button rounded="full" className="w-full" showRightArrowIcon asChild>
-                <Link href="/auth/login">
-                  Войти
-                </Link>
+            <span>
+              <Link href="forgot-password">Забыли пароль?</Link>
+            </span>
+            <div className="pt-10">
+              <Button variant="status" showRightArrowIcon asChild>
+                <Link href="/auth/login">Войти</Link>
               </Button>
-
               <div className="flex justify-center items-center my-4">
                 <span className="w-20 border-t border-gray-300"></span>
                 <span className="text-[#6B7280] text-sm px-2 theme:text-primary">
@@ -109,9 +106,11 @@ export const LoginForm = () => {
             </div>
           </form>
         </Form>
-        <Link href={'/auth/register'}>
-          <Button variant="login">Зарегистрироваться</Button>
-        </Link>
+        <div className="pb-10">
+          <Link href={'/auth/register'}>
+            <Button variant="login">Зарегистрироваться</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
