@@ -89,17 +89,12 @@ export const LoginForm = () => {
                 </FormItem>
               )}
             />
-            <span>
-              <Link href="forgot-password">Забыли пароль?</Link>
-            </span>
-            <div className="pt-10">
-              <Button
-                showRightArrowIcon
-                variant="default"
-                size="full"
-                rounded="full"
-              >
-                <Link href="/auth/login">Войти</Link>
+            <div className="flex justify-end mt-8 mb-4 text-gray-600">
+              <Link href="forgot-password" className="underline">Забыли пароль?</Link>
+            </div>
+            <div className="">
+              <Button rounded="full" className="w-full" showRightArrowIcon type="submit">
+                Войти
               </Button>
               <div className="flex justify-center items-center my-4">
                 <span className="w-20 border-t border-gray-300"></span>
