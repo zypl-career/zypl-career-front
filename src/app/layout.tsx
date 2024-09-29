@@ -23,8 +23,10 @@ export default function RootLayout({
       <ReactQueryProvider>
         <ThemeProvider>
           <TestProvider>
-            <Toaster />
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+              <Toaster />
+              {children}
+            </body>
           </TestProvider>
         </ThemeProvider>
       </ReactQueryProvider>
