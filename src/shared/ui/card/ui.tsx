@@ -29,7 +29,7 @@ export const CardValue: FC<TCardItemProps> = ({ data = [] }) => {
                 {item.title}
               </div>
             </div>
-        </div>
+          </div>
         ))}
       </div>
     </div>

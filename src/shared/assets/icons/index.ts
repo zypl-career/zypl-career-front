@@ -55,8 +55,10 @@ import Economist from './economist.svg';
 import Geology from './Geology.svg';
 import Building from './Building.svg';
 import HelpSick from './help-sick-people-in-hospital.svg';
+import SuccessPasswordIcon from './success-password';
 
 export {
+  SuccessPasswordIcon,
   HelpSick,
   Building,
   Geology,

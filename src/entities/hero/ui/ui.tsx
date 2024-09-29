@@ -1,5 +1,7 @@
+'use client';
 import Image from 'next/image';
 import { Button, Hero as HeroImg, TimeIcon } from '@/shared';
+import { ApproveTestModal } from './components';
 
 export const Hero = () => {
   return (
@@ -14,6 +16,7 @@ export const Hero = () => {
           решений о карьере.
         </p>
         <div className="hidden md:flex gap-2 py-5">
+          <ApproveTestModal />
           <div className="flex items-center justify-center gap-1 py-2">
             <TimeIcon />
             <p className="font-thin">Займет около 30-40 минут</p>
@@ -26,7 +29,6 @@ export const Hero = () => {
       <div className="container flex md:hidden flex-col items-center gap-2 py-5">
         <Button
           showRightArrowIcon
-          variant="default"
           size="subscribe"
           rounded="full"
           className="w-full md:w-auto text-center"

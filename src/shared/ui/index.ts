@@ -16,3 +16,5 @@ export * from './label';
 export * from './form';
 export * from './toast';
 export * from './progress-test';
+export * from './modal';
+export * from './timer';

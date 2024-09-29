@@ -3,7 +3,7 @@ import { SignUpSchema } from './schema';
 
 export type TSignUp = z.infer<typeof SignUpSchema>;
 
-export interface IUserData {
+export type IUserData = {
   name: string;
   surname: string;
   gender: string;

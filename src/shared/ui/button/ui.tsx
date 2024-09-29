@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { cn } from '@/shared/utils';
-import { Slot } from '@radix-ui/react-slot';
+import { Slot, Slottable } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
 import { ArrowIcon } from '@/shared';
 
@@ -29,7 +29,7 @@ const buttonVariants = cva(
         register:
           'theme:bg-primary theme:text-primaryBg bg-purple-800 rounded-2xl cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         login:
-          'border border-[#9CA3AF] text-[#4B5563] md:text-[20px] cursor-pointer w-full bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full transform transition-transform duration-200 active:scale-110',
+          'border border-[#9CA3AF] text-[#4B5563] md:text-[20px] cursor-pointer bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full transform transition-transform duration-200 active:scale-110',
         outlineSecondary:
           'border border-[#9CA3AF] text-[#4B5563] cursor-pointer bg-background font-[600] hover:text-accent-foreground rounded-2xl w-full md:w-[400px] transform transition-transform duration-200 active:scale-110',
         ghost: 'text-gray-600 font-semibold',
@@ -72,9 +72,9 @@ const Button = React.forwardRef<HTMLButtonElement, TButtonProps>(
   (
     {
       className,
-      variant,
-      size,
+      variant = 'default',
       rounded = 'default',
+      size,
       showRightArrowIcon = false,
       asChild = false,
       children,
@@ -92,7 +92,7 @@ const Button = React.forwardRef<HTMLButtonElement, TButtonProps>(
         {...props}
       >
         {startIcon}
-        {children}
+        <Slottable>{children}</Slottable>
         {endIcon}
         {showRightArrowIcon ? (
           <ArrowIcon

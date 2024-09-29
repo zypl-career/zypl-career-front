@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavbarData } from '@/entities';
-import { Button, SearchIcon, HamburgerIcon, UserIcon } from '@/shared';
+import { Button, SearchIcon, HamburgerIcon, UserIcon, getUser } from '@/shared';
 import Link from 'next/link';
 
 export const Navbar = () => {
+  const { isAuth } = getUser();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -54,17 +55,22 @@ export const Navbar = () => {
         <div className="w-[24px] h-[24px] cursor-pointer flex md:hidden bg-background">
           <UserIcon />
         </div>
-        <Button className="lg:block hidden" variant="register" rounded="full">
-          Зарегистрироваться
-        </Button>
-        <Button
-          className="lg:flex hidden"
-          variant="outline"
-          rounded="full"
-          showRightArrowIcon
-        >
-          <Link href="/login">Войти</Link>
-        </Button>
+        {!isAuth ? (
+          <>
+            <Button className="lg:block hidden" variant="register" rounded="full">
+              Зарегистрироваться
+            </Button>
+            <Button
+              className="lg:flex hidden"
+              variant="outline"
+              rounded="full"
+              showRightArrowIcon
+              asChild
+            >
+              <Link href="/auth/login">Войти</Link>
+            </Button>
+          </>
+        ) : null}
       </div>
     </nav>
   );

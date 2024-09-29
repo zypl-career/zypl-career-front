@@ -89,9 +89,14 @@ export const LoginForm = () => {
                 </FormItem>
               )}
             />
+            <span>
+              <Link href="forgot-password">Забыли пароль?</Link>
+            </span>
             <div className="pt-10">
-              <Button variant="status" showRightArrowIcon>
-                Войти
+              <Button variant="status" showRightArrowIcon asChild>
+                <Link href="/auth/login">
+                  Войти
+                </Link>
               </Button>
 
               <div className="flex justify-center items-center my-4">
@@ -104,7 +109,7 @@ export const LoginForm = () => {
             </div>
           </form>
         </Form>
-        <Link href={'/register'}>
+        <Link href={'/auth/register'}>
           <Button variant="login">Зарегистрироваться</Button>
         </Link>
       </div>

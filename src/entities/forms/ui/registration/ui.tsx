@@ -18,6 +18,7 @@ import { TSignUp } from './types';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { genderList, roleList } from './consts';
+import { useSignIn } from '../login/services';
 
 export const FormRegister = () => {
   const router = useRouter();
@@ -39,7 +40,8 @@ export const FormRegister = () => {
     },
   });
 
-  const signIn = useSignUp();
+  const signUp = useSignUp();
+  const signIn = useSignIn();
 
   const onSubmit = (data: TSignUp) => {
     const mappedData = {
@@ -54,8 +56,9 @@ export const FormRegister = () => {
         message: 'Пароль не совпадает!',
       });
     }
-    signIn.mutate(mappedData, {
+    signUp.mutate(mappedData, {
       onSuccess: () => {
+        signIn.mutate(mappedData);
         router.push('/');
       },
     });

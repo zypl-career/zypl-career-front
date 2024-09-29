@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { ThemeProvider } from '@/shared';
+import { ThemeProvider, Toaster } from '@/shared';
 import ReactQueryProvider from '@/shared/providers/react-query';
 import { TestProvider } from '@/shared/providers/test-provider';
 import './styles/globals.css';
@@ -23,6 +23,7 @@ export default function RootLayout({
       <ReactQueryProvider>
         <ThemeProvider>
           <TestProvider>
+            <Toaster />
             <body className={inter.className}>{children}</body>
           </TestProvider>
         </ThemeProvider>

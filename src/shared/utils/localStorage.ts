@@ -1,16 +1,18 @@
+'use client';
+
 type TAccessToken = {
   access: string;
   refresh: string;
 };
 
 export const getAccessToken = (): TAccessToken => {
-  return JSON.parse(localStorage.getItem('accessToken') ?? '{}');
+  return JSON.parse(globalThis?.window?.localStorage?.getItem('access') ?? '{}');
 };
 
-export const setAccessToken = (token: string) => {
-  return localStorage.setItem('accessToken', token);
+export const setAccessToken = (token: TAccessToken) => {
+  globalThis?.window?.localStorage?.setItem('access', JSON.stringify(token));
 };
 
 export const removeAccessToken = () => {
-  return localStorage.removeItem('accessToken');
+  return globalThis?.window?.localStorage?.removeItem('access');
 };
