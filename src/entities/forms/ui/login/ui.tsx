@@ -89,11 +89,11 @@ export const LoginForm = () => {
                 </FormItem>
               )}
             />
-            <span>
-              <Link href="forgot-password">Забыли пароль?</Link>
-            </span>
-            <div className="pt-10">
-              <Button variant="status" showRightArrowIcon asChild>
+            <div className="flex justify-end mt-8 mb-4 text-gray-600">
+              <Link href="forgot-password" className="underline">Забыли пароль?</Link>
+            </div>
+            <div className="">
+              <Button rounded="full" className="w-full" showRightArrowIcon asChild>
                 <Link href="/auth/login">
                   Войти
                 </Link>
