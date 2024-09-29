@@ -52,6 +52,7 @@ const buttonVariants = cva(
         subscribe: 'w-full lg:w-[212px] p-2',
         followFuture: 'w-full md:w-[534px] p-2',
         cluster: 'w-full lg:w-[376px] p-2',
+        full: 'w-full py-2',
       },
       rounded: {
         default: 'rounded',

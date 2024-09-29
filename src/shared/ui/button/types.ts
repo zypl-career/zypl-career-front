@@ -36,7 +36,8 @@ export type TSizeType =
   | 'lg'
   | 'icon'
   | 'subscribe'
-  | 'followFuture';
+  | 'followFuture'
+  | 'full';
 
 export type TRounded =
   | 'default'
