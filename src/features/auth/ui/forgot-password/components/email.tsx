@@ -11,7 +11,11 @@ export const ForgotPasswordEmail: FC<TForgotComponentsProps> = ({ onDone }) => {
     try {
       setIsLoading(true);
       const { message } = await sendCode(email);
-      onDone({ message, values: { email }, key: message === 'code successfully sended' ? 'code' : 'email' });
+      onDone({
+        message,
+        values: { email },
+        key: message === 'code successfully sended' ? 'code' : 'email',
+      });
     } catch (error: any) {
       toast({ variant: 'error', title: error?.message });
     } finally {

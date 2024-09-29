@@ -15,4 +15,4 @@ export type IUserData = {
   district: string;
   school: string;
   confirmPassword?: string;
-}
+};

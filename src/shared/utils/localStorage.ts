@@ -6,7 +6,9 @@ type TAccessToken = {
 };
 
 export const getAccessToken = (): TAccessToken => {
-  return JSON.parse(globalThis?.window?.localStorage?.getItem('access') ?? '{}');
+  return JSON.parse(
+    globalThis?.window?.localStorage?.getItem('access') ?? '{}',
+  );
 };
 
 export const setAccessToken = (token: TAccessToken) => {

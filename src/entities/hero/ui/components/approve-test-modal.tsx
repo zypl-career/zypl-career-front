@@ -26,15 +26,16 @@ export const ApproveTestModal = () => {
           Для последующего сохранение результатов тестирования,
           зарегистрируйтесь в системе
         </div>
-        <Button variant="default" size="md" showRightArrowIcon rounded="full" asChild>
-          <Link href="/auth/register">Регистрация</Link>
-        </Button>
         <Button
-          variant="outlineSecondary"
+          variant="default"
           size="md"
+          showRightArrowIcon
           rounded="full"
           asChild
         >
+          <Link href="/auth/register">Регистрация</Link>
+        </Button>
+        <Button variant="outlineSecondary" size="md" rounded="full" asChild>
           <Link href="/values">Продолжить без регистрации</Link>
         </Button>
       </Modal>
