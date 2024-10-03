@@ -7,7 +7,7 @@ import { cva } from 'class-variance-authority';
 import type { TVariantType, TInputProps } from './types';
 
 const inputVariants = cva(
-  'flex theme:text-primary theme:bg-primaryBg text theme:border-primary h-10 w-full text-black border px-3 py-2 pl-10 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
+  'flex theme:text-primary theme:bg-primaryBg text theme:border-primary h-10 w-full text-black border px-3 py-2 pl-4 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
   {
     variants: {
       variant: {
