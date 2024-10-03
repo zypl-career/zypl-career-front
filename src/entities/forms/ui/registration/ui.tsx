@@ -56,9 +56,13 @@ export const FormRegister = () => {
         message: 'Пароль не совпадает!',
       });
     }
-    signUp.mutate(mappedData, {
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { confirmPassword, ...sendData } = mappedData;
+
+    signUp.mutate(sendData, {
       onSuccess: () => {
-        signIn.mutate(mappedData);
+        signIn.mutate(sendData);
         router.push('/');
       },
     });
@@ -282,25 +286,35 @@ export const FormRegister = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <Button variant="auth" type="submit" showRightArrowIcon={true}>
+                <Button
+                  type="submit"
+                  className="md:w-[400px]"
+                  rounded="full"
+                  showRightArrowIcon
+                >
                   Зарегистрироваться
                 </Button>
               </div>
-              <div className="flex justify-center items-center mt-4">
+              <div className="flex justify-center items-center my-4">
                 <span className="w-20 border-t border-gray-300"></span>
                 <span className="text-[#6B7280] text-sm px-2">
                   У вас есть аккаунт?
                 </span>
                 <span className="w-20 border-t border-gray-300"></span>
               </div>
+              <div className="flex justify-center">
+                <Button
+                  variant="outline"
+                  className="md:w-[400px]"
+                  rounded="full"
+                  asChild
+                >
+                  <Link href="/auth/login">Войти в систему</Link>
+                </Button>
+              </div>
             </div>
           </form>
         </Form>
-        <div className="flex justify-center">
-          <Link href={'/login'}>
-            <Button variant="outlineSecondary">Войти в систему</Button>
-          </Link>
-        </div>
       </div>
     </div>
   );

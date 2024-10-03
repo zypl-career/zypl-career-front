@@ -58,17 +58,17 @@ export const Navbar = () => {
         {!isAuth ? (
           <>
             <Button
-              className="lg:block hidden"
+              className="lg:flex hidden"
               variant="register"
               rounded="full"
+              asChild
             >
-              Зарегистрироваться
+              <Link href="/auth/register">Зарегистрироваться</Link>
             </Button>
             <Button
               className="lg:flex hidden"
               variant="outline"
               rounded="full"
-              showRightArrowIcon
               asChild
             >
               <Link href="/auth/login">Войти</Link>

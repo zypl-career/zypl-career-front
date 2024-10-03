@@ -1,9 +1,38 @@
-/* eslint-disable react/no-unescaped-entities */
-import { NextEducational } from '@/entities';
+'use client';
+
+import {
+  NextEducational,
+  TABLE_DATA,
+  tableDataWithProfessions,
+} from '@/entities';
 import { ArrowIcon, Button } from '@/shared';
-import { titles } from '.';
+import { useMemo, useState } from 'react';
+import { useResultTest } from '@/entities/career-profile/ui/table/services';
+import { useTest } from '@/shared/providers/test-provider';
+
+const limit = 2;
 
 export const ContentProfessions = () => {
+  const { test } = useTest();
+  const { data } = useResultTest(test);
+  const [page, setPage] = useState(1);
+
+  const payload = useMemo(
+    () =>
+      TABLE_DATA.map((item) => ({
+        ...item,
+        progress: +(Number(data?.payload[item.id - 1]) * 100).toFixed(2),
+      }))
+        .sort((a, b) => (b.progress || 0) - (a.progress || 0))
+        .map((item) => ({
+          ...item,
+          professions: tableDataWithProfessions.find(
+            (itm) => itm.id === item.id,
+          )?.professions,
+        })),
+    [data?.payload],
+  );
+
   return (
     <div className="lg:px-28">
       <div className="py-10">
@@ -21,17 +50,33 @@ export const ContentProfessions = () => {
         <hr className="bg-gray-900" />
       </div>
       <div>
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          {titles.map((title, index) => (
-            <NextEducational key={index} title={title} />
-          ))}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2">
+          {payload.map(({ professions }) =>
+            professions
+              ?.slice((page - 1) * limit, page * limit)
+              ?.map((prof, i) => (
+                <NextEducational key={i} title={prof.title} />
+              )),
+          )}
         </div>
       </div>
-      <div className="flex items-center space-x-4">
-        <Button variant="white" startIcon={<ArrowIcon />}>
+      <div className="flex items-center space-x-4 my-4">
+        <Button
+          variant="white"
+          startIcon={<ArrowIcon className="fill-black rotate-180" />}
+          rounded="full"
+          disabled={page === 1}
+          onClick={() => setPage((prev) => prev - 1)}
+        >
           Previous
         </Button>
-        <Button variant="white" endIcon={<ArrowIcon />}>
+        <Button
+          variant="white"
+          endIcon={<ArrowIcon className="fill-black" />}
+          rounded="full"
+          disabled={page === Math.ceil(payload.length / limit)}
+          onClick={() => setPage((prev) => prev + 1)}
+        >
           Next
         </Button>
       </div>

@@ -14,5 +14,5 @@ export const SignUpSchema = z.object({
     .min(2, { message: 'Обязательное поле' })
     .email({ message: 'min' }),
   password: z.string().min(2, { message: 'Обязательное поле' }),
-  confirmPassword: z.string().min(2, { message: 'Обязательное поле' }),
+  confirmPassword: z.string().min(2, { message: 'Обязательное поле' }).optional(),
 });

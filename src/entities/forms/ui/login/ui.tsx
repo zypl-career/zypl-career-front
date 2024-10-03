@@ -53,7 +53,7 @@ export const LoginForm = () => {
           zypl.career
         </p>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="py-5">
+          <form onSubmit={form.handleSubmit(onSubmit)}>
             <FormField
               control={form.control}
               name="email"
@@ -107,9 +107,11 @@ export const LoginForm = () => {
           </form>
         </Form>
         <div className="pb-10">
-          <Link href={'/auth/register'}>
-            <Button variant="login">Зарегистрироваться</Button>
-          </Link>
+          <Button variant="login" rounded="full" asChild>
+            <Link href="/auth/register">
+              Зарегистрироваться
+            </Link>
+          </Button>
         </div>
       </div>
     </div>
