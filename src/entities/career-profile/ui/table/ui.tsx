@@ -7,6 +7,7 @@ import { TABLE_DATA, type TResultsTableProps } from '.';
 import { useResultTest } from './services';
 import { useTest } from '@/shared/providers/test-provider';
 import Link from 'next/link';
+import { TableLoading } from './loading';
 
 export const TableResults: FC<TResultsTableProps> = ({ title }) => {
   const { test, handleTestTime } = useTest();
@@ -32,11 +33,9 @@ export const TableResults: FC<TResultsTableProps> = ({ title }) => {
     <div className="mt-8">
       <h3 className="text-2xl font-bold my-2">{title}</h3>
       <div className="divide-y divide-gray-200 p-4 bg-white shadow w-full rounded-xl">
-        {payload?.map((item, i) => (
+        {isLoading ? <TableLoading /> : payload?.map((item, i) => (
           <div key={i} className="flex justify-between items-center py-7">
-            <div>
-              {i + 1}. {item.title}
-            </div>
+            <span>{item.title}</span>
             <ProgressTest progress={item.progress} />
           </div>
         ))}

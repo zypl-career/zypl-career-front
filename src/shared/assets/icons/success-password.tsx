@@ -2,6 +2,7 @@ import { FC, SVGProps } from 'react';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const SuccessPasswordIcon: FC<SVGProps<SVGSVGElement>> = ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   stroke,
   ...props
 }) => {

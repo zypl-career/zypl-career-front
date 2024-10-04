@@ -4,58 +4,36 @@ export const dataSociology: TDataItem[] = [
   {
     title: 'Номи ихтисос',
     description: 'Иқтисодиёт ва ташкили истеҳсолот (энергетика)',
+    key: 'title',
   },
   {
     title: 'Номи муассисаи таълимӣ',
     description: 'Донишгоҳи байналмилалии сайёҳӣ ва соҳибкории Тоҷикистон',
+    key: 'nameOfSchool',
   },
   {
-    title: 'Маблағи таҳсил (бо (сомонӣ)',
+    title: 'Маблағи таҳсил бо (сомонӣ)',
     description: 'ройгон',
+    key: 'educationPrice',
   },
   {
     title: 'Шакли таҳсил',
     description: 'рӯзона',
+    key: 'educationType',
   },
   {
     title: 'Таҳсилот',
     description: 'Олии касбӣ',
+    key: 'education',
   },
   {
     title: 'Рамзи ихтисос',
     description: '1230105',
+    key: 'profId',
   },
   {
     title: 'Забони таҳсил',
     description: 'Тоҷикӣ',
-  },
-
-  {
-    title: 'Номи ихтисос',
-    description: 'Иқтисодиёт ва ташкили истеҳсолот (энергетика)',
-  },
-  {
-    title: 'Номи муассисаи таълимӣ',
-    description: 'Донишгоҳи байналмилалии сайёҳӣ ва соҳибкории Тоҷикистон',
-  },
-  {
-    title: 'Маблағи таҳсил (бо (сомонӣ)',
-    description: 'ройгон',
-  },
-  {
-    title: 'Шакли таҳсил',
-    description: 'рӯзона',
-  },
-  {
-    title: 'Таҳсилот',
-    description: 'Олии касбӣ',
-  },
-  {
-    title: 'Рамзи ихтисос',
-    description: '1230105',
-  },
-  {
-    title: 'Забони таҳсил',
-    description: 'Тоҷикӣ',
+    key: 'lang',
   },
 ];

@@ -2,7 +2,7 @@ import { FutureGrowthIcon, MoneyIcon, SkillsLevelIcon } from '@/shared';
 
 export const SociologyCards = () => {
   return (
-    <div className="bg-white  border border-gray-200 rounded-lg p-6  lg:mx-24">
+    <div className="bg-white border border-gray-200 rounded-lg p-6">
       <div className="flex justify-around">
         <div className="flex flex-col items-center">
           <div className="flex items-center mb-2">

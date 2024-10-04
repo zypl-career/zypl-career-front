@@ -1,20 +1,32 @@
 import { FC } from 'react';
 import { dataSociology, SociologyCard } from '@/entities/sociology';
+import { TRelatedSociologyData } from '@/entities';
 
-export const ActivitySociology: FC = () => {
+export const ActivitySociology: FC<{ data: TRelatedSociologyData }> = ({
+  data,
+}) => {
+  const mappedData = dataSociology.map((itm, i) => ({
+    ...itm,
+    ...data.sociology[i],
+    name: itm.title,
+    description: data.sociology[i]?.[itm?.key || 'description'],
+  }));
+
   return (
-    <div className="lg:px-24">
-      <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-md lg:w-[400px]">
-        <div className="">
-          {dataSociology.map((item, index) => (
-            <SociologyCard
-              key={index}
-              title={item.title}
-              description={item.description}
-            />
-          ))}
+    <div className="grid md:grid-cols-3 gap-5 my-5">
+      {data.sociology.map((itm) => (
+        <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-md lg:w-[400px]" key={itm.id}>
+          <div className="">
+            {mappedData.map((item, index) => (
+              <SociologyCard
+                key={index}
+                title={item.name}
+                description={itm[item.key || 'description']}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };

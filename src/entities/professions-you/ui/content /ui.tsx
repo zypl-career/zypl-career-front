@@ -9,15 +9,16 @@ import { ArrowIcon, Button } from '@/shared';
 import { useMemo, useState } from 'react';
 import { useResultTest } from '@/entities/career-profile/ui/table/services';
 import { useTest } from '@/shared/providers/test-provider';
+import Link from 'next/link';
 
-const limit = 2;
+const limit = 10;
 
 export const ContentProfessions = () => {
   const { test } = useTest();
   const { data } = useResultTest(test);
   const [page, setPage] = useState(1);
 
-  const payload = useMemo(
+  const professions = useMemo(
     () =>
       TABLE_DATA.map((item) => ({
         ...item,
@@ -29,7 +30,9 @@ export const ContentProfessions = () => {
           professions: tableDataWithProfessions.find(
             (itm) => itm.id === item.id,
           )?.professions,
-        })),
+        }))
+        .map((itm) => itm.professions)
+        .flat(),
     [data?.payload],
   );
 
@@ -51,13 +54,13 @@ export const ContentProfessions = () => {
       </div>
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2">
-          {payload.map(({ professions }) =>
-            professions
-              ?.slice((page - 1) * limit, page * limit)
-              ?.map((prof, i) => (
-                <NextEducational key={i} title={prof.title} />
-              )),
-          )}
+          {professions
+            ?.slice((page - 1) * limit, page * limit)
+            ?.map((prof, i) => (
+              <Link key={i} href={`/sociology/${prof?.id}`}>
+                <NextEducational title={prof?.title || ''} />
+              </Link>
+            ))}
         </div>
       </div>
       <div className="flex items-center space-x-4 my-4">
@@ -74,7 +77,7 @@ export const ContentProfessions = () => {
           variant="white"
           endIcon={<ArrowIcon className="fill-black" />}
           rounded="full"
-          disabled={page === Math.ceil(payload.length / limit)}
+          disabled={page === Math.ceil(professions.length / limit)}
           onClick={() => setPage((prev) => prev + 1)}
         >
           Next
