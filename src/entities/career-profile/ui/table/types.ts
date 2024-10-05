@@ -34,4 +34,5 @@ export type TRelatedSociologyData = {
   id: number;
   title: string;
   classerId: number;
+  classer?: TableDataProps;
 }

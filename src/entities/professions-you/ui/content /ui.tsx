@@ -57,7 +57,7 @@ export const ContentProfessions = () => {
           {professions
             ?.slice((page - 1) * limit, page * limit)
             ?.map((prof, i) => (
-              <Link key={i} href={`/sociology/${prof?.id}`}>
+              <Link key={prof?.id || i} href={`/profession/${prof?.id}`}>
                 <NextEducational title={prof?.title || ''} />
               </Link>
             ))}
