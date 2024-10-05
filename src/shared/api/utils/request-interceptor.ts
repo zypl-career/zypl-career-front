@@ -8,9 +8,9 @@ export const requestInterceptor = (config: InternalAxiosRequestConfig<any>) => {
 
 const authInterceptor = (config: InternalAxiosRequestConfig<any>) => {
   const authToken = getAccessToken();
-  if (authToken) {
+  if (authToken?.access) {
     config.headers = Object.assign({}, config.headers, {
-      // Authorization: `Bearer ${authToken.access}`,
+      Authorization: `Bearer ${authToken.access}`,
     });
   }
 

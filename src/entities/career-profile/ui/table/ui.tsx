@@ -5,9 +5,12 @@ import { Button, ProgressTest, differenceInMinutes } from '@/shared';
 import { TABLE_DATA, type TResultsTableProps } from '.';
 
 import { useResultTest } from './services';
-import { useTest } from '@/shared/providers/test-provider';
+import {
+  useTest,
+} from '@/shared/providers/test-provider';
 import Link from 'next/link';
 import { TableLoading } from './loading';
+import { isTestAuth } from './utils';
 
 export const TableResults: FC<TResultsTableProps> = ({ title }) => {
   const { test, handleTestTime } = useTest();
@@ -20,25 +23,33 @@ export const TableResults: FC<TResultsTableProps> = ({ title }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const isPayload = isTestAuth(data);
+
   const payload = useMemo(
     () =>
       TABLE_DATA.map((item) => ({
         ...item,
-        progress: +(Number(data?.payload[item.id - 1]) * 100).toFixed(2),
+        progress: isPayload
+          ? +(Number(data?.payload[item.id - 1]) * 100).toFixed(2)
+          : +(Number(data?.payload?.resultTest[item.id - 1]) * 100).toFixed(2),
       })).sort((a, b) => (b.progress || 0) - (a.progress || 0)),
-    [data?.payload],
+    [data?.payload, isPayload],
   );
 
   return (
-    <div className="mt-8">
+    <div>
       <h3 className="text-2xl font-bold my-2">{title}</h3>
       <div className="divide-y divide-gray-200 p-4 bg-white shadow w-full rounded-xl">
-        {isLoading ? <TableLoading /> : payload?.map((item, i) => (
-          <div key={i} className="flex justify-between items-center py-7">
-            <span>{item.title}</span>
-            <ProgressTest progress={item.progress} />
-          </div>
-        ))}
+        {isLoading ? (
+          <TableLoading />
+        ) : (
+          payload?.map((item, i) => (
+            <div key={i} className="flex justify-between items-center py-7">
+              <span>{item.title}</span>
+              <ProgressTest progress={item.progress} />
+            </div>
+          ))
+        )}
       </div>
       <div className="py-4">
         <Button

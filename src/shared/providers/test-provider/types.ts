@@ -18,7 +18,7 @@ export type TTestContext = {
 export type TTestResponse = {
   message: string;
   payload: TTestResponsePayload;
-  without_auth: TTestResponseWithoutAuth;
+  without_auth?: TTestResponseWithoutAuth;
 };
 
 export type TTestResponsePayload = {

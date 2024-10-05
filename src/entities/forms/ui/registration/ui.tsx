@@ -62,8 +62,11 @@ export const FormRegister = () => {
 
     signUp.mutate(sendData, {
       onSuccess: () => {
-        signIn.mutate(sendData);
-        router.push('/');
+        signIn.mutate(sendData, {
+          onSuccess: () => {
+            router.push('/');
+          },
+        });
       },
     });
   };
