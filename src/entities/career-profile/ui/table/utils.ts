@@ -6,5 +6,5 @@ import {
 export const isTestAuth = (
   data?: TTestResponse | TTestResponseWithoutAuth,
 ): data is TTestResponseWithoutAuth => {
-  return (data as TTestResponseWithoutAuth).info !== undefined;
+  return (data as TTestResponseWithoutAuth)?.info !== undefined;
 };

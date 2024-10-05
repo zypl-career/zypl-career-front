@@ -10,6 +10,7 @@ import { useMemo, useState } from 'react';
 import { useResultTest } from '@/entities/career-profile/ui/table/services';
 import { useTest } from '@/shared/providers/test-provider';
 import Link from 'next/link';
+import { isTestAuth } from '@/entities/career-profile/ui/table/utils';
 
 const limit = 10;
 
@@ -18,11 +19,15 @@ export const ContentProfessions = () => {
   const { data } = useResultTest(test);
   const [page, setPage] = useState(1);
 
+  const isPayload = isTestAuth(data);
+
   const professions = useMemo(
     () =>
       TABLE_DATA.map((item) => ({
         ...item,
-        progress: +(Number(data?.payload[item.id - 1]) * 100).toFixed(2),
+        progress: isPayload
+          ? +(Number(data?.payload[item.id - 1]) * 100).toFixed(2)
+          : +(Number(data?.payload?.resultTest[item.id - 1]) * 100).toFixed(2),
       }))
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
         .map((item) => ({
@@ -33,7 +38,7 @@ export const ContentProfessions = () => {
         }))
         .map((itm) => itm.professions)
         .flat(),
-    [data?.payload],
+    [data?.payload, isPayload],
   );
 
   return (
