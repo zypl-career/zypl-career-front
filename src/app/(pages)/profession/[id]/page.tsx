@@ -21,7 +21,10 @@ const SociologyPage = ({ params }: PageParams) => {
       <div className="container">
         {sociology ? (
           <>
-            <HeroSociology title={sociology.title} name={classer?.title || ''} />
+            <HeroSociology
+              title={sociology.title}
+              name={classer?.title || ''}
+            />
             {/* <SociologyCards /> */}
             <ReviewSociology description={sociology} />
             <ActivitySociology data={sociology} />

@@ -8,7 +8,11 @@ export const SociologyCard = ({
   return (
     <div className="border-b last:border-none py-4">
       <p className="text-gray-500">{title}</p>
-      {description ? <p className="text-black font-bold">{description}</p> : '–'}
+      {description ? (
+        <p className="text-black font-bold">{description}</p>
+      ) : (
+        '–'
+      )}
     </div>
   );
 };

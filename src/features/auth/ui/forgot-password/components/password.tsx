@@ -80,7 +80,9 @@ export const ForgotPasswordPassword: FC<TForgotComponentsProps> = ({
         >
           Сменить пароль
         </Button>
-        <Button variant="ghost" onClick={handleBack}>Назад</Button>
+        <Button variant="ghost" onClick={handleBack}>
+          Назад
+        </Button>
       </div>
     </div>
   );
