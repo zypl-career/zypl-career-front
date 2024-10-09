@@ -4,7 +4,7 @@ import { CardValue, cardData } from '@/shared';
 
 export const CareerValues = () => {
   return (
-    <section className="flex gap-5 py-8 lg:px-20">
+    <section className="flex gap-5 py-8">
       <CardValue data={cardData} />
       <div>
         <h2 className="font-bold text-2xl">{careerValuesContent.heading}</h2>

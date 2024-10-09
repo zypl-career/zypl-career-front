@@ -24,7 +24,9 @@
       "@ui": ["./src/shared/ui"],
       "@utils": ["./src/shared/utils"],
       "@types": ["./src/shared/types"],
-      "@providers": ["./src/shared/providers"]
+      "@providers": ["./src/shared/providers"],
+      "@entities": ["./src/entities"],
+      "@features": ["./src/features"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

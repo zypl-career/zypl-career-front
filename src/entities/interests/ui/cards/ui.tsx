@@ -43,7 +43,7 @@ export const CardsInteres = () => {
     <section>
       <div className="grid grid-cols-1 md:grid-cols-1 gap-5">
         {cards.map(([left, right], index) => (
-          <div className="flex items-center gap-10" key={index}>
+          <div className="flex items-center gap-4 lg:gap-10" key={index}>
             <div
               key={left.name}
               className={cn(
@@ -52,10 +52,10 @@ export const CardsInteres = () => {
               )}
               onClick={() => handleSelected(left, right, 'left', index)}
             >
-              <div className="w-48 h-48 mb-4 relative ">
+              <div className="w-28 h-28 lg:w-48 lg:h-48 mb-4 relative">
                 <Image src={left.src} alt={left.title} />
               </div>
-              <h2 className="text-lg font-semibold mb-2 text-center">
+              <h2 className="text-sm lg:text-lg font-semibold mb-2 text-center">
                 {left.title}
               </h2>
             </div>
@@ -68,10 +68,10 @@ export const CardsInteres = () => {
               )}
               onClick={() => handleSelected(left, right, 'right', index)}
             >
-              <div className="w-48 h-48 mb-4 relative ">
+              <div className="w-28 h-28 lg:w-48 lg:h-48 mb-4 relative">
                 <Image src={right.src} alt={right.title} />
               </div>
-              <h2 className="text-lg font-semibold mb-2 text-center">
+              <h2 className="text-sm lg:text-lg font-semibold mb-2 text-center">
                 {right.title}
               </h2>
             </div>
@@ -84,7 +84,6 @@ export const CardsInteres = () => {
         </Button>
         <Button
           variant="subscribe"
-          showRightArrowIcon={true}
           size="subscribe"
           className="order-1 sm:order-2"
           disabled={disableContinue}
