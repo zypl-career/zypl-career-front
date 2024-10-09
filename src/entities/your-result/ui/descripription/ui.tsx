@@ -2,7 +2,7 @@ import { TableResults } from '@/entities';
 
 export const YourResultDesc = () => {
   return (
-    <div className="lg:px-28">
+    <div className="container">
       <div className="py-10">
         <h3 className="font-semibold text-3xl">Ваш результат</h3>
         <p className="text-gray-600 lg:w-[800px] pb-5">

@@ -6,7 +6,9 @@ const ChoosingValuesPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
-      <ChoosingValuesHead />
+      <div className="container">
+        <ChoosingValuesHead />
+      </div>
       <Footer />
     </div>
   );
