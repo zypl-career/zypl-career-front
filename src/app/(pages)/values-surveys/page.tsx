@@ -6,9 +6,9 @@ const ValuesSurveyPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <div className="container">
-      <ValuesSurveysHead />
+        <ValuesSurveysHead />
       </div>
-  
+
       <Footer />
     </div>
   );
