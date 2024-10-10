@@ -47,7 +47,7 @@ export const CardsInteres = () => {
             <div
               key={left.name}
               className={cn(
-                'flex flex-col cursor-pointer flex-1 items-center  p-6 rounded-lg shadow-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl',
+                'theme:border-primary theme:border theme:bg-primaryBg theme:text-primary flex flex-col cursor-pointer flex-1 items-center  p-6 rounded-lg shadow-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl',
                 left.selected ? 'border-2 border-primary' : 'bg-white',
               )}
               onClick={() => handleSelected(left, right, 'left', index)}
@@ -63,7 +63,7 @@ export const CardsInteres = () => {
             <div
               key={right.name}
               className={cn(
-                'flex flex-col cursor-pointer flex-1 items-center  p-6 rounded-lg shadow-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl',
+                'theme:border-primary theme:border theme:bg-primaryBg theme:text-primary flex flex-col cursor-pointer flex-1 items-center  p-6 rounded-lg shadow-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl',
                 right.selected ? 'border-2 border-primary' : 'bg-white',
               )}
               onClick={() => handleSelected(left, right, 'right', index)}

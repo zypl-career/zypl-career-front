@@ -11,7 +11,7 @@ import {
 
 export const Footer: FC = () => {
   return (
-    <footer className="bg-gray-800 text-gray-400 py-8 px-8 theme:bg-primaryBg theme:text-primary">
+    <footer className="bg-gray-800 text-gray-400 py-8 px-8 theme:border-primary theme:border theme:bg-primaryBg theme:text-primary">
       <div className="flex lg:px-24 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {footerData.map((section, index) => (

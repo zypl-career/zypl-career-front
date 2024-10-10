@@ -21,11 +21,11 @@ export const FeedbackContent = () => {
 
   return (
     <div className="py-4">
-      <div className="bg-white rounded-lg border p-6">
+      <div className="bg-white rounded-lg border p-6 theme:border-primary theme:bg-primaryBg theme:text-primary">
         {feedbackOptions.map((option, index) => (
           <div
             key={option.id}
-            className={`py-4 ${index < feedbackOptions.length - 1 ? 'border-b' : ''}`}
+            className={`py-4 theme:border-primary ${index < feedbackOptions.length - 1 ? 'border-b' : ''}`}
           >
             <div className="text-container flex flex-col sm:flex-row items-center justify-between">
               <div className="text-gray-700">{option.text}</div>

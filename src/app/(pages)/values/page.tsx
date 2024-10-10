@@ -3,7 +3,7 @@ import { Footer } from '@/widgets';
 
 const VideoGuidePage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="min-h-screen">
       <Navbar />
       <CareerValues />
       <Footer />

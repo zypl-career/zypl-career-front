@@ -10,7 +10,7 @@ const interestsCard = cardData.map((c) => ({
 
 export const InterestsHead = () => {
   return (
-    <section className="flex gap-5 py-8 lg:px-20">
+    <section className="flex gap-5 py-8 lg:px-20 theme:bg-primaryBg theme:text-primary">
       <CardValue data={interestsCard} />
       <div>
         <h2 className="font-bold text-2xl">{careerValuesContent.heading}</h2>

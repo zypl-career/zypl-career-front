@@ -74,7 +74,6 @@ const Select = React.forwardRef<
         )}
         {showFlagIcon && (
           <div className="absolute left-5 inset-y-0 flex items-center pointer-events-none">
-            {/*<img src= alt=""/>*/}
             <RussianFlag />
           </div>
         )}
@@ -104,17 +103,7 @@ const Select = React.forwardRef<
               },
             )}
           >
-            <DropdownIcon />
-          </div>
-          <div
-            className={cn(
-              'absolute right-6 inset-y-0 flex items-center pointer-events-none transition-transform duration-300',
-              {
-                'rotate-180': isOpen,
-              },
-            )}
-          >
-            <ArrowDownIcon />
+            <ArrowDownIcon className="theme:text-primary" />
           </div>
         </div>
       </div>

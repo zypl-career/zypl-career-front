@@ -10,7 +10,7 @@ const questionnaireSurveysCard = cardData.map((c, i) => ({
 
 export const QuestionnaireValuesHead = () => {
   return (
-    <section className="flex gap-5 py-8 lg:px-20">
+    <section className="flex gap-5 py-8 lg:px-20 theme:bg-primaryBg theme:text-primary">
       <CardValue data={questionnaireSurveysCard} />
       <div>
         <h2 className="font-bold text-2xl">{VALUES_SURVEYS_DATA.heading}</h2>
