@@ -7,12 +7,14 @@ import {
 import { useQuery } from '@tanstack/react-query';
 
 export const useResultTest = (test: Partial<TTestRequest>) => {
-  return useQuery<Partial<TTestRequest>, Error, TTestResponse | TTestResponseWithoutAuth>({
+  return useQuery<
+    Partial<TTestRequest>,
+    Error,
+    TTestResponse | TTestResponseWithoutAuth
+  >({
     queryKey: ['resultTest'],
     queryFn: async () => {
-      return await apiService
-        .post('test', test)
-        .then(({ data }) => data);
+      return await apiService.post('test', test).then(({ data }) => data);
     },
   });
 };

@@ -15,7 +15,10 @@ export const ActivitySociology: FC<{ data: TRelatedSociologyData }> = ({
   return (
     <div className="grid md:grid-cols-3 gap-5 my-5">
       {data.sociology.map((itm) => (
-        <div className="bg-white border border-gray-200 rounded-xl p-4" key={itm.id}>
+        <div
+          className="bg-white border border-gray-200 rounded-xl p-4"
+          key={itm.id}
+        >
           {mappedData.map((item, index) => (
             <SociologyCard
               key={index}

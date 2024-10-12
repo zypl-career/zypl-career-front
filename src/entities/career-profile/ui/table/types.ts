@@ -11,8 +11,7 @@ export type TProfessionsClasser = {
   id: number;
   title: string;
   classerId: number;
-}
-
+};
 
 export type TSociology = {
   id: number;
@@ -20,14 +19,13 @@ export type TSociology = {
   title: string;
   type: string;
   class: number;
-  education: string,
+  education: string;
   educationType: string;
   educationPrice: number;
   lang: string;
   nameOfSchool: string;
   description: string;
-}
-
+};
 
 export type TRelatedSociologyData = {
   sociology: TSociology[];
@@ -35,4 +33,4 @@ export type TRelatedSociologyData = {
   title: string;
   classerId: number;
   classer?: TableDataProps;
-}
+};

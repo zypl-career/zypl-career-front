@@ -17,7 +17,6 @@ export const MainQuestionnaireValues = () => {
         </Button>
         <Button
           variant="subscribe"
-          showRightArrowIcon={true}
           size="subscribe"
           className="order-1 sm:order-2"
           disabled={!disableContinueButton}

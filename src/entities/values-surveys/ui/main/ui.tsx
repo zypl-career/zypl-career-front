@@ -17,7 +17,6 @@ export const MainValuesSureys = () => {
         </Button>
         <Button
           variant="subscribe"
-          showRightArrowIcon={true}
           size="subscribe"
           className="order-1 sm:order-2"
           onClick={() => router.push('test-fourth')}

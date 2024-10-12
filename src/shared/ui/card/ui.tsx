@@ -5,7 +5,7 @@ import { Check } from 'lucide-react';
 
 export const CardValue: FC<TCardItemProps> = ({ data = [] }) => {
   return (
-    <div className="bg-white theme:border-primary theme:bg-primaryBg theme:text-primary rounded-lg border py-4 px-6 w-96 self-baseline sticky top-5">
+    <div className="hidden lg:block bg-white theme:border-primary theme:bg-primaryBg theme:text-primary rounded-lg border py-4 px-6 w-96 self-baseline sticky top-5">
       <div className="flex flex-col divide-y theme:divide-primary">
         {data.map((item) => (
           <div key={item.id}>

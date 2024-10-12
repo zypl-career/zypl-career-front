@@ -17,7 +17,7 @@ export const CardValuesSurveys = ({
   };
   return (
     <div>
-      <h3 className="font-semibold">
+      <h3 className="font-semibold py-4">
         Кадом изҳорот вазъи молиявии оилаи шуморо ҳангоми 14 ё 15-солагиатон
         беҳтар тавсиф мекунад?
       </h3>

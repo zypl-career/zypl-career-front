@@ -5,9 +5,7 @@ import { Button, ProgressTest, differenceInMinutes } from '@/shared';
 import { TABLE_DATA, type TResultsTableProps } from '.';
 
 import { useResultTest } from './services';
-import {
-  useTest,
-} from '@/shared/providers/test-provider';
+import { useTest } from '@/shared/providers/test-provider';
 import Link from 'next/link';
 import { TableLoading } from './loading';
 import { isTestAuth } from './utils';

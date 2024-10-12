@@ -28,7 +28,7 @@ export const FeedbackContent = () => {
             className={`py-4 theme:border-primary ${index < feedbackOptions.length - 1 ? 'border-b' : ''}`}
           >
             <div className="text-container flex flex-col sm:flex-row items-center justify-between">
-              <div className="text-gray-700">{option.text}</div>
+              <div className="theme:text-primary text-gray-700">{option.text}</div>
               <div className="icons-container flex space-x-2 mt-4 sm:mt-0">
                 {option.icons.map((el, idx) => (
                   <div

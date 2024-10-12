@@ -3,9 +3,11 @@ import { Footer } from '@/widgets';
 
 const InterestsPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen theme:bg-primaryBg theme:text-primary">
       <Navbar />
-      <InterestsHead />
+      <div className="container">
+        <InterestsHead />
+      </div>
       <Footer />
     </div>
   );
