@@ -4,7 +4,7 @@ import * as React from 'react';
 import { cn } from '@/shared/utils';
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
-import { ArrowDownIcon, RussianFlag, DropdownIcon } from '@/shared';
+import { ArrowDownIcon, RussianFlag } from '@/shared';
 
 import type { TVariantType, TSizeType, TSelectProps } from './types';
 
@@ -36,7 +36,7 @@ const selectVariants = cva(
   },
 );
 
-const Select = React.forwardRef<
+const SelectOption = React.forwardRef<
   HTMLSelectElement,
   TSelectProps & { showFlagIcon?: boolean; options: string[]; label?: string }
 >(
@@ -111,6 +111,6 @@ const Select = React.forwardRef<
   },
 );
 
-Select.displayName = 'Select';
+SelectOption.displayName = 'Select';
 
-export { Select, selectVariants };
+export { SelectOption, selectVariants };

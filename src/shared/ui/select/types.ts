@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { VariantProps } from 'class-variance-authority';
-import { selectVariants } from '.';
+import { selectVariants } from './ui';
 
 export type TSelectProps = Omit<
   React.SelectHTMLAttributes<HTMLSelectElement>,

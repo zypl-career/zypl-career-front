@@ -3,3 +3,4 @@ export * from './localStorage';
 export * from './test';
 export * from './differenceInMinutes';
 export * from './getUser';
+export * from './set-field-error';

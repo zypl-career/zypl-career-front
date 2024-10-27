@@ -8,7 +8,7 @@ import {
   FormItem,
   FormMessage,
   Input,
-  Select,
+  SelectOption,
 } from '@ui';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -143,7 +143,7 @@ export const FormRegister = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormControl>
-                            <Select
+                            <SelectOption
                               label="Роле*"
                               options={['Студент', 'Учитель', 'Родители']}
                               variant="outline"
@@ -162,7 +162,7 @@ export const FormRegister = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormControl>
-                            <Select
+                            <SelectOption
                               label="Пол*"
                               options={['Мужской', 'Женский']}
                               variant="outline"

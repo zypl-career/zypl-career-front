@@ -7,7 +7,7 @@ import {
 } from './utils';
 
 export const apiService = axios.create({
-  baseURL: 'https://zypllback-vpq7gp0b.b4a.run/',
+  baseURL: 'http://35.222.129.179/',
 });
 
 apiService.interceptors.response.use(responseInterceptor, errorInterceptor);

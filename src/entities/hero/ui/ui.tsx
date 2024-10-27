@@ -2,13 +2,15 @@
 import Image from 'next/image';
 import { Button, Hero as HeroImg, TimeIcon } from '@/shared';
 import { ApproveTestModal } from './components';
+import { useTranslations } from 'next-intl';
 
 export const Hero = () => {
+  const t = useTranslations('HomePage');
   return (
     <div className="flex flex-col md:flex-row justify-between bg-[#F8F8F8] theme:bg-primaryBg">
       <div className="py-5 container md:mx-24 md:py-32">
         <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8 text-primary">
-          Формируйте свое будущее
+          {t('title')}
         </p>
         <p className="md:w-[522px] text-gray-600 text-primary">
           zypl.career предоставляет ресурсы для изучения карьерных путей и

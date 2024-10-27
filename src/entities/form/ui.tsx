@@ -1,4 +1,4 @@
-import { Button, Input, RadioGroup, RadioGroupItem, Select } from '@ui';
+import { Button, Input, RadioGroup, RadioGroupItem, SelectOption } from '@ui';
 
 export const FormInfo = () => {
   return (
@@ -26,7 +26,7 @@ export const FormInfo = () => {
           </div>
         </div>
         <div className="mb-4">
-          <Select
+          <SelectOption
             variant="outline"
             options={['Душанбе', 'Худжанд']}
             size="default"

@@ -12,7 +12,7 @@ export const Modal: FC<TModalProps> = ({ toggle, setToggle, children }) => {
   return (
     <Dialog open={toggle} onOpenChange={setToggle}>
       <DialogTitle>
-        <VisuallyHiddenComponent>asd</VisuallyHiddenComponent>
+        <VisuallyHiddenComponent> </VisuallyHiddenComponent>
       </DialogTitle>
       <DialogContent>{children}</DialogContent>
     </Dialog>

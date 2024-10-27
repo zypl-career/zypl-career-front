@@ -1,13 +1,13 @@
 'use client';
-
-import { Button, Select } from '@ui';
-import { cn } from '@utils';
-import { Themes } from '@/features/themes/ui';
-import { useTheme } from '@providers';
-import { Logo } from '@/shared';
-import { GlassesIcon } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
+import { GlassesIcon } from 'lucide-react';
+
+import { Button } from '@ui';
+import { cn } from '@utils';
+import { useTheme } from '@providers';
+import { Lang, Themes } from '@features';
+import { Logo } from '@/shared';
 
 export const Header = () => {
   const { theme } = useTheme();
@@ -25,7 +25,7 @@ export const Header = () => {
           <Link href="/">
             <Logo className="theme:fill-primary" />
           </Link>
-          <div className="flex items-center not">
+          <div className="flex items-center gap-6">
             <div className="hidden md:block">
               <Button
                 startIcon={
@@ -33,19 +33,12 @@ export const Header = () => {
                 }
                 variant="secondary"
                 size="default"
-                className="mt-2.5"
                 onClick={() => setShowThemes((prev) => !prev)}
               >
                 Версия для слабовидящих
               </Button>
             </div>
-            <Select
-              showFlagIcon
-              variant="secondary"
-              options={['Русский', 'Английсский']}
-              size="default"
-              className="ml-4"
-            />
+            <Lang />
           </div>
         </div>
       </header>

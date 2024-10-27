@@ -10,7 +10,7 @@ const authInterceptor = (config: InternalAxiosRequestConfig<any>) => {
   const authToken = getAccessToken();
   if (authToken?.access) {
     config.headers = Object.assign({}, config.headers, {
-      Authorization: `Bearer ${authToken.access}`,
+      Authorization: `${authToken.access}`,
     });
   }
 
