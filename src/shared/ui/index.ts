@@ -19,3 +19,5 @@ export * from './progress-test';
 export * from './modal';
 export * from './timer';
 export * from './skeleton';
+export * from './If';
+export * from './spinner';

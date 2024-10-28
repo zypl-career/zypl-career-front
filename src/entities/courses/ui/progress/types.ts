@@ -1,5 +1,3 @@
-import { TMoreCardProps } from '@/entities';
+import { TCourseData } from '../../types';
 
-export type TCardCoursesProps = TMoreCardProps & {
-  progress: number;
-};
+export type TCardCoursesProps = TCourseData;

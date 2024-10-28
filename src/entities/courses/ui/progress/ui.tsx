@@ -1,7 +1,7 @@
 export const ProgressBar = ({ progress }: { progress: number | string }) => {
   return (
     <div className="flex flex-col items-start pt-10 pb-4">
-      <span className="text-gray-500 text-sm mb-1">{progress} 0 %</span>
+      <span className="text-gray-500 text-sm mb-1">{progress} %</span>
       <div className="w-full bg-gray-200 rounded-full h-2.5 relative">
         <div
           className="bg-purple-600 h-2.5 rounded-full absolute"

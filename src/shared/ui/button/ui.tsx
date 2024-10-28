@@ -18,7 +18,7 @@ const buttonVariants = cva(
         destructive:
           'bg-destructive cursor-pointer text-destructive-foreground hover:bg-destructive/90',
         outline:
-          'theme:text-primary theme:border-primary theme:hover:bg-primary theme:hover:text-primaryBg  border border-input bg-transparent text-black cursor-pointer hover:bg-accent hover:text-accent-foreground',
+          'theme:text-primary theme:border-primary theme:hover:bg-primary theme:hover:text-primaryBg  border bg-white text-black cursor-pointer hover:bg-accent hover:text-accent-foreground',
         purpleOutline:
           'border border-[#371141] rounded-2xl text-[#111827] bg-background cursor-pointer hover:text-accent-foreground transform transition-transform duration-200 active:scale-110',
         secondary:
