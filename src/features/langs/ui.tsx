@@ -6,11 +6,7 @@ import { SelectField } from '@ui';
 import { TValueLangs, type TLang } from './types';
 import { usePathname, useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
-
-const langs: TLang[] = [
-  { value: 'ru', label: 'Русский' },
-  { value: 'tj', label: 'Таджикский' },
-];
+import { langs } from './constants';
 
 export const Lang = () => {
   const router = useRouter();

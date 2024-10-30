@@ -2,21 +2,27 @@
 
 import { Button } from '@ui';
 import { useEffect, useState } from 'react';
+import { fontSizes } from './constants';
 
-export const FontsChange = () => {
-  const [adjustmentFactor, setAdjustmentFactor] = useState(1);
+export const FontSizesChange = () => {
+  const [adjustmentFactor, setAdjustmentFactor] = useState(0.1);
   const [type, setType] = useState<'minus' | 'plus'>();
+  const [typeSize, setTypeSize] = useState<keyof typeof fontSizes>();
 
-  const increaseFontSize = () => {
-    setAdjustmentFactor((prevFactor) => prevFactor * 1.1); // Increase by 10%
-    setType('plus');
+  const changeFontSize = (sizeKeys: keyof typeof fontSizes) => {
+    const size = fontSizes[sizeKeys];
+    setTypeSize(sizeKeys);
+
+    setAdjustmentFactor((prev) => {
+      if (prev > size) {
+        setType('minus');
+        return prev / 1.1;
+      }
+      setType('plus');
+      return prev * 1.1;
+    });
   };
 
-  const decreaseFontSize = () => {
-    setAdjustmentFactor((prevFactor) => prevFactor / 1.1); // Decrease by 10%
-    setType('minus');
-  };
-  
   useEffect(() => {
     const adjustFontSize = (element: HTMLElement) => {
       const computedStyle = window.getComputedStyle(element);
@@ -27,24 +33,48 @@ export const FontsChange = () => {
           : currentFontSize + adjustmentFactor;
       element.style.fontSize = `${result <= 0 ? 0 : result}px`;
     };
-  
+
     const traverseDOM = (element: HTMLElement) => {
       adjustFontSize(element);
       Array.from(element.children).forEach((child) =>
         traverseDOM(child as HTMLElement),
       );
     };
-    if (type) {
-      traverseDOM(document.body);
-    }
-  }, [type, adjustmentFactor]);
+
+    traverseDOM(document.body);
+  }, [adjustmentFactor, type]);
 
   return (
-    <div className="space-y-2.5">
-      <h1 className="font-semibold">Шрифт:</h1>
+    <div className="flex items-center gap-2">
+      <h1 className="font-semibold text-white">Шрифт:</h1>
       <div className="flex items-center gap-1">
-        <Button onClick={decreaseFontSize}>-</Button>
-        <Button onClick={increaseFontSize}>+</Button>
+        <Button
+          disabled={typeSize === 'base'}
+          onClick={() => changeFontSize('base')}
+          className="size-14 text-xl bg-transparent text-white theme:text-primary"
+          variant="outline"
+          rounded="sm"
+        >
+          A
+        </Button>
+        <Button
+          disabled={typeSize === 'large'}
+          onClick={() => changeFontSize('large')}
+          className="size-14 text-2xl bg-transparent text-white theme:text-primary"
+          variant="outline"
+          rounded="sm"
+        >
+          A
+        </Button>
+        <Button
+          disabled={typeSize === 'xLarge'}
+          onClick={() => changeFontSize('xLarge')}
+          className="size-14 text-3xl bg-transparent text-white theme:text-primary"
+          variant="outline"
+          rounded="sm"
+        >
+          A
+        </Button>
       </div>
     </div>
   );
