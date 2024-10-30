@@ -5,7 +5,8 @@ import { TLessonIdData } from './types';
 export const useLessonId = (courseId: string) => {
   return useQuery<TLessonIdData[]>({
     queryKey: ['lessonId'],
-    queryFn: () => apiService.get(`lesson/by-course/${courseId}`).then(({ data }) => data),
+    queryFn: () =>
+      apiService.get(`lesson/by-course/${courseId}`).then(({ data }) => data),
   });
 };
 

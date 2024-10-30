@@ -8,12 +8,7 @@ export const CardSection = () => {
   return (
     <div className="bg-white">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 pb-4 lg:pb-10 gap-5 ">
-        {data?.data.map((card, index) => (
-          <CardCourses
-            key={index}
-            {...card}
-          />
-        ))}
+        {data?.data.map((card, index) => <CardCourses key={index} {...card} />)}
       </div>
     </div>
   );

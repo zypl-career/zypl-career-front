@@ -1,28 +1,30 @@
+'use client';
+
 import { Button, Input, PaperPlane } from '@/shared';
 import { MoreCard, moreData } from '@/entities';
+import { useTranslations } from 'next-intl';
 
 export const CareerTips = () => {
+  const t = useTranslations('CareerTips');
+
   return (
     <section className="bg-[#F8F8F8] theme:bg-primaryBg theme:text-primary">
       <div className="container flex flex-col md:flex-row justify-between">
         <div className="py-5 md:py-32">
           <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8">
-            Советы по карьере
+            {t('title')}
           </p>
           <p className="font-bold text-gray-600 py-2 theme:text-primary">
-            Получайте информацию о карьере прямо на свой почтовый ящик
+            {t('subscribePrompt')}
           </p>
           <p className="md:w-[800px] text-gray-500 theme:text-primary">
-            Будьте на шаг впереди! Зарегистрируйте учетную запись myfuture и
-            установите флажок, чтобы получать актуальную информацию о карьере о
-            профессиях, курсах, карьерных путях, выборе предметов, днях открытых
-            дверей.
+            {t('description')}
           </p>
           <div className="py-5">
             <Input
               variant="outline"
               className="md:w-[360px]"
-              label="Электронная почта*"
+              label={t('emailLabel')}
             />
             <div className="py-5">
               <Button
@@ -31,7 +33,7 @@ export const CareerTips = () => {
                 size="subscribe"
                 rounded="full"
               >
-                Подписаться
+                {t('subscribeButton')}
               </Button>
             </div>
           </div>
