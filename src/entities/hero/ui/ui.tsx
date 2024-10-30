@@ -12,16 +12,12 @@ export const Hero = () => {
         <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8 text-primary">
           {t('title')}
         </p>
-        <p className="md:w-[522px] text-gray-600 text-primary">
-          zypl.career предоставляет ресурсы для изучения карьерных путей и
-          инструментов для развития самопознания, чтобы помочь в принятии
-          решений о карьере.
-        </p>
+        <p className="md:w-[522px] text-gray-600 text-primary">{t('about')}</p>
         <div className="hidden md:flex gap-2 py-5">
           <ApproveTestModal />
           <div className="flex items-center justify-center gap-1 py-2">
             <TimeIcon />
-            <p className="font-thin">Займет около часа</p>
+            <p className="font-thin">{t('time')}</p>
           </div>
         </div>
       </div>
@@ -35,7 +31,7 @@ export const Hero = () => {
           rounded="full"
           className="w-full md:w-auto text-center"
         >
-          Пройти тест
+          {t('test')}
         </Button>
         <div className="flex items-center justify-center gap-1 py-2">
           <TimeIcon />

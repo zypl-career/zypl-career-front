@@ -31,7 +31,10 @@ export const SelectField = <T,>({
   size,
   onChange,
 }: ISelectFieldProps<T>) => (
-  <Select onValueChange={(value) => onChange(value as T[keyof T])} defaultValue={value}>
+  <Select
+    onValueChange={(value) => onChange(value as T[keyof T])}
+    defaultValue={value}
+  >
     <SelectTrigger
       className={cn(
         selectVariants({ variant, size, className }),

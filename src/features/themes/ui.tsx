@@ -13,7 +13,10 @@ export const Themes = () => {
     <div className="py-5 md:px-24 flex items-center justify-between gap-2 bg-[#1F2937]">
       <div className="flex items-center gap-2">
         <span className="text-white">ВКЛ/ВЫКЛ:</span>
-        <div className="w-14 h-14 text-2xl bg-white rounded flex items-center justify-center cursor-pointer text-primary" onClick={() => setTheme('')}>
+        <div
+          className="w-14 h-14 text-2xl bg-white rounded flex items-center justify-center cursor-pointer text-primary"
+          onClick={() => setTheme('')}
+        >
           <X />
         </div>
       </div>

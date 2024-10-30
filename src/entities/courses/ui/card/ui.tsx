@@ -3,7 +3,12 @@ import Image from 'next/image';
 import { ProgressBar, TCardCoursesProps } from '@/entities';
 import Link from 'next/link';
 
-export const CardCourses: FC<TCardCoursesProps> = ({ id, image, title, finishedPercentage }) => {
+export const CardCourses: FC<TCardCoursesProps> = ({
+  id,
+  image,
+  title,
+  finishedPercentage,
+}) => {
   return (
     <Link
       href={`/courses/${id}`}
