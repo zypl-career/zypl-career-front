@@ -7,7 +7,7 @@ import {
 } from './utils';
 
 export const apiService = axios.create({
-  baseURL: 'http://35.222.129.179/',
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
 });
 
 apiService.interceptors.response.use(responseInterceptor, errorInterceptor);
