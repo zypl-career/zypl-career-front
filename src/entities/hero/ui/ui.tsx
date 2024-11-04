@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { Button, Hero as HeroImg, TimeIcon } from '@/shared';
+import { Hero as HeroImg, TimeIcon } from '@/shared';
 import { ApproveTestModal } from './components';
 import { useTranslations } from 'next-intl';
 
@@ -24,18 +24,11 @@ export const Hero = () => {
       <div className="flex justify-center md:justify-end py-5">
         <Image src={HeroImg} alt="hero" className="lg:w-[1180px]" />
       </div>
-      <div className="container flex md:hidden flex-col items-center gap-2 py-5">
-        <Button
-          showRightArrowIcon
-          size="subscribe"
-          rounded="full"
-          className="w-full md:w-auto text-center"
-        >
-          {t('test')}
-        </Button>
+      <div className="sm:hidden flex flex-col container gap-2 py-5">
+        <ApproveTestModal />
         <div className="flex items-center justify-center gap-1 py-2">
           <TimeIcon />
-          <p className="font-thin">Займет около часа</p>
+          <p className="font-thin">{t('time')}</p>
         </div>
       </div>
     </div>

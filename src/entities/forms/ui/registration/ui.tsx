@@ -8,7 +8,7 @@ import {
   FormItem,
   FormMessage,
   Input,
-  SelectOption,
+  SelectField,
 } from '@ui';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -19,6 +19,18 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { genderList, roleList } from './consts';
 import { useSignIn } from '../login/services';
+import { districts } from '@/shared/constants';
+import { setFieldError } from '@/shared';
+
+type TGender = {
+  label: string;
+  value: string;
+};
+
+const genders: TGender[] = [
+  { label: 'Мужской', value: 'male' },
+  { label: 'Женский', value: 'female' },
+];
 
 export const FormRegister = () => {
   const router = useRouter();
@@ -50,17 +62,14 @@ export const FormRegister = () => {
       role: roleList.find((r) => r.name === data.role)?.id || '',
       gender: genderList.find((r) => r.name === data.gender)?.id || '',
     };
-    if (data.password !== data.confirmPassword) {
-      return form.setError('password', {
-        type: 'custom',
-        message: 'Пароль не совпадает!',
-      });
-    }
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { confirmPassword, ...sendData } = mappedData;
 
     signUp.mutate(sendData, {
+      onError() {
+        setFieldError(form);
+      },
       onSuccess: () => {
         signIn.mutate(sendData, {
           onSuccess: () => {
@@ -90,8 +99,8 @@ export const FormRegister = () => {
                         <FormItem>
                           <FormControl>
                             <Input
-                              variant="outline"
                               label="Фамилия*"
+                              variant="outline"
                               type="text"
                               {...field}
                             />
@@ -143,9 +152,11 @@ export const FormRegister = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormControl>
-                            <SelectOption
-                              label="Роле*"
-                              options={['Студент', 'Учитель', 'Родители']}
+                            <SelectField
+                              label="Роль*"
+                              options={roleList}
+                              printType="name"
+                              valueType="id"
                               variant="outline"
                               className="mt-3"
                               {...field}
@@ -162,9 +173,11 @@ export const FormRegister = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormControl>
-                            <SelectOption
+                            <SelectField
                               label="Пол*"
-                              options={['Мужской', 'Женский']}
+                              options={genders}
+                              printType="label"
+                              valueType="value"
                               variant="outline"
                               className="mt-3"
                               {...field}
@@ -217,10 +230,13 @@ export const FormRegister = () => {
                     render={({ field }) => (
                       <FormItem>
                         <FormControl>
-                          <Input
-                            className="w-full md:w-[393px]"
-                            label="Район"
+                          <SelectField
+                            label="Район*"
+                            options={districts}
+                            printType="label"
+                            valueType="value"
                             variant="outline"
+                            className="w-full md:w-[393px]"
                             {...field}
                           />
                         </FormControl>

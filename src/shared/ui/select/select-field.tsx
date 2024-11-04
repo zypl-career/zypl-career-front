@@ -13,6 +13,7 @@ import { selectVariants } from './ui';
 
 type ISelectFieldProps<T> = Omit<TSelectProps, 'onChange'> & {
   value: string;
+  label?: string
   options: T[];
   printType: keyof T;
   valueType: keyof T;
@@ -23,6 +24,7 @@ type ISelectFieldProps<T> = Omit<TSelectProps, 'onChange'> & {
 export const SelectField = <T,>({
   options,
   value,
+  label,
   valueType,
   printType,
   placeholder = 'Выберите элемент',
@@ -35,6 +37,11 @@ export const SelectField = <T,>({
     onValueChange={(value) => onChange(value as T[keyof T])}
     defaultValue={value}
   >
+    {label && (
+      <label className="block mb-1 text-sm font-semibold text-gray-700">
+        {label}
+      </label>
+    )}
     <SelectTrigger
       className={cn(
         selectVariants({ variant, size, className }),
