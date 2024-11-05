@@ -1,31 +1,31 @@
 'use client';
 
 import { RadioGroup, RadioGroupCard } from '@/shared';
-import { LABELS } from '.';
+import { LABELS_QUESTION } from '.';
 import { useTest } from '@/shared/providers/test-provider';
 import { useTranslations } from 'next-intl';
 
-export const CardValuesSurveys = ({
+export const CardQuestionnaireValues = ({
   onSelect,
 }: {
   onSelect: (value: string) => void;
 }) => {
   const { handleTestString } = useTest();
-  const t = useTranslations('valuesSurveys');
-
+  const t = useTranslations('testFourth');
   const handleSelect = (value: string) => {
     onSelect(value);
-    handleTestString(value, 'third');
+    handleTestString(value, 'fourth');
   };
+  console.log(t('heading'));
 
   return (
-    <div>
-      <h3 className="font-semibold py-4">{t('selectQuestion')}</h3>
+    <>
+      <h3 className="font-semibold">{t('heading')}</h3>
       <RadioGroup onValueChange={handleSelect}>
-        {LABELS.map((label, index) => (
-          <RadioGroupCard key={index} label={label} />
+        {LABELS_QUESTION.map((label, index) => (
+          <RadioGroupCard key={index} label={t(`labels.option${index + 1}`)} />
         ))}
       </RadioGroup>
-    </div>
+    </>
   );
 };
