@@ -4,16 +4,19 @@ import { Button } from '@/shared';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { CardChoosingValues } from '..';
+import { useTranslations } from 'next-intl';
 
 export const MainChoosingValues = () => {
   const [disableContinueButton, setDisableContinueButton] = useState('');
+  const t = useTranslations('valuesSurveys');
   const router = useRouter();
+
   return (
     <div>
       <CardChoosingValues onSelect={setDisableContinueButton} />
       <div className="flex flex-col sm:flex-row items-center mt-8 mb-40">
         <Button variant="ghost" className="order-2 sm:order-1">
-          Отменить
+          {t('cancel')}
         </Button>
         <Button
           variant="subscribe"
@@ -22,7 +25,7 @@ export const MainChoosingValues = () => {
           disabled={!disableContinueButton}
           onClick={() => router.push('test-sixth')}
         >
-          Далее
+          {t('next')}
         </Button>
       </div>
     </div>
