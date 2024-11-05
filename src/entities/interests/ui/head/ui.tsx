@@ -1,5 +1,5 @@
 import { CardsInteres } from '..';
-import { careerValuesContent } from './constants';
+import { useTranslations } from 'next-intl';
 import { CardValue, cardData } from '@/shared';
 
 const interestsCard = cardData.map((c) => ({
@@ -9,18 +9,18 @@ const interestsCard = cardData.map((c) => ({
 }));
 
 export const InterestsHead = () => {
+  const t = useTranslations('careerInterests');
+
   return (
     <section className="flex gap-5 py-8">
       <CardValue data={interestsCard} />
       <div>
-        <h2 className="font-bold text-2xl">{careerValuesContent.heading}</h2>
+        <h2 className="font-bold text-2xl">{t('heading')}</h2>
         <div className="text-gray-600 pb-5">
-          <p>{careerValuesContent.description}</p>
+          <p>{t('description')}</p>
         </div>
         <div>
-          <p className="font-semibold py-6 border-t">
-            Аз ин ду кадомеаш ба шумо писанд аст?
-          </p>
+          <p className="font-semibold py-6 border-t">{t('likeQuestion')}</p>
         </div>
         <CardsInteres />
       </div>
