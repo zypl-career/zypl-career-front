@@ -13,7 +13,7 @@ import { selectVariants } from './ui';
 
 type ISelectFieldProps<T> = Omit<TSelectProps, 'onChange'> & {
   value: string;
-  label?: string
+  label?: string;
   options: T[];
   printType: keyof T;
   valueType: keyof T;

@@ -6,9 +6,11 @@ import { feedbackOptions } from './constants';
 import { useTest } from '@/shared/providers/test-provider';
 import { cn } from '@utils';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 export const FeedbackContent = () => {
   const router = useRouter();
+  const t = useTranslations('feedbackContent');
   const { test, handleTestValue } = useTest();
   const disableContinueButton = useMemo(
     () => test.first?.some((el) => el === 0),
@@ -29,7 +31,7 @@ export const FeedbackContent = () => {
           >
             <div className="text-container flex flex-col sm:flex-row items-center justify-between">
               <div className="theme:text-primary text-gray-700">
-                {option.text}
+                {t(`options.${option.id}`)}
               </div>
               <div className="icons-container flex space-x-2 mt-4 sm:mt-0">
                 {option.icons.map((el, idx) => (
@@ -55,7 +57,7 @@ export const FeedbackContent = () => {
       </div>
       <div className="flex flex-col sm:flex-row items-center my-8">
         <Button variant="ghost" className="order-2 sm:order-1">
-          Отменить
+          {t('cancel')}
         </Button>
         <Button
           showRightArrowIcon
@@ -65,7 +67,7 @@ export const FeedbackContent = () => {
           disabled={disableContinueButton}
           onClick={() => router.push('interests')}
         >
-          Продолжить
+          {t('continue')}
         </Button>
       </div>
     </div>
