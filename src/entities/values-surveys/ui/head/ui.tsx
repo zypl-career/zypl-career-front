@@ -1,4 +1,4 @@
-import { VALUES_SURVEYS_DATA } from '.';
+import { useTranslations } from 'next-intl';
 import { CardValue, cardData } from '@/shared';
 import { MainValuesSureys } from '..';
 
@@ -9,13 +9,15 @@ const valuesSurveysCard = cardData.map((c, i) => ({
 }));
 
 export const ValuesSurveysHead = () => {
+  const t = useTranslations('valuesSurveys');
+
   return (
     <section className="flex gap-5 py-8 theme:bg-primaryBg theme:text-primary">
       <CardValue data={valuesSurveysCard} />
       <div>
-        <h2 className="font-bold text-2xl">{VALUES_SURVEYS_DATA.heading}</h2>
+        <h2 className="font-bold text-2xl">{t('heading')}</h2>
         <div className="text-gray-600 pb-5 border-b border-b-gray-300">
-          <p>{VALUES_SURVEYS_DATA.description}</p>
+          <p>{t('description')}</p>
         </div>
         <MainValuesSureys />
       </div>

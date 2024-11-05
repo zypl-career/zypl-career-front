@@ -3,6 +3,7 @@
 import { RadioGroup, RadioGroupCard } from '@/shared';
 import { LABELS } from '.';
 import { useTest } from '@/shared/providers/test-provider';
+import { useTranslations } from 'next-intl';
 
 export const CardValuesSurveys = ({
   onSelect,
@@ -10,17 +11,16 @@ export const CardValuesSurveys = ({
   onSelect: (value: string) => void;
 }) => {
   const { handleTestString } = useTest();
+  const t = useTranslations('valuesSurveys');
 
   const handleSelect = (value: string) => {
     onSelect(value);
     handleTestString(value, 'third');
   };
+
   return (
     <div>
-      <h3 className="font-semibold py-4">
-        Кадом изҳорот вазъи молиявии оилаи шуморо ҳангоми 14 ё 15-солагиатон
-        беҳтар тавсиф мекунад?
-      </h3>
+      <h3 className="font-semibold py-4">{t('selectQuestion')}</h3>
       <RadioGroup onValueChange={handleSelect}>
         {LABELS.map((label, index) => (
           <RadioGroupCard key={index} label={label} />
