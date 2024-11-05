@@ -1,31 +1,31 @@
 'use client';
 
 import { RadioGroup, RadioGroupCard } from '@/shared';
-import { LABELS_QUESTION } from '.';
+import { LABELS } from '.';
 import { useTest } from '@/shared/providers/test-provider';
-import { useTranslations } from 'next-intl';
 
-export const CardQuestionnaireValues = ({
+export const CardValuesSurveys = ({
   onSelect,
 }: {
   onSelect: (value: string) => void;
 }) => {
   const { handleTestString } = useTest();
-  const t = useTranslations('testFourth');
+
   const handleSelect = (value: string) => {
     onSelect(value);
-    handleTestString(value, 'fourth');
+    handleTestString(value, 'third');
   };
-  console.log(t('heading'));
-
   return (
-    <>
-      <h3 className="font-semibold">{t('heading')}</h3>
+    <div>
+      <h3 className="font-semibold py-4">
+        Кадом изҳорот вазъи молиявии оилаи шуморо ҳангоми 14 ё 15-солагиатон
+        беҳтар тавсиф мекунад?
+      </h3>
       <RadioGroup onValueChange={handleSelect}>
-        {LABELS_QUESTION.map((label, index) => (
-          <RadioGroupCard key={index} label={t(`labels.option${index + 1}`)} />
+        {LABELS.map((label, index) => (
+          <RadioGroupCard key={index} label={label} />
         ))}
       </RadioGroup>
-    </>
+    </div>
   );
 };

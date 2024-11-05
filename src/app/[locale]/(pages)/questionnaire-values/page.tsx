@@ -1,4 +1,5 @@
-import { Navbar, QuestionnaireValuesHead } from '@/entities';
+import { Navbar } from '@/entities';
+import { QuestionnaireValuesHead } from '@/entities/questionnaire-values';
 import { Footer } from '@/widgets';
 
 const QuestionnaireValuesPage = () => {
