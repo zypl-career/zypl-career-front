@@ -2,8 +2,11 @@ import { FC } from 'react';
 import { TCardItemProps } from './types';
 import { cn } from '@/shared';
 import { Check } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export const CardValue: FC<TCardItemProps> = ({ data = [] }) => {
+  const t = useTranslations('cardFeedback');
+
   return (
     <div className="hidden lg:block bg-white theme:border-primary theme:bg-primaryBg theme:text-primary rounded-lg border py-4 px-6 w-96 self-baseline sticky top-5">
       <div className="flex flex-col divide-y theme:divide-primary">
@@ -32,7 +35,11 @@ export const CardValue: FC<TCardItemProps> = ({ data = [] }) => {
                   'text-purple-500 theme:text-primary': item.active,
                 })}
               >
-                {item.title}
+                {item.id === '01'
+                  ? t('title_values')
+                  : item.id === '02'
+                    ? t('title_skills')
+                    : t('title_interests')}
               </div>
             </div>
           </div>
