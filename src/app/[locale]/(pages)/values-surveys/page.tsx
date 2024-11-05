@@ -8,7 +8,6 @@ const ValuesSurveyPage = () => {
       <div className="container">
         <ValuesSurveysHead />
       </div>
-
       <Footer />
     </div>
   );
