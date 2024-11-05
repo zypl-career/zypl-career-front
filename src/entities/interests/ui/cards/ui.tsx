@@ -7,8 +7,10 @@ import { useTest } from '@/shared/providers/test-provider';
 import { TCardDataInters } from './types';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 export const CardsInteres = () => {
+  const t = useTranslations('careerInterests');
   const router = useRouter();
   const [cards, setCards] = useState(CARDS_DATA_INTERES);
   const { handleTestInteraction } = useTest();
@@ -47,7 +49,7 @@ export const CardsInteres = () => {
             <div
               key={left.name}
               className={cn(
-                'theme:border-primary theme:border theme:bg-primaryBg theme:text-primary flex flex-col cursor-pointer flex-1 items-center  p-6 rounded-lg shadow-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl',
+                'theme:border-primary theme:border theme:bg-primaryBg theme:text-primary flex flex-col cursor-pointer flex-1 items-center p-6 rounded-lg shadow-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl',
                 left.selected ? 'border-2 border-primary' : 'bg-white',
               )}
               onClick={() => handleSelected(left, right, 'left', index)}
@@ -56,14 +58,14 @@ export const CardsInteres = () => {
                 <Image src={left.src} alt={left.title} />
               </div>
               <h2 className="text-sm lg:text-lg font-semibold mb-2 text-center">
-                {left.title}
+                {t(left.name)}
               </h2>
             </div>
-            <p>Или</p>
+            <p>{t('or')}</p>
             <div
               key={right.name}
               className={cn(
-                'theme:border-primary theme:border theme:bg-primaryBg theme:text-primary flex flex-col cursor-pointer flex-1 items-center  p-6 rounded-lg shadow-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl',
+                'theme:border-primary theme:border theme:bg-primaryBg theme:text-primary flex flex-col cursor-pointer flex-1 items-center p-6 rounded-lg shadow-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl',
                 right.selected ? 'border-2 border-primary' : 'bg-white',
               )}
               onClick={() => handleSelected(left, right, 'right', index)}
@@ -72,7 +74,7 @@ export const CardsInteres = () => {
                 <Image src={right.src} alt={right.title} />
               </div>
               <h2 className="text-sm lg:text-lg font-semibold mb-2 text-center">
-                {right.title}
+                {t(right.name)}
               </h2>
             </div>
           </div>
@@ -80,7 +82,7 @@ export const CardsInteres = () => {
       </div>
       <div className="flex flex-col sm:flex-row items-center mt-8 mb-40">
         <Button variant="ghost" className="order-2 sm:order-1">
-          Отменить
+          {t('cancelButton')}
         </Button>
         <Button
           variant="subscribe"
@@ -89,7 +91,7 @@ export const CardsInteres = () => {
           disabled={disableContinue}
           onClick={() => router.push('values-surveys')}
         >
-          Продолжить
+          {t('continueButton')}
         </Button>
       </div>
     </section>
