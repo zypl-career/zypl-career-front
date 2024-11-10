@@ -20,4 +20,4 @@ services:
       - /etc/letsencrypt/live/kasbiman.pro/fullchain.pem:/nginx/certificate.crt:ro
       - /etc/letsencrypt/live/kasbiman.pro/privkey.pem:/nginx/private.key:ro
     depends_on:
-      - back
+      - front
