@@ -1,12 +1,13 @@
-import { MoreCardIndustries, moreDataIndustries } from '@/entities';
 import Link from 'next/link';
+import { MoreCardIndustries, moreDataIndustries } from '@/entities';
+import { useTranslations } from 'next-intl';
 
 export const CardSectionIndustries = () => {
+  const t = useTranslations('cardSectionIndustries');
+
   return (
     <section>
-      <p className="lg:px-24 py-5 px-3">
-        Выберите интересующую вас отрасль, чтобы просмотреть ее профиль.
-      </p>
+      <p className="lg:px-24 py-5 px-3">{t('description')}</p>
       <div className="container grid grid-rows-1 lg:grid-cols-3 md:grid-cols-2 px-5 pb-4 lg:pb-10">
         {moreDataIndustries.map((card, index) =>
           card.link ? (
