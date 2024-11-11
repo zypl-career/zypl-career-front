@@ -1,7 +1,12 @@
+'use client';
+
 import Image from 'next/image';
 import { CareerProfile } from '@/shared';
+import { useTranslations } from 'next-intl';
 
 export const CareerProfileHero = () => {
+  const t = useTranslations('careerProfileHero');
+
   return (
     <div className="bg-white">
       <div className="container flex flex-col md:flex-row justify-between">
@@ -9,15 +14,8 @@ export const CareerProfileHero = () => {
           <Image src={CareerProfile} alt="video-hero" className="w-52 h-52" />
         </div>
         <div className="py-5 md:py-32 order-2 md:order-1">
-          <p className="text-2xl md:text-5xl font-bold md:pb-8">
-            Мой карьерный профиль
-          </p>
-          <p className="md:w-[522px] text-gray-600">
-            Начните свой личный карьерный путь. Проходите тесты, которые помогут
-            определить ваши интересы, ценности и навыки, а затем просмотрите
-            результаты, включая предлагаемые профессии, чтобы изучить курсы и
-            карьерные пути.
-          </p>
+          <p className="text-2xl md:text-5xl font-bold md:pb-8">{t('title')}</p>
+          <p className="md:w-[522px] text-gray-600">{t('description')}</p>
         </div>
       </div>
     </div>
