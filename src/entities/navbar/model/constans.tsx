@@ -8,7 +8,7 @@ export const useNavbarData = () => {
     { title: t('teachers'), link: '/teachers' },
     { title: t('parents'), link: '/parents' },
     { title: t('aboutUs'), link: '/about-us' },
-    { title: t('partners'), link: '/partners' }
+    { title: t('partners'), link: '/partners' },
   ];
   return NavbarData;
 };

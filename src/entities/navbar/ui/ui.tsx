@@ -26,7 +26,10 @@ export const Navbar = () => {
         </div>
         <ul className="flex-col md:flex-row lg:items-center gap-4 md:gap-8 hidden md:flex">
           {NavbarData.map((item, index) => (
-            <li key={index} className="text-gray-700 hover:text-gray-900 theme:text-primary">
+            <li
+              key={index}
+              className="text-gray-700 hover:text-gray-900 theme:text-primary"
+            >
               <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
@@ -58,10 +61,20 @@ export const Navbar = () => {
         </div>
         {!isAuth ? (
           <>
-            <Button className="lg:flex hidden" variant="register" rounded="full" asChild>
+            <Button
+              className="lg:flex hidden"
+              variant="register"
+              rounded="full"
+              asChild
+            >
               <Link href="/auth/register">{t('register')}</Link>
             </Button>
-            <Button className="lg:flex hidden" variant="outline" rounded="full" asChild>
+            <Button
+              className="lg:flex hidden"
+              variant="outline"
+              rounded="full"
+              asChild
+            >
               <Link href="/auth/login">{t('login')}</Link>
             </Button>
           </>
