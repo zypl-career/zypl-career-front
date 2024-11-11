@@ -11,7 +11,7 @@ import { TableLoading } from './loading';
 import { isTestAuth } from './utils';
 import { useTranslations } from 'next-intl';
 
-export const TableResults: FC<TResultsTableProps> = ({ title }) => {
+export const TableResults: FC<TResultsTableProps> = () => {
   const t = useTranslations('tableResults');
   const { test, handleTestTime } = useTest();
   const { data, isLoading } = useResultTest(test);
