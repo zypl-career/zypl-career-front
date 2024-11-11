@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import { CardFuture } from '@/entities';
 import { Table } from '@/features';
+import { useTranslations } from 'next-intl';
 
 export const Tabs = () => {
   const [activeTab, setActiveTab] = useState('tests');
+  const t = useTranslations('tabs');
 
   return (
     <div>
@@ -18,9 +20,9 @@ export const Tabs = () => {
           }`}
           onClick={() => setActiveTab('tests')}
         >
-          Тесты
+          {t('tests')}
         </div>
-        <div className=" h-12 text-white border-r">d</div>
+        <div className="h-12 text-white border-r">d</div>
         <div
           className={`flex-1 py-2 text-center ${
             activeTab === 'results'
@@ -29,7 +31,7 @@ export const Tabs = () => {
           }`}
           onClick={() => setActiveTab('results')}
         >
-          Результаты
+          {t('results')}
         </div>
       </div>
       {activeTab === 'tests' && <CardFuture />}

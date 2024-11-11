@@ -1,11 +1,11 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { Button, SearchIcon, HamburgerIcon, UserIcon, getUser } from '@/shared';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { useNavbarData } from '..';
 
 export const Navbar = () => {
