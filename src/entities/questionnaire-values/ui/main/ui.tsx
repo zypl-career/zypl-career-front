@@ -1,9 +1,9 @@
 'use client';
 
-import { CardQuestionnaireValues } from '@/entities';
 import { Button } from '@/shared';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { CardQuestionnaireValues } from '..';
 
 export const MainQuestionnaireValues = () => {
   const [disableContinueButton, setDisableContinueButton] = useState('');
