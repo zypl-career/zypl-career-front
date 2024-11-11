@@ -12,10 +12,10 @@ export const ToolsInspirationUI = () => {
     <section className="py-10 theme:border theme:border-primary theme:bg-primaryBg theme:text-primary">
       <div className="container my-5">
         <p className="text-3xl font-bold">{t('title')}</p>
-        <p className="my-2 md:w-[800px]">{t('description')}</p>
+        <p className="my-2">{t('description')}</p>
       </div>
       <div className="mx-2 md:mx-0">
-        <div className="container grid grid-cols-1 md:grid-cols-3">
+        <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {toolsData.map((tool, index) => (
             <Link href={tool.link} key={index}>
               <ToolsInspiration

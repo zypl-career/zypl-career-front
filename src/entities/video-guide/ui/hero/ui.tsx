@@ -2,11 +2,13 @@
 
 import { FC } from 'react';
 import { VideoHero } from '@/shared';
+import { useTranslations } from 'next-intl';
 import type { TVideoHeroProps } from '.';
-
 import Image from 'next/image';
 
 export const VideoGuideHero: FC<TVideoHeroProps> = () => {
+  const t = useTranslations('videoGuideHero');
+
   return (
     <div className="bg-white">
       <div className="container flex flex-col md:flex-row justify-between">
@@ -14,14 +16,8 @@ export const VideoGuideHero: FC<TVideoHeroProps> = () => {
           <Image src={VideoHero} alt="video-hero" className="w-52 h-52" />
         </div>
         <div className="py-5 md:py-32 order-2 md:order-1">
-          <p className="text-2xl md:text-5xl font-bold md:pb-8">
-            Видео с руководством пользователя
-          </p>
-          <p className="text-gray-600">
-            Просмотрите короткие видео, демонстрирующие ключевые разделы
-            веб-сайта, чтобы узнать, как получить максимальную отдачу от моего
-            будущего.
-          </p>
+          <p className="text-2xl md:text-5xl font-bold md:pb-8">{t('title')}</p>
+          <p className="text-gray-600">{t('description')}</p>
         </div>
       </div>
     </div>
