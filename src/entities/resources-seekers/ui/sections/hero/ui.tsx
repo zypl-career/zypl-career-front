@@ -1,7 +1,10 @@
-import { ResourcesSeekers } from '@/shared';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { ResourcesSeekers } from '@/shared';
 
 export const ResourcesSeekersHero = () => {
+  const t = useTranslations('resourcesSeekersHero');
+
   return (
     <section className="bg-white">
       <div className="container flex flex-col md:flex-row justify-between">
@@ -14,14 +17,9 @@ export const ResourcesSeekersHero = () => {
         </div>
         <div className="py-5 md:py-32 order-2 md:order-1">
           <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8">
-            Ресурсы для соискателей
+            {t('title')}
           </p>
-          <p className="md:w-[522px] text-gray-600 pb-5">
-            Соискателям нужен целый ряд информации, которая поможет им
-            подготовиться к различным этапам поиска работы. Чтобы помочь вам, мы
-            собрали некоторые ресурсы myfuture, которые помогут вам найти и
-            получить работу.
-          </p>
+          <p className="md:w-[522px] text-gray-600 pb-5">{t('description')}</p>
         </div>
       </div>
     </section>

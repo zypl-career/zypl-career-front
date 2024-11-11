@@ -13,7 +13,7 @@ export const MoreCardIndustries: FC<TMoreCardProps> = ({
   buttonText,
 }) => {
   return (
-    <div className="lg:w-[350px] my-5 md:w-[280px] bg-white border border-gray-100 rounded-md theme:bg-primaryBg theme:text-primary theme:border theme:border-primary">
+    <div className="my-5 bg-white border border-gray-100 rounded-md theme:bg-primaryBg theme:text-primary theme:border theme:border-primary">
       <Image
         src={imageSrc}
         alt={imageAlt}

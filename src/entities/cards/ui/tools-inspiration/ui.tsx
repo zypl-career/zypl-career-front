@@ -7,7 +7,7 @@ export const ToolsInspiration: FC<ToolsInspirationProps> = ({
   description,
 }) => {
   return (
-    <div className="theme:border-primary border lg:h-72 border-gray-200 w-full md:w-[432px] p-5 md:p-[32px] my-2 rounded-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer">
+    <div className="theme:border-primary border md:h-72 border-gray-200 w-full p-5 md:p-[32px] my-2 rounded-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer">
       {createElement(Icons, {
         className: 'theme:stroke-primary theme:fill-primary',
       })}

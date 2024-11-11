@@ -19,9 +19,7 @@ export const HeroEducational = () => {
           <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8">
             {t('title')}
           </p>
-          <p className="md:w-[522px] text-gray-600">
-            {t('description')}
-          </p>
+          <p className="md:w-[522px] text-gray-600">{t('description')}</p>
         </div>
       </div>
     </div>
