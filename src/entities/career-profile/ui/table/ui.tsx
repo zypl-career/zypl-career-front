@@ -9,8 +9,10 @@ import { useTest } from '@/shared/providers/test-provider';
 import Link from 'next/link';
 import { TableLoading } from './loading';
 import { isTestAuth } from './utils';
+import { useTranslations } from 'next-intl';
 
 export const TableResults: FC<TResultsTableProps> = ({ title }) => {
+  const t = useTranslations('tableResults');
   const { test, handleTestTime } = useTest();
   const { data, isLoading } = useResultTest(test);
 
@@ -36,7 +38,7 @@ export const TableResults: FC<TResultsTableProps> = ({ title }) => {
 
   return (
     <div>
-      <h3 className="text-2xl font-bold my-2">{title}</h3>
+      <h3 className="text-2xl font-bold my-2">{t('title')}</h3>
       <div className="divide-y divide-gray-200 p-4 bg-white shadow w-full rounded-xl">
         {isLoading ? (
           <TableLoading />
@@ -57,7 +59,7 @@ export const TableResults: FC<TResultsTableProps> = ({ title }) => {
           showRightArrowIcon
           asChild
         >
-          <Link href="/professions-you">Посмотреть подходящие професии</Link>
+          <Link href="/professions-you">{t('viewProfessions')}</Link>
         </Button>
       </div>
     </div>

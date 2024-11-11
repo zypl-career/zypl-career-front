@@ -1,6 +1,9 @@
 import { Professions } from '@/shared';
+import { useTranslations } from 'next-intl';
 
 export const HeroPartners = () => {
+  const t = useTranslations('heroPartners');
+
   return (
     <div className="bg-[#F8F8F8]">
       <div className="container flex flex-col md:flex-row justify-between">
@@ -8,12 +11,8 @@ export const HeroPartners = () => {
           <Professions />
         </div>
         <div className="py-5 md:py-32 order-2 md:order-1">
-          <p className="text-2xl md:text-5xl font-bold md:pb-8">Профессии</p>
-          <p className="md:w-[522px] text-gray-600">
-            Ищите и изучайте сотни профессий с информацией, включающей описания
-            основных выполняемых задач, требуемого уровня квалификации,
-            заработной платы и перспектив роста на рабочем месте.
-          </p>
+          <p className="text-2xl md:text-5xl font-bold md:pb-8">{t('title')}</p>
+          <p className="md:w-[522px] text-gray-600">{t('description')}</p>
         </div>
       </div>
     </div>
