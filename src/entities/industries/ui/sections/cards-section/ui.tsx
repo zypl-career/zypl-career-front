@@ -8,7 +8,7 @@ export const CardSectionIndustries = () => {
   return (
     <section>
       <p className="lg:px-24 py-5 px-3">{t('description')}</p>
-      <div className="container grid grid-rows-1 lg:grid-cols-3 md:grid-cols-2 px-5 pb-4 lg:pb-10">
+      <div className="container grid grid-rows-1 gap-10 lg:grid-cols-3 md:grid-cols-2 px-5 pb-4 lg:pb-10">
         {moreDataIndustries.map((card, index) =>
           card.link ? (
             <Link href={card.link} key={index}>
