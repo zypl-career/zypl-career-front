@@ -1,6 +1,9 @@
+import { useTranslations } from 'next-intl';
 import { CareerArticles } from '@/shared';
 
 export const HeroCareerArticles = () => {
+  const t = useTranslations('careerArticles');
+
   return (
     <section className="bg-white">
       <div className="container flex flex-col md:flex-row justify-between">
@@ -9,13 +12,9 @@ export const HeroCareerArticles = () => {
         </div>
         <div className="py-5 md:py-32 order-2 md:order-1">
           <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8">
-            Карьерные статьи
+            {t('title')}
           </p>
-          <p className="md:w-[522px] text-gray-600">
-            Изучите советы и рекомендации и откройте для себя информацию по
-            многим темам карьеры, таким как опыт работы, стажировка, написание
-            резюме и подача заявления о приеме на работу.
-          </p>
+          <p className="md:w-[522px] text-gray-600">{t('description')}</p>
         </div>
       </div>
     </section>
