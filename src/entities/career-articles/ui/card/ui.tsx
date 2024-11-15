@@ -26,7 +26,7 @@ export const MoreCardCareerArticles: FC<TMoreCardProps> = ({
           className="w-full h-[300px] object-cover rounded-t-xl"
           isSkeleton
         />
-        <p className="md:px-5 px-2 font-bold md:text-xl pt-5">{title}</p>
+        <h1 className="md:px-5 px-2 font-bold md:text-xl pt-5">{title}</h1>
       </div>
       <div className="md:px-5 px-2">
         <div className="flex items-center justify-between pt-10 pb-4">

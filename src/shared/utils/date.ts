@@ -78,8 +78,12 @@ export const getHMS = (date: string) => {
   return `${dHMS[0]}:${dHMS[1]}`;
 };
 
+function isValidDate(date: string | Date | number) {
+  return date instanceof Date && !isNaN(Number(date));
+}
+
 export const getDMY = (date?: string | Date | number, short = true): string => {
-  if (!date) {
+  if (!date || isValidDate(date)) {
     return 'сейчас';
   }
   const d = new Date(date);
