@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Button } from '@/shared';
+import { Button, getDMY } from '@/shared';
 import { TMoreCardProps } from '@/entities';
 import Image from 'next/image';
 
@@ -23,7 +23,7 @@ export const MoreCardIndustries: FC<TMoreCardProps> = ({
       <div className="md:px-5 px-2">
         <p className="font-bold md:text-xl pt-5">{title}</p>
         <div className="flex items-center justify-between md:gap-20 pt-10 pb-4">
-          <p className="text-gray-600 text-sm">{date}</p>
+          <p className="text-gray-600 text-sm">{getDMY(date)}</p>
           <Button variant="outlineCard">{buttonText}</Button>
         </div>
       </div>

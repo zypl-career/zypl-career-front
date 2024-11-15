@@ -1,14 +1,15 @@
 import { redirect } from 'next/navigation';
-import { toast } from '@ui';
-import { unauthenticate } from './utils';
+import { toast } from 'sonner';
+import { unAuthenticate } from './utils';
 
 export const errorStatus: Record<number, (msg?: string) => void> = {
   400: (msg?: string) =>
-    toast({ title: 'Данные не найдены', description: msg, variant: 'warning' }),
+    toast.warning('Данные не найдены', { description: msg }),
   422: (msg?: string) =>
-    toast({ title: 'Данные не валидны', description: msg, variant: 'warning' }),
-  403: (msg?: string) => unauthenticate(msg),
+    toast.warning('Данные не найдены', { description: msg }),
+  403: (msg?: string) => unAuthenticate(msg),
   404: () => redirect('/404'),
-  401: (msg?: string) => unauthenticate(msg),
+  401: (msg?: string) => unAuthenticate(msg),
+  409: (msg?: string) => toast.warning('Такой пользователь уже существует', { description: msg }),
   500: () => redirect('/'),
 };

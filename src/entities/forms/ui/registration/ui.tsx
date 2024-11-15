@@ -12,25 +12,15 @@ import {
 } from '@ui';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { SignUpSchema } from './schema';
 import { useSignUp } from './services';
 import { TSignUp } from './types';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { genderList, roleList } from './consts';
+import { genders, roleList } from './constants';
 import { useSignIn } from '../login/services';
 import { districts } from '@/shared/constants';
 import { setFieldError } from '@/shared';
-
-type TGender = {
-  label: string;
-  value: string;
-};
-
-const genders: TGender[] = [
-  { label: 'Мужской', value: 'male' },
-  { label: 'Женский', value: 'female' },
-];
 
 export const FormRegister = () => {
   const router = useRouter();
@@ -59,8 +49,6 @@ export const FormRegister = () => {
     const mappedData = {
       ...data,
       age: Number(data.age),
-      role: roleList.find((r) => r.name === data.role)?.id || '',
-      gender: genderList.find((r) => r.name === data.gender)?.id || '',
     };
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

@@ -12,6 +12,7 @@ export const CardSectionIndustries = () => {
           card.link ? (
             <Link href={card.link} key={index}>
               <MoreCardIndustries
+                id={index}
                 imageSrc={card.imageSrc}
                 imageAlt={card.imageAlt}
                 imageHeight={card.imageHeight}
@@ -22,6 +23,7 @@ export const CardSectionIndustries = () => {
             </Link>
           ) : (
             <MoreCardIndustries
+              id={index}
               key={index}
               imageSrc={card.imageSrc}
               imageAlt={card.imageAlt}

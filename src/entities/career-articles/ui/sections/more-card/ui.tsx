@@ -1,43 +1,32 @@
+'use client';
+
 import {
   BadgeSection,
   MoreCardCareerArticles,
-  moreDataCareer,
 } from '@/entities';
-import Link from 'next/link';
+import { useArticles } from '../../../services';
 
 export const MoreCardSection = () => {
+  const { data } = useArticles();
   return (
     <section className="bg-white">
       <div className="container py-5 lg:pt-14">
         <BadgeSection />
       </div>
-      <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-24 px-5 container pb-4 lg:pb-10">
-        {moreDataCareer.map((card, index) =>
-          card.link ? (
-            <Link href={card.link} key={index}>
-              <MoreCardCareerArticles
-                imageSrc={card.imageSrc}
-                imageAlt={card.imageAlt}
-                imageHeight={card.imageHeight}
-                imageWidth={card.imageWidth}
-                title={card.title}
-                date={card.date}
-                buttonText={card.buttonText}
-              />
-            </Link>
-          ) : (
-            <MoreCardCareerArticles
-              key={index}
-              imageSrc={card.imageSrc}
-              imageAlt={card.imageAlt}
-              imageHeight={card.imageHeight}
-              imageWidth={card.imageWidth}
-              title={card.title}
-              date={card.date}
-              buttonText={card.buttonText}
-            />
-          ),
-        )}
+      <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-5 container pb-4 lg:pb-10">
+        {data?.data.map((card, index) => (
+          <MoreCardCareerArticles
+            id={card.id}
+            key={index}
+            imageSrc={card.image}
+            imageAlt={card.title}
+            imageHeight={300}
+            imageWidth={420}
+            title={card.title}
+            date={card.createdAt}
+            buttonText="Подробнее"
+          />
+        ))}
       </div>
     </section>
   );

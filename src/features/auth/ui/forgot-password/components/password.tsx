@@ -1,9 +1,10 @@
 'use client';
 
-import { Button, Input, toast } from '@ui';
+import { Button, Input } from '@ui';
 import { ChangeEvent, FC, useState } from 'react';
 import { TForgotComponentsProps } from './types';
 import { changePassword } from '../services';
+import { toast } from 'sonner';
 
 export const ForgotPasswordPassword: FC<TForgotComponentsProps> = ({
   onDone,
@@ -36,7 +37,7 @@ export const ForgotPasswordPassword: FC<TForgotComponentsProps> = ({
             : 'newPassword',
       });
     } catch (error: any) {
-      toast({ variant: 'error', title: error?.message });
+      toast.error(error?.message);
     } finally {
       setIsLoading(false);
     }

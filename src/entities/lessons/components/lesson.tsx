@@ -1,10 +1,10 @@
 'use client';
 
-import { FC, useMemo, useState } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, Download } from 'lucide-react';
 import { Button, If, Skeleton } from '@ui';
 import { useLessonById, useLessonId } from '../services';
-import { downloadFile } from '@/shared';
+import { cn, downloadFile, Spinner } from '@/shared';
 
 type LessonItemProps = {
   lessonId: string;
@@ -19,6 +19,7 @@ export const LessonItem: FC<LessonItemProps> = ({
   onPrevLesson,
   onNextLesson,
 }) => {
+  const [isResourceLoading, setIsResourceLoading] = useState(true);
   const { data: lesson, isLoading } = useLessonById(lessonId);
   const { data: lessons = [] } = useLessonId(courseId);
   const [isDownloading, setIsDownloading] = useState(false);
@@ -42,6 +43,10 @@ export const LessonItem: FC<LessonItemProps> = ({
     }
   };
 
+  useEffect(() => {
+    setIsResourceLoading(true);
+  }, [isLoading, lessonId]);
+
   return (
     <main className="flex-1 h-dvh">
       <header className="flex items-center justify-between text-xl font-bold bg-gray-100 p-6">
@@ -56,14 +61,31 @@ export const LessonItem: FC<LessonItemProps> = ({
           disabled={isDownloading}
           onClick={handleDownload}
         >
-          <Download size={24} />
+          {isDownloading ? (
+            <Spinner className="size-6" />
+          ) : (
+            <Download size={24} />
+          )}
           <span>{lesson?.type === 'pdf' ? 'Скачать PDF' : 'Скачать'}</span>
         </Button>
       </header>
-      <div className="h-[calc(100dvh-320px)] overflow-auto">
-        <If condition={lesson?.type === 'pdf'}>
-          <iframe src={lesson?.resource} width="100%" height="100%" />
-        </If>
+      <div className="h-[80%]">
+        {lessons.length ? (
+          <>
+            <If condition={isResourceLoading}>
+              <div className="flex justify-center items-center min-h-full">
+                <Spinner className="size-10" />
+              </div>
+            </If>
+            <iframe
+              src={lesson?.resource}
+              width="100%"
+              height="100%"
+              className={cn('h-[calc(100dvh-180px)]', { hidden: isResourceLoading })}
+              onLoad={() => setIsResourceLoading(false)}
+            />
+          </>
+        ) : 'no data'}
       </div>
       <div className="flex justify-center items-center gap-8 bg-gray-200 p-6">
         <Button

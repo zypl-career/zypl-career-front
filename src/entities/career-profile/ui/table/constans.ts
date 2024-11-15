@@ -121,7 +121,7 @@ export const professionsClasser: TProfessionsClasser[] = [
   { id: 82, title: 'Энергетик', classerId: 1 },
 ];
 
-const uniqueProfessions = Array.from(
+export const uniqueProfessions = Array.from(
   new Map(professionsClasser.map((item) => [item.title, item])).values(),
 );
 

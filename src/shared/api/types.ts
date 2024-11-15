@@ -1,5 +1,4 @@
 export type AxiosErrorResponse = {
-  data: AxiosErrorData;
   status: number;
   statusText: string;
   headers: AxiosErrorHeaders;

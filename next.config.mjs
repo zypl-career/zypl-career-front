@@ -7,8 +7,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: '34.123.170.84',
+        protocol: 'https',
+        hostname: 'api.kasbiman.pro',
         port: '',
         pathname: '/**',
       },

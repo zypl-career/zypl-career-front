@@ -9,7 +9,7 @@ const Professions: FC<SVGProps<SVGSVGElement>> = ({ ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g clip-path="url(#clip0_2026_48592)">
+    <g clipPath="url(#clip0_2026_48592)">
       <path
         d="M120.24 33.7566L117.751 35.7066L120.24 33.7566Z"
         fill="#35BFC6"

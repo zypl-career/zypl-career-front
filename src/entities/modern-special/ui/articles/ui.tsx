@@ -7,6 +7,7 @@ export const ArticlesTheme = () => {
       <div className="grid lg:grid-cols-3 md:grid-cols-2 pb-4 lg:pb-10">
         {moreDataFraudPrevention.map((card, index) => (
           <MoreCardFraudPrevention
+            id={index}
             key={index}
             imageSrc={card.imageSrc}
             imageAlt={card.imageAlt}

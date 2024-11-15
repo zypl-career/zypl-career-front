@@ -46,6 +46,7 @@ export const CareerTips = () => {
       <div className="container grid grid-rows-1 lg:grid-cols-3 md:grid-cols-2 gap-24 pb-4 lg:pb-10">
         {moreData.map((card, index) => (
           <MoreCard
+            id={index}
             key={index}
             imageSrc={card.imageSrc}
             imageAlt={card.imageAlt}

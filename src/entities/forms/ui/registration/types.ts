@@ -16,3 +16,8 @@ export type IUserData = {
   password: string;
   confirmPassword?: string;
 };
+
+export type TGender = {
+  label: string;
+  value: string;
+};

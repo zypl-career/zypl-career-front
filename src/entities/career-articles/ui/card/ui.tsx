@@ -1,9 +1,11 @@
 import { FC } from 'react';
-import { Button } from '@/shared';
-import { TMoreCardProps } from '@/entities';
-import Image from 'next/image';
+import { BlurImage, Button } from '@ui';
+import { TMoreCardProps } from '@entities';
+import { getDMY } from '@/shared/utils/date';
+import Link from 'next/link';
 
 export const MoreCardCareerArticles: FC<TMoreCardProps> = ({
+  id,
   imageSrc,
   imageAlt,
   imageHeight,
@@ -13,20 +15,25 @@ export const MoreCardCareerArticles: FC<TMoreCardProps> = ({
   buttonText,
 }) => {
   return (
-    <div className="md:w-[350px] bg-white border border-gray-100 shadow-lg rounded-xl transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer my-5">
-      <Image
-        src={imageSrc}
-        alt={imageAlt}
-        height={imageHeight}
-        width={imageWidth}
-      />
-      <div className="md:px-5  px-2">
-        <p className="font-bold md:text-xl pt-5">{title}</p>
+    <Link href={`career-articles/${id}`} className="bg-white border border-gray-100 shadow-lg rounded-xl transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer my-5 flex flex-col">
+      <div className="flex flex-col flex-1">
+        <BlurImage
+          src={imageSrc}
+          alt={imageAlt}
+          width={imageWidth}
+          height={imageHeight}
+          sizes="100vw"
+          className="w-full h-[300px] object-cover rounded-t-xl"
+          isSkeleton
+        />
+        <p className="md:px-5 px-2 font-bold md:text-xl pt-5">{title}</p>
+      </div>
+      <div className="md:px-5 px-2">
         <div className="flex items-center justify-between pt-10 pb-4">
-          <p className="text-gray-600 text-sm">{date}</p>
+          <p className="text-gray-600 text-sm">{getDMY(date)}</p>
           <Button variant="outlineCard">{buttonText}</Button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

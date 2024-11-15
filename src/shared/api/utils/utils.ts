@@ -1,12 +1,12 @@
 import { removeAccessToken } from '@/shared';
 import { redirect } from 'next/navigation';
 import axios from 'axios';
-import { toast } from '@ui';
+import { toast } from 'sonner';
 
-export const unauthenticate = (message?: string) => {
+export const unAuthenticate = (message?: string) => {
   removeAccessToken();
   removeHeaders();
-  toast({ title: 'Время авторизации закончилось', description: message });
+  toast.warning('Время авторизации закончилось', { description: message });
   redirect('/login');
 };
 

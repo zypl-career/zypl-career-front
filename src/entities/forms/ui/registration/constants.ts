@@ -1,9 +1,8 @@
-export const genderList = [
-  { id: 'male', name: 'Мужской' },
-  {
-    id: 'female',
-    name: 'Женский',
-  },
+import { TGender } from './types';
+
+export const genders: TGender[] = [
+  { label: 'Мужской', value: 'male' },
+  { label: 'Женский', value: 'female' },
 ];
 
 export const roleList = [

@@ -1,8 +1,9 @@
-import { Button, Input, toast } from '@ui';
+import { Button, Input } from '@ui';
 import { FC, useState } from 'react';
 import { TForgotComponentsProps } from './types';
 import { sendCode } from '../services';
 import Link from 'next/link';
+import { toast } from 'sonner';
 
 export const ForgotPasswordEmail: FC<TForgotComponentsProps> = ({ onDone }) => {
   const [email, setEmail] = useState('');
@@ -18,7 +19,7 @@ export const ForgotPasswordEmail: FC<TForgotComponentsProps> = ({ onDone }) => {
         key: message === 'code successfully sended' ? 'code' : 'email',
       });
     } catch (error: any) {
-      toast({ variant: 'error', title: error?.message });
+      toast.error(error?.message);
     } finally {
       setIsLoading(false);
     }

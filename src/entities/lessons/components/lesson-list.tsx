@@ -48,7 +48,7 @@ export const LessonListUI: FC<TLessonListProps> = ({
               {item.item < 10 ? `0${item.item}` : item.item}
             </div>
             <div className="flex items-center justify-center rounded-md bg-[#7E3794] size-14">
-              {item.type === 'video' ? <PlayIcon /> : <PDFIcon />}
+              {item.type === 'video' ? <PlayIcon className="text-white fill-white" /> : <PDFIcon />}
             </div>
             {item.name}
           </li>

@@ -1,12 +1,10 @@
 import type { AxiosResponse } from 'axios';
-import { toast } from '@ui';
+import { toast } from 'sonner';
 
 export const responseInterceptor = (response: AxiosResponse) => {
   if (response.data?.code > 300) {
-    toast({
-      title: 'Ошибка!',
-      variant: 'warning',
-      ...(response.data?.message ? { detail: response.data?.message } : {}),
+    toast.error('Ошибка!',{
+      description: response.data?.message,
     });
   }
 

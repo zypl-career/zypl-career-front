@@ -12,17 +12,19 @@ export const CardCourses: FC<TCardCoursesProps> = ({
   return (
     <Link
       href={`/courses/${id}`}
-      className="bg-white border border-gray-200 rounded-xl transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer my-5"
+      className="bg-white flex flex-col border border-gray-200 rounded-xl transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
     >
-      <Image
-        src={image}
-        alt={title}
-        width={413}
-        height={277}
-        className="rounded-t-xl !w-full"
-      />
-      <div className="md:px-5 px-2">
-        <p className="font-bold md:text-xl pt-5">{title}</p>
+      <div className="flex-1">
+        <Image
+          src={image}
+          alt={title}
+          width={413}
+          height={272}
+          className="rounded-t-xl object-cover w-full h-[272px]"
+        />
+        <h1 className="font-bold md:text-xl m-6">{title}</h1>
+      </div>
+      <div className="m-6">
         <ProgressBar progress={finishedPercentage} />
       </div>
     </Link>

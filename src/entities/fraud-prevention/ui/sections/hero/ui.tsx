@@ -1,18 +1,19 @@
 import Image from 'next/image';
 import {
-  CareerDecide,
   FacebookIcn,
   InstaIcon,
   TgIcon,
   VkontakteIcon,
 } from '@/shared';
+import { TArticleData } from '@entities';
+import { FC } from 'react';
 
-export const FraudPreventionsHero = () => {
+export const FraudPreventionsHero: FC<{ data?: TArticleData }> = ({ data }) => {
   return (
     <div className="flex justify-center p-4 lg:p-0 my-5 lg:my-24">
       <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-52">
         <div className="text-left">
-          <p className="text-[#7E7E7E] mb-2">12 минут чтения</p>
+          <p className="text-[#7E7E7E] mb-2">{data?.minutesRead} минут чтения</p>
           <h2 className="text-3xl font-bold lg:w-[522px] mb-4">
             Как предотвратить мошенничество в онлайн-тесте?
           </h2>
@@ -33,11 +34,11 @@ export const FraudPreventionsHero = () => {
           </p>
         </div>
         <Image
-          src={CareerDecide}
+          src={data?.image || ''}
           alt="career-decide"
-          width={700}
-          height={700}
-          className="max-w-full h-auto"
+          width={630}
+          height={420}
+          className="w-[630px] h-[420px] object-contain"
         />
       </div>
     </div>
