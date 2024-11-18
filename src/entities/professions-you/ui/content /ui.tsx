@@ -11,6 +11,7 @@ import { useResultTest } from '@/entities/career-profile/ui/table/services';
 import { useTest } from '@/shared/providers/test-provider';
 import Link from 'next/link';
 import { isTestAuth } from '@/entities/career-profile/ui/table/utils';
+import { useTranslations } from 'next-intl';
 
 const limit = 10;
 
@@ -18,6 +19,7 @@ export const ContentProfessions = () => {
   const { test } = useTest();
   const { data } = useResultTest(test);
   const [page, setPage] = useState(1);
+  const t = useTranslations('ContentProfessions');
 
   const isPayload = isTestAuth(data);
 
@@ -44,17 +46,8 @@ export const ContentProfessions = () => {
   return (
     <div className="lg:px-28">
       <div className="py-10">
-        <h3 className="font-semibold text-3xl pb-5">
-          Подходящие профессии для вас
-        </h3>
-        <p className="text-gray-600 lg:w-[800px] pb-5">
-          Действие "Значения" определяет, какие ценности важны для вас.
-          <br />
-          <br />
-          Ваши карьерные ценности - это то, что вы лично считаете важным и
-          получаете удовлетворение на работе. Когда вы определите и поймете свои
-          ценности, вы сможете лучше изучить подходящие варианты карьеры.
-        </p>
+        <h3 className="font-semibold text-3xl pb-5">{t('title')}</h3>
+        <p className="text-gray-600 lg:w-[800px] pb-5">{t('description')}</p>
         <hr className="bg-gray-900" />
       </div>
       <div>
@@ -76,7 +69,7 @@ export const ContentProfessions = () => {
           disabled={page === 1}
           onClick={() => setPage((prev) => prev - 1)}
         >
-          Previous
+          {t('previous')}
         </Button>
         <Button
           variant="white"
@@ -85,7 +78,7 @@ export const ContentProfessions = () => {
           disabled={page === Math.ceil(professions.length / limit)}
           onClick={() => setPage((prev) => prev + 1)}
         >
-          Next
+          {t('next')}
         </Button>
       </div>
     </div>
