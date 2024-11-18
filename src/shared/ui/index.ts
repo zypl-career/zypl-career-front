@@ -23,4 +23,5 @@ export * from './skeleton';
 export * from './If';
 export * from './spinner';
 export * from './blur-image';
-export * from './block-notes';
+export * from './block-note';
+export * from './alert-dialog';

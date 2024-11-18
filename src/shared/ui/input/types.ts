@@ -6,5 +6,6 @@ export type TInputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   variant?: 'default' | 'gray' | 'secondary' | 'outline';
   labelPosition?: 'top' | 'inside';
   showSearchIcon?: boolean;
+  onEnter?: (value: string) => void;
   label?: string;
 };

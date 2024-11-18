@@ -31,10 +31,22 @@ export const Input = React.forwardRef<HTMLInputElement, TInputProps>(
       variant = 'default',
       label,
       labelPosition = 'top',
+      onEnter,
+      onKeyDown,
       ...props
     },
     ref,
   ) => {
+    const handlePressEnter = React.useCallback((event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (onKeyDown) {
+        onKeyDown(event);
+      }
+      if (event.key === 'Enter' && onEnter && props.value) {
+        event.preventDefault();
+        onEnter(props.value.toString());
+      }
+    }, [onEnter, onKeyDown, props.value]);
+
     return (
       <div className="relative flex flex-col">
         {label && labelPosition === 'top' && (
@@ -52,6 +64,7 @@ export const Input = React.forwardRef<HTMLInputElement, TInputProps>(
             type={type}
             className={cn(inputVariants({ variant }), className)}
             ref={ref}
+            onKeyDown={handlePressEnter}
             {...props}
           />
         </div>
