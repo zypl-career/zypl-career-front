@@ -11,6 +11,9 @@
     "prettier": "prettier -w ."
   },
   "dependencies": {
+    "@blocknote/core": "^0.19.1",
+    "@blocknote/mantine": "^0.19.1",
+    "@blocknote/react": "^0.19.1",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",

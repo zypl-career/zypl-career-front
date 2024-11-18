@@ -9,3 +9,8 @@ export type TArticleData = {
   createdAt: Date | number | string
   updatedAt: Date | number | string
 }
+
+export type TArticleDataRequest = Omit<Partial<TArticleData>, 'createAt' | 'updateAt'> & {
+ page?: string
+ limit?: string;
+};

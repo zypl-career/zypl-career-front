@@ -15,7 +15,7 @@ export const MoreCardCareerArticles: FC<TMoreCardProps> = ({
   buttonText,
 }) => {
   return (
-    <Link href={`career-articles/${id}`} className="bg-white border border-gray-100 shadow-lg rounded-xl transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer my-5 flex flex-col">
+    <Link href={`/career-articles/${id}`} className="bg-white border border-gray-100 shadow-lg rounded-xl transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer my-5 flex flex-col">
       <div className="flex flex-col flex-1">
         <BlurImage
           src={imageSrc}

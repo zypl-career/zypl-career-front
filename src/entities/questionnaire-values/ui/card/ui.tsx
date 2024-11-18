@@ -3,6 +3,7 @@
 import { RadioGroup, RadioGroupCard } from '@/shared';
 import { LABELS_QUESTION } from '.';
 import { useTest } from '@/shared/providers/test-provider';
+import { useTranslations } from 'next-intl';
 
 export const CardQuestionnaireValues = ({
   onSelect,
@@ -10,6 +11,7 @@ export const CardQuestionnaireValues = ({
   onSelect: (value: string) => void;
 }) => {
   const { handleTestString } = useTest();
+  const t = useTranslations('questionnaireValues');
 
   const handleSelect = (value: string) => {
     onSelect(value);

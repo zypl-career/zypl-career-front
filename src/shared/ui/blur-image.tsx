@@ -29,7 +29,7 @@ export const BlurImage: FC<CustomImageProps> = ({
         className={cn(
           className,
           'duration-500 ease-in-out',
-          { 'invisible': isLoading && isSkeleton },
+          { 'invisible absolute size-0 inset-0': isLoading && isSkeleton },
           isLoading ? 'scale-105 blur-sm' : 'scale-100 blur-0',
         )}
         alt={alt}
@@ -40,7 +40,7 @@ export const BlurImage: FC<CustomImageProps> = ({
       <If condition={isLoading && !!placeholderImg}>
         {placeholderImg}
       </If>
-      <If condition={isLoading && !!isSkeleton}>
+      {isSkeleton && isLoading ?
         <div
           className={cn(
             'flex items-center justify-center h-48 mb-4 bg-gray-300 rounded animate-pulse',
@@ -59,7 +59,7 @@ export const BlurImage: FC<CustomImageProps> = ({
             <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
           </svg>
         </div>
-      </If>
+      : null}
     </>
   );
 };
