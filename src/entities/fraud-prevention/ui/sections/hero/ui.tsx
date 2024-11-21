@@ -29,7 +29,7 @@ export const FraudPreventionsHero: FC<{
             {data?.title}
           </h2>
           <p className="text-gray-700 lg:w-[522px] mb-4">
-            {data?.generalInfoFile}
+            {data?.generalInfo}
           </p>
           <p className="mb-4 text-gray-400">
             Поделитесь на:

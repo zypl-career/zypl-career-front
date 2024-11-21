@@ -5,6 +5,7 @@ export type TArticleData = {
   description: string
   minutesRead: number
   generalInfoFile: string
+  generalInfo: string
   hashtags: string[]
   createdAt: Date | number | string
   updatedAt: Date | number | string

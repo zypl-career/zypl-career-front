@@ -6,7 +6,7 @@ export const MoreCardSectionFraud: FC<{ data?: TArticleData }> = ({ data }) => {
   const filteredData = moreData?.data.filter((card) => card.id !== data?.id);
   return (
     <div className="bg-white">
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 pb-4 lg:pb-10">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 pb-4 lg:pb-10 gap-5">
         {filteredData?.length ? moreData?.data.map((card, index) => (
           <MoreCardCareerArticles
             id={card.id}
