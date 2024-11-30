@@ -6,6 +6,7 @@ import { cn } from '@utils';
 import { TLessonIdData } from '../types';
 import { TCourseData } from '@/entities/courses/types';
 import { PDFIcon } from '@/shared';
+import { useLocale } from 'next-intl';
 
 type TLessonListProps = {
   list: TLessonIdData[];
@@ -21,10 +22,11 @@ export const LessonListUI: FC<TLessonListProps> = ({
   onSelect,
 }) => {
   const router = useRouter();
+  const locale = useLocale();
   return (
     <aside className="max-h-dvh overflow-auto border">
       <header className="flex items-center gap-3 bg-gray-100 p-6 sticky top-0">
-        <Button onClick={() => router.back()} variant="ghost">
+        <Button onClick={() => router.replace(`/${locale}/courses`)} variant="ghost">
           <ArrowLeft size={24} />
         </Button>
         <h1>{course?.title}</h1>

@@ -34,6 +34,9 @@ export const LessonItem: FC<LessonItemProps> = ({
     [lessonId, lessons],
   );
 
+  const isYoutube = lesson?.description?.includes('youtube');
+  const isPdf = lesson?.type === 'pdf';
+
   const handleDownload = async () => {
     try {
       setIsDownloading(true);
@@ -69,10 +72,14 @@ export const LessonItem: FC<LessonItemProps> = ({
           <span>{lesson?.type === 'pdf' ? 'Скачать PDF' : 'Скачать'}</span>
         </Button>
       </header>
-      <div className="h-[80%]">
+      <div
+        className={cn('h-[80%]', {
+          'flex items-center justify-center': !isYoutube && !isPdf,
+        })}
+      >
         {lessons.length ? (
           <>
-            <If condition={isResourceLoading}>
+            <If condition={!!(isResourceLoading && (isPdf || isYoutube))}>
               <div className="flex justify-center items-center min-h-full">
                 <Spinner className="size-10" />
               </div>
@@ -87,9 +94,16 @@ export const LessonItem: FC<LessonItemProps> = ({
               width="100%"
               height="100%"
               className={cn('h-[calc(100dvh-180px)]', {
-                hidden: isResourceLoading,
+                hidden: isResourceLoading || (!isYoutube && !isPdf),
               })}
               onLoad={() => setIsResourceLoading(false)}
+            />
+            <video
+              controls
+              src={lesson?.description}
+              className={cn({
+                hidden: isYoutube || isPdf || isResourceLoading,
+              })}
             />
           </>
         ) : (
