@@ -78,14 +78,23 @@ export const LessonItem: FC<LessonItemProps> = ({
               </div>
             </If>
             <iframe
-              src={lesson?.resource}
+              allowFullScreen
+              src={
+                lesson?.description === 'empty'
+                  ? lesson?.resource
+                  : lesson?.description.replace('/watch?v=', '/embed/')
+              }
               width="100%"
               height="100%"
-              className={cn('h-[calc(100dvh-180px)]', { hidden: isResourceLoading })}
+              className={cn('h-[calc(100dvh-180px)]', {
+                hidden: isResourceLoading,
+              })}
               onLoad={() => setIsResourceLoading(false)}
             />
           </>
-        ) : 'no data'}
+        ) : (
+          'no data'
+        )}
       </div>
       <div className="flex justify-center items-center gap-8 bg-gray-200 p-6">
         <Button

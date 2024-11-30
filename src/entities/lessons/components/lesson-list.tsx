@@ -22,8 +22,8 @@ export const LessonListUI: FC<TLessonListProps> = ({
 }) => {
   const router = useRouter();
   return (
-    <aside className="max-h-full overflow-auto border">
-      <header className="flex items-center gap-3 bg-gray-100 p-6">
+    <aside className="max-h-dvh overflow-auto border">
+      <header className="flex items-center gap-3 bg-gray-100 p-6 sticky top-0">
         <Button onClick={() => router.back()} variant="ghost">
           <ArrowLeft size={24} />
         </Button>
