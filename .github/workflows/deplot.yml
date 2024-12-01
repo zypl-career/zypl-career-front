@@ -21,12 +21,12 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          gcloud builds submit --tag gcr.io/${{ secrets.PROJECT_ID }}/ My First Project
+          gcloud builds submit --tag gcr.io/${{ secrets.PROJECT_ID }}/kasbiman-pro
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy  My First Project \
-            --image gcr.io/${{ secrets.PROJECT_ID }}/ My First Project \
+          gcloud run deploy kasbiman-pro \
+            --image gcr.io/${{ secrets.PROJECT_ID }}/kasbiman-pro \
             --region us-central1 \
             --platform managed \
             --allow-unauthenticated
