@@ -17,6 +17,6 @@ jobs:
       # Deploy to Google Cloud instance
       - name: Deploy to Google Cloud
         run: |
-          ssh -o StrictHostKeyChecking=no user@<GCP_INSTANCE_IP> /home/zypl_career/deploy.sh
+          ssh -o StrictHostKeyChecking=no user@${{ secrets.GC_INSTANCE_IP }} /home/zypl_career/deploy.sh
         env:
           SSH_PRIVATE_KEY: ${{ secrets.GC_INSTANCE_PRIVATE_KEY }}
