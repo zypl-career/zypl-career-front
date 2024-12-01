@@ -10,15 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout the repository code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ secrets.GC_INSTANCE_IP }}
-          username: ${{ secrets.GC_INSTANCE_USER }}
-          key: ${{ secrets.GC_INSTANCE_PRIVATE_KEY }}
-          script: |
-            cd ../../
-            ./deploy.sh
+      # Deploy to Google Cloud instance
+      - name: Deploy to Google Cloud
+        run: |
+          ssh -o StrictHostKeyChecking=no user@<GCP_INSTANCE_IP> /home/zypl_career/deploy.sh
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GC_INSTANCE_PRIVATE_KEY }}
