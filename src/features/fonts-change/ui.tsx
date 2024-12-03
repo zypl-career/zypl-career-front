@@ -16,11 +16,12 @@ export const FontSizesChange = () => {
     setAdjustmentFactor((prev) => {
       if (prev > size) {
         setType('minus');
-        return prev / 1.1;
+        return prev / 1.5;
       }
       setType('plus');
-      return prev * 1.1;
+      return prev * 1.5;
     });
+
   };
 
   useEffect(() => {

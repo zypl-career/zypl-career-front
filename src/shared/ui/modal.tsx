@@ -6,15 +6,16 @@ export type TModalProps = {
   toggle: boolean;
   setToggle: (value: boolean) => void;
   children?: ReactNode;
+  className?: string;
 };
 
-export const Modal: FC<TModalProps> = ({ toggle, setToggle, children }) => {
+export const Modal: FC<TModalProps> = ({ toggle, setToggle, className, children }) => {
   return (
     <Dialog open={toggle} onOpenChange={setToggle}>
       <DialogTitle>
         <VisuallyHiddenComponent> </VisuallyHiddenComponent>
       </DialogTitle>
-      <DialogContent>{children}</DialogContent>
+      <DialogContent className={className}>{children}</DialogContent>
     </Dialog>
   );
 };
