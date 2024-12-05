@@ -19,7 +19,7 @@ export const partnersData: TPartner[] = [
   {
     imageSrc: Flag,
     altText: 'emblem',
-    text: 'Вазорати маориф ва илми Ҷумҳурии Тоҷикистон',
+    text: 'Бо маблағгузории Иттиҳоди Аврупо',
   },
   {
     imageSrc: Tajrupt,

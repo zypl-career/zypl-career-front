@@ -11,6 +11,7 @@ import { useNavbarData } from '..';
 export const Navbar = () => {
   const { isAuth } = getUser();
   const [isOpen, setIsOpen] = useState(false);
+  const [isAuthClient, setIsAuthClient] = useState(isAuth);
   const NavbarData = useNavbarData();
   const t = useTranslations('navbar');
 
@@ -59,7 +60,7 @@ export const Navbar = () => {
         <div className="w-[24px] h-[24px] cursor-pointer flex md:hidden bg-background">
           <UserIcon />
         </div>
-        {!isAuth ? (
+        {!isAuthClient ? (
           <>
             <Button
               className="lg:flex hidden"
@@ -78,7 +79,18 @@ export const Navbar = () => {
               <Link href="/auth/login">{t('login')}</Link>
             </Button>
           </>
-        ) : null}
+        ) : (
+          <>
+            <Button
+              className="lg:flex hidden"
+              variant="register"
+              rounded="full"
+              onClick={() => setIsAuthClient(false)}
+            >
+              {t('logout')}
+            </Button>
+          </>
+        )}
       </div>
     </nav>
   );

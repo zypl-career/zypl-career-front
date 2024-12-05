@@ -111,7 +111,8 @@
     "aboutUs": "О нас",
     "partners": "Партнеры",
     "register": "Зарегистрироваться",
-    "login": "Войти"
+    "login": "Войти",
+    "logout": "Выйти"
   },
   "careerValues": {
     "heading": "Ценности",
