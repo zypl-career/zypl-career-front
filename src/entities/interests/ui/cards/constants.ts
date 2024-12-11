@@ -85,7 +85,7 @@ export const CARDS_DATA_INTERES: TCardDataInters[][] = [
       title: 'Тарбияи ҷисмони',
       name: 'Physical training',
     },
-    { selected: false, src: Doctor, title: 'Тиб', name: 'Doktor' },
+    { selected: false, src: Doctor, title: 'Тиб', name: 'Doctor' },
   ],
   [
     { selected: false, src: Music, title: 'Мусиқӣ', name: 'Music' },
