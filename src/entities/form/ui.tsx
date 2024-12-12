@@ -20,8 +20,10 @@ import { districts } from '@/shared/constants';
 import { useRouter } from 'next/navigation';
 import { useTestSignin } from './services';
 import { setFieldError } from '@/shared';
+import { useTranslations } from 'next-intl';
 
 export const FormInfo = () => {
+  const t = useTranslations('userFast');
   const router = useRouter();
   const form = useForm<TUserFastRequest>({
     resolver: zodResolver(CreateUserFast),
@@ -57,16 +59,15 @@ export const FormInfo = () => {
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <p className="font-semibold mb-4 pb-3 border-b">
-          Чтобы предоставить вам наилучшие рекомендации, пожалуйста, ответьте на
-          несколько вопросов:
+          {t('title')}
         </p>
 
         <div className="mb-4">
-          <label className="block text-gray-700">Ваш пол</label>
+          <label className="block text-gray-700">{t('gender')}</label>
           <div className="mt-2">
             <RadioGroup defaultValue="male">
-              <RadioGroupItem value="male" id="male" label="Мужской" />
-              <RadioGroupItem value="female" id="female" label="Женский" />
+              <RadioGroupItem value="male" id="male" label={t('male')} />
+              <RadioGroupItem value="female" id="female" label={t('female')} />
             </RadioGroup>
           </div>
         </div>
@@ -78,7 +79,7 @@ export const FormInfo = () => {
               <FormItem>
                 <FormControl>
                   <SelectField
-                    label="Район*"
+                    label={t('region')}
                     options={districts}
                     printType="label"
                     valueType="value"
@@ -101,7 +102,7 @@ export const FormInfo = () => {
                 <FormControl>
                   <Input
                     variant="outline"
-                    label="Возраст"
+                    label={t('age')}
                     type="number"
                     {...field}
                   />
@@ -117,10 +118,10 @@ export const FormInfo = () => {
             type="button"
             onClick={() => router.push('/')}
           >
-            Отменить
+            {t('cancel')}
           </Button>
           <Button variant="subscribe" showRightArrowIcon size="subscribe">
-            Продолжить
+            {t('continue')}
           </Button>
         </div>
       </form>

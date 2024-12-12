@@ -53,6 +53,7 @@ export const FormRegister = () => {
       age: Number(data.age),
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { confirmPassword, ...sendData } = mappedData;
 
     signUp.mutate(sendData, {
