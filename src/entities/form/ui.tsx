@@ -1,52 +1,129 @@
-import { Button, Input, RadioGroup, RadioGroupItem, SelectOption } from '@ui';
+'use client';
+
+import {
+  Button,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+  Input,
+  RadioGroup,
+  RadioGroupItem,
+  SelectField,
+} from '@ui';
+import { useForm } from 'react-hook-form';
+import { TUserFastRequest } from './types';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { CreateUserFast } from './schema';
+import { districts } from '@/shared/constants';
+import { useRouter } from 'next/navigation';
+import { useTestSignin } from './services';
+import { setFieldError } from '@/shared';
 
 export const FormInfo = () => {
+  const router = useRouter();
+  const form = useForm<TUserFastRequest>({
+    resolver: zodResolver(CreateUserFast),
+    defaultValues: {
+      age: '',
+      gender: 'male',
+      district: '',
+    },
+  });
+
+  const userFastCreate = useTestSignin();
+
+  const onSubmit = (data: TUserFastRequest) => {
+    const mappedData = {
+      ...data,
+      age: Number(data.age),
+    };
+
+    userFastCreate.mutate(mappedData, {
+      onError() {
+        setFieldError(form);
+      },
+      onSuccess: () => {
+        router.push('/values');
+      },
+    });
+  };
+
   return (
-    <div className="bg-white py-8 px-7 max-w-md mx-2 lg:mx-auto md:mx-auto rounded-lg border my-10 ">
-      <p className="font-semibold mb-4 pb-3 border-b">
-        Чтобы предоставить вам наилучшие рекомендации, пожалуйста, ответьте на
-        несколько вопросов:
-      </p>
-      <div>
+    <Form {...form}>
+      <form
+        className="bg-white py-8 px-7 max-w-md mx-2 lg:mx-auto md:mx-auto rounded-lg border my-10 "
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
+        <p className="font-semibold mb-4 pb-3 border-b">
+          Чтобы предоставить вам наилучшие рекомендации, пожалуйста, ответьте на
+          несколько вопросов:
+        </p>
+
         <div className="mb-4">
           <label className="block text-gray-700">Ваш пол</label>
           <div className="mt-2">
-            <RadioGroup defaultValue="option-one">
-              <RadioGroupItem
-                value="option-one"
-                id="option-one"
-                label="Мужской"
-              />
-              <RadioGroupItem
-                value="option-two"
-                id="option-two"
-                label="Женский"
-              />
+            <RadioGroup defaultValue="male">
+              <RadioGroupItem value="male" id="male" label="Мужской" />
+              <RadioGroupItem value="female" id="female" label="Женский" />
             </RadioGroup>
           </div>
         </div>
         <div className="mb-4">
-          <SelectOption
-            variant="outline"
-            options={['Душанбе', 'Худжанд']}
-            size="default"
-            label="Город"
+          <FormField
+            control={form.control}
+            name="district"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <SelectField
+                    label="Район*"
+                    options={districts}
+                    printType="label"
+                    valueType="value"
+                    variant="outline"
+                    className="w-full md:w-[393px]"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
           />
         </div>
         <div className="mb-4">
-          <Input variant="outline" label="Ваш возраст" />
+          <FormField
+            control={form.control}
+            name="age"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    variant="outline"
+                    label="Возраст"
+                    type="number"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </div>
         <div className="flex justify-between">
-          <Button variant="ghost">Отменить</Button>
           <Button
-            variant="subscribe"
-            showRightArrowIcon={true}
-            size="subscribe"
+            variant="ghost"
+            type="button"
+            onClick={() => router.push('/')}
           >
+            Отменить
+          </Button>
+          <Button variant="subscribe" showRightArrowIcon size="subscribe">
             Продолжить
           </Button>
         </div>
-      </div>
-    </div>
+      </form>
+    </Form>
   );
 };

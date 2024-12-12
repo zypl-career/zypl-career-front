@@ -1,15 +1,13 @@
 'use client';
 
-import { Button, Input, PaperPlane } from '@/shared';
-import { MoreCard, moreData } from '@/entities';
-import { useTranslations } from 'next-intl';
+import { MoreCardCareerArticles, useArticles } from '@entities';
+import { LoaderArticles } from '@/entities/career-articles/ui/sections/more-card/loader';
 
 export const CareerTips = () => {
-  const t = useTranslations('CareerTips');
-
+  const articlesApi = useArticles({ limit: '3' });
   return (
     <section className="bg-[#F8F8F8] theme:bg-primaryBg theme:text-primary">
-      <div className="container flex flex-col md:flex-row justify-between">
+      {/* <div className="container flex flex-col md:flex-row justify-between">
         <div className="py-5 md:py-32">
           <p className="text-2xl md:text-5xl md:w-[522px] font-bold md:pb-8">
             {t('title')}
@@ -41,22 +39,30 @@ export const CareerTips = () => {
         <div className="flex justify-center py-5 md:py-14">
           <PaperPlane />
         </div>
-      </div>
+      </div> */}
 
-      <div className="container grid grid-rows-1 lg:grid-cols-3 md:grid-cols-2 gap-10 pb-4 lg:pb-10">
-        {moreData.map((card, index) => (
-          <MoreCard
-            id={index}
-            key={index}
-            imageSrc={card.imageSrc}
-            imageAlt={card.imageAlt}
-            imageHeight={card.imageHeight}
-            imageWidth={card.imageWidth}
-            title={card.title}
-            date={card.date}
-            buttonText={card.buttonText}
-          />
-        ))}
+      <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-5 container pb-4 lg:pb-10">
+        {articlesApi.isLoading ? (
+          <>
+            <LoaderArticles />
+            <LoaderArticles />
+            <LoaderArticles />
+          </>
+        ) : (
+          articlesApi.data?.data.map((card) => (
+            <MoreCardCareerArticles
+              id={card.id}
+              key={card.id}
+              imageSrc={card.image}
+              imageAlt={card.title}
+              imageHeight={300}
+              imageWidth={420}
+              title={card.title}
+              date={card.createdAt}
+              buttonText="Подробнее"
+            />
+          ))
+        )}
       </div>
     </section>
   );

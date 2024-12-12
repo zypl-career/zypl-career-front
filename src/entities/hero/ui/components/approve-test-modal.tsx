@@ -38,7 +38,7 @@ export const ApproveTestModal = () => {
           <Link href="/auth/register">Регистрация</Link>
         </Button>
         <Button variant="outlineSecondary" size="md" rounded="full" asChild>
-          <Link href="/values">Продолжить без регистрации</Link>
+          <Link href="/form">Продолжить без регистрации</Link>
         </Button>
       </Modal>
     </>

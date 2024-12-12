@@ -11,7 +11,7 @@ import Flag from './flag.png';
 import Professions from './professions';
 import Industries from './industies';
 import AgriculturalIndustry from './agricultural-industry.svg';
-import CareerArticles from './career-arcticles';
+import CareerArticles from './career-articles';
 import FutureWorkImg from './future-work.png';
 import CareerDecide from './career-decide.png';
 import Tips from './tips.png';

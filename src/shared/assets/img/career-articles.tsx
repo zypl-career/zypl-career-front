@@ -1,6 +1,6 @@
 import { FC, SVGProps } from 'react';
 
-const CareerArcticles: FC<SVGProps<SVGSVGElement>> = ({ ...props }) => (
+const CareerArticlesIcon: FC<SVGProps<SVGSVGElement>> = ({ ...props }) => (
   <svg
     width="197"
     height="197"
@@ -22,4 +22,4 @@ const CareerArcticles: FC<SVGProps<SVGSVGElement>> = ({ ...props }) => (
   </svg>
 );
 
-export default CareerArcticles;
+export default CareerArticlesIcon;

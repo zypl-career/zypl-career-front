@@ -92,6 +92,7 @@ const config = {
     require('tailwindcss-animate'),
     plugin(({ addVariant }) => {
       addVariant('theme', '.theme &');
+      addVariant('error', '&[aria-invalid="true"]');
     }),
   ],
 } satisfies Config;

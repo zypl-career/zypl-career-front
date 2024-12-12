@@ -6,7 +6,7 @@ import {
   Partners,
   partnersData,
   ToolsInspirationUI,
-} from '@/entities';
+} from '@entities';
 import { Footer } from '@/widgets';
 
 const HomePage = () => {

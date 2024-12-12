@@ -3,8 +3,8 @@ import { NextCard, uniqueProfessions } from '@/entities';
 
 export const CardsSection = () => {
   return (
-    <section className="container">
-      <div className="grid lg:grid-cols-2 py-14 pb-28">
+    <section className="theme:bg-primaryBg theme:text-primary theme:border-primary theme:border-y">
+      <div className="grid lg:grid-cols-2 py-14 pb-28 container">
         {uniqueProfessions.map((profession, index) => (
           <Link
             key={index}

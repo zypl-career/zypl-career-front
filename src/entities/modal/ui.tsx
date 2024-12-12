@@ -7,6 +7,7 @@ import {
   DialogTrigger,
   WarnIcon,
 } from '@/shared';
+import Link from 'next/link';
 
 export const ModalUI = () => {
   return (
@@ -21,15 +22,15 @@ export const ModalUI = () => {
             Для последующего сохранение результатов тестирования,
             зарегистрируйтесь в системе
           </DialogDescription>
-          <Button variant="subscribe" size="md" showRightArrowIcon={true}>
+          <Button variant="subscribe" size="md" showRightArrowIcon>
             Регистрация
           </Button>
           <Button
             variant="outlineSecondary"
             size="md"
-            showRightArrowIcon={true}
+            showRightArrowIcon
           >
-            Продолжить без регистрации
+            <Link href="/form">Продолжить без регистрации</Link>
           </Button>
         </DialogHeader>
       </DialogContent>

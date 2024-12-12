@@ -3,7 +3,7 @@
 import {
   BadgeSection,
   MoreCardCareerArticles,
-} from '@/entities';
+} from '@entities';
 import { useArticles } from '../../../services';
 import { LoaderArticles } from './loader';
 
