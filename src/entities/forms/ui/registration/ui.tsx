@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import {
   Button,
   Form,
@@ -23,6 +24,7 @@ import { districts } from '@/shared/constants';
 import { setFieldError } from '@/shared';
 
 export const FormRegister = () => {
+  const t = useTranslations('formRegister');
   const router = useRouter();
 
   const form = useForm<TSignUp>({
@@ -51,7 +53,6 @@ export const FormRegister = () => {
       age: Number(data.age),
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { confirmPassword, ...sendData } = mappedData;
 
     signUp.mutate(sendData, {
@@ -67,17 +68,16 @@ export const FormRegister = () => {
       },
     });
   };
+
   return (
     <div className="flex justify-center py-10">
       <div>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="py-5">
             <div className="p-6 bg-white rounded-lg md:w-[847px]">
-              <h2 className="text-2xl font-bold mb-4">Регистрация</h2>
+              <h2 className="text-2xl font-bold mb-4">{t('title')}</h2>
               <div className="mb-4">
-                <h3 className="text-xl font-semibold mb-2">
-                  Персональные данные
-                </h3>
+                <h3 className="text-xl font-semibold mb-2">{t('personalData')}</h3>
                 <div className="">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-5">
                     <FormField
@@ -87,7 +87,7 @@ export const FormRegister = () => {
                         <FormItem>
                           <FormControl>
                             <Input
-                              label="Фамилия*"
+                              label={t('surname')}
                               variant="outline"
                               type="text"
                               {...field}
@@ -105,7 +105,7 @@ export const FormRegister = () => {
                           <FormControl>
                             <Input
                               variant="outline"
-                              label="Имя*"
+                              label={t('name')}
                               type="text"
                               {...field}
                             />
@@ -124,7 +124,7 @@ export const FormRegister = () => {
                           <Input
                             className="w-full md:w-[393px]"
                             variant="outline"
-                            label="Отчество"
+                            label={t('patronymic')}
                             type="text"
                             {...field}
                           />
@@ -141,7 +141,7 @@ export const FormRegister = () => {
                         <FormItem>
                           <FormControl>
                             <SelectField
-                              label="Роль*"
+                              label={t('role')}
                               options={roleList}
                               printType="name"
                               valueType="id"
@@ -162,7 +162,7 @@ export const FormRegister = () => {
                         <FormItem>
                           <FormControl>
                             <SelectField
-                              label="Пол*"
+                              label={t('gender')}
                               options={genders}
                               printType="label"
                               valueType="value"
@@ -185,7 +185,7 @@ export const FormRegister = () => {
                           <FormControl>
                             <Input
                               variant="outline"
-                              label="Возраст"
+                              label={t('age')}
                               type="number"
                               {...field}
                             />
@@ -202,7 +202,7 @@ export const FormRegister = () => {
                           <FormControl>
                             <Input
                               variant="outline"
-                              label="Школа"
+                              label={t('school')}
                               type="text"
                               {...field}
                             />
@@ -219,7 +219,7 @@ export const FormRegister = () => {
                       <FormItem>
                         <FormControl>
                           <SelectField
-                            label="Район*"
+                            label={t('district')}
                             options={districts}
                             printType="label"
                             valueType="value"
@@ -236,7 +236,7 @@ export const FormRegister = () => {
               </div>
 
               <div className="mb-4">
-                <h3 className="text-xl font-semibold mb-2">Безопасность</h3>
+                <h3 className="text-xl font-semibold mb-2">{t('security')}</h3>
                 <FormField
                   control={form.control}
                   name="email"
@@ -245,7 +245,7 @@ export const FormRegister = () => {
                       <FormControl>
                         <Input
                           className="w-full md:w-[393px]"
-                          label="Email*"
+                          label={t('email')}
                           variant="outline"
                           type="email"
                           {...field}
@@ -263,7 +263,7 @@ export const FormRegister = () => {
                       <FormItem>
                         <FormControl>
                           <Input
-                            label="Пароль*"
+                            label={t('password')}
                             variant="outline"
                             type="password"
                             {...field}
@@ -280,7 +280,7 @@ export const FormRegister = () => {
                       <FormItem>
                         <FormControl>
                           <Input
-                            label="Подтвердите пароль*"
+                            label={t('confirmPassword')}
                             variant="outline"
                             type="password"
                             {...field}
@@ -299,29 +299,20 @@ export const FormRegister = () => {
                   rounded="full"
                   showRightArrowIcon
                 >
-                  Зарегистрироваться
-                </Button>
-              </div>
-              <div className="flex justify-center items-center my-4">
-                <span className="w-20 border-t border-gray-300"></span>
-                <span className="text-[#6B7280] text-sm px-2">
-                  У вас есть аккаунт?
-                </span>
-                <span className="w-20 border-t border-gray-300"></span>
-              </div>
-              <div className="flex justify-center">
-                <Button
-                  variant="outline"
-                  className="md:w-[400px]"
-                  rounded="full"
-                  asChild
-                >
-                  <Link href="/auth/login">Войти в систему</Link>
+                  {t('registerButton')}
                 </Button>
               </div>
             </div>
           </form>
         </Form>
+        <div className="text-center mt-4">
+          <p>
+            {t('alreadyHaveAccount')}{' '}
+            <Link href="/login" className="text-blue-500 hover:underline">
+              {t('loginLink')}
+            </Link>
+          </p>
+        </div>
       </div>
     </div>
   );

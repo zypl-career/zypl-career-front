@@ -523,5 +523,24 @@
     "noAccountMessage": "Шумо дар қайди система нестед?",
     "registerButton": "Бақайдгирӣ",
     "loginError": "Логин ё рамзи нодуруст"
+  },
+  "formRegister": {
+    "title": "Бақайдгирӣ",
+    "personalData": "Иттилооти инфиродӣ",
+    "surname": "Насаб",
+    "name": "Ном",
+    "patronymic": "Номи падар(ихтиёрӣ)",
+    "role": "Вазифа",
+    "gender": "Ҷинс",
+    "age": "Синну сол",
+    "school": "Мактаб",
+    "district": "Минтақа",
+    "security": "Бехатарӣ",
+    "email": "Почтаи электронӣ",
+    "password": "Рамз",
+    "confirmPassword": "Рамзро такрор кунед",
+    "registerButton": "Сабти ном",
+    "alreadyHaveAccount": "Ҳисоб доред?",
+    "loginLink": "Даромадан"
   }
 }

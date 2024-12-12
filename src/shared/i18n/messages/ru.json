@@ -524,5 +524,24 @@
     "noAccountMessage": "У вас нет аккаунта?",
     "registerButton": "Зарегистрироваться",
     "loginError": "Неверный логин или пароль"
+  },
+  "formRegister": {
+    "title": "Регистрация",
+    "personalData": "Личные данные",
+    "surname": "Фамилия",
+    "name": "Имя",
+    "patronymic": "Отчество",
+    "role": "Роль",
+    "gender": "Пол",
+    "age": "Возраст",
+    "school": "Школа",
+    "district": "Район",
+    "security": "Безопасность",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "confirmPassword": "Подтвердите пароль",
+    "registerButton": "Зарегистрироваться",
+    "alreadyHaveAccount": "Уже есть аккаунт?",
+    "loginLink": "Войти"
   }
 }
