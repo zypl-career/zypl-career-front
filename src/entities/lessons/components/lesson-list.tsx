@@ -29,11 +29,16 @@ export const LessonListUI: FC<TLessonListProps> = ({
       <Modal toggle={isInfoOpen} setToggle={setIsInfoOpen}>
         <div className="max-w-3xl container max-h-[600px] overflow-auto">
           <h1 className="text-xl font-bold mb-4">{course?.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: course?.description ?? '' }} />
+          <div
+            dangerouslySetInnerHTML={{ __html: course?.description ?? '' }}
+          />
         </div>
       </Modal>
       <header className="flex items-center gap-3 bg-gray-100 p-6 sticky top-0">
-        <Button onClick={() => router.replace(`/${locale}/courses`)} variant="ghost">
+        <Button
+          onClick={() => router.replace(`/${locale}/courses`)}
+          variant="ghost"
+        >
           <ArrowLeft size={24} />
         </Button>
         <h1 className="flex-1 line-clamp-2">{course?.title}</h1>
@@ -60,11 +65,13 @@ export const LessonListUI: FC<TLessonListProps> = ({
               {item.item < 10 ? `0${item.item}` : item.item}
             </div>
             <div className="flex items-center justify-center rounded-md bg-[#7E3794] size-14">
-              {item.type === 'video' ? <PlayIcon className="text-white fill-white" /> : <PDFIcon />}
+              {item.type === 'video' ? (
+                <PlayIcon className="text-white fill-white" />
+              ) : (
+                <PDFIcon />
+              )}
             </div>
-            <p className="line-clamp-2 flex-1">
-              {item.name}
-            </p>
+            <p className="line-clamp-2 flex-1">{item.name}</p>
           </li>
         ))}
       </ul>

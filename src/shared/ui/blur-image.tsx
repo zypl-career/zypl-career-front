@@ -5,7 +5,7 @@ import Image, { ImageProps as NextImageProps } from 'next/image';
 import { cn } from '@utils';
 import { If } from '@ui';
 
-type ImageWithStateProps = NextImageProps
+type ImageWithStateProps = NextImageProps;
 
 export type CustomImageProps = ImageWithStateProps & {
   isSkeleton?: boolean;
@@ -37,10 +37,8 @@ export const BlurImage: FC<CustomImageProps> = ({
         {...props}
         onLoad={() => setLoading(false)}
       />
-      <If condition={isLoading && !!placeholderImg}>
-        {placeholderImg}
-      </If>
-      {isSkeleton && isLoading ?
+      <If condition={isLoading && !!placeholderImg}>{placeholderImg}</If>
+      {isSkeleton && isLoading ? (
         <div
           className={cn(
             'flex items-center justify-center h-48 mb-4 bg-gray-300 rounded animate-pulse',
@@ -59,7 +57,7 @@ export const BlurImage: FC<CustomImageProps> = ({
             <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
           </svg>
         </div>
-      : null}
+      ) : null}
     </>
   );
 };

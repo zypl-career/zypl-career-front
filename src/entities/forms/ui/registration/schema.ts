@@ -4,9 +4,11 @@ export const SignUpSchema = z
   .object({
     name: z.string().min(2, { message: 'Обязательное поле' }),
     surname: z.string().min(2, { message: 'Обязательное поле' }),
-    patronymic: z.string({
-      required_error: 'Обязательное поле',
-    }).optional(),
+    patronymic: z
+      .string({
+        required_error: 'Обязательное поле',
+      })
+      .optional(),
     gender: z.string().min(2, { message: 'Обязательное поле' }),
     age: z.union([z.string().min(2), z.number().min(2)]),
     district: z.string().min(2, { message: 'Обязательное поле' }),

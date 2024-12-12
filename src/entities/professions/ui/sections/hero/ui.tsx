@@ -12,7 +12,9 @@ export const HeroPartners = () => {
         </div>
         <div className="py-5 md:py-32 order-2 md:order-1">
           <p className="text-2xl md:text-5xl font-bold md:pb-8">{t('title')}</p>
-          <p className="md:w-[522px] text-gray-600 theme:text-primary">{t('description')}</p>
+          <p className="md:w-[522px] text-gray-600 theme:text-primary">
+            {t('description')}
+          </p>
         </div>
       </div>
     </div>

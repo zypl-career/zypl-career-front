@@ -6,7 +6,8 @@ import { TArticleData, TArticleDataRequest } from './types';
 export const useArticles = (params?: TArticleDataRequest) => {
   return useQuery<TResponse<TArticleData[]>>({
     queryKey: ['articles', params],
-    queryFn: () => apiService.get('article/get', { params }).then(({ data }) => data),
+    queryFn: () =>
+      apiService.get('article/get', { params }).then(({ data }) => data),
   });
 };
 
@@ -16,4 +17,3 @@ export const useArticleId = (id: TArticleData['id']) => {
     queryFn: () => apiService.get(`article/get/${id}`).then(({ data }) => data),
   });
 };
-

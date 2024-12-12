@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import {
   Button,
   Form,
@@ -19,6 +20,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 export const LoginForm = () => {
+  const t = useTranslations('loginForm');
   const router = useRouter();
   const form = useForm<TSignIn>({
     resolver: zodResolver(SignInSchema),
@@ -35,7 +37,7 @@ export const LoginForm = () => {
       onError: () => {
         form.setError('password', {
           type: 'custom',
-          message: 'Неверный логин или пароль',
+          message: t('loginError'),
         });
       },
       onSuccess: () => {
@@ -47,11 +49,8 @@ export const LoginForm = () => {
   return (
     <div className="flex justify-center py-10 theme:bg-primaryBg theme:text-primary">
       <div className="md:w-[408px] bg-white rounded-md px-5 theme:bg-primaryBg theme:border theme:border-primary">
-        <p className="font-bold text-2xl py-5">Войти в систему</p>
-        <p className="text-gray-500 theme:text-primary">
-          Пожалуйста, войдите в систему, используя свою учетную запись
-          zypl.career
-        </p>
+        <p className="font-bold text-2xl py-5">{t('title')}</p>
+        <p className="text-gray-500 theme:text-primary">{t('description')}</p>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <FormField
@@ -62,9 +61,9 @@ export const LoginForm = () => {
                   <FormControl>
                     <Input
                       variant="outline"
-                      label="Email*"
+                      label={t('emailLabel')}
                       type="email"
-                      placeholder="Введите почту"
+                      placeholder={t('emailPlaceholder')}
                       {...field}
                     />
                   </FormControl>
@@ -79,9 +78,9 @@ export const LoginForm = () => {
                 <FormItem>
                   <FormControl>
                     <PasswordInput
-                      label="Пароль*"
+                      label={t('passwordLabel')}
                       variant="outline"
-                      placeholder="Введите пароль"
+                      placeholder={t('passwordPlaceholder')}
                       {...field}
                     />
                   </FormControl>
@@ -91,7 +90,7 @@ export const LoginForm = () => {
             />
             <div className="flex justify-end mt-8 mb-4 text-gray-600">
               <Link href="forgot-password" className="underline">
-                Забыли пароль?
+                {t('forgotPassword')}
               </Link>
             </div>
             <div className="">
@@ -101,12 +100,12 @@ export const LoginForm = () => {
                 showRightArrowIcon
                 type="submit"
               >
-                Войти
+                {t('loginButton')}
               </Button>
               <div className="flex justify-center items-center my-4">
                 <span className="w-20 border-t border-gray-300"></span>
                 <span className="text-[#6B7280] text-sm px-2 theme:text-primary">
-                  У вас нет аккаунта?
+                  {t('noAccountMessage')}
                 </span>
                 <span className="w-20 border-t border-gray-300"></span>
               </div>
@@ -115,7 +114,7 @@ export const LoginForm = () => {
         </Form>
         <div className="pb-10">
           <Button variant="login" rounded="full" asChild>
-            <Link href="/auth/register">Зарегистрироваться</Link>
+            <Link href="/auth/register">{t('registerButton')}</Link>
           </Button>
         </div>
       </div>

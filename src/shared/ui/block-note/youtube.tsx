@@ -40,7 +40,6 @@ export const Youtube = createReactBlockSpec(
   },
   {
     render: (props) => {
-
       const [width, setWidth] = useState<number>(
         Math.min(
           props.block.props.previewWidth,
@@ -63,7 +62,7 @@ export const Youtube = createReactBlockSpec(
         setIsOpen(true);
         const url = new URL(currentURL);
         url.searchParams.delete('t');
-        
+
         props.editor.updateBlock(props.block, {
           type: 'youtube',
           props: {

@@ -37,15 +37,18 @@ export const Input = React.forwardRef<HTMLInputElement, TInputProps>(
     },
     ref,
   ) => {
-    const handlePressEnter = React.useCallback((event: React.KeyboardEvent<HTMLInputElement>) => {
-      if (onKeyDown) {
-        onKeyDown(event);
-      }
-      if (event.key === 'Enter' && onEnter && props.value) {
-        event.preventDefault();
-        onEnter(props.value.toString());
-      }
-    }, [onEnter, onKeyDown, props.value]);
+    const handlePressEnter = React.useCallback(
+      (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (onKeyDown) {
+          onKeyDown(event);
+        }
+        if (event.key === 'Enter' && onEnter && props.value) {
+          event.preventDefault();
+          onEnter(props.value.toString());
+        }
+      },
+      [onEnter, onKeyDown, props.value],
+    );
 
     return (
       <div className="relative flex flex-col">

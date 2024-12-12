@@ -13,15 +13,16 @@ type BlockNoteProps = {
   value?: string;
 };
 
-const BlockNote: FC<BlockNoteProps> = ({
-  value,
-  editable = false,
-}) => {
+const BlockNote: FC<BlockNoteProps> = ({ value, editable = false }) => {
   const initialContent = value ? JSON.parse(value) : null;
-  const editor = useMemo(() => BlockNoteEditor.create({
-    initialContent,
-    schema,
-  }), [initialContent]);
+  const editor = useMemo(
+    () =>
+      BlockNoteEditor.create({
+        initialContent,
+        schema,
+      }),
+    [initialContent],
+  );
 
   return <BlockNoteView editor={editor} editable={editable} theme="light" />;
 };

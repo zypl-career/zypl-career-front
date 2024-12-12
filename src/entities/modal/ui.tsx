@@ -25,11 +25,7 @@ export const ModalUI = () => {
           <Button variant="subscribe" size="md" showRightArrowIcon>
             Регистрация
           </Button>
-          <Button
-            variant="outlineSecondary"
-            size="md"
-            showRightArrowIcon
-          >
+          <Button variant="outlineSecondary" size="md" showRightArrowIcon>
             <Link href="/form">Продолжить без регистрации</Link>
           </Button>
         </DialogHeader>

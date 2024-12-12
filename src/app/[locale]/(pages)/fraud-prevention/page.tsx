@@ -1,7 +1,4 @@
-import {
-  FraudPreventionContent,
-  Navbar,
-} from '@entities';
+import { FraudPreventionContent, Navbar } from '@entities';
 import { Footer } from '@/widgets';
 
 const FraudPreventionPage = () => {

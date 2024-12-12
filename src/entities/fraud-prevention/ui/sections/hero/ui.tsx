@@ -28,9 +28,7 @@ export const FraudPreventionsHero: FC<{
           <h2 className="text-3xl font-bold lg:w-[522px] mb-4">
             {data?.title}
           </h2>
-          <p className="text-gray-700 lg:w-[522px] mb-4">
-            {data?.generalInfo}
-          </p>
+          <p className="text-gray-700 lg:w-[522px] mb-4">{data?.generalInfo}</p>
           <p className="mb-4 text-gray-400">
             Поделитесь на:
             <div className="flex items-center gap-5 cursor-pointer py-2 my-2">

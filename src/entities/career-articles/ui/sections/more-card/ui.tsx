@@ -1,9 +1,6 @@
 'use client';
 
-import {
-  BadgeSection,
-  MoreCardCareerArticles,
-} from '@entities';
+import { BadgeSection, MoreCardCareerArticles } from '@entities';
 import { useArticles } from '../../../services';
 import { LoaderArticles } from './loader';
 
@@ -21,19 +18,21 @@ export const MoreCardSection = () => {
             <LoaderArticles />
             <LoaderArticles />
           </>
-        ) : data?.data.map((card, index) => (
-          <MoreCardCareerArticles
-            id={card.id}
-            key={index}
-            imageSrc={card.image}
-            imageAlt={card.title}
-            imageHeight={300}
-            imageWidth={420}
-            title={card.title}
-            date={card.createdAt}
-            buttonText="Подробнее"
-          />
-        ))}
+        ) : (
+          data?.data.map((card, index) => (
+            <MoreCardCareerArticles
+              id={card.id}
+              key={index}
+              imageSrc={card.image}
+              imageAlt={card.title}
+              imageHeight={300}
+              imageWidth={420}
+              title={card.title}
+              date={card.createdAt}
+              buttonText="Подробнее"
+            />
+          ))
+        )}
       </div>
     </section>
   );

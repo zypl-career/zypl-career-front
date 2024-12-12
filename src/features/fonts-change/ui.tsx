@@ -21,7 +21,6 @@ export const FontSizesChange = () => {
       setType('plus');
       return prev * 1.5;
     });
-
   };
 
   useEffect(() => {
