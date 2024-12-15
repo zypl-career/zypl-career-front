@@ -13,7 +13,7 @@ export const Lang = () => {
   const pathname = usePathname();
 
   const localeActive = useLocale();
-  const [lang, setLang] = useState<Partial<TLang>>({});
+  const [lang, setLang] = useState<Partial<TLang>>({ value: 'tj' });
 
   const changeLocale = (value: string): void => {
     const locale = value.toLowerCase() as TValueLangs;
@@ -28,7 +28,7 @@ export const Lang = () => {
     <SelectField
       variant="secondary"
       options={langs}
-      value={lang.value || localeActive}
+      value={lang.value || localeActive} 
       valueType="value"
       printType="label"
       onChange={changeLocale}
