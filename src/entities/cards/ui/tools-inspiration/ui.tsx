@@ -6,8 +6,15 @@ export const ToolsInspiration: FC<ToolsInspirationProps> = ({
   title,
   description,
 }) => {
+  
+  const isContentLong = title.length > 20 || description.length > 100;
+
   return (
-    <div className="theme:border-primary border md:h-72 border-gray-200 w-full p-5 md:p-[32px] my-2 rounded-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer">
+    <div
+      className={`theme:border-primary border border-gray-200 w-full p-5 md:p-[32px] my-2 rounded-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer ${
+        isContentLong ? 'h-auto' : 'md:h-72'
+      }`}
+    >
       {createElement(Icons, {
         className: 'theme:stroke-primary theme:fill-primary',
       })}
