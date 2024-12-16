@@ -25,7 +25,7 @@ export const LessonListUI: FC<TLessonListProps> = ({
   const locale = useLocale();
   const [isInfoOpen, setIsInfoOpen] = useState(false);
   return (
-    <aside className="max-h-dvh max-w-80 overflow-auto border">
+    <aside className="sm:max-h-dvh max-h-96 max-w-80 overflow-auto border">
       <Modal toggle={isInfoOpen} setToggle={setIsInfoOpen}>
         <div className="max-w-3xl container max-h-[600px] overflow-auto">
           <h1 className="text-xl font-bold mb-4">{course?.title}</h1>
@@ -34,7 +34,7 @@ export const LessonListUI: FC<TLessonListProps> = ({
           />
         </div>
       </Modal>
-      <header className="flex items-center gap-3 bg-gray-100 p-6 sticky top-0">
+      <header className="sm:flex hidden items-center gap-3 bg-gray-100 p-6 sticky top-0">
         <Button
           onClick={() => router.replace(`/${locale}/courses`)}
           variant="ghost"

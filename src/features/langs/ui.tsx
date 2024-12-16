@@ -26,7 +26,6 @@ export const Lang = () => {
 
   useEffect(() => {
     if (!localeActive) {
-      console.log(1, localeActive);
       changeLocale('tj');
     }
   }, [changeLocale, localeActive]);

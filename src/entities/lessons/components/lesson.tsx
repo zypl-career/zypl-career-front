@@ -52,13 +52,14 @@ export const LessonItem: FC<LessonItemProps> = ({
 
   return (
     <main className="flex-1 h-dvh">
-      <header className="flex items-center justify-between text-xl font-bold bg-gray-100 p-6">
+      <header className="sm:flex hidden items-center justify-between text-xl font-bold bg-gray-100 p-6">
         {isLoading ? (
           <Skeleton className="w-40 h-5 bg-gray-700" />
         ) : (
-          <h1>{lesson?.name}</h1>
+          <h1 className="sm:text-base text-xs">{lesson?.name}</h1>
         )}
         <Button
+          className="sm:inline-flex hidden"
           rounded="full"
           variant="outline"
           disabled={isDownloading}
@@ -88,7 +89,7 @@ export const LessonItem: FC<LessonItemProps> = ({
               allowFullScreen
               src={
                 lesson?.description === 'empty'
-                  ? lesson?.resource
+                  ? `https://docs.google.com/gview?embedded=true&url=${lesson?.resource}`
                   : lesson?.description.replace('/watch?v=', '/embed/')
               }
               width="100%"

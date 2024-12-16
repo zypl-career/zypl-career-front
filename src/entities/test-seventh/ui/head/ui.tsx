@@ -1,6 +1,7 @@
-import { MainChoosingValues } from '..';
+
 import { useTranslations } from 'next-intl';
 import { CardValue, cardData } from '@/shared';
+import { MainChoosingValues } from '../main';
 
 const choosingValuesCard = cardData.map((c, i) => ({
   ...c,
