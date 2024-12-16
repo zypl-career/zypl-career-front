@@ -47,7 +47,7 @@ export const LessonListUI: FC<TLessonListProps> = ({
         </Button>
       </header>
       <ul className="divide-y overflow-hidden">
-        {list.map((item) => (
+        {list.map((item, idx) => (
           <li
             key={item.id}
             className={cn(
@@ -62,7 +62,7 @@ export const LessonListUI: FC<TLessonListProps> = ({
                 { 'border-[#007728] text-[#007728]': item.id === lesson?.id },
               )}
             >
-              {item.item < 10 ? `0${item.item}` : item.item}
+              {idx+1 < 10 ? `0${idx+1}` : idx}
             </div>
             <div className="flex items-center justify-center rounded-md bg-[#7E3794] size-14">
               {item.type === 'video' ? (

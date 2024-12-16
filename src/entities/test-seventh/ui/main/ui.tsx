@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/shared';
-import { CardChoosingValues } from '@/entities/choosing-values/ui';
+import { CardChoosingValues } from '../card';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';

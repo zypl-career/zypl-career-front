@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { redirect } from 'next/navigation';
 import { ThemeProvider, Toaster } from '@/shared';
 import { ReactQueryProvider, NextIntlProvider, TestProvider } from '@providers';
 import './styles/globals.css';
@@ -19,6 +20,9 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  if (!locale) {
+    redirect('/tj');
+  }
   return (
     <html lang={locale}>
       <ReactQueryProvider>

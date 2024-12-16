@@ -31,6 +31,7 @@ export const CardQuestionnaireValues = ({
         <RadioGroupCard label={t('label_6_8')} />
         <RadioGroupCard label={t('label_6_9')} />
         <RadioGroupCard label={t('label_6_10')} />
+        <RadioGroupCard label={t('label_6_11')} />
       </RadioGroup>
     </div>
   );

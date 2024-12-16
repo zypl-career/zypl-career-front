@@ -1,6 +1,6 @@
 import { Navbar } from '@/entities';
+import { ChoosingValuesHead } from '@/entities/test-seventh';
 import { Footer } from '@/widgets';
-import { ChoosingValuesHead } from '@/entities/choosing-values/ui';
 
 const ChoosingValuesPage = () => {
   return (

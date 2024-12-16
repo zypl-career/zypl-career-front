@@ -25,7 +25,6 @@ export * from './repetitor';
 export * from './values';
 export * from './interests';
 export * from './values-surveys';
-export * from './choosing-values';
 export * from './your-result';
 export * from './professions-you';
 export * from './sociology';

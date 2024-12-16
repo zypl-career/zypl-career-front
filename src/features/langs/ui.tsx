@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { SelectField } from '@ui';
 
 import { TValueLangs, type TLang } from './types';
@@ -13,16 +13,23 @@ export const Lang = () => {
   const pathname = usePathname();
 
   const localeActive = useLocale();
-  const [lang, setLang] = useState<Partial<TLang>>({ value: 'tj' });
+  const [lang, setLang] = useState<Partial<TLang>>({});
 
-  const changeLocale = (value: string): void => {
+  const changeLocale = useCallback((value: string): void => {
     const locale = value.toLowerCase() as TValueLangs;
     setLang((prev) => ({ ...prev, value: locale }));
     if (locale !== localeActive) {
       const newPathname = pathname.replace(`/${localeActive}`, `/${locale}`);
       router.replace(newPathname, { scroll: false });
     }
-  };
+  }, [localeActive, pathname, router]);
+
+  useEffect(() => {
+    if (!localeActive) {
+      console.log(1, localeActive);
+      changeLocale('tj');
+    }
+  }, [changeLocale, localeActive]);
 
   return (
     <SelectField
