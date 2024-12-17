@@ -10,7 +10,18 @@ export const SignUpSchema = z
       })
       .optional(),
     gender: z.string().min(2, { message: 'Обязательное поле' }),
-    age: z.union([z.string().min(2), z.number().min(2)]),
+    age: z.union([
+      z
+        .string({
+          required_error: 'Обязательное поле',
+        })
+        .min(9, { message: 'Минимальный допустимый возрост 9 лет' }),
+      z
+        .number({
+          required_error: 'Обязательное поле',
+        })
+        .min(9, { message: 'Минимальный допустимый возрост 9 леты' }),
+    ]),
     district: z.string().min(2, { message: 'Обязательное поле' }),
     role: z.string().min(2, { message: 'Обязательное поле' }),
     school: z.string().min(3, { message: 'Минимальное значение 3 символа' }),
