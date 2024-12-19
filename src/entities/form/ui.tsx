@@ -65,10 +65,16 @@ export const FormInfo = () => {
         <div className="mb-4">
           <label className="block text-gray-700">{t('gender')}</label>
           <div className="mt-2">
-            <RadioGroup defaultValue="male">
-              <RadioGroupItem value="male" id="male" label={t('male')} />
-              <RadioGroupItem value="female" id="female" label={t('female')} />
-            </RadioGroup>
+            <FormField
+              control={form.control}
+              name="gender"
+              render={({ field }) => (
+                <RadioGroup defaultValue="male" {...field} onValueChange={field.onChange}>
+                  <RadioGroupItem value="male" id="male" label={t('male')} />
+                  <RadioGroupItem value="female" id="female" label={t('female')} />
+                </RadioGroup>
+              )}
+            />
           </div>
         </div>
         <div className="mb-4">
