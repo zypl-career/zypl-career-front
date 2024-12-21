@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useEffect, useMemo, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, Download } from 'lucide-react';
 import { Button, If, Skeleton } from '@ui';
 import { useLessonById, useLessonId } from '../services';
@@ -13,7 +13,7 @@ type LessonItemProps = {
   onPrevLesson: () => void;
 };
 
-export const LessonItem: FC<LessonItemProps> = ({
+export const LessonShow: FC<LessonItemProps> = ({
   lessonId,
   courseId,
   onPrevLesson,
@@ -37,14 +37,14 @@ export const LessonItem: FC<LessonItemProps> = ({
   const isYoutube = lesson?.description?.includes('youtube');
   const isPdf = lesson?.type === 'pdf';
 
-  const handleDownload = async () => {
+  const handleDownload = useCallback(async () => {
     try {
       setIsDownloading(true);
       await downloadFile(lesson?.resource || '', lesson?.name || 'lesson');
     } finally {
       setIsDownloading(false);
     }
-  };
+  }, [lesson]);
 
   useEffect(() => {
     setIsResourceLoading(true);

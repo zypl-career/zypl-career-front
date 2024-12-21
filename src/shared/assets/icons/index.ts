@@ -35,7 +35,7 @@ import TgIcon from './tg';
 import InstaIcon from './insta';
 import FacebookIcn from './facebook-icn';
 import WarningIcon from './warning';
-import DowloadIcon from './dowload';
+import DownloadIcon from './dowload';
 import HamburgerIcon from './hamburger';
 import UserIcon from './user';
 import TimeIcon from './time';
@@ -102,7 +102,7 @@ export {
   InstaIcon,
   FacebookIcn,
   WarningIcon,
-  DowloadIcon,
+  DownloadIcon as DownloadIcon,
   HamburgerIcon,
   UserIcon,
   TimeIcon,

@@ -1,6 +1,6 @@
 import { FC, SVGProps } from 'react';
 
-const DowloadIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
+const DownloadIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     width="12"
     height="14"
@@ -19,4 +19,4 @@ const DowloadIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 );
 
-export default DowloadIcon;
+export default DownloadIcon;
