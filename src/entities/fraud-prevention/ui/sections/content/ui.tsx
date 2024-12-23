@@ -1,17 +1,12 @@
 'use client';
 
+import { FC } from 'react';
 import {
   FRAUD_PREVENTION_CONTENT,
   MoreCardSectionFraud,
   TArticleData,
-} from '@/entities';
-import { FC } from 'react';
-
-import dynamic from 'next/dynamic';
-
-export const BlockNotes = dynamic(() => import('@/shared/ui/block-note/ui'), {
-  ssr: false,
-});
+} from '@entities';
+import { Editor } from '@ui';
 
 export const FraudPreventionContent: FC<{ data?: TArticleData }> = ({
   data,
@@ -19,7 +14,7 @@ export const FraudPreventionContent: FC<{ data?: TArticleData }> = ({
   return (
     <section className="bg-white">
       <div className="container">
-        <BlockNotes value={data?.description} />
+        <Editor value={data?.description} />
         <div className="py-16">
           <h2 className="text-3xl font-bold">
             {FRAUD_PREVENTION_CONTENT.relatedArticles}

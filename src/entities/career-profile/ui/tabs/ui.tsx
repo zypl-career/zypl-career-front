@@ -10,7 +10,7 @@ export const Tabs = () => {
   const t = useTranslations('tabs');
 
   return (
-    <div>
+    <>
       <div className="bg-white flex items-center space-x-2 p-2 w-full lg:w-[400px] rounded-lg shadow cursor-pointer">
         <div
           className={`flex-1 py-2 text-center ${
@@ -36,6 +36,6 @@ export const Tabs = () => {
       </div>
       {activeTab === 'tests' && <CardFuture />}
       {activeTab === 'results' && <Table />}
-    </div>
+    </>
   );
 };

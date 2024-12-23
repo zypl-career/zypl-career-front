@@ -13,7 +13,7 @@ export const ApproveTestModal = () => {
   const [toggleApprove, setToggleApprove] = useState(false);
   const { isAuth } = getUser();
   const handleToTest = () => {
-    isAuth ? router.push('values') : setToggleApprove(true);
+    isAuth ? router.push('/test/values') : setToggleApprove(true);
   };
   return (
     <>
@@ -38,7 +38,7 @@ export const ApproveTestModal = () => {
           <Link href="/auth/register">Регистрация</Link>
         </Button>
         <Button variant="outlineSecondary" size="md" rounded="full" asChild>
-          <Link href="/form">Продолжить без регистрации</Link>
+          <Link href="/test/form">Продолжить без регистрации</Link>
         </Button>
       </Modal>
     </>

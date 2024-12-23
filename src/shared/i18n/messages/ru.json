@@ -542,6 +542,7 @@
     "loginError": "Неверный логин или пароль"
   },
   "formRegister": {
+    "seoDescription": "Страница регистрации",
     "title": "Регистрация",
     "personalData": "Персональные данные",
     "surname": "Фамилия*",

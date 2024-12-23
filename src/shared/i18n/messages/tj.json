@@ -541,6 +541,7 @@
     "loginError": "Логин ё рамзи нодуруст"
   },
   "formRegister": {
+    "seoDescription": "Саифаи бақайдгирӣ",
     "title": "Бақайдгирӣ",
     "personalData": "Маълумоти инфиродӣ",
     "surname": "Насаб*",
@@ -561,7 +562,7 @@
     "email": "Email*",
     "password": "Рамз*",
     "confirmPassword": "Рамзро тасдиқ кунед*",
-    "registerButton": "Сабти ном",
+    "registerButton": "Бақайдгирӣ",
     "alreadyHaveAccount": "Оё шумо аккаунт доред?",
     "loginLink": "Ба система даромадан"
   },

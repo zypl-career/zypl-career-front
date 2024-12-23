@@ -53,15 +53,12 @@ export const Navbar = () => {
           )}
         </AnimatePresence>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2" suppressHydrationWarning>
         <div className="w-[24px] h-[24px] cursor-pointer flex md:hidden">
           <SearchIcon />
         </div>
-        <div className="w-[24px] h-[24px] cursor-pointer flex md:hidden bg-background">
-          <UserIcon />
-        </div>
         {!isAuthClient ? (
-          <>
+          <div className="flex items-center gap-2" suppressHydrationWarning>
             <Button
               className="lg:flex hidden"
               variant="register"
@@ -78,9 +75,12 @@ export const Navbar = () => {
             >
               <Link href="/auth/login">{t('login')}</Link>
             </Button>
-          </>
+          </div>
         ) : (
-          <>
+          <div className="flex items-center gap-2" suppressHydrationWarning>
+            <Link href="/career-profile" className="w-[24px] h-[24px] cursor-pointer flex md:hidden bg-background">
+              <UserIcon />
+            </Link>
             <Button
               className="lg:flex hidden"
               variant="register"
@@ -89,7 +89,7 @@ export const Navbar = () => {
             >
               {t('logout')}
             </Button>
-          </>
+          </div>
         )}
       </div>
     </nav>

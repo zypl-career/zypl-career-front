@@ -1,6 +1,6 @@
 import { Dialog, DialogContent, DialogTitle } from '@ui';
 import { FC, ReactNode } from 'react';
-import VisuallyHiddenComponent from './utils';
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 
 export type TModalProps = {
   toggle: boolean;
@@ -17,9 +17,9 @@ export const Modal: FC<TModalProps> = ({
 }) => {
   return (
     <Dialog open={toggle} onOpenChange={setToggle}>
-      <DialogTitle>
-        <VisuallyHiddenComponent> </VisuallyHiddenComponent>
-      </DialogTitle>
+      <VisuallyHidden.Root>
+        <DialogTitle></DialogTitle>
+      </VisuallyHidden.Root>
       <DialogContent className={className}>{children}</DialogContent>
     </Dialog>
   );

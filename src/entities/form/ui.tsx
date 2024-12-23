@@ -47,7 +47,7 @@ export const FormInfo = () => {
         setFieldError(form);
       },
       onSuccess: () => {
-        router.push('/values');
+        router.push('/test/values');
       },
     });
   };

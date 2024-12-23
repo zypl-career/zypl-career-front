@@ -15,6 +15,7 @@ export type TArticleDataRequest = Omit<
   Partial<TArticleData>,
   'createAt' | 'updateAt'
 > & {
+  type: 'student' | 'teacher' | 'parent' | 'admin';
   page?: string;
   limit?: string;
 };

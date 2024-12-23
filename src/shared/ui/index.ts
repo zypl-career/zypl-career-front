@@ -3,7 +3,7 @@ export * from './select';
 export * from './input';
 export * from './password';
 export * from './badges';
-export * from './dowload';
+export * from './download';
 export * from './warn-content';
 export * from './key-findings';
 export * from './video';
