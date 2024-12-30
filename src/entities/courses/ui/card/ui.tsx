@@ -1,13 +1,12 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { ProgressBar, TCardCoursesProps } from '@/entities';
+import { TCardCoursesProps } from '@/entities';
 import Link from 'next/link';
 
 export const CardCourses: FC<TCardCoursesProps> = ({
   id,
   image,
   title,
-  finishedPercentage,
 }) => {
   return (
     <Link
@@ -23,10 +22,10 @@ export const CardCourses: FC<TCardCoursesProps> = ({
           className="rounded-t-xl object-cover w-full h-[272px]"
         />
         <h1 className="font-bold md:text-xl m-6">{title}</h1>
-      </div>
-      <div className="m-6">
+      </div>  
+      {/* <div className="m-6">
         <ProgressBar progress={finishedPercentage} />
-      </div>
+      </div> */}
     </Link>
   );
 };

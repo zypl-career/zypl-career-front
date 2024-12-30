@@ -5,6 +5,8 @@ import { themes } from '@/features/themes/constants';
 import { ReactNode } from 'react';
 import { Header } from '@/widgets';
 import { X } from 'lucide-react';
+import { FontSizesChange } from '../fonts-change';
+import { VoiceOverText } from '../voice-over-text';
 
 export const Themes = () => {
   const { setTheme } = useTheme();
@@ -18,8 +20,9 @@ export const Themes = () => {
         >
           <X />
         </div>
+        <VoiceOverText />
       </div>
-      {/* <FontSizesChange /> */}
+      <FontSizesChange />
       <div className="flex items-center justify-end gap-2">
         <span className="text-white">Фон:</span>
         {themes.map((theme) => (

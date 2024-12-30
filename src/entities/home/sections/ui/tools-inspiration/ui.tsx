@@ -17,7 +17,11 @@ export const ToolsInspirationUI = () => {
       <div className="mx-2 md:mx-0">
         <div className="container grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {toolsData.map((tool, index) => (
-            <Link href={tool.link} key={index}>
+            <Link
+              href={tool.link}
+              key={index}
+              className="first:col-span-full theme:border-primary border border-gray-200 w-full p-5 md:p-[32px] my-2 rounded-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
+            >
               <ToolsInspiration
                 Icons={tool.Icons}
                 title={t(`tools.${tool.key}.title`)}

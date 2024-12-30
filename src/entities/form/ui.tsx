@@ -19,7 +19,7 @@ import { CreateUserFast } from './schema';
 import { districts } from '@/shared/constants';
 import { useRouter } from 'next/navigation';
 import { useTestSignin } from './services';
-import { setFieldError } from '@/shared';
+import { setFieldError, Spinner } from '@/shared';
 import { useTranslations } from 'next-intl';
 
 export const FormInfo = () => {
@@ -58,9 +58,7 @@ export const FormInfo = () => {
         className="bg-white py-8 px-7 max-w-md mx-2 lg:mx-auto md:mx-auto rounded-lg border my-10 "
         onSubmit={form.handleSubmit(onSubmit)}
       >
-        <p className="font-semibold mb-4 pb-3 border-b">
-          {t('title')}
-        </p>
+        <p className="font-semibold mb-4 pb-3 border-b">{t('title')}</p>
 
         <div className="mb-4">
           <label className="block text-gray-700">{t('gender')}</label>
@@ -69,9 +67,17 @@ export const FormInfo = () => {
               control={form.control}
               name="gender"
               render={({ field }) => (
-                <RadioGroup defaultValue="male" {...field} onValueChange={field.onChange}>
+                <RadioGroup
+                  defaultValue="male"
+                  {...field}
+                  onValueChange={field.onChange}
+                >
                   <RadioGroupItem value="male" id="male" label={t('male')} />
-                  <RadioGroupItem value="female" id="female" label={t('female')} />
+                  <RadioGroupItem
+                    value="female"
+                    id="female"
+                    label={t('female')}
+                  />
                 </RadioGroup>
               )}
             />
@@ -111,7 +117,9 @@ export const FormInfo = () => {
                     label={t('age')}
                     type="number"
                     {...field}
-                    onChange={(e) => field.onChange(parseInt(e.target.value, 10) || '')}
+                    onChange={(e) =>
+                      field.onChange(parseInt(e.target.value, 10) || '')
+                    }
                   />
                 </FormControl>
                 <FormMessage />
@@ -127,7 +135,13 @@ export const FormInfo = () => {
           >
             {t('cancel')}
           </Button>
-          <Button variant="subscribe" showRightArrowIcon size="subscribe">
+          <Button
+            variant="subscribe"
+            showRightArrowIcon
+            size="subscribe"
+            disabled={userFastCreate.isPending}
+          >
+            {userFastCreate.isPending ? <Spinner /> : null}
             {t('continue')}
           </Button>
         </div>

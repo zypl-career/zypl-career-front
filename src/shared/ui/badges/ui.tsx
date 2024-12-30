@@ -13,10 +13,22 @@ const badgeVariants = {
   },
 };
 
-export const Badge: FC<TBadgeProps> = ({ title, variant = 'default' }) => {
+export const Badge: FC<TBadgeProps> = ({
+  title,
+  variant = 'default',
+  className,
+  ...props
+}) => {
   return (
-    <div className={cn(badgeVariants.base, badgeVariants.states[variant])}>
-      <p>{title}</p>
+    <div
+      className={cn(
+        badgeVariants.base,
+        badgeVariants.states[variant],
+        className,
+      )}
+      {...props}
+    >
+      {title}
     </div>
   );
 };

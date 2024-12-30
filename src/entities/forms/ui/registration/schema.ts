@@ -23,7 +23,7 @@ export const SignUpSchema = z
     ]),
     district: z.string().min(2, { message: 'Обязательное поле' }),
     role: z.string().min(2, { message: 'Обязательное поле' }),
-    school: z.string().min(3, { message: 'Минимальное значение 3 символа' }),
+    school: z.string(),
     email: z
       .string()
       .min(2, { message: 'Обязательное поле' })

@@ -11,7 +11,7 @@ export const ToolsInspiration: FC<ToolsInspirationProps> = ({
 
   return (
     <div
-      className={`theme:border-primary border border-gray-200 w-full p-5 md:p-[32px] my-2 rounded-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer ${
+      className={`cursor-pointer ${
         isContentLong ? 'h-auto' : 'md:h-72'
       }`}
     >

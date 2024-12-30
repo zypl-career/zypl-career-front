@@ -1,11 +1,9 @@
-'use client';
-
-import { CardCourses } from '@/entities';
-import { useCourses } from '@/entities/courses/services';
+import { FC } from 'react';
+import { CardCourses } from '@entities';
 import { LoaderCourses } from './loader';
+import { TCourseCardProps } from './types';
 
-export const CardSection = () => {
-  const { data, isLoading } = useCourses();
+export const CardSection: FC<TCourseCardProps> = ({ data, isLoading }) => {
   return (
     <div className="bg-white">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 pb-4 lg:my-10 gap-5">
@@ -16,7 +14,7 @@ export const CardSection = () => {
             <LoaderCourses />
           </>
         ) : (
-          data?.data.map((card, index) => <CardCourses key={index} {...card} />)
+          data?.map((card, index) => <CardCourses key={index} {...card} />)
         )}
       </div>
     </div>

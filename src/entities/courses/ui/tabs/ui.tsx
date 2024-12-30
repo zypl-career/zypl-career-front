@@ -1,39 +1,45 @@
 'use client';
 
-import { useState } from 'react';
-import { CardSection } from '@/entities';
-import { Badge } from '@/shared';
-import { BADGES_DATA, TABS_DATA } from '../../model';
+import { useCallback, useState } from 'react';
+import { CardSection } from '@entities';
+import { Badge, cn } from '@/shared';
+import { useCourses, useCoursesTag } from '../../services';
+import { TagLoading } from './Loading';
 
 export const TabsCourses = () => {
-  const [activeTab, setActiveTab] = useState(TABS_DATA[0].id);
+  const [activeTag, setActiveTag] = useState<string[]>([]);
+  const coursesTagApi = useCoursesTag();
+  const coursesApi = useCourses({ tags: activeTag });
+
+  const toggleTagHandler = useCallback((tag: string) => {
+    setActiveTag((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag],
+    );
+  }, []);
 
   return (
-    <div>
-      <div className="flex border-b border-gray-200">
-        {TABS_DATA.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`py-2 px-2 text-gray-700 ${activeTab === tab.id ? 'border-b-2 border-purple-500 text-gray-900 font-bold' : ''}`}
-          >
-            {tab.title}
-          </button>
-        ))}
-      </div>
+    <>
       <div className="py-4 bg-white">
-        {activeTab === 1 && (
-          <div>
-            {BADGES_DATA.map((badge) => (
-              <Badge key={badge.id} title={badge.title} />
-            ))}
-            <CardSection />
-          </div>
+        {coursesTagApi.isLoading ? (
+          <TagLoading />
+        ) : (
+          coursesTagApi.data?.map((tag) => (
+            <Badge
+              key={tag}
+              title={tag}
+              className={cn({
+                'bg-[#9746B3] text-white': activeTag.includes(tag),
+              })}
+              onClick={() => toggleTagHandler(tag)}
+            />
+          ))
         )}
-        {activeTab === 2 && (
-          <div> Здесь будет контенд для раздела "Библиотека курсов"</div>
-        )}
+
+        <CardSection
+          data={coursesApi.data?.data}
+          isLoading={coursesApi.isLoading}
+        />
       </div>
-    </div>
+    </>
   );
 };

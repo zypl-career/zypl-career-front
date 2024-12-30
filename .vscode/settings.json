@@ -3,5 +3,8 @@
     "src/features/langs",
     "src/shared/i18n",
     "src/shared/i18n/messages"
+  ],
+  "cSpell.words": [
+    "XLARGE"
   ]
 }

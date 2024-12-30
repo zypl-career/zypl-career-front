@@ -13,6 +13,11 @@ import { ToolsProps } from '@/entities';
 
 export const toolsData: ToolsProps[] = [
   {
+    Icons: VideoIcon,
+    key: 'videoGuide',
+    link: '/video-guide',
+  },
+  {
     Icons: CareerIcon,
     key: 'careerPath',
     link: '/career-profiles',
@@ -51,10 +56,5 @@ export const toolsData: ToolsProps[] = [
     Icons: TrainingCentersIcon,
     key: 'trainingCenters',
     link: '/training-centers',
-  },
-  {
-    Icons: VideoIcon,
-    key: 'videoGuide',
-    link: '/video-guide',
   },
 ];

@@ -1,4 +1,4 @@
-import { Navbar, ResourcesTeachers, TeachersHero, YourPupil } from '@entities';
+import { Navbar, ResourcesTeachers, TeachersHero } from '@entities';
 import { Footer } from '@/widgets';
 import { getTranslations } from 'next-intl/server';
 
@@ -16,7 +16,7 @@ const TeachersPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <TeachersHero />
-      <YourPupil />
+      {/* <YourPupil /> */}
       <ResourcesTeachers />
       <Footer />
     </div>
