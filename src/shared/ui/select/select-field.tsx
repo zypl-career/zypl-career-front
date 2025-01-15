@@ -7,9 +7,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@ui';
-import { TSelectProps } from './types';
-import { cn } from '@/shared';
+import { cn } from '@utils';
 import { selectVariants } from './ui';
+import { TSelectProps } from './types';
 
 type ISelectFieldProps<T> = Omit<TSelectProps, 'onChange'> & {
   value: string;
@@ -35,17 +35,17 @@ export const SelectField = <T,>({
 }: ISelectFieldProps<T>) => (
   <Select
     onValueChange={(value) => onChange(value as T[keyof T])}
-    defaultValue={value}
+    value={value}
   >
     {label && (
-      <label className="block mb-1 text-sm font-semibold text-gray-700">
+      <label className="block text-sm font-semibold text-gray-700">
         {label}
       </label>
     )}
     <SelectTrigger
       className={cn(
         selectVariants({ variant, size, className }),
-        'appearance-none pl-10 pr-10',
+        'appearance-none',
       )}
     >
       <SelectValue placeholder={placeholder} />

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC, SVGProps } from 'react';
 
-const VkontakteIcon: FC<SVGProps<SVGSVGElement>> = ({ stroke, ...props }) => {
+const VKIcon: FC<SVGProps<SVGSVGElement>> = ({ stroke, ...props }) => {
   return (
     <svg
       width="24"
@@ -19,4 +19,4 @@ const VkontakteIcon: FC<SVGProps<SVGSVGElement>> = ({ stroke, ...props }) => {
   );
 };
 
-export default VkontakteIcon;
+export default VKIcon;

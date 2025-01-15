@@ -1,9 +1,9 @@
 import {
-  FacebookIcn,
-  InstaIcon,
+  FacebookIcon,
+  InstagramIcon,
   ModernSpecial,
   TgIcon,
-  VkontakteIcon,
+  VKIcon,
 } from '@/shared';
 import Image from 'next/image';
 
@@ -23,10 +23,10 @@ export const ModernSpecialHero = () => {
         <div className="my-4 text-gray-400">
           Поделитесь на:
           <div className="flex items-center gap-5 cursor-pointer py-2 my-2">
-            <VkontakteIcon />
+            <VKIcon />
             <TgIcon />
-            <InstaIcon />
-            <FacebookIcn />
+            <InstagramIcon />
+            <FacebookIcon />
           </div>
         </div>
       </div>

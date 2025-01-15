@@ -1,13 +1,6 @@
-import {
-  BlurImage,
-  FacebookIcn,
-  InstaIcon,
-  Skeleton,
-  TgIcon,
-  VkontakteIcon,
-} from '@/shared';
-import { TArticleData } from '@entities';
 import { FC } from 'react';
+import { TArticleData, BlurImage, Skeleton } from '@ui';
+import { Share } from './share';
 
 export const FraudPreventionsHero: FC<{
   data?: TArticleData;
@@ -29,15 +22,7 @@ export const FraudPreventionsHero: FC<{
             {data?.title}
           </h2>
           <p className="text-gray-700 lg:w-[522px] mb-4">{data?.generalInfo}</p>
-          <p className="mb-4 text-gray-400">
-            Поделитесь на:
-            <div className="flex items-center gap-5 cursor-pointer py-2 my-2">
-              <VkontakteIcon />
-              <TgIcon />
-              <InstaIcon />
-              <FacebookIcn />
-            </div>
-          </p>
+          <Share data={data} />
         </div>
         {isLoading ? (
           <div className="flex items-center justify-center w-[630px] h-[420px] mb-4 bg-gray-300 rounded dark:bg-gray-700 animate-pulse">

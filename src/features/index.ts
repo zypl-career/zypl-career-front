@@ -4,3 +4,4 @@ export * from './table';
 export * from './themes';
 export * from './langs';
 export * from './voice-over-text';
+export * from './user-edit';

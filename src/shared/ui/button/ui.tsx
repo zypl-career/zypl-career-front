@@ -1,10 +1,11 @@
 'use client';
 
 import * as React from 'react';
-import { cn } from '@/shared/utils';
-import { Slot, Slottable } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
-import { ArrowIcon } from '@/shared';
+import { Slot, Slottable } from '@radix-ui/react-slot';
+import { cn } from '@utils';
+import { Spinner } from '@ui';
+import { ArrowIcon } from '@icons';
 
 import type { TVariantType, TSizeType, TButtonProps } from './types';
 
@@ -38,7 +39,7 @@ const buttonVariants = cva(
         subscribe:
           'theme:bg-primaryBg theme:border-primary bg-[#7E3794] rounded-3xl md:text-[17px] cursor-pointer font-[600] text-white w-full transform transition-transform duration-200 active:scale-110',
         outlineCard:
-          'theme:border-primary theme:text-primary theme:bg-primaryBg border border-[#D7D7D7] text-[#6B7280] cursor-pointer bg-background font-[600] hover:text-accent-foreground rounded-3xl md:w-[115px] transform transition-transform duration-200 active:scale-110',
+          'theme:border-primary theme:text-primary theme:bg-primaryBg border border-[#D7D7D7] text-[#6B7280] cursor-pointer bg-background font-[600] hover:text-accent-foreground rounded-3xl transform transition-transform duration-200 active:scale-110',
         gray: 'bg-gray-200 text-gray-700 py-2 px-4 rounded transform transition-transform duration-200 active:scale-110',
         white:
           'border border-[#D1D5DB] bg-white px-4 py-2 rounded-3xl lg:w-[114px] flex items-center justify-center',
@@ -78,28 +79,47 @@ const Button = React.forwardRef<HTMLButtonElement, TButtonProps>(
       size,
       showRightArrowIcon = false,
       asChild = false,
+      isLoading = false,
       children,
       startIcon,
       endIcon,
+      disabled,
       ...props
     },
     ref,
   ) => {
+    const isShowArrowBlackList = React.useMemo<boolean>(
+      () =>
+        ![
+          'default',
+          'auth',
+          'status',
+          'register',
+          'outlineSecondary',
+          'link',
+          'subscribe',
+        ].includes(variant ?? ''),
+      [variant],
+    );
     const Comp = asChild ? Slot : 'button';
     return (
       <Comp
         className={cn(buttonVariants({ variant, rounded, size, className }))}
         ref={ref}
+        disabled={disabled ?? isLoading}
         {...props}
       >
         {startIcon}
         <Slottable>{children}</Slottable>
         {endIcon}
+        {isLoading ? <Spinner /> : null}
         {showRightArrowIcon ? (
           <ArrowIcon
             className={cn(
               'ml-2 animate-moveRight fill-white theme:fill-primaryBg',
-              { 'fill-black': variant !== 'default' },
+              {
+                'fill-black': isShowArrowBlackList,
+              },
             )}
           />
         ) : null}

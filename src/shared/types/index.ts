@@ -8,3 +8,10 @@ export type TResponse<T> = {
   limit: number;
   data: T;
 };
+
+export type TQueryParams = {
+  page: number | string;
+  limit: number | string;
+}
+
+export type TGender = 'male' | 'female';

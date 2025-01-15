@@ -6,6 +6,7 @@ import { ReactNode } from 'react';
 export type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
+    isLoading?: boolean;
     showRightArrowIcon?: boolean;
     rounded?: TRounded;
     startIcon?: ReactNode;

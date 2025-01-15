@@ -1,6 +1,11 @@
 'use client';
 
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useMemo } from 'react';
+import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
 import {
   Button,
   Form,
@@ -11,17 +16,13 @@ import {
   Input,
   SelectField,
 } from '@ui';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import { districts } from '@constants';
+import { useUserStore } from '@stores';
+import { setFieldError } from '@utils';
 import { SignUpSchema } from './schema';
 import { useSignUp } from './services';
 import { TGender, TSignUp } from './types';
 import { useSignIn } from '../login/services';
-import { districts } from '@/shared/constants';
-import { setFieldError } from '@/shared';
-import { useMemo } from 'react';
 
 export const FormRegister = () => {
   const t = useTranslations('formRegister');
@@ -64,7 +65,7 @@ export const FormRegister = () => {
       confirmPassword: '',
     },
   });
-
+  const { setUser } = useUserStore();
   const signUp = useSignUp();
   const signIn = useSignIn();
 
@@ -83,7 +84,8 @@ export const FormRegister = () => {
       },
       onSuccess: () => {
         signIn.mutate(sendData, {
-          onSuccess: () => {
+          onSuccess: (user) => {
+            setUser(user);
             router.push('/');
           },
         });

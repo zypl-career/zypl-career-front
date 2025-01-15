@@ -564,6 +564,9 @@
     "password": "Пароль",
     "confirmPassword": "Подтвердите пароль",
     "registerButton": "Зарегистрироваться",
+    "save": "Сохранить",
+    "back": "Назад",
+    "logout": "Выйти",
     "alreadyHaveAccount": "Уже есть аккаунт?",
     "loginLink": "Войти"
   },

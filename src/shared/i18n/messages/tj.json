@@ -563,6 +563,9 @@
     "password": "Рамз*",
     "confirmPassword": "Рамзро тасдиқ кунед*",
     "registerButton": "Бақайдгирӣ",
+    "save": "Сохранить",
+    "back": "Бозгашт",
+    "logout": "Хуриҷ",
     "alreadyHaveAccount": "Оё шумо аккаунт доред?",
     "loginLink": "Ба система даромадан"
   },

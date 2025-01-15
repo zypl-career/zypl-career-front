@@ -11,6 +11,7 @@ import Flag from './flag.png';
 import Professions from './professions';
 import Industries from './industies';
 import AgriculturalIndustry from './agricultural-industry.svg';
+import Blur from './blur.svg';
 import CareerArticles from './career-articles';
 import FutureWorkImg from './future-work.png';
 import CareerDecide from './career-decide.png';
@@ -125,6 +126,7 @@ import Accountancy from './Accountancy.png';
 import ApproveHomeLoan from './approve-home-loan.png';
 
 export {
+  Blur,
   ApproveHomeLoan,
   Accountancy,
   Electro,

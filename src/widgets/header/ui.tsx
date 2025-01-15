@@ -26,18 +26,16 @@ export const Header = () => {
             <Logo className="theme:fill-primary" />
           </Link>
           <div className="flex items-center gap-6">
-            <div className="hidden md:block">
-              <Button
-                startIcon={
-                  <GlassesIcon className="theme:stroke-primaryBg stroke-purple-900" />
-                }
-                variant="secondary"
-                size="default"
-                onClick={() => setShowThemes((prev) => !prev)}
-              >
-                Версия для слабовидящих
-              </Button>
-            </div>
+            <Button
+              startIcon={
+                <GlassesIcon className="theme:stroke-primaryBg stroke-purple-900" />
+              }
+              variant="secondary"
+              size="default"
+              onClick={() => setShowThemes((prev) => !prev)}
+            >
+              <span className="sm:inline-block hidden">Версия для слабовидящих</span>
+            </Button>
             <Lang />
           </div>
         </div>

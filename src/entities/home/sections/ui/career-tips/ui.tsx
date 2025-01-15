@@ -1,10 +1,8 @@
 'use client';
 
-import { MoreCardCareerArticles, useArticles } from '@entities';
-import { LoaderArticles } from '@/entities/career-articles/ui/sections/more-card/loader';
+import { Articles, CardArticle } from '@ui';
 
 export const CareerTips = () => {
-  const articlesApi = useArticles({ limit: '3' });
   return (
     <section className="bg-[#F8F8F8] theme:bg-primaryBg theme:text-primary">
       {/* <div className="container flex flex-col md:flex-row justify-between">
@@ -40,30 +38,27 @@ export const CareerTips = () => {
           <PaperPlane />
         </div>
       </div> */}
-
-      <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-5 container pb-4 lg:pb-10">
-        {articlesApi.isLoading ? (
-          <>
-            <LoaderArticles />
-            <LoaderArticles />
-            <LoaderArticles />
-          </>
-        ) : (
-          articlesApi.data?.data.map((card) => (
-            <MoreCardCareerArticles
-              id={card.id}
-              key={card.id}
-              imageSrc={card.image}
-              imageAlt={card.title}
-              imageHeight={300}
-              imageWidth={420}
-              title={card.title}
-              date={card.createdAt}
-              buttonText="Подробнее"
-            />
-          ))
+      <Articles
+        className="bg-white"
+        fallbackClassName="container"
+        withoutTags
+        params={{ limit: 3 }}
+        repeatFallback={3}
+      >
+        {(data) => (
+          <div className="grid grid-rows-1 gap-10 lg:grid-cols-3 md:grid-cols-2 container">
+            {data?.map((card) => (
+              <CardArticle
+                key={card.id}
+                href={`/career-articles/${card.id}`}
+                imageSrc={card.image}
+                title={card.title}
+                date={card.createdAt}
+              />
+            ))}
+          </div>
         )}
-      </div>
+      </Articles>
     </section>
   );
 };

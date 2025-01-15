@@ -1,12 +1,25 @@
-import { NextEducational } from '@/entities';
-import { UNIVERSITY_TITLES } from '.';
+'use client';
+
+import { NextEducational } from '@entities';
+import { Articles } from '@ui';
 
 export const NextSections = () => {
   return (
-    <div className="lg:px-36 pb-56">
-      {UNIVERSITY_TITLES.map((title, index) => (
-        <NextEducational key={index} title={title} />
-      ))}
-    </div>
+    <Articles
+      params={{ sections: ['Universities and Colleges'] }}
+      fallbackClassName="container pb-56"
+      className="container pb-56"
+      withoutTags
+    >
+      {(data) =>
+        data?.map((card) => (
+          <NextEducational
+            key={card.id}
+            title={card.title}
+            href={`/career-articles/${card.id}`}
+          />
+        ))
+      }
+    </Articles>
   );
 };

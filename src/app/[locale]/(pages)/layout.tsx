@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { ThemesLayout } from '@/features/themes';
+import { ThemesLayout } from '@features';
 
 const MainLayout = ({ children }: PropsWithChildren) => {
   return <ThemesLayout>{children}</ThemesLayout>;

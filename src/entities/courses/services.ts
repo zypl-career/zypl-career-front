@@ -1,8 +1,8 @@
-import { apiService } from '@api';
-import { TResponse } from '@types';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import { apiService } from '@api';
+import { touUnique, removeEmpty } from '@utils';
+import { TResponse } from '@types';
 import { TCourseData, TCourseParams } from './types';
-import { touUnique } from '@/shared';
 
 export const useCourses = (params?: TCourseParams) => {
   return useQuery<TResponse<TCourseData[]>>({
@@ -18,7 +18,7 @@ export const useCoursesTag = (params?: TCourseParams) => {
     queryFn: () =>
       apiService.get('course/get', { params }).then(({ data }) => data),
     placeholderData: keepPreviousData,
-    select: (data) => touUnique(data.data.flatMap(course => course?.tags)),
+    select: (data) => removeEmpty(touUnique(data.data.flatMap(course => course?.tags))),
   });
 };
 

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { FC, SVGProps } from 'react';
 
-const InstaIcon: FC<SVGProps<SVGSVGElement>> = ({ stroke, ...props }) => {
+const InstagramIcon: FC<SVGProps<SVGSVGElement>> = ({ stroke, ...props }) => {
   return (
     <svg
       width="24"
@@ -27,4 +27,4 @@ const InstaIcon: FC<SVGProps<SVGSVGElement>> = ({ stroke, ...props }) => {
   );
 };
 
-export default InstaIcon;
+export default InstagramIcon;

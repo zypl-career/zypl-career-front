@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, ReactNode, useState } from 'react';
+import { FC, ReactNode, useMemo, useState } from 'react';
 import Image, { ImageProps as NextImageProps } from 'next/image';
 import { cn } from '@utils';
 import { If } from '@ui';
@@ -11,34 +11,34 @@ export type CustomImageProps = ImageWithStateProps & {
   isSkeleton?: boolean;
   className?: string;
   placeholderImg?: ReactNode;
+  blurImg?: string;
 };
 
 export const BlurImage: FC<CustomImageProps> = ({
   className,
-  isSkeleton, // don't use loading="lazy" with this prop
   placeholderImg,
   src = '',
   alt = '',
   ...props
 }) => {
   const [isLoading, setLoading] = useState(true);
+  const isShow = useMemo<boolean>(() => isLoading || !src, [isLoading, src]);
 
   return (
     <>
       <Image
         className={cn(
           className,
-          'duration-500 ease-in-out',
-          { 'invisible absolute size-0 inset-0': isLoading && isSkeleton },
+          { 'invisible absolute size-0 inset-0': isShow },
           isLoading ? 'scale-105 blur-sm' : 'scale-100 blur-0',
         )}
         alt={alt}
         src={src}
         {...props}
-        onLoad={() => setLoading(false)}
+        onLoadingComplete={() => setLoading(false)}
       />
       <If condition={isLoading && !!placeholderImg}>{placeholderImg}</If>
-      {isSkeleton && isLoading ? (
+      {isShow ? (
         <div
           className={cn(
             'flex items-center justify-center h-48 mb-4 bg-gray-300 rounded animate-pulse',
@@ -47,7 +47,7 @@ export const BlurImage: FC<CustomImageProps> = ({
           style={{ width: props.width, height: props.height }}
         >
           <svg
-            className="w-10 h-10 text-gray-200 dark:text-gray-600"
+            className="size-10 text-gray-200 dark:text-gray-600"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"

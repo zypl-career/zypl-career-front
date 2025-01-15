@@ -4,9 +4,8 @@ import { FC } from 'react';
 import {
   FRAUD_PREVENTION_CONTENT,
   MoreCardSectionFraud,
-  TArticleData,
 } from '@entities';
-import { Editor } from '@ui';
+import { Editor, type TArticleData } from '@ui';
 
 export const FraudPreventionContent: FC<{ data?: TArticleData }> = ({
   data,
@@ -14,7 +13,7 @@ export const FraudPreventionContent: FC<{ data?: TArticleData }> = ({
   return (
     <section className="bg-white">
       <div className="container">
-        <Editor value={data?.description} />
+        {data?.description ? <Editor value={data.description} /> : null}
         <div className="py-16">
           <h2 className="text-3xl font-bold">
             {FRAUD_PREVENTION_CONTENT.relatedArticles}

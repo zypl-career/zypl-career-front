@@ -38,6 +38,7 @@ export const Lang = () => {
       valueType="value"
       printType="label"
       onChange={changeLocale}
+      className="p-0"
     />
   );
 };

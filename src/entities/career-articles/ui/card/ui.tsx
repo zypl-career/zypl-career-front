@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { BlurImage, Button } from '@ui';
-import { TMoreCardProps } from '@entities';
-import { getDMY } from '@/shared/utils/date';
 import Link from 'next/link';
+import { TMoreCardProps } from '@entities';
+import { BlurImage, Button } from '@ui';
+import { getDMY } from '@utils';
 
 export const MoreCardCareerArticles: FC<TMoreCardProps> = ({
   id,

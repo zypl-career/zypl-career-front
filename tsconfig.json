@@ -24,10 +24,15 @@
       "@ui": ["./src/shared/ui"],
       "@utils": ["./src/shared/utils"],
       "@types": ["./src/shared/types"],
+      "@constants": ["./src/shared/constants"],
       "@providers": ["./src/shared/providers"],
+      "@stores": ["./src/shared/providers/stores"],
       "@entities": ["./src/entities"],
       "@features": ["./src/features"],
-      "@icons": ["./src/shared/assets/icons"]
+      "@widgets": ["./src/widgets"],
+      "@hooks": ["./src/shared/hooks"],
+      "@icons": ["./src/shared/assets/icons"],
+      "@img": ["./src/shared/assets/img"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

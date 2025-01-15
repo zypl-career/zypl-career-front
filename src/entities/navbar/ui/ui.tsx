@@ -1,22 +1,23 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { Button, SearchIcon, HamburgerIcon, UserIcon, getUser } from '@/shared';
-import { useTranslations } from 'next-intl';
+import { Button } from '@ui';
+import { HamburgerIcon, UserIcon } from '@icons';
+import { useUserStore } from '@stores';
 import { useNavbarData } from '..';
 
 export const Navbar = () => {
-  const { isAuth } = getUser();
+  const { userData, isAuth } = useUserStore();
   const [isOpen, setIsOpen] = useState(false);
-  const [isAuthClient, setIsAuthClient] = useState(isAuth);
   const NavbarData = useNavbarData();
   const t = useTranslations('navbar');
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(prev => !prev);
   };
 
   return (
@@ -54,10 +55,7 @@ export const Navbar = () => {
         </AnimatePresence>
       </div>
       <div className="flex items-center gap-2" suppressHydrationWarning>
-        <div className="w-[24px] h-[24px] cursor-pointer flex md:hidden">
-          <SearchIcon />
-        </div>
-        {!isAuthClient ? (
+        {!isAuth ? (
           <div className="flex items-center gap-2" suppressHydrationWarning>
             <Button
               className="lg:flex hidden"
@@ -77,19 +75,10 @@ export const Navbar = () => {
             </Button>
           </div>
         ) : (
-          <div className="flex items-center gap-2" suppressHydrationWarning>
-            <Link href="/career-profile" className="w-[24px] h-[24px] cursor-pointer flex md:hidden bg-background">
-              <UserIcon />
-            </Link>
-            <Button
-              className="lg:flex hidden"
-              variant="register"
-              rounded="full"
-              onClick={() => setIsAuthClient(false)}
-            >
-              {t('logout')}
-            </Button>
-          </div>
+          <Link href="/user-edit" className="flex items-center bg-background gap-2">
+            <UserIcon />
+            <span>{userData?.user?.name}</span>
+          </Link>
         )}
       </div>
     </nav>

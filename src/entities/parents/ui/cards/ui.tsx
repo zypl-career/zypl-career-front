@@ -1,6 +1,7 @@
 'use client';
 
-import { LoaderArticles, MoreCardIndustries, useArticles } from '@entities';
+import { useArticles } from '@ui';
+import { LoaderArticles, MoreCardIndustries } from '@entities';
 
 export const CardSectionParents = () => {
   const parentArticleApi = useArticles({ type: 'parent' });

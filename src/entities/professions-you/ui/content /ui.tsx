@@ -9,7 +9,6 @@ import { ArrowIcon, Button } from '@/shared';
 import { useMemo, useState } from 'react';
 import { useResultTest } from '@/entities/career-profile/ui/table/services';
 import { useTest } from '@/shared/providers/test-provider';
-import Link from 'next/link';
 import { isTestAuth } from '@/entities/career-profile/ui/table/utils';
 import { useTranslations } from 'next-intl';
 
@@ -55,9 +54,11 @@ export const ContentProfessions = () => {
           {professions
             ?.slice((page - 1) * limit, page * limit)
             ?.map((prof, i) => (
-              <Link key={prof?.id || i} href={`/profession/${prof?.id}`}>
-                <NextEducational title={prof?.title || ''} />
-              </Link>
+              <NextEducational
+                key={i}
+                title={prof?.title || ''}
+                href={`/profession/${prof?.id}`}
+              />
             ))}
         </div>
       </div>

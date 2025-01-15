@@ -1,10 +1,10 @@
 import {
   FileSave,
-  MoreCardSection,
   Navbar,
+  ResourcesSeekersArticle,
   ResourcesSeekersHero,
-} from '@/entities';
-import { Footer } from '@/widgets';
+} from '@entities';
+import { Footer } from '@widgets';
 
 const ResourcesSeekerPage = () => {
   return (
@@ -15,7 +15,7 @@ const ResourcesSeekerPage = () => {
         <FileSave />
         <FileSave />
       </div>
-      <MoreCardSection />
+      <ResourcesSeekersArticle />
       <Footer />
     </div>
   );

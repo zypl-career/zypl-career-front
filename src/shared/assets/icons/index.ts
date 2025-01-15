@@ -30,7 +30,7 @@ import ArrowLeft from './arrow-left';
 import MoneyIcon from './monet';
 import SkillsLevelIcon from './skills-level';
 import FutureGrowthIcon from './future-growth';
-import VkontakteIcon from './Vkontakte';
+import VKIcon from './Vkontakte';
 import TgIcon from './tg';
 import InstaIcon from './insta';
 import FacebookIcn from './facebook-icn';
@@ -97,7 +97,7 @@ export {
   MoneyIcon,
   SkillsLevelIcon,
   FutureGrowthIcon,
-  VkontakteIcon,
+  VKIcon as VKIcon,
   TgIcon,
   InstaIcon,
   FacebookIcn,

@@ -1,5 +1,7 @@
 'use client';
 
+import { TUserData } from '@entities';
+
 type TAccessToken = {
   access: string;
   refresh: string;
@@ -17,4 +19,16 @@ export const setAccessToken = (token: TAccessToken) => {
 
 export const removeAccessToken = () => {
   return globalThis?.window?.localStorage?.removeItem('access');
+};
+
+export const setUserStorage = (user: TUserData) => {
+  globalThis?.window?.localStorage?.setItem('user', JSON.stringify(user));
+};
+
+export const getUserStorage = (): TUserData | null => {
+  return JSON.parse(globalThis?.window?.localStorage?.getItem('user') ?? 'null');
+};
+
+export const removeUserStorage = () => {
+  return globalThis?.window?.localStorage?.removeItem('user');
 };

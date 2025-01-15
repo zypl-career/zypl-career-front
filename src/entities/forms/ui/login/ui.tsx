@@ -1,6 +1,11 @@
 'use client';
 
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { useUserStore } from '@stores';
 import {
   Button,
   Form,
@@ -11,13 +16,9 @@ import {
   Input,
   PasswordInput,
 } from '@ui';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
 import { useSignIn } from './services';
 import { SignInSchema } from './schema';
 import { TSignIn } from './types';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 
 export const LoginForm = () => {
   const t = useTranslations('loginForm');
@@ -31,6 +32,7 @@ export const LoginForm = () => {
   });
 
   const signIn = useSignIn();
+  const { setUser } = useUserStore();
 
   const onSubmit = (data: TSignIn) => {
     signIn.mutate(data, {
@@ -40,8 +42,9 @@ export const LoginForm = () => {
           message: t('loginError'),
         });
       },
-      onSuccess: () => {
+      onSuccess: (user) => {
         router.push('/');
+        setUser(user);
       },
     });
   };
@@ -99,6 +102,7 @@ export const LoginForm = () => {
                 className="w-full"
                 showRightArrowIcon
                 type="submit"
+                isLoading={signIn.isPending}
               >
                 {t('loginButton')}
               </Button>

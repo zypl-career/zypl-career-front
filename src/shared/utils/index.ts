@@ -8,3 +8,4 @@ export * from './download-file';
 export * from './date';
 export * from './error-parser';
 export * from './touUnique';
+export * from './array';

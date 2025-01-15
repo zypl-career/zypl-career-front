@@ -4,10 +4,10 @@ import {
   FraudPreventionContent,
   FraudPreventionsHero,
   Navbar,
-  useArticleId,
 } from '@entities';
 import { PageParams } from '@types';
-import { Footer } from '@/widgets';
+import { Footer } from '@widgets';
+import { useArticleId } from '@ui';
 
 const ArticleIdPage = ({ params }: PageParams) => {
   const { data, isLoading } = useArticleId(params.id);
