@@ -6,7 +6,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: 'teachersHero' });
 
   return {
-    title: `Zypl.career | ${t('title')}`,
+    title: `Kasbi man | ${t('title')}`,
     description: t('title'),
   };
 }

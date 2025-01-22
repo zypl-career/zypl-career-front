@@ -39,7 +39,7 @@ export const Footer: FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-start">
           <LogoFooter />
           <p className="mt-2 sm:mt-0 sm:ml-2">
-            &copy; 2024. zypl.career. Все права защищены
+            &copy; 2024. Kasbi man. Все права защищены
           </p>
         </div>
         <div className="flex flex-row  sm:justify-end gap-2">
