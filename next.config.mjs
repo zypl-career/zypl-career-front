@@ -15,6 +15,7 @@ const nextConfig = {
       },
     ],
   },
+  transpilePackages: ['shiki'],
 };
 
 export default withNextIntl(nextConfig);

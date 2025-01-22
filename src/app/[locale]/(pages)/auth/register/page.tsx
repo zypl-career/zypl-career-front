@@ -5,7 +5,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const t = await getTranslations({ locale, namespace: 'formRegister' });
 
   return {
-    title: `Zypl.career | ${t('seoDescription')}`,
+    title: `Kasbi man | ${t('seoDescription')}`,
     description: t('seoDescription'),
   };
 }
