@@ -7,11 +7,31 @@ import { ReactQueryProvider, NextIntlProvider } from '@providers';
 import './styles/globals.css';
 import { locales } from 'i18n';
 
+import favicon from '../../shared/assets/icons/favicon.png';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Kasbi man',
   description: 'Education platform for future professionals',
+  icons: {
+    icon: favicon.src,
+  },
+  keywords: [
+    'Kasbi man',
+    'Касб',
+    'Интихоби касб',
+    'Роҳнамоии касбӣ',
+    'Касби ман',
+    'зипл кариер',
+    'zypl career',
+    'Профессия',
+    'Выбор профессии',
+    'Профессиональное руководство',
+    'Моя профессия',
+    'зипл карьера',
+    'zypl карьера',
+  ],
 };
 
 export default async function RootLayout({
