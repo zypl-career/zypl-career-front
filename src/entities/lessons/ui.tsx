@@ -55,7 +55,11 @@ export const Lessons: FC<TLessonIdProps> = ({ courseId }) => {
             onNextLesson={handleNextLesson}
             onPrevLesson={handlePrevLesson}
           />
-          <LessonHeader title={course?.title} description={course?.description} className="sm:hidden flex" />
+          <LessonHeader
+            title={course?.title}
+            description={course?.description}
+            className="sm:hidden flex"
+          />
         </section>
       )}
     </div>

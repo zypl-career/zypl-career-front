@@ -15,3 +15,5 @@ export const resumeTemplates = [
     pdfSize: '263kb',
   },
 ];
+
+export const wordWhiteListFormat = ['.doc', '.docx', '.pages'];

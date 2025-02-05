@@ -85,27 +85,31 @@ export const LessonShow: FC<LessonItemProps> = ({
                 <Spinner className="size-10" />
               </div>
             </If>
-            <iframe
-              allowFullScreen
-              src={
-                lesson?.description === 'empty'
-                  ? `https://docs.google.com/gview?embedded=true&url=${lesson?.resource}`
-                  : lesson?.description.replace('/watch?v=', '/embed/')
-              }
-              width="100%"
-              height="100%"
-              className={cn('h-[calc(100dvh-180px)]', {
-                hidden: isResourceLoading || (!isYoutube && !isPdf),
-              })}
-              onLoad={() => setIsResourceLoading(false)}
-            />
-            <video
-              controls
-              src={lesson?.description}
-              className={cn({
-                hidden: isYoutube || isPdf || isResourceLoading,
-              })}
-            />
+            {lesson?.id ? (
+              <>
+                <iframe
+                  allowFullScreen
+                  src={
+                    lesson.description === 'empty'
+                      ? `https://docs.google.com/gview?embedded=true&url=${lesson.resource}`
+                      : lesson.description.replace('/watch?v=', '/embed/')
+                  }
+                  width="100%"
+                  height="100%"
+                  className={cn('h-[calc(100dvh-180px)]', {
+                    hidden: isResourceLoading || (!isYoutube && !isPdf),
+                  })}
+                  onLoad={() => setIsResourceLoading(false)}
+                />
+                <video
+                  controls
+                  src={lesson.description}
+                  className={cn({
+                    hidden: isYoutube || isPdf || isResourceLoading,
+                  })}
+                />
+              </>
+            ) : null}
           </>
         ) : (
           'no data'

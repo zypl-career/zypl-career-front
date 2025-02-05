@@ -1,6 +1,6 @@
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { apiService } from '@api';
-import { touUnique } from '@utils';
+import { toUnique } from '@utils';
 import { TResponse } from '@types';
 import { TEducationCenterData, TEducationCenterParams } from './types';
 
@@ -23,6 +23,6 @@ export const useEducationCenterTags = (params?: TEducationCenterParams) => {
         .then(({ data }) => data),
     placeholderData: keepPreviousData,
     select: (data) =>
-      touUnique(data.data.flatMap((eduCenter) => eduCenter?.city)),
+      toUnique(data.data.flatMap((eduCenter) => eduCenter?.city)),
   });
 };

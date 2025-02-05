@@ -17,7 +17,7 @@ export const Navbar = () => {
   const t = useTranslations('navbar');
 
   const toggleMenu = () => {
-    setIsOpen(prev => !prev);
+    setIsOpen((prev) => !prev);
   };
 
   return (
@@ -57,25 +57,18 @@ export const Navbar = () => {
       <div className="flex items-center gap-2" suppressHydrationWarning>
         {!isAuth ? (
           <div className="flex items-center gap-2" suppressHydrationWarning>
-            <Button
-              className="lg:flex hidden"
-              variant="register"
-              rounded="full"
-              asChild
-            >
+            <Button variant="register" rounded="full" asChild>
               <Link href="/auth/register">{t('register')}</Link>
             </Button>
-            <Button
-              className="lg:flex hidden"
-              variant="outline"
-              rounded="full"
-              asChild
-            >
+            <Button variant="outline" rounded="full" asChild>
               <Link href="/auth/login">{t('login')}</Link>
             </Button>
           </div>
         ) : (
-          <Link href="/user-edit" className="flex items-center bg-background gap-2">
+          <Link
+            href="/user-edit"
+            className="flex items-center bg-background gap-2"
+          >
             <UserIcon />
             <span>{userData?.user?.name}</span>
           </Link>

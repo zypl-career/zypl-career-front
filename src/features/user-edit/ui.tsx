@@ -27,7 +27,7 @@ import { LogOutIcon } from 'lucide-react';
 import { useUserStore } from '@stores';
 
 export const UserEdit = () => {
-  const { userData, setUser } = useUserStore();
+  const { userData, setUser, signOut } = useUserStore();
   const router = useRouter();
   const t = useTranslations('formRegister');
   const currentUserApi = useUserById(userData?.user?.id ?? '');
@@ -94,8 +94,9 @@ export const UserEdit = () => {
   const logoutHandler = useCallback(() => {
     removeAccessToken();
     removeUserStorage();
+    signOut(),
     router.push('/');
-  }, [router]);
+  }, [router, signOut]);
 
   return (
     <Form {...userEditForm}>
@@ -110,6 +111,7 @@ export const UserEdit = () => {
           <Button
             rounded="full"
             endIcon={<LogOutIcon size="16" />}
+            type="button"
             onClick={logoutHandler}
           >
             {t('logout')}

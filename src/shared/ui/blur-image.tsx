@@ -19,6 +19,8 @@ export const BlurImage: FC<CustomImageProps> = ({
   placeholderImg,
   src = '',
   alt = '',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  isSkeleton = true,
   ...props
 }) => {
   const [isLoading, setLoading] = useState(true);
@@ -44,7 +46,6 @@ export const BlurImage: FC<CustomImageProps> = ({
             'flex items-center justify-center h-48 mb-4 bg-gray-300 rounded animate-pulse',
             className,
           )}
-          style={{ width: props.width, height: props.height }}
         >
           <svg
             className="size-10 text-gray-200 dark:text-gray-600"

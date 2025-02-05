@@ -1,20 +1,23 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import { WarnIcon, getUser } from '@/shared';
-import { Button, Modal } from '@ui';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
+import { useCallback, useState } from 'react';
+import { WarnIcon } from '@icons';
+import { Button, Modal } from '@ui';
+import { useUserStore } from '@stores';
 
 export const ApproveTestModal = () => {
   const t = useTranslations('HomePage');
   const router = useRouter();
   const [toggleApprove, setToggleApprove] = useState(false);
-  const { isAuth } = getUser();
-  const handleToTest = () => {
+  const { isAuth } = useUserStore();
+  
+  const handleToTest = useCallback(() => {
     isAuth ? router.push('/test/values') : setToggleApprove(true);
-  };
+  }, [isAuth, router]);
+  
   return (
     <>
       <Button rounded="full" showRightArrowIcon onClick={handleToTest}>
@@ -24,21 +27,17 @@ export const ApproveTestModal = () => {
         <div className="flex justify-center">
           <WarnIcon />
         </div>
-        <div className="text-center">
-          Для последующего сохранение результатов тестирования,
-          зарегистрируйтесь в системе
-        </div>
+        <div className="text-center">{t('approveTitle')}</div>
         <Button
-          variant="default"
           size="md"
-          showRightArrowIcon
           rounded="full"
+          showRightArrowIcon
           asChild
         >
-          <Link href="/auth/register">Регистрация</Link>
+          <Link href="/auth/register">{t('register')}</Link>
         </Button>
         <Button variant="outlineSecondary" size="md" rounded="full" asChild>
-          <Link href="/test/form">Продолжить без регистрации</Link>
+          <Link href="/test/form">{t('continueWithoutRegistration')}</Link>
         </Button>
       </Modal>
     </>

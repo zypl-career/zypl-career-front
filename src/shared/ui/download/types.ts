@@ -1,4 +1,5 @@
 export type TDownloadButtonProps = {
-  fileSize: number;
-  fileType: 'Word' | 'PDF';
+  fileSize?: number;
+  fileType: string;
+  fileUrl: string;
 };

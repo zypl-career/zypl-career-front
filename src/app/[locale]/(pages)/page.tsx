@@ -7,14 +7,14 @@ import {
   partnersData,
   ToolsInspirationUI,
 } from '@entities';
-import { Footer } from '@/widgets';
+import { Footer } from '@widgets';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'HomePage' });
 
   return {
-    title: `Kasbi man | ${t('title')}`,
+    title: `Касби ман | ${t('title')}`,
     description: t('about'),
   };
 }

@@ -12,7 +12,7 @@ import favicon from '../../shared/assets/icons/favicon.png';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Kasbi man',
+  title: 'Касби ман',
   description: 'Education platform for future professionals',
   icons: {
     icon: favicon.src,

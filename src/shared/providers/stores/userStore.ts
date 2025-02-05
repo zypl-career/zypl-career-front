@@ -20,7 +20,7 @@ export const useUserStore = create<UserStore & UserActions>()(
       userData: null,
       isAuth: !!get()?.userData?.access,
       setUser: (userData) => set({ userData, isAuth: !!userData?.access }),
-      signOut: () => set({ userData: null }),
+      signOut: () => set({ userData: null, isAuth: false }),
     }),
     {
       name: 'user',

@@ -30,5 +30,4 @@ export * from './professions-you';
 export * from './sociology';
 export * from './parents';
 export * from './teachers';
-export * from './modal';
 export * from './lessons';

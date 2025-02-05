@@ -2,14 +2,27 @@
 
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import { getDMY } from '@utils';
+import { getDMY, removeEmpty } from '@utils';
 import { BlurImage, Button, useArticles } from '@ui';
+import {
+  Description,
+  ResourcesSeekerFiles,
+} from '@/entities/resources-seekers/ui/file/model';
 
 export const FutureWork = () => {
   const router = useRouter();
   const t = useTranslations('futureWork');
   const articleApi = useArticles();
-  const lastArticle = articleApi.data?.data[articleApi.data?.data.length - 1];
+  const description: ResourcesSeekerFiles[] = removeEmpty(
+    articleApi.data?.data?.map((item) => {
+      const parsedDescription = JSON.parse(item.description) as Description[];
+      const descriptionItem = parsedDescription.find(
+        (desc) => desc.type !== 'file',
+      );
+      return descriptionItem ? { ...item, description: parsedDescription } : {};
+    }),
+  ) as ResourcesSeekerFiles[];
+  const lastArticle = description?.[description?.length - 1];
 
   return (
     <div className="flex flex-col md:flex-row items-center px-6 md:px-24 py-5 lg:py-24">

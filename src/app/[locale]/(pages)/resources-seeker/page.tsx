@@ -13,7 +13,6 @@ const ResourcesSeekerPage = () => {
       <ResourcesSeekersHero />
       <div className="container">
         <FileSave />
-        <FileSave />
       </div>
       <ResourcesSeekersArticle />
       <Footer />
