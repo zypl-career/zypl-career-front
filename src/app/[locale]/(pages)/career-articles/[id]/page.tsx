@@ -8,7 +8,6 @@ import {
 import { PageParams } from '@types';
 import { Footer } from '@widgets';
 import { useArticleId } from '@ui';
-import { getTranslations } from 'next-intl/server';
 
 
 // async function getPostData(slug: string) {

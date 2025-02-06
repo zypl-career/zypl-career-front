@@ -10,7 +10,7 @@ export const DownloadButton: FC<TDownloadButtonProps> = ({
     <div className="flex items-center px-3 py-1 bg-[#F9FAFB] cursor-pointer border border-[#DADADD] rounded-full">
       <DownloadIcon />
       <span
-        onClick={async () => await downloadFile(fileUrl)}
+        onClick={async () => await downloadFile(fileUrl, fileType)}
         className="ml-2 text-sm font-medium cursor-pointer"
       >
         {fileType}

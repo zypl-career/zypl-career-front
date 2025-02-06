@@ -12,11 +12,11 @@ export const useResourcesSeekerFiles = () => {
     select: (articles) => {
       const description: ResourcesSeekerFiles[] = articles.data.map((item) => {
         const parsedDescription = JSON.parse(item.description) as Description[];
-        const descriptionItem = parsedDescription.find(
+        const descriptionItem = parsedDescription.filter(
           (desc) => desc.type === 'file',
         );
-        return descriptionItem
-          ? { ...item, description: parsedDescription }
+        return descriptionItem?.length
+          ? { ...item, description: descriptionItem }
           : {};
       }) as ResourcesSeekerFiles[];
 
