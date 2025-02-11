@@ -15,4 +15,5 @@ export type TPartner = {
   imageSrc: ImageSrc | string;
   altText: string;
   text?: string;
+  link?: string;
 };

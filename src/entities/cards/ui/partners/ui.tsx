@@ -1,17 +1,22 @@
-import { FC } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
-import type { TPartnersCardProps } from '.';
-import { cn } from '@/shared';
+import { FC } from 'react';
+import { cn } from '@utils';
+import type { TPartnersCardProps } from './types';
 
 export const PartnersCard: FC<TPartnersCardProps> = ({
   imageSrc,
   altText,
   text,
+  link = '',
 }) => {
   return (
-    <div
+    <Link
+      href={link}
+      target="_blank"
+      rel="noopener"
       className={cn(
-        'partner-card flex items-center justify-center bg-white m-2 lg:m-3 py-12 lg:py-[32px] rounded-lg shadow-md h-52',
+        'partner-card flex items-center justify-center bg-white m-2 lg:m-3 py-12 lg:py-[32px] rounded-lg shadow-md h-52 transition hover:scale-105',
         text ? 'flex-row' : 'flex-col',
       )}
     >
@@ -37,6 +42,6 @@ export const PartnersCard: FC<TPartnersCardProps> = ({
           height={200}
         />
       )}
-    </div>
+    </Link>
   );
 };

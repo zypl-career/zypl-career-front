@@ -15,6 +15,7 @@ export const Partners: FC<TPartnerProps> = ({ data }) => {
           {data.map((partner, index) => (
             <PartnersCard
               key={index}
+              link={partner.link}
               imageSrc={partner.imageSrc}
               altText={partner.altText}
               text={partner.text}

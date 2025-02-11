@@ -1,13 +1,8 @@
+import Link from 'next/link';
 import { FC } from 'react';
-import { footerData } from '@/widgets';
-import {
-  FacebookIcon,
-  InstagramIcon,
-  LogoFooter,
-  TelegramIcon,
-  VkIcn,
-  YoutubeIcon,
-} from '@/shared';
+import { FacebookIcon, InstagramIcon } from '@icons';
+import { Logo } from '@img';
+import { footerData } from './model';
 
 export const Footer: FC = () => {
   return (
@@ -23,7 +18,7 @@ export const Footer: FC = () => {
                 {section.items.map((item, idx) => (
                   <li key={idx} className="mb-1 hover:underline cursor-pointer">
                     {item.link ? (
-                      <a href={item.link}>{item.label}</a>
+                      <Link href={item.link}>{item.label}</Link>
                     ) : (
                       item.label
                     )}
@@ -36,10 +31,10 @@ export const Footer: FC = () => {
       </div>
       <div className="border-b border-gray-600"></div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-5">
-        <div className="flex flex-col sm:flex-row sm:items-start">
-          <LogoFooter />
+        <div className="flex flex-col sm:flex-row sm:items-center items-start">
+          <Logo className="theme:fill-primary" />
           <p className="mt-2 sm:mt-0 sm:ml-2">
-            &copy; 2024. Kasbi man. Все права защищены
+            &copy; 2025. Kasbi man. Все права защищены
           </p>
         </div>
         <div className="flex flex-row  sm:justify-end gap-2">
@@ -47,11 +42,22 @@ export const Footer: FC = () => {
             <p className="mt-2 sm:mt-0 md:order-1">
               Пользовательское соглашение
             </p>
-            <VkIcn />
-            <TelegramIcon />
-            <InstagramIcon />
-            <YoutubeIcon />
-            <FacebookIcon />
+            <Link
+              target="_blank"
+              rel="noopener"
+              href="https://www.instagram.com/kasbiman.pro/"
+              className="transition hover:scale-125"
+            >
+              <InstagramIcon />
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener"
+              href="https://www.facebook.com/people/Kasbimanpro/61572600953558/"
+              className="transition hover:scale-125"
+            >
+              <FacebookIcon />
+            </Link>
           </div>
         </div>
       </div>

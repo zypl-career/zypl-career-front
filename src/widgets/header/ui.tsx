@@ -1,13 +1,14 @@
 'use client';
-import { useState } from 'react';
+
 import Link from 'next/link';
+import { useState } from 'react';
 import { GlassesIcon } from 'lucide-react';
 
 import { Button } from '@ui';
 import { cn } from '@utils';
 import { useTheme } from '@providers';
 import { Lang, Themes } from '@features';
-import { Logo } from '@/shared';
+import { Logo } from '@img';
 
 export const Header = () => {
   const { theme } = useTheme();
@@ -34,7 +35,9 @@ export const Header = () => {
               size="default"
               onClick={() => setShowThemes((prev) => !prev)}
             >
-              <span className="sm:inline-block hidden">Версия для слабовидящих</span>
+              <span className="sm:inline-block hidden">
+                Версия для слабовидящих
+              </span>
             </Button>
             <Lang />
           </div>

@@ -1,15 +1,18 @@
-import { VideoCard } from '@/shared';
-import { VIDEO_CARDS_DATA } from '.';
+'use client';
+
+import { Spinner, VideoCard } from '@ui';
+import { useGetVideoGuide } from '../../services';
 
 export const VideoCardSection = () => {
+  const { data, isLoading } = useGetVideoGuide();
   return (
     <div className="px-5">
-      {VIDEO_CARDS_DATA.map((card, index) => (
+      {isLoading ? <Spinner /> : data?.map((card, index) => (
         <VideoCard
           key={index}
           title={card.title}
-          description={card.description}
-          imageSrc={card.imageSrc}
+          description={card.generalInfoFile}
+          imageSrc={card.image}
         />
       ))}
     </div>

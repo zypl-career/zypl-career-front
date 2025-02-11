@@ -28,3 +28,4 @@ export * from './tags-filter';
 export * from './loader';
 export * from './counter';
 export * from './articles';
+export * from './async-text';

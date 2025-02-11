@@ -1,6 +1,6 @@
-import { AboutUsHero, Navbar } from '@/entities';
-import { Footer } from '@/widgets';
-import { OurMissions } from '@/entities/about-us/ui/sections/our-missions/ui';
+import { AboutUsHero, Navbar, OurMissions } from '@entities';
+import { Footer } from '@widgets';
+// import {  } from '@/entities/about-us/ui/sections/our-missions/ui';
 
 const AboutUsPage = () => {
   return (
