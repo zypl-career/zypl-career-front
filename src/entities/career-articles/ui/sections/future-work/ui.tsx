@@ -3,11 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { getDMY, removeEmpty } from '@utils';
-import { BlurImage, Button, useArticles } from '@ui';
-import {
-  Description,
-  ResourcesSeekerFiles,
-} from '@/entities/resources-seekers/ui/file/model';
+import { BlurImage, Button, Description, ResourcesSeekerFiles, useArticles } from '@ui';
 
 export const FutureWork = () => {
   const router = useRouter();

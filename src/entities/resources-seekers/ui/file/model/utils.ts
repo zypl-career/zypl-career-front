@@ -1,5 +1,5 @@
+import { Description } from '@ui';
 import { wordWhiteListFormat } from './constants';
-import { Description } from './types';
 
 export const filteredDocx = (description?: Description[]) => {
   return description?.filter((desc) =>
