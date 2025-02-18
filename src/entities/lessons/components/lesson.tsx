@@ -52,14 +52,14 @@ export const LessonShow: FC<LessonItemProps> = ({
 
   return (
     <main className="flex-1 h-dvh">
-      <header className="sm:flex hidden items-center justify-between text-xl font-bold bg-gray-100 p-6">
+      <header className="md:flex hidden items-center justify-between text-xl font-bold bg-gray-100 p-6">
         {isLoading ? (
           <Skeleton className="w-40 h-5 bg-gray-700" />
         ) : (
-          <h1 className="sm:text-base text-xs">{lesson?.name}</h1>
+          <h1 className="md:text-base text-xs">{lesson?.name}</h1>
         )}
         <Button
-          className="sm:inline-flex hidden"
+          className="md:inline-flex hidden"
           rounded="full"
           variant="outline"
           disabled={isDownloading}

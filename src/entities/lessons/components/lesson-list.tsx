@@ -18,11 +18,11 @@ export const LessonListUI: FC<TLessonListProps> = ({
   onSelect,
 }) => {
   return (
-    <aside className="sm:max-h-dvh max-h-96 sm:max-w-80 overflow-auto border">
+    <aside className="md:max-h-dvh max-h-96 md:max-w-80 overflow-auto border">
       <LessonHeader
         title={course?.title}
         description={course?.description}
-        className="sm:flex hidden"
+        className="md:flex hidden"
       />
       <ul className="divide-y overflow-hidden flex-1 w-full">
         {list.map((lessonItem, idx) => (

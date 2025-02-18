@@ -12,11 +12,13 @@ export const TabsCourses = () => {
 
   return (
     <div className="py-4 bg-white">
-      <TagsFilter
-        api={coursesTagApi}
-        selectedTag={activeTag}
-        onSelectTag={toggleTagHandler}
-      />
+      <header className="flex flex-wrap gap-2">
+        <TagsFilter
+          api={coursesTagApi}
+          selectedTag={activeTag}
+          onSelectTag={toggleTagHandler}
+        />
+      </header>
       <CardSection
         data={coursesApi.data?.data}
         isLoading={coursesApi.isLoading}

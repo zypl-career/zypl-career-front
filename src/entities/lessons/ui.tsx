@@ -42,7 +42,7 @@ export const Lessons: FC<TLessonIdProps> = ({ courseId }) => {
           <Spinner />
         </div>
       ) : (
-        <section className="flex sm:flex-row flex-col-reverse border">
+        <section className="flex md:flex-row flex-col-reverse border">
           <LessonListUI
             list={lessons}
             lesson={lesson}
@@ -58,7 +58,7 @@ export const Lessons: FC<TLessonIdProps> = ({ courseId }) => {
           <LessonHeader
             title={course?.title}
             description={course?.description}
-            className="sm:hidden flex"
+            className="md:hidden flex"
           />
         </section>
       )}

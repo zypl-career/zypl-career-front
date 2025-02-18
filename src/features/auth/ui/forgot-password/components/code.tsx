@@ -1,21 +1,29 @@
 'use client';
 
-import { FC, useState } from 'react';
-import { Button, Input, Timer } from '@ui';
-import { TForgotComponentsProps } from './types';
+import { FC, useCallback, useState } from 'react';
+import { Button, Form, FormField, FormItem, FormMessage, Input, Timer } from '@ui';
+import { TForgotComponentsProps, TPasswordCodeSchema } from './types';
 import { checkCode } from '../services';
 import { toast } from 'sonner';
+import { passwordCodeSchema } from './schema';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useTranslations } from 'next-intl';
 
 export const ForgotPasswordCode: FC<TForgotComponentsProps> = ({
   onDone,
   values,
 }) => {
-  const [code, setCode] = useState<number>();
-  const [isLoading, setIsLoading] = useState(false);
+  const [timerCount, setTimerCount] = useState<number>(60);
+  const form = useForm<TPasswordCodeSchema>({
+    resolver: zodResolver(passwordCodeSchema),
+    mode: 'onSubmit',
+  });
 
-  const handleSendCode = async () => {
+  const t = useTranslations('forgotPassowrdSections');
+
+  const handleSendCode = useCallback(async ({ code }: TPasswordCodeSchema) => {
     try {
-      setIsLoading(true);
       const { message } = await checkCode(values.email || '', code ?? 0);
       onDone({
         message,
@@ -24,48 +32,59 @@ export const ForgotPasswordCode: FC<TForgotComponentsProps> = ({
       });
     } catch (error: any) {
       toast.error(error?.message);
-    } finally {
-      setIsLoading(false);
     }
-  };
+  }, [onDone, values]);
 
-  const handleBack = () => {
+  const handleBack = useCallback(() => {
     onDone({
       message: '',
-      values: { ...values, code },
+      values: { ...values, code: form.watch('code') },
       key: 'email',
     });
-  };
+  }, [form, onDone, values]);
 
   return (
-    <div className="bg-white max-w-96 container rounded-md px-5 py-5">
-      <h1 className="font-bold text-2xl mb-4">Сменить пароль</h1>
-      <p className="text-gray-500 mb-6">
-        Мы отправили код подтверждения на вашу электронную почту
-      </p>
-      <Input
-        label="Код потдверждения"
-        placeholder="0000"
-        value={code}
-        onChange={(e) => setCode(Number(e.target.value))}
-      />
-      <div className="flex flex-col gap-4">
-        <Button
-          variant="default"
-          showRightArrowIcon
-          disabled={isLoading}
-          onClick={handleSendCode}
-          rounded="full"
-        >
-          Далее
-        </Button>
-        <Button variant="ghost" onClick={handleBack}>
-          Назад
-        </Button>
-      </div>
-      <p className="text-gray-500 text-sm">
-        Повторная отправка через 43 сек <Timer defaultCount={60} />
-      </p>
-    </div>
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSendCode)} className="bg-white max-w-96 container rounded-md px-5 py-5">
+        <h1 className="font-bold text-2xl mb-4">{t('code.title')}</h1>
+        <p className="text-gray-500 mb-6">
+          {t('code.subtitle')}
+        </p>
+        <FormField
+          control={form.control}
+          name="code"
+          render={({ field }) => (
+            <FormItem>
+              <Input
+                variant="outline"
+                label={t('code.code')}
+                placeholder="0000"
+                {...field}
+                onChange={(e) => field.onChange(Number(e.target.value))}
+              />
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="flex flex-col gap-4 my-5">
+          <Button
+            variant="default"
+            showRightArrowIcon
+            disabled={form.formState.isSubmitting}
+            rounded="full"
+            type="submit"
+          >
+            {t('buttons.next')}
+          </Button>
+          <Button variant="outline" rounded="full" type="button" onClick={handleBack}>
+            {t('buttons.back')}
+          </Button>
+        </div>
+        <p className="text-gray-500 text-sm">
+          <Timer hidden defaultCount={60} onTick={setTimerCount} />
+          {t('code.resend', { count: timerCount })}
+        </p>
+      </form>
+    </Form>
   );
 };

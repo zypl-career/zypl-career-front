@@ -72,7 +72,7 @@ export const LessonItem: FC<LessonItemProps> = ({
       <p className="line-clamp-2 flex-1">{lessonItem.name}</p>
       <Button
         variant="ghost"
-        className="sm:hidden"
+        className="md:hidden"
         onClick={(e) => handleDownload(e, lessonItem)}
         disabled={isDownloading}
       >

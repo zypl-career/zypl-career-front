@@ -21,7 +21,7 @@ export const LessonHeader: FC<LessonHeaderProps> = ({ title, description, classN
     <>
       <header
         className={cn(
-          'items-center gap-3 bg-gray-100 sm:p-6 p-3 sticky top-0',
+          'items-center gap-3 bg-gray-100 md:p-6 p-3 sticky top-0',
           className,
         )}
       >

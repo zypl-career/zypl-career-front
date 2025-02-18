@@ -6,6 +6,7 @@ import type { TVideoProps } from './types';
 export const VideoCard: FC<TVideoProps> = ({
   title,
   description,
+  generalInfo,
   imageSrc,
 }) => {
   return (
@@ -14,14 +15,25 @@ export const VideoCard: FC<TVideoProps> = ({
       <div className="bg-white border shadow py-8 rounded-xl">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-3 lg:gap-20 px-4 lg:px-20">
           <p className="flex-1">
-            <AsyncText file={description} />
+            <AsyncText file={generalInfo} />
           </p>
-          <video
-            controls
-            className="w-full lg:w-96 cursor-pointer transform transition-transform duration-200 hover:scale-110"
-          >
-            <source src={imageSrc} type="video/mp4" />
-          </video>
+          {imageSrc.endsWith('.mp4') ? (
+            <video
+              controls
+              className="w-full lg:w-96 cursor-pointer transform transition-transform duration-200 hover:scale-110"
+            >
+              <source src={imageSrc} type="video/mp4" />
+            </video>
+          ) : (
+            <iframe
+              width={620}
+              height="315"
+              src={description}
+              title="YouTube video player"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
+              allowFullScreen
+            />
+          )}
         </div>
       </div>
     </div>

@@ -1,9 +1,8 @@
 import { apiService } from '@api';
-import { TArticleData } from '@ui';
+import { Description, ResourcesSeekerFiles, TArticleData } from '@ui';
 import { removeEmpty } from '@utils';
 import { useQuery } from '@tanstack/react-query';
 import { TResponse } from '@types';
-import { Description, ResourcesSeekerFiles } from './model/types';
 
 export const useResourcesSeekerFiles = () => {
   return useQuery<TResponse<TArticleData[]>, Error, ResourcesSeekerFiles[]>({

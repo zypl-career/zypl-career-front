@@ -4,12 +4,14 @@ import { useState, useEffect, FC } from 'react';
 
 type TTimerProps = {
   defaultCount?: number;
+  hidden?: boolean;
   onDone?: () => void;
   onTick?: (count: number) => void;
 };
 
 export const Timer: FC<TTimerProps> = ({
   defaultCount = 10,
+  hidden,
   onDone,
   onTick,
 }) => {
@@ -31,5 +33,5 @@ export const Timer: FC<TTimerProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count]);
 
-  return count;
+  return hidden ? null : count;
 };

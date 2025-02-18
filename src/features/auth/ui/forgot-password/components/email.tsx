@@ -4,10 +4,13 @@ import { TForgotComponentsProps } from './types';
 import { sendCode } from '../services';
 import Link from 'next/link';
 import { toast } from 'sonner';
+import { useTranslations } from 'next-intl';
 
 export const ForgotPasswordEmail: FC<TForgotComponentsProps> = ({ onDone }) => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  const t = useTranslations('forgotPassowrdSections');
 
   const handleSendCode = async () => {
     try {
@@ -27,12 +30,16 @@ export const ForgotPasswordEmail: FC<TForgotComponentsProps> = ({ onDone }) => {
 
   return (
     <div className="bg-white max-w-96 container rounded-md px-5 py-5">
-      <p className="font-bold  md:text-2xl">Восстановление пароля</p>
+      <p className="font-bold  md:text-2xl">
+        {t('email.title')}
+      </p>
       <div className="py-5">
         <Input
           label="Email*"
           variant="outline"
+          placeholder="example@mail.com"
           onChange={(e) => setEmail(e.target.value)}
+          onEnter={handleSendCode}
           value={email}
           disabled={isLoading}
         />
@@ -45,10 +52,12 @@ export const ForgotPasswordEmail: FC<TForgotComponentsProps> = ({ onDone }) => {
           onClick={handleSendCode}
           rounded="full"
         >
-          Далее
+          {t('buttons.next')}
         </Button>
-        <Button variant="ghost" asChild>
-          <Link href="/auth/login">Назад</Link>
+        <Button variant="outline" asChild rounded="full">
+          <Link href="/auth/login">
+            {t('buttons.back')}
+          </Link>
         </Button>
       </div>
     </div>

@@ -2,7 +2,7 @@ import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { apiService } from '@api';
 import { TResponse } from '@types';
 import { removeEmpty, toUnique } from '@utils';
-import { TArticleData, TArticleDataRequest } from './types';
+import { Description, TArticleData, TArticleDataRequest } from './types';
 
 export const useArticles = (params?: TArticleDataRequest) => {
   return useQuery<TResponse<TArticleData[]>>({
@@ -10,11 +10,23 @@ export const useArticles = (params?: TArticleDataRequest) => {
     queryFn: () =>
       apiService.get('article/get', { params }).then(({ data }) => data),
     select(data) {
-      data.data = data.data.sort(
-        (a, b) =>
-          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-      );
-      return data;
+      const description: TArticleData[] = data.data.map((item) => {
+        const parsedDescription = JSON.parse(item.description) as Description[];
+        const descriptionItem = parsedDescription.filter(
+          (desc) => desc.type !== 'file',
+        );
+        return descriptionItem?.length
+          ? { ...item, description: descriptionItem }
+          : {};
+      }) as TArticleData[];
+
+      data.data = description.sort((a, b) => {
+        const dateA = a.createdAt ? new Date(a.createdAt) : new Date(0);
+        const dateB = b.createdAt ? new Date(b.createdAt) : new Date(0);
+        return dateB.getTime() - dateA.getTime();
+      });
+
+      return removeEmpty(data);
     },
   });
 };

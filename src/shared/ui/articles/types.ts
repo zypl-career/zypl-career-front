@@ -41,6 +41,29 @@ export type TArticleDataRequest = Omit<
   'createAt' | 'updateAt'
 >;
 
+export type Props = {
+  backgroundColor: string;
+  name: string;
+  url: string;
+  caption: string;
+};
+
+
+export type Description = {
+  id: string;
+  type: string;
+  props: Props;
+  children: any[];
+};
+
+
+export type ResourcesSeekerFiles = Partial<
+  Omit<TArticleData, 'description'> & {
+    description?: Description[] | undefined;
+  }
+>;
+
+
 export type ArticleProps<T> = Omit<HTMLAttributes<HTMLElement>, 'children'> & {
   children: ((data?: T, isLoading?: boolean) => (ReactNode | JSX.Element)) | ReactNode;
   withoutTags?: boolean

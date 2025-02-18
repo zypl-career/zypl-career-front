@@ -11,7 +11,8 @@ export const VideoCardSection = () => {
         <VideoCard
           key={index}
           title={card.title}
-          description={card.generalInfoFile}
+          generalInfo={card.generalInfoFile}
+          description={card.description}
           imageSrc={card.image}
         />
       ))}
