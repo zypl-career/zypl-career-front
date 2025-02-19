@@ -1,15 +1,29 @@
-# Navigate to the root directory
-cd ../
+# Navigate to the correct directory (ensure it exists)
+cd /home/${USER}/zypl-career-front || exit 1
 
-# Remove all unused data
-docker system prune -af # remove all unused data
-docker volume prune -f # remove all unused volumes
-docker network prune -f # remove all unused networks
-docker image prune -af # remove all unused images
-docker container prune -f # remove all stopped containers
-docker builder prune -f # remove all unused builders
+# Check if it's a Git repository
+if [ ! -d ".git" ]; then
+  echo "Error: Not a git repository."
+  exit 1
+fi
 
-# Update the repository and redeploy
+# Clean up Docker resources
+docker system prune -af
+docker volume prune -f
+docker network prune -f
+docker image prune -af
+docker container prune -f
+docker builder prune -f
+
+# Pull latest changes
 git pull origin ci_cd
+
+# Ensure the docker-compose file exists
+if [ ! -f "docker-compose.yml" ]; then
+  echo "Error: docker-compose.yml not found."
+  exit 1
+fi
+
+# Restart containers
 docker compose down
-docker compose up -d --build 
+docker compose up -d --build
