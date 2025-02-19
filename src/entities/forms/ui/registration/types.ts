@@ -22,7 +22,7 @@ export type TUserData = TUserLogin & {
 export type TUserResponse = {
   payload: TUserData;
   message: string;
-}
+};
 
 export type TGender = {
   label: string;

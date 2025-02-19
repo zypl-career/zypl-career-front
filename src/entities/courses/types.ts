@@ -9,7 +9,9 @@ export type TCourseData = {
   updatedAt: string;
 };
 
-export type TCourseParams = Partial<TCourseData & {
-  page: string;
-  limit: string;
-}>
+export type TCourseParams = Partial<
+  TCourseData & {
+    page: string;
+    limit: string;
+  }
+>;

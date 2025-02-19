@@ -2,9 +2,12 @@ export const toUnique = <T>(data: T[]): T[] => {
   return Array.from(new Set(data));
 };
 
-export const toUniqueObject = <T, K extends keyof T>(data: T[], key: K): T[] => {
+export const toUniqueObject = <T, K extends keyof T>(
+  data: T[],
+  key: K,
+): T[] => {
   const uniqueKeys = new Set();
-  return data.filter(item => {
+  return data.filter((item) => {
     const keyValue = item[key];
     if (uniqueKeys.has(keyValue)) {
       return false;

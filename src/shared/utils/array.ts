@@ -3,7 +3,9 @@ type EmptyValue = null | undefined | '' | [] | { [key: string]: never };
 export function removeEmpty<T>(data: T): T {
   const defaultValue = Array.isArray(data) ? [] : {};
   if (Array.isArray(data)) {
-    const cleanedArray = data.map((item) => removeEmpty(item)).filter((item) => !isValueEmpty(item));
+    const cleanedArray = data
+      .map((item) => removeEmpty(item))
+      .filter((item) => !isValueEmpty(item));
     return cleanedArray as T;
   }
 
@@ -15,7 +17,7 @@ export function removeEmpty<T>(data: T): T {
     return cleanedObj as T;
   }
 
-  return isValueEmpty(data) ? defaultValue as T : data;
+  return isValueEmpty(data) ? (defaultValue as T) : data;
 }
 
 export function isValueEmpty(value: unknown): value is EmptyValue {

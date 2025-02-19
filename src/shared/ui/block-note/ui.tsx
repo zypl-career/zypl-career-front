@@ -7,7 +7,6 @@ import { BlockNoteView } from '@blocknote/mantine';
 import { schema } from './utils';
 import '@blocknote/mantine/style.css';
 
-
 type BlockNoteProps = {
   editable?: boolean;
   value?: string;
@@ -22,6 +21,5 @@ export const BlockNote: FC<BlockNoteProps> = ({ value, editable = false }) => {
 
   return <BlockNoteView editor={editor} editable={editable} theme="light" />;
 };
-
 
 export default BlockNote;

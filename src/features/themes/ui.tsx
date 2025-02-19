@@ -33,7 +33,9 @@ export const Themes = () => {
               style={{
                 color: theme.color,
                 background: theme.bg,
-                ...(theme?.border ? { border: `2px solid ${theme.border}` } : {}),
+                ...(theme?.border
+                  ? { border: `2px solid ${theme.border}` }
+                  : {}),
               }}
               onClick={() => setTheme(theme.theme)}
             >

@@ -9,7 +9,6 @@ import { PageParams } from '@types';
 import { Footer } from '@widgets';
 import { useArticleId } from '@ui';
 
-
 // async function getPostData(slug: string) {
 //   const res = await fetch(`https://api.kasbiman.pro/${slug}`, {
 //     // e.g. revalidate after 60s
@@ -26,7 +25,6 @@ import { useArticleId } from '@ui';
 //     description: t('about'),
 //   };
 // }
-
 
 const ArticleIdPage = ({ params }: PageParams) => {
   const { data, isLoading } = useArticleId(params.id);

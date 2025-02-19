@@ -13,11 +13,11 @@ export const ApproveTestModal = () => {
   const router = useRouter();
   const [toggleApprove, setToggleApprove] = useState(false);
   const { isAuth } = useUserStore();
-  
+
   const handleToTest = useCallback(() => {
     isAuth ? router.push('/test/values') : setToggleApprove(true);
   }, [isAuth, router]);
-  
+
   return (
     <>
       <Button rounded="full" showRightArrowIcon onClick={handleToTest}>
@@ -28,12 +28,7 @@ export const ApproveTestModal = () => {
           <WarnIcon />
         </div>
         <div className="text-center">{t('approveTitle')}</div>
-        <Button
-          size="md"
-          rounded="full"
-          showRightArrowIcon
-          asChild
-        >
+        <Button size="md" rounded="full" showRightArrowIcon asChild>
           <Link href="/auth/register">{t('register')}</Link>
         </Button>
         <Button variant="outlineSecondary" size="md" rounded="full" asChild>

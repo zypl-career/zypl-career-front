@@ -80,10 +80,10 @@ export const UserEdit = () => {
       onSuccess: () => {
         toast.success('Данные обновлены');
         if (currentUserApi.data) {
-          setUser({ 
-            ...userData, 
-            access: userData?.access ?? '', 
-            refresh: userData?.refresh ?? '', 
+          setUser({
+            ...userData,
+            access: userData?.access ?? '',
+            refresh: userData?.refresh ?? '',
             user: currentUserApi.data ?? null,
           });
         }
@@ -94,8 +94,7 @@ export const UserEdit = () => {
   const logoutHandler = useCallback(() => {
     removeAccessToken();
     removeUserStorage();
-    signOut(),
-    router.push('/');
+    signOut(), router.push('/');
   }, [router, signOut]);
 
   return (

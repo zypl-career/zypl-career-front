@@ -13,7 +13,11 @@ type LessonHeaderProps = {
   className?: string;
 };
 
-export const LessonHeader: FC<LessonHeaderProps> = ({ title, description, className }) => {
+export const LessonHeader: FC<LessonHeaderProps> = ({
+  title,
+  description,
+  className,
+}) => {
   const router = useRouter();
   const locale = useLocale();
   const [isInfoOpen, setIsInfoOpen] = useState(false);

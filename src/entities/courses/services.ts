@@ -18,7 +18,8 @@ export const useCoursesTag = (params?: TCourseParams) => {
     queryFn: () =>
       apiService.get('course/get', { params }).then(({ data }) => data),
     placeholderData: keepPreviousData,
-    select: (data) => removeEmpty(toUnique(data.data.flatMap(course => course?.tags))),
+    select: (data) =>
+      removeEmpty(toUnique(data.data.flatMap((course) => course?.tags))),
   });
 };
 

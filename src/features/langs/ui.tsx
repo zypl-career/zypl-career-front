@@ -15,14 +15,17 @@ export const Lang = () => {
   const localeActive = useLocale();
   const [lang, setLang] = useState<Partial<TLang>>({});
 
-  const changeLocale = useCallback((value: string): void => {
-    const locale = value.toLowerCase() as TValueLangs;
-    setLang((prev) => ({ ...prev, value: locale }));
-    if (locale !== localeActive) {
-      const newPathname = pathname.replace(`/${localeActive}`, `/${locale}`);
-      router.replace(newPathname, { scroll: false });
-    }
-  }, [localeActive, pathname, router]);
+  const changeLocale = useCallback(
+    (value: string): void => {
+      const locale = value.toLowerCase() as TValueLangs;
+      setLang((prev) => ({ ...prev, value: locale }));
+      if (locale !== localeActive) {
+        const newPathname = pathname.replace(`/${localeActive}`, `/${locale}`);
+        router.replace(newPathname, { scroll: false });
+      }
+    },
+    [localeActive, pathname, router],
+  );
 
   useEffect(() => {
     if (!localeActive) {
@@ -34,7 +37,7 @@ export const Lang = () => {
     <SelectField
       variant="secondary"
       options={langs}
-      value={lang.value || localeActive} 
+      value={lang.value || localeActive}
       valueType="value"
       printType="label"
       onChange={changeLocale}

@@ -3,7 +3,13 @@
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { getDMY, removeEmpty } from '@utils';
-import { BlurImage, Button, Description, ResourcesSeekerFiles, useArticles } from '@ui';
+import {
+  BlurImage,
+  Button,
+  Description,
+  ResourcesSeekerFiles,
+  useArticles,
+} from '@ui';
 
 export const FutureWork = () => {
   const router = useRouter();

@@ -4,7 +4,16 @@ import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Button, Form, FormControl, FormField, FormItem, FormLabel, FormMessage, Input } from '@ui';
+import {
+  Button,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+  Input,
+} from '@ui';
 import { TForgotComponentsProps, TNewPasswordSchema } from './types';
 import { changePassword } from '../services';
 import { newPasswordSchema } from './schema';
@@ -51,20 +60,19 @@ export const ForgotPasswordPassword: FC<TForgotComponentsProps> = ({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleChangePassword)} className="bg-white max-w-96 container rounded-md px-5 py-5">
+      <form
+        onSubmit={form.handleSubmit(handleChangePassword)}
+        className="bg-white max-w-96 container rounded-md px-5 py-5"
+      >
         <h1 className="font-bold text-2xl mb-4">{t('password.title')}</h1>
-        <p className="text-gray-500 mb-6">
-          {t('password.subtitle')}
-        </p>
+        <p className="text-gray-500 mb-6">{t('password.subtitle')}</p>
         <div className="flex flex-col gap-3 mb-5">
           <FormField
             control={form.control}
             name="newPassword"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>
-                  {t('password.newPassword')}
-                </FormLabel>
+                <FormLabel>{t('password.newPassword')}</FormLabel>
                 <FormControl>
                   <Input
                     variant="outline"
@@ -82,9 +90,7 @@ export const ForgotPasswordPassword: FC<TForgotComponentsProps> = ({
             name="confirmPassword"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>
-                  {t('password.confirmPassword')}
-                </FormLabel>
+                <FormLabel>{t('password.confirmPassword')}</FormLabel>
                 <FormControl>
                   <Input
                     variant="outline"
@@ -108,7 +114,13 @@ export const ForgotPasswordPassword: FC<TForgotComponentsProps> = ({
           >
             {t('buttons.update')}
           </Button>
-          <Button variant="outline" rounded="full" type="button" className="w-full" onClick={handleBack}>
+          <Button
+            variant="outline"
+            rounded="full"
+            type="button"
+            className="w-full"
+            onClick={handleBack}
+          >
             {t('buttons.back')}
           </Button>
         </div>

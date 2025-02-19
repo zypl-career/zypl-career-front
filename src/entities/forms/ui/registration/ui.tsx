@@ -214,7 +214,11 @@ export const FormRegister = () => {
                               label={t('age')}
                               type="number"
                               {...field}
-                              onChange={(e) => field.onChange(parseInt(e.target.value, 10) || '')}
+                              onChange={(e) =>
+                                field.onChange(
+                                  parseInt(e.target.value, 10) || '',
+                                )
+                              }
                             />
                           </FormControl>
                           <FormMessage />

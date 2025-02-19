@@ -3,11 +3,7 @@ import Image from 'next/image';
 import { TCardCoursesProps } from '@/entities';
 import Link from 'next/link';
 
-export const CardCourses: FC<TCardCoursesProps> = ({
-  id,
-  image,
-  title,
-}) => {
+export const CardCourses: FC<TCardCoursesProps> = ({ id, image, title }) => {
   return (
     <Link
       href={`/courses/${id}`}
@@ -22,7 +18,7 @@ export const CardCourses: FC<TCardCoursesProps> = ({
           className="rounded-t-xl object-cover w-full h-[272px]"
         />
         <h1 className="font-bold md:text-xl m-6">{title}</h1>
-      </div>  
+      </div>
       {/* <div className="m-6">
         <ProgressBar progress={finishedPercentage} />
       </div> */}

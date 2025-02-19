@@ -26,7 +26,9 @@ export const setUserStorage = (user: TUserData) => {
 };
 
 export const getUserStorage = (): TUserData | null => {
-  return JSON.parse(globalThis?.window?.localStorage?.getItem('user') ?? 'null');
+  return JSON.parse(
+    globalThis?.window?.localStorage?.getItem('user') ?? 'null',
+  );
 };
 
 export const removeUserStorage = () => {
