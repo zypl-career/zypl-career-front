@@ -18,10 +18,10 @@ export const FraudPreventionsHero: FC<{
             </p>
           )}
 
-          <h2 className="text-3xl font-bold lg:w-[522px] mb-4">
+          <h2 className="text-3xl font-bold max-w-[522px] mb-4">
             {data?.title}
           </h2>
-          <p className="text-gray-700 lg:w-[522px] mb-4">{data?.generalInfo}</p>
+          <p className="text-gray-700 max-w-[522px] mb-4">{data?.generalInfo}</p>
           <Share data={data} />
         </div>
         {isLoading ? (

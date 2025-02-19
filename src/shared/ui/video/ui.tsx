@@ -26,8 +26,7 @@ export const VideoCard: FC<TVideoProps> = ({
             </video>
           ) : (
             <iframe
-              width={620}
-              height="315"
+            className="max-w-[620px] max-h-[315px]"
               src={description}
               title="YouTube video player"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
