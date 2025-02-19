@@ -29,5 +29,4 @@ jobs:
           username: ${{ secrets.GCP_VM_USER }}
           key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
           script: |
-            cd /home/${{ secrets.GCP_VM_USER }}
-            ./script/deploy.sh
+            cd /home/zypl_career/script/deploy.sh
