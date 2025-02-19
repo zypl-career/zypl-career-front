@@ -17,7 +17,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./nginx:/nginx
-      - /etc/letsencrypt/live/kasbiman.pro/fullchain.pem:/nginx/certificate.crt:ro
-      - /etc/letsencrypt/live/kasbiman.pro/privkey.pem:/nginx/private.key:ro
+      - /etc/letsencrypt/live/kasbiman.pro-0001/fullchain.pem:/nginx/certificate.crt:ro
+      - /etc/letsencrypt/live/kasbiman.pro-0001/privkey.pem:/nginx/private.key:ro
     depends_on:
       - front
