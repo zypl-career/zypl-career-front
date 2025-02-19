@@ -1,3 +1,6 @@
+# Navigate to the root directory
+cd ../
+
 # Remove all unused data
 sudo docker system prune -af # remove all unused data
 sudo docker volume prune -f # remove all unused volumes
