@@ -16,7 +16,7 @@ docker container prune -f
 docker builder prune -f
 
 # Pull latest changes
-git pull origin ci_cd
+git pull origin main
 
 # Ensure the docker-compose file exists
 if [ ! -f "docker-compose.yml" ]; then
