@@ -22,26 +22,29 @@ export const LessonItem: FC<LessonItemProps> = ({
   onSelectLesson,
 }) => {
   const [isDownloading, setIsDownloading] = useState(false);
-  const handleDownload = useCallback(async (
-    e: React.MouseEvent<HTMLButtonElement>,
-    selectedLesson: TLessonIdData,
-  ) => {
-    try {
-      e.preventDefault();
-      e.stopPropagation();
-      setIsDownloading(true);
-      const { data: lessonData } = await apiService.get<TLessonIdData>(
-        `lesson/get/${selectedLesson.id}`,
-      );
+  const handleDownload = useCallback(
+    async (
+      e: React.MouseEvent<HTMLButtonElement>,
+      selectedLesson: TLessonIdData,
+    ) => {
+      try {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsDownloading(true);
+        const { data: lessonData } = await apiService.get<TLessonIdData>(
+          `lesson/get/${selectedLesson.id}`,
+        );
 
-      await downloadFile(
-        lessonData?.resource || '',
-        lessonData?.name || 'lesson',
-      );
-    } finally {
-      setIsDownloading(false);
-    }
-  }, []);
+        await downloadFile(
+          lessonData?.resource || '',
+          lessonData?.name || 'lesson',
+        );
+      } finally {
+        setIsDownloading(false);
+      }
+    },
+    [],
+  );
   return (
     <li
       key={lessonItem.id}

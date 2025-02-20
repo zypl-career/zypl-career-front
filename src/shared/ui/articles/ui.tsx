@@ -26,7 +26,12 @@ export const Articles = <T extends TArticleData[]>({
   return (
     <section {...props}>
       {withoutTags ? null : (
-        <header className={cn('py-5 flex items-center flex-wrap gap-2', fallbackClassName)}>
+        <header
+          className={cn(
+            'py-5 flex items-center flex-wrap gap-2',
+            fallbackClassName,
+          )}
+        >
           <TagsFilter
             api={tagsApi}
             selectedTag={activeTag}

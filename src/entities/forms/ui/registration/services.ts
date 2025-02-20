@@ -10,7 +10,6 @@ export const useSignUp = () => {
     mutationFn: (form: TSignUp) =>
       apiService.post('user/create', form).then((response) => response.data),
     onSuccess(data) {
-      
       return data;
     },
   });

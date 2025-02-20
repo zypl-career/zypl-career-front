@@ -30,9 +30,7 @@ export const ForgotPasswordEmail: FC<TForgotComponentsProps> = ({ onDone }) => {
 
   return (
     <div className="bg-white max-w-96 container rounded-md px-5 py-5">
-      <p className="font-bold  md:text-2xl">
-        {t('email.title')}
-      </p>
+      <p className="font-bold  md:text-2xl">{t('email.title')}</p>
       <div className="py-5">
         <Input
           label="Email*"
@@ -55,9 +53,7 @@ export const ForgotPasswordEmail: FC<TForgotComponentsProps> = ({ onDone }) => {
           {t('buttons.next')}
         </Button>
         <Button variant="outline" asChild rounded="full">
-          <Link href="/auth/login">
-            {t('buttons.back')}
-          </Link>
+          <Link href="/auth/login">{t('buttons.back')}</Link>
         </Button>
       </div>
     </div>

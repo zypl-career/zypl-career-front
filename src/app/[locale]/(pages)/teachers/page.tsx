@@ -2,7 +2,11 @@ import { Navbar, ResourcesTeachers, TeachersHero } from '@entities';
 import { Footer } from '@/widgets';
 import { getTranslations } from 'next-intl/server';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
   const t = await getTranslations({ locale, namespace: 'teachersHero' });
 
   return {

@@ -1,4 +1,4 @@
-name: Deploy to Google Cloud
+name: Deploy to Google Cloud VM
 
 on:
   push:
@@ -10,13 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository code
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Deploy to Google Cloud instance
-      - name: Deploy to Google Cloud
+      - name: Decode SSH Key
         run: |
-          ssh -o StrictHostKeyChecking=no user@${{ secrets.GC_INSTANCE_IP }} /home/zypl_career/deploy.sh
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.GC_INSTANCE_PRIVATE_KEY }}
+          echo "${{ secrets.GCP_SSH_PRIVATE_KEY_BASE64 }}" | base64 --decode > private_key.pem
+          chmod 600 private_key.pem
+
+      - name: Debug SSH Connection
+        run: |
+          ssh -i private_key.pem -o StrictHostKeyChecking=no ${{ secrets.GCP_VM_USER }}@${{ secrets.GCP_VM_IP }} "echo SSH Connection Successful"
+
+      - name: SSH into VM and Deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.GCP_VM_IP }}
+          username: ${{ secrets.GCP_VM_USER }}
+          key: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
+          script: |
+            cd /home/${{ secrets.GCP_VM_USER }}
+            ./zypl-career-front/script/deploy.sh

@@ -1,7 +1,15 @@
 'use client';
 
 import { FC, useCallback, useState } from 'react';
-import { Button, Form, FormField, FormItem, FormMessage, Input, Timer } from '@ui';
+import {
+  Button,
+  Form,
+  FormField,
+  FormItem,
+  FormMessage,
+  Input,
+  Timer,
+} from '@ui';
 import { TForgotComponentsProps, TPasswordCodeSchema } from './types';
 import { checkCode } from '../services';
 import { toast } from 'sonner';
@@ -22,18 +30,22 @@ export const ForgotPasswordCode: FC<TForgotComponentsProps> = ({
 
   const t = useTranslations('forgotPassowrdSections');
 
-  const handleSendCode = useCallback(async ({ code }: TPasswordCodeSchema) => {
-    try {
-      const { message } = await checkCode(values.email || '', code ?? 0);
-      onDone({
-        message,
-        values: { ...values, code },
-        key: message === 'Email successfully verified' ? 'newPassword' : 'code',
-      });
-    } catch (error: any) {
-      toast.error(error?.message);
-    }
-  }, [onDone, values]);
+  const handleSendCode = useCallback(
+    async ({ code }: TPasswordCodeSchema) => {
+      try {
+        const { message } = await checkCode(values.email || '', code ?? 0);
+        onDone({
+          message,
+          values: { ...values, code },
+          key:
+            message === 'Email successfully verified' ? 'newPassword' : 'code',
+        });
+      } catch (error: any) {
+        toast.error(error?.message);
+      }
+    },
+    [onDone, values],
+  );
 
   const handleBack = useCallback(() => {
     onDone({
@@ -45,11 +57,12 @@ export const ForgotPasswordCode: FC<TForgotComponentsProps> = ({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSendCode)} className="bg-white max-w-96 container rounded-md px-5 py-5">
+      <form
+        onSubmit={form.handleSubmit(handleSendCode)}
+        className="bg-white max-w-96 container rounded-md px-5 py-5"
+      >
         <h1 className="font-bold text-2xl mb-4">{t('code.title')}</h1>
-        <p className="text-gray-500 mb-6">
-          {t('code.subtitle')}
-        </p>
+        <p className="text-gray-500 mb-6">{t('code.subtitle')}</p>
         <FormField
           control={form.control}
           name="code"
@@ -76,7 +89,12 @@ export const ForgotPasswordCode: FC<TForgotComponentsProps> = ({
           >
             {t('buttons.next')}
           </Button>
-          <Button variant="outline" rounded="full" type="button" onClick={handleBack}>
+          <Button
+            variant="outline"
+            rounded="full"
+            type="button"
+            onClick={handleBack}
+          >
             {t('buttons.back')}
           </Button>
         </div>

@@ -12,6 +12,6 @@ export type TResponse<T> = {
 export type TQueryParams = {
   page: number | string;
   limit: number | string;
-}
+};
 
 export type TGender = 'male' | 'female';

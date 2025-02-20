@@ -48,7 +48,6 @@ export type Props = {
   caption: string;
 };
 
-
 export type Description = {
   id: string;
   type: string;
@@ -56,20 +55,20 @@ export type Description = {
   children: any[];
 };
 
-
 export type ResourcesSeekerFiles = Partial<
   Omit<TArticleData, 'description'> & {
     description?: Description[] | undefined;
   }
 >;
 
-
 export type ArticleProps<T> = Omit<HTMLAttributes<HTMLElement>, 'children'> & {
-  children: ((data?: T, isLoading?: boolean) => (ReactNode | JSX.Element)) | ReactNode;
-  withoutTags?: boolean
+  children:
+    | ((data?: T, isLoading?: boolean) => ReactNode | JSX.Element)
+    | ReactNode;
+  withoutTags?: boolean;
   params?: TArticleDataRequest;
   once?: boolean;
   fallback?: ReactNode;
   fallbackClassName?: string;
   repeatFallback?: number;
-}
+};

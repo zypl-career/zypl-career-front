@@ -44,7 +44,10 @@ export const TableResults: FC<TResultsTableProps> = () => {
           <TableLoading />
         ) : (
           payload?.map((item, i) => (
-            <div key={i} className="flex justify-between items-center py-7">
+            <div
+              key={i}
+              className="flex flex-col lg:flex-row lg:justify-between items-center py-7"
+            >
               <span>{item.title}</span>
               <ProgressTest progress={item.progress} />
             </div>

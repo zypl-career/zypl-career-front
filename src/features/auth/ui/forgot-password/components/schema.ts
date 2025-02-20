@@ -10,14 +10,14 @@ export const forgotPasswordSchema = z.object({
 
 export const passwordCodeSchema = z.object({
   code: z
-  .number({
-    required_error: 'Обязательное поле',
-    invalid_type_error: 'Должно быть числом',
-  })
-  .nonnegative()
-  .int()
-  .gte(1000, { message: 'Код должен быть 4-значным числом' })
-  .lte(9999, { message: 'Код должен быть 4-значным числом' }),
+    .number({
+      required_error: 'Обязательное поле',
+      invalid_type_error: 'Должно быть числом',
+    })
+    .nonnegative()
+    .int()
+    .gte(1000, { message: 'Код должен быть 4-значным числом' })
+    .lte(9999, { message: 'Код должен быть 4-значным числом' }),
 });
 
 export const newPasswordSchema = z

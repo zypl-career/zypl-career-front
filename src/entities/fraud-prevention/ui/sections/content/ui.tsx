@@ -1,10 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import {
-  FRAUD_PREVENTION_CONTENT,
-  MoreCardSectionFraud,
-} from '@entities';
+import { FRAUD_PREVENTION_CONTENT, MoreCardSectionFraud } from '@entities';
 import { Editor, type TArticleData } from '@ui';
 
 export const FraudPreventionContent: FC<{ data?: TArticleData }> = ({

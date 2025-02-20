@@ -6,15 +6,10 @@ export const ToolsInspiration: FC<ToolsInspirationProps> = ({
   title,
   description,
 }) => {
-  
   const isContentLong = title.length > 20 || description.length > 100;
 
   return (
-    <div
-      className={`cursor-pointer ${
-        isContentLong ? 'h-auto' : 'md:h-72'
-      }`}
-    >
+    <div className={`cursor-pointer ${isContentLong ? 'h-auto' : 'md:h-72'}`}>
       {createElement(Icons, {
         className: 'theme:stroke-primary theme:fill-primary',
       })}

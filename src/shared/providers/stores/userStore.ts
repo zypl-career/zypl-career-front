@@ -12,7 +12,7 @@ export type UserStore = {
 export type UserActions = {
   setUser: (data: UserStore['userData']) => void;
   signOut: () => void;
-}
+};
 
 export const useUserStore = create<UserStore & UserActions>()(
   persist(

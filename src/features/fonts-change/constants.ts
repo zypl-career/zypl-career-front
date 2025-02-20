@@ -9,4 +9,3 @@ export enum FontSize {
   LARGE = 125,
   X_LARGE = 150,
 }
-

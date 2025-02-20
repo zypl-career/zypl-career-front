@@ -2,7 +2,11 @@
 
 import { ReactNode, useState } from 'react';
 
-export const Counter = ({ children }: { children: (x: number) => ReactNode }) => {
+export const Counter = ({
+  children,
+}: {
+  children: (x: number) => ReactNode;
+}) => {
   const [x, setX] = useState(0);
 
   return (

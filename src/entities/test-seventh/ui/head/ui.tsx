@@ -1,4 +1,3 @@
-
 import { useTranslations } from 'next-intl';
 import { CardValue, cardData } from '@/shared';
 import { MainChoosingValues } from '../main';
