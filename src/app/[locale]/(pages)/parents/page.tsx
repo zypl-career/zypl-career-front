@@ -2,16 +2,15 @@ import {
   Navbar,
   ParentsHero,
   ResourcesParents,
-  YourChildren,
-} from '@/entities';
-import { Footer } from '@/widgets';
+} from '@entities';
+import { Footer } from '@widgets';
 
 const PartnersPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <ParentsHero />
-      <YourChildren />
+      {/* <YourChildren /> */}
       <ResourcesParents />
       <Footer />
     </div>
