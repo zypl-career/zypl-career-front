@@ -18,6 +18,11 @@ export const BlockNote: FC<BlockNoteProps> = ({ value, editable = false }) => {
   const editor = useCreateBlockNote({
     initialContent,
     schema,
+    domAttributes: {
+      editor: {
+        class: '!px-0',
+      },
+    },
   });
 
   return <BlockNoteView editor={editor} editable={editable} theme="light" />;
