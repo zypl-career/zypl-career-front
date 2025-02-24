@@ -1,5 +1,5 @@
-import { Navbar, YourResultDesc } from '@/entities';
-import { Footer } from '@/widgets';
+import { Navbar, YourResultDesc } from '@entities';
+import { Footer } from '@widgets';
 
 const YourResultPage = () => {
   return (

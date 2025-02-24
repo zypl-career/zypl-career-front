@@ -14,19 +14,19 @@ export const VideoCard: FC<TVideoProps> = ({
       <h2 className="font-bold text-2xl my-2">{title}</h2>
       <div className="bg-white border shadow py-8 rounded-xl">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-3 lg:gap-20 px-4 lg:px-20">
-          <p className="flex-1">
+          <div className="flex-1">
             <AsyncText file={generalInfo} />
-          </p>
+          </div>
           {imageSrc.endsWith('.mp4') ? (
             <video
               controls
-              className="w-full lg:w-96 cursor-pointer transform transition-transform duration-200 hover:scale-110"
+              className="w-full lg:w-[420px] h-60 cursor-pointer transform transition-transform duration-200 hover:scale-110"
             >
               <source src={imageSrc} type="video/mp4" />
             </video>
           ) : (
             <iframe
-            className="max-w-[620px] max-h-[315px]"
+              className="w-[420px] h-60"
               src={description}
               title="YouTube video player"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"

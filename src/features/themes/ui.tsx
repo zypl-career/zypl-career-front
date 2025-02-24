@@ -1,10 +1,13 @@
 'use client';
 
-import { cn, useTheme } from '@/shared';
-import { themes } from '@/features/themes/constants';
 import { ReactNode } from 'react';
-import { Header } from '@/widgets';
 import { X } from 'lucide-react';
+import { Button } from '@ui';
+import { cn } from '@utils';
+import { themes } from '@features';
+import { Header } from '@widgets';
+import { useTheme } from '@providers';
+
 import { FontSizesChange } from '../fonts-change';
 import { VoiceOverText } from '../voice-over-text';
 
@@ -15,12 +18,13 @@ export const Themes = () => {
       <main className="container flex sm:flex-row flex-col sm:items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <span className="text-white">ВКЛ/ВЫКЛ:</span>
-          <div
-            className="w-14 h-14 text-2xl bg-white rounded flex items-center justify-center cursor-pointer text-primary"
+          <Button
+            className="size-14 text-xl text-white bg-transparent theme:text-primary border"
+            variant="outline"
             onClick={() => setTheme('')}
           >
             <X />
-          </div>
+          </Button>
           <VoiceOverText />
         </div>
         <FontSizesChange />

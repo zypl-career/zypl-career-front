@@ -32,7 +32,12 @@ export const TableResults: FC<TResultsTableProps> = () => {
         progress: isPayload
           ? +(Number(data?.payload[item.id - 1]) * 100).toFixed(2)
           : +(Number(data?.payload?.resultTest[item.id - 1]) * 100).toFixed(2),
-      })).sort((a, b) => (b.progress || 0) - (a.progress || 0)),
+      }))
+        .sort((a, b) => (b.progress || 0) - (a.progress || 0))
+        .map((item, index) =>
+          index > 0 ? { ...item, progress: item.progress + 20 } : item,
+        )
+        .sort((a, b) => (b.progress || 0) - (a.progress || 0)),
     [data?.payload, isPayload],
   );
 

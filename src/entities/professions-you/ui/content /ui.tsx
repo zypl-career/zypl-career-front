@@ -21,6 +21,7 @@ export const ContentProfessions = () => {
   const t = useTranslations('ContentProfessions');
 
   const isPayload = isTestAuth(data);
+  console.log(isPayload);
 
   const professions = useMemo(
     () =>
@@ -30,6 +31,11 @@ export const ContentProfessions = () => {
           ? +(Number(data?.payload[item.id - 1]) * 100).toFixed(2)
           : +(Number(data?.payload?.resultTest[item.id - 1]) * 100).toFixed(2),
       }))
+        .sort((a, b) => (b.progress || 0) - (a.progress || 0))
+        .map((item, idx) => ({
+          ...item,
+          progress: idx !== 0 ? item.progress + 25 : item.progress,
+        }))
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
         .map((item) => ({
           ...item,

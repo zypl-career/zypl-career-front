@@ -12,7 +12,7 @@ export const useResultTest = (test: Partial<TTestRequest>) => {
     Error,
     TTestResponse | TTestResponseWithoutAuth
   >({
-    queryKey: ['resultTest'],
+    queryKey: ['resultTest', test],
     queryFn: async () => {
       return await apiService.post('test', test).then(({ data }) => data);
     },

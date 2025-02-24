@@ -7,8 +7,8 @@ import {
   TABLE_DATA,
   // SociologyCards,
   relatedSociologyData,
-} from '@/entities';
-import { Footer } from '@/widgets';
+} from '@entities';
+import { Footer } from '@widgets';
 import type { PageParams } from '@types';
 
 const SociologyPage = ({ params }: PageParams) => {

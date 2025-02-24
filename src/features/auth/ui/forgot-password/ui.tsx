@@ -26,7 +26,7 @@ const ForgotPasswordComponents = ({
 
 export const ForgotPassword = () => {
   const [renderComponentByKey, setRenderComponentByKey] =
-    useState<TForgotPasswordSteps>('email');
+    useState<TForgotPasswordSteps>('success');
   const [values, setValues] = useState<Partial<TForgotComponentsValues>>({});
 
   const handleSendCode = async (params: TOnDoneParams) => {
