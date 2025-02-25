@@ -21,7 +21,6 @@ export const ContentProfessions = () => {
   const t = useTranslations('ContentProfessions');
 
   const isPayload = isTestAuth(data);
-  console.log(isPayload);
 
   const professions = useMemo(
     () =>
@@ -34,7 +33,8 @@ export const ContentProfessions = () => {
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
         .map((item, idx) => ({
           ...item,
-          progress: idx !== 0 ? item.progress + 25 : item.progress,
+          progress:
+            idx !== 0 ? Math.min(item.progress + 50, 100) : item.progress,
         }))
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
         .map((item) => ({

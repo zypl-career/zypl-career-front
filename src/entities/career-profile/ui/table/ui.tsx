@@ -35,7 +35,9 @@ export const TableResults: FC<TResultsTableProps> = () => {
       }))
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
         .map((item, index) =>
-          index > 0 ? { ...item, progress: item.progress + 20 } : item,
+          index > 0
+            ? { ...item, progress: Math.min(item.progress + 50, 100) }
+            : item,
         )
         .sort((a, b) => (b.progress || 0) - (a.progress || 0)),
     [data?.payload, isPayload],

@@ -3,7 +3,11 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { redirect } from 'next/navigation';
 import { ThemeProvider, Toaster } from '@/shared';
-import { ReactQueryProvider, NextIntlProvider } from '@providers';
+import {
+  ReactQueryProvider,
+  NextIntlProvider,
+  PostHogProvider,
+} from '@providers';
 import './styles/globals.css';
 import { locales } from 'i18n';
 
@@ -58,10 +62,12 @@ export default async function RootLayout({
 
       <ReactQueryProvider>
         <ThemeProvider>
-          <body className={inter.className}>
-            <Toaster />
-            <NextIntlProvider>{children}</NextIntlProvider>
-          </body>
+          <PostHogProvider>
+            <body className={inter.className}>
+              <Toaster />
+              <NextIntlProvider>{children}</NextIntlProvider>
+            </body>
+          </PostHogProvider>
         </ThemeProvider>
       </ReactQueryProvider>
     </html>
