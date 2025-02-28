@@ -131,8 +131,7 @@ export const tableDataWithProfessions = TABLE_DATA.map((tableEntry) => {
   );
 
   return {
-    ...tableEntry,
-    professions: relatedProfessions,
+    ...relatedProfessions,
   };
 });
 

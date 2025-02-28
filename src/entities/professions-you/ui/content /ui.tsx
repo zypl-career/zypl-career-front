@@ -39,9 +39,9 @@ export const ContentProfessions = () => {
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
         .map((item) => ({
           ...item,
-          professions: tableDataWithProfessions.find(
-            (itm) => itm.id === item.id,
-          )?.professions,
+          professions: tableDataWithProfessions.find((itm) =>
+            itm.find((i) => i.id === item.id),
+          ),
         }))
         .map((itm) => itm.professions)
         .flat(),
