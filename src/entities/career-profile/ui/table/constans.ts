@@ -130,7 +130,10 @@ export const tableDataWithProfessions = TABLE_DATA.map((tableEntry) => {
     (profession) => profession.classerId === tableEntry.id,
   );
 
-  return relatedProfessions;
+  return {
+    ...tableEntry,
+    professions: relatedProfessions,
+  };
 });
 
 export const sociology: TSociology[] = [
