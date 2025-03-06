@@ -30,8 +30,12 @@ export const TableResults: FC<TResultsTableProps> = () => {
       TABLE_DATA.map((item) => ({
         ...item,
         progress: isPayload
-          ? +(Number(data?.payload[item.id - 1]) * 100).toFixed(2)
-          : +(Number(data?.payload?.resultTest[item.id - 1]) * 100).toFixed(2),
+          ? parseInt((data?.payload[item.id - 1] * 100).toFixed(2))
+          : Number(
+              ((data?.payload?.resultTest?.[item.id - 1] ?? 0) * 100).toFixed(
+                2,
+              ),
+            ),
       }))
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
         .map((item, index) =>

@@ -27,8 +27,12 @@ export const ContentProfessions = () => {
       TABLE_DATA.map((item) => ({
         ...item,
         progress: isPayload
-          ? +(Number(data?.payload[item.id - 1]) * 100).toFixed(2)
-          : +(Number(data?.payload?.resultTest[item.id - 1]) * 100).toFixed(2),
+          ? parseInt((data?.payload[item.id - 1] * 100).toFixed(2))
+          : Number(
+              ((data?.payload?.resultTest?.[item.id - 1] ?? 0) * 100).toFixed(
+                2,
+              ),
+            ),
       }))
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
         .map((item, idx) => ({
@@ -37,6 +41,7 @@ export const ContentProfessions = () => {
             idx !== 0 ? Math.min(item.progress + 50, 100) : item.progress,
         }))
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
+        .map((item, idx) => ({ ...item, id: idx + 1 }))
         .map((item) => ({
           ...item,
           professions: tableDataWithProfessions.find(
