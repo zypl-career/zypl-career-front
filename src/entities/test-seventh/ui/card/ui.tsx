@@ -1,7 +1,7 @@
 'use client';
 
-import { RadioGroup, RadioGroupCard } from '@/shared';
-import { useTest } from '@/shared/providers/test-provider';
+import { RadioGroup, RadioGroupCard } from '@ui';
+import { useTestStore } from '@providers';
 import { useTranslations } from 'next-intl';
 
 export const CardChoosingValues = ({
@@ -9,12 +9,12 @@ export const CardChoosingValues = ({
 }: {
   onSelect: (value: string) => void;
 }) => {
-  const { handleTestString } = useTest();
+  const { toggleTest } = useTestStore();
   const t = useTranslations('test.seventh');
 
   const handleSelect = (value: string) => {
     onSelect(value);
-    handleTestString(value, 'seventh');
+    toggleTest(value, 'seventh');
   };
 
   return (

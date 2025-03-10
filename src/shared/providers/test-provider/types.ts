@@ -10,11 +10,6 @@ export type TTestRequest = {
   time_spent: number;
 };
 
-export type TTestContext = {
-  test: Partial<TTestRequest>;
-  setTest: (test: Partial<TTestRequest>) => void;
-};
-
 export type TTestResponse = {
   message: string;
   payload: TTestResponsePayload;

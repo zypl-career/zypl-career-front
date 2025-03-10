@@ -8,8 +8,8 @@ import {
   NextIntlProvider,
   PostHogProvider,
 } from '@providers';
-import './styles/globals.css';
 import { locales } from 'i18n';
+import './styles/globals.css';
 
 import favicon from '../../shared/assets/icons/favicon.png';
 

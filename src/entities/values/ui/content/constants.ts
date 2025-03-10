@@ -1,3 +1,5 @@
+'use client';
+
 import {
   DislikeIcon,
   DislikeOrangeIcon,
@@ -329,3 +331,5 @@ export const feedbackOptions: TFeedbackOption[] = [
     ],
   },
 ];
+
+console.log(feedbackOptions.length);

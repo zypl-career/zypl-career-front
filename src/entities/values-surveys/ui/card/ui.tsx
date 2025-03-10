@@ -2,19 +2,19 @@
 
 import { RadioGroup, RadioGroupCard } from '@/shared';
 import { useTranslations } from 'next-intl';
-import { useTest } from '@/shared/providers/test-provider';
+import { useTestStore } from '@providers';
 
 export const CardValuesSurveys = ({
   onSelect,
 }: {
   onSelect: (value: string) => void;
 }) => {
-  const { handleTestString } = useTest();
+  const { toggleTest } = useTestStore();
   const t = useTranslations();
 
   const handleSelect = (value: string) => {
     onSelect(value);
-    handleTestString(value, 'third');
+    toggleTest(value, 'third');
   };
 
   return (

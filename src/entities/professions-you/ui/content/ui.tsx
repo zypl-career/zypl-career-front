@@ -1,21 +1,23 @@
 'use client';
 
+import { useMemo, useState } from 'react';
+import { useTranslations } from 'next-intl';
+
 import {
   NextEducational,
   TABLE_DATA,
   tableDataWithProfessions,
-} from '@/entities';
-import { ArrowIcon, Button } from '@/shared';
-import { useMemo, useState } from 'react';
-import { useResultTest } from '@/entities/career-profile/ui/table/services';
-import { useTest } from '@/shared/providers/test-provider';
-import { isTestAuth } from '@/entities/career-profile/ui/table/utils';
-import { useTranslations } from 'next-intl';
+  useResultTest,
+  isTestAuth,
+} from '@entities';
+import { Button } from '@ui';
+import { ArrowIcon } from '@icons';
+import { useTestStore } from '@providers';
 
 const limit = 10;
 
 export const ContentProfessions = () => {
-  const { test } = useTest();
+  const { test } = useTestStore();
   const { data } = useResultTest(test);
   const [page, setPage] = useState(1);
   const t = useTranslations('ContentProfessions');
@@ -41,7 +43,6 @@ export const ContentProfessions = () => {
             idx !== 0 ? Math.min(item.progress + 50, 100) : item.progress,
         }))
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
-        .map((item, idx) => ({ ...item, id: idx + 1 }))
         .map((item) => ({
           ...item,
           professions: tableDataWithProfessions.find(

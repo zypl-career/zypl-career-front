@@ -5,7 +5,7 @@ import { Button, ProgressTest, differenceInMinutes } from '@/shared';
 import { TABLE_DATA, type TResultsTableProps } from '.';
 
 import { useResultTest } from './services';
-import { useTest } from '@/shared/providers/test-provider';
+import { useTestStore } from '@providers';
 import Link from 'next/link';
 import { TableLoading } from './loading';
 import { isTestAuth } from './utils';
@@ -13,15 +13,14 @@ import { useTranslations } from 'next-intl';
 
 export const TableResults: FC<TResultsTableProps> = () => {
   const t = useTranslations('tableResults');
-  const { test, handleTestTime } = useTest();
+  const { test, setTestTime } = useTestStore();
   const { data, isLoading } = useResultTest(test);
 
   useEffect(() => {
     const timeStart = new Date(localStorage.getItem('timeStart') || new Date());
     const timeEnd = new Date();
-    handleTestTime(differenceInMinutes(timeStart, timeEnd));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    setTestTime(differenceInMinutes(timeStart, timeEnd));
+  }, [setTestTime]);
 
   const isPayload = isTestAuth(data);
 
@@ -48,7 +47,7 @@ export const TableResults: FC<TResultsTableProps> = () => {
   );
 
   return (
-    <div>
+    <>
       <h3 className="text-2xl font-bold my-2">{t('title')}</h3>
       <div className="divide-y divide-gray-200 p-4 bg-white shadow w-full rounded-xl">
         {isLoading ? (
@@ -76,6 +75,6 @@ export const TableResults: FC<TResultsTableProps> = () => {
           <Link href="/professions-you">{t('viewProfessions')}</Link>
         </Button>
       </div>
-    </div>
+    </>
   );
 };

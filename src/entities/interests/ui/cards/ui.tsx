@@ -1,19 +1,20 @@
 'use client';
 
 import Image from 'next/image';
-import { CARDS_DATA_INTERES } from './constants';
-import { Button, cn } from '@/shared';
-import { useTest } from '@/shared/providers/test-provider';
-import { TCardDataInters } from './types';
-import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import { useTestStore } from '@providers';
+import { Button } from '@ui';
+import { cn } from '@utils';
+import { CARDS_DATA_INTERES } from './constants';
+import { TCardDataInters } from './types';
 
 export const CardsInteres = () => {
   const t = useTranslations('careerInterests');
   const router = useRouter();
   const [cards, setCards] = useState(CARDS_DATA_INTERES);
-  const { handleTestInteraction } = useTest();
+  const { setTestInteraction } = useTestStore();
   const disableContinue = cards.some(
     ([left, right]) => !left.selected && !right.selected,
   );
@@ -38,7 +39,7 @@ export const CardsInteres = () => {
       }),
     );
     const name = clicked === 'left' ? left.name : right.name;
-    handleTestInteraction(name, index);
+    setTestInteraction(name, index, 'second');
   };
 
   return (

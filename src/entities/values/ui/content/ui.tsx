@@ -1,21 +1,24 @@
 'use client';
 
-import { createElement, useEffect, useMemo } from 'react';
-import { Button } from '@ui';
-import { feedbackOptions } from './constants';
-import { useTest } from '@/shared/providers/test-provider';
-import { cn } from '@utils';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { createElement, useEffect, useMemo } from 'react';
+import { Button } from '@ui';
+import { cn } from '@utils';
+import { useTestStore } from '@providers';
+import { feedbackOptions } from './constants';
+import { array } from 'zod';
 
 export const FeedbackContent = () => {
   const router = useRouter();
   const t = useTranslations('feedbackContent');
-  const { test, handleTestValue } = useTest();
+  const { test, setTestInteraction } = useTestStore();
   const disableContinueButton = useMemo(
     () => test.first?.some((el) => el === 0),
     [test.first],
   );
+
+  console.log(test.first);
 
   useEffect(() => {
     localStorage.setItem('timeStart', new Date().toString());
@@ -38,7 +41,7 @@ export const FeedbackContent = () => {
                   <div
                     key={index + idx + 1}
                     className="text-2xl transition-transform transform hover:scale-110 focus:outline-none"
-                    onClick={() => handleTestValue(idx + 1, index)}
+                    onClick={() => setTestInteraction(idx + 1, index)}
                   >
                     {createElement(el, {
                       className: cn(

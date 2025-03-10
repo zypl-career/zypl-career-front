@@ -1,7 +1,4 @@
-import {
-  TTestResponse,
-  TTestResponseWithoutAuth,
-} from '@/shared/providers/test-provider';
+import { TTestResponse, TTestResponseWithoutAuth } from '@providers';
 
 export const isTestAuth = (
   data?: TTestResponse | TTestResponseWithoutAuth,
