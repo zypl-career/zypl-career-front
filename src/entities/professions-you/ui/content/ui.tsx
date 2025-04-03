@@ -6,9 +6,9 @@ import { useTranslations } from 'next-intl';
 import {
   NextEducational,
   TABLE_DATA,
-  tableDataWithProfessions,
   useResultTest,
   isTestAuth,
+  useGetProfessions,
 } from '@entities';
 import { Button } from '@ui';
 import { ArrowIcon } from '@icons';
@@ -19,6 +19,7 @@ const limit = 10;
 export const ContentProfessions = () => {
   const { test } = useTestStore();
   const { data } = useResultTest(test);
+  const professionsApi = useGetProfessions();
   const [page, setPage] = useState(1);
   const t = useTranslations('ContentProfessions');
 
@@ -45,12 +46,13 @@ export const ContentProfessions = () => {
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
         .map((item) => ({
           ...item,
-          professions: tableDataWithProfessions.find(
-            (itm) => itm.id === item.id,
-          )?.professions,
+          professions: professionsApi.data?.find(
+            (itm) => itm.clusterTag === item.title,
+          ),
         }))
-        .flatMap((item) => item.professions),
-    [data?.payload, isPayload],
+        .flatMap((item) => item.professions)
+        .filter((item) => item),
+    [data?.payload, isPayload, professionsApi.data],
   );
 
   return (
@@ -67,7 +69,7 @@ export const ContentProfessions = () => {
             ?.map((prof, i) => (
               <NextEducational
                 key={i}
-                title={prof?.title || ''}
+                title={prof?.name || ''}
                 href={`/profession/${prof?.id}`}
               />
             ))}

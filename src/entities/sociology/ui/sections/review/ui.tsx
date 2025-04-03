@@ -1,33 +1,29 @@
-// import { Badge } from '@/shared';
-// import { careerSociology } from '@/entities/sociology';
+'use client';
+
 import { FC } from 'react';
-import { TRelatedSociologyData } from '@/entities';
+import { useParams } from 'next/navigation';
+import { useGetProfessionsById } from '@entities';
+import { Badge, Spinner } from '@ui';
 
-export const ReviewSociology: FC<{ description: TRelatedSociologyData }> = ({
-  description,
-}) => {
-  const isShowDescription = description.sociology.every(
-    (item) => item.description,
-  );
-  return isShowDescription ? (
+export const ReviewSociology: FC = () => {
+  const params = useParams();
+  const professionApi = useGetProfessionsById(String(params.id));
+  return (
     <div className="bg-white rounded-2xl border border-gray-200 lg:p-12">
-      <>
-        <h2 className="font-bold text-xl">Обзор</h2>
-        {description.sociology.map((item, index) => (
-          <p key={index} className="py-2 text-gray-600">
-            {item.description}
-          </p>
-        ))}
-      </>
-
-      {/* <h3 className="font-bold text-black text-xl py-2">
-        Карьерные возможности:
-        </h3>
-        <div className="">
-        {careerSociology.map((opportunity, index) => (
-          <Badge key={index} title={opportunity.title} />
-          ))}
-        </div> */}
+      <h2 className="font-bold text-xl mb-2">Обзор</h2>
+      <p>{professionApi.data?.specialtyDescription}</p>
+      <main className="space-y-3 mt-4">
+        <h3 className="font-bold text-3xl">Карьераный возможности</h3>
+        <div className="flex flex-wrap items-center gap-3">
+          {professionApi.isLoading ? (
+            <Spinner />
+          ) : (
+            professionApi.data?.careerOpportunities.map((item, index) => (
+              <Badge key={index} title={item} />
+            ))
+          )}
+        </div>
+      </main>
     </div>
-  ) : null;
+  );
 };
