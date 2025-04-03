@@ -7,7 +7,6 @@ import { Button } from '@ui';
 import { cn } from '@utils';
 import { useTestStore } from '@providers';
 import { feedbackOptions } from './constants';
-import { array } from 'zod';
 
 export const FeedbackContent = () => {
   const router = useRouter();
@@ -17,8 +16,6 @@ export const FeedbackContent = () => {
     () => test.first?.some((el) => el === 0),
     [test.first],
   );
-
-  console.log(test.first);
 
   useEffect(() => {
     localStorage.setItem('timeStart', new Date().toString());

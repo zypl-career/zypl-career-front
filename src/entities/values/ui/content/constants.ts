@@ -331,5 +331,3 @@ export const feedbackOptions: TFeedbackOption[] = [
     ],
   },
 ];
-
-console.log(feedbackOptions.length);
