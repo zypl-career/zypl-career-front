@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useMemo } from 'react';
+import { FC } from 'react';
 import { useGetProfessions, useGetProfessionsById } from '@entities';
 import { useParams } from 'next/navigation';
 import { Spinner } from '@ui';
@@ -8,15 +8,9 @@ import { Spinner } from '@ui';
 export const ActivitySociology: FC = () => {
   const params = useParams();
   const professionApi = useGetProfessionsById(String(params.id));
-  const professionsApi = useGetProfessions();
-
-  const professions = useMemo(
-    () =>
-      professionsApi.data?.filter(
-        (p) => p.clusterName === professionApi.data?.clusterName,
-      ),
-    [professionApi.data?.clusterName, professionsApi.data],
-  );
+  const professionsApi = useGetProfessions({
+    clusterName: professionApi.data?.clusterName,
+  });
 
   const isLoading = professionApi.isLoading || professionsApi.isLoading;
 
@@ -25,7 +19,7 @@ export const ActivitySociology: FC = () => {
       {isLoading ? (
         <Spinner />
       ) : (
-        professions?.map((specialtyItem) => (
+        professionsApi.data?.map((specialtyItem) => (
           <section
             key={specialtyItem.id}
             className="relative self-baseline rounded-xl border border-gray-200 bg-white p-4"

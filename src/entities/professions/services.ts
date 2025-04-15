@@ -4,11 +4,15 @@ import { TResponse } from '@types';
 import { Specialty } from './constants';
 import { TSpecialty } from './types';
 
-export const useGetProfessions = () => {
+export const useGetProfessions = (
+  params?: Partial<Record<keyof TSpecialty, any>>,
+) => {
   return useQuery<TResponse<TSpecialty[]>, Error, TSpecialty[]>({
-    queryKey: [Specialty.SpecialtyKey],
+    queryKey: [Specialty.SpecialtyKey, params],
     queryFn: () =>
-      apiService.get(Specialty.SpecialtyPath).then(({ data }) => data),
+      apiService
+        .get(Specialty.SpecialtyPath, { params })
+        .then(({ data }) => data),
     select: ({ data }) => data,
   });
 };
