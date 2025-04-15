@@ -69,7 +69,7 @@ export const ContentProfessions = () => {
             ?.map((prof, i) => (
               <NextEducational
                 key={i}
-                title={prof?.name || ''}
+                title={prof?.clusterName || ''}
                 href={`/profession/${prof?.id}`}
               />
             ))}
