@@ -11,16 +11,14 @@ export const useGetProfessions = (
     queryKey: [Specialty.SpecialtyKey, params],
     queryFn: () =>
       apiService
-        .get(Specialty.SpecialtyPath, { params })
+        .get(Specialty.SpecialtyPath, { params: { ...params, limit: 1239 } })
         .then(({ data }) => data),
     select: ({ data }) =>
       Array.from(
         new Map(
           data.map((profession) => [profession.clusterName, profession]),
         ).entries(),
-      ).map(([_, profession]) => ({
-        ...profession,
-      })),
+      ).map(([, profession]) => profession),
   });
 };
 

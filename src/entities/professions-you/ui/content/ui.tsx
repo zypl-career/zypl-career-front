@@ -47,12 +47,11 @@ export const ContentProfessions = () => {
         .sort((a, b) => (b.progress || 0) - (a.progress || 0))
         .map((item) => ({
           ...item,
-          professions: professionsApi.data?.find(
+          professions: professionsApi.data?.filter(
             (itm) => itm.clusterTag === item.title,
           ),
         }))
-        .flatMap((item) => item.professions)
-        .filter((item) => item),
+        .flatMap((item) => item.professions || []),
     [data?.payload, isPayload, professionsApi.data],
   );
 

@@ -10,7 +10,7 @@ export const CardsSection = () => {
 
   return (
     <section className="theme:bg-primaryBg theme:text-primary theme:border-primary theme:border-y">
-      <div className="grid lg:grid-cols-2 py-14 pb-28 container">
+      <div className="grid lg:grid-cols-2 py-14 pb-28 container gap-x-36">
         {specialtyApi.isLoading ? (
           <Spinner />
         ) : (
@@ -18,6 +18,7 @@ export const CardsSection = () => {
             <Link
               key={profession.clusterName}
               href={`/profession/${profession.id}`}
+              className="inline self-baseline"
             >
               <NextCard title={profession.clusterName} />
             </Link>

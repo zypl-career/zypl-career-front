@@ -42,7 +42,7 @@ const buttonVariants = cva(
           'theme:border-primary theme:text-primary theme:bg-primaryBg border border-[#D7D7D7] text-[#6B7280] cursor-pointer bg-background font-[600] hover:text-accent-foreground rounded-3xl transform transition-transform duration-200 active:scale-110',
         gray: 'bg-gray-200 text-gray-700 py-2 px-4 rounded transform transition-transform duration-200 active:scale-110',
         white:
-          'border border-[#D1D5DB] bg-white px-4 py-2 rounded-3xl lg:w-[114px] flex items-center justify-center',
+          'border border-[#D1D5DB] bg-white px-4 py-2 rounded-3xl flex items-center justify-center',
       },
       size: {
         default: 'h-10 px-4 py-2',
