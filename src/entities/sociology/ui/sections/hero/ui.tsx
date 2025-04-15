@@ -18,14 +18,18 @@ export const HeroSociology: FC = () => {
       <ArrowLeft className="cursor-pointer" onClick={() => router.back()} />
       <div className="flex flex-col px-8">
         <div className="font-bold lg:text-3xl text-[#F9FAFB] py-2">
-          {professionApi.isLoading ? <Skeleton /> : professionApi.data?.name}
+          {professionApi.isLoading ? (
+            <Skeleton />
+          ) : (
+            professionApi.data?.clusterName
+          )}
         </div>
         <div className="text-gray-300">
           {t('title')}{' '}
           {professionApi.isLoading ? (
             <Skeleton />
           ) : (
-            <span className="font-bold">{professionApi.data?.clusterName}</span>
+            <span className="font-bold">{professionApi.data?.clusterTag}</span>
           )}
         </div>
       </div>

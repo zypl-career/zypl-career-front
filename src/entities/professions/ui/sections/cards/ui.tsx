@@ -15,7 +15,7 @@ export const CardsSection = () => {
         ) : (
           specialtyApi.data?.map((profession, index) => (
             <Link key={index} href={`/profession/${profession?.id}`}>
-              <NextCard title={profession.name} />
+              <NextCard title={profession.clusterName} />
             </Link>
           ))
         )}
