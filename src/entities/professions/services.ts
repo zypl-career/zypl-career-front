@@ -13,7 +13,14 @@ export const useGetProfessions = (
       apiService
         .get(Specialty.SpecialtyPath, { params })
         .then(({ data }) => data),
-    select: ({ data }) => data,
+    select: ({ data }) =>
+      Array.from(
+        new Map(
+          data.map((profession) => [profession.clusterName, profession]),
+        ).entries(),
+      ).map(([_, profession]) => ({
+        ...profession,
+      })),
   });
 };
 

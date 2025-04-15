@@ -10,7 +10,7 @@ import {
   isTestAuth,
   useGetProfessions,
 } from '@entities';
-import { Button } from '@ui';
+import { Button, Spinner } from '@ui';
 import { ArrowIcon } from '@icons';
 import { useTestStore } from '@providers';
 
@@ -18,12 +18,13 @@ const limit = 10;
 
 export const ContentProfessions = () => {
   const { test } = useTestStore();
-  const { data } = useResultTest(test);
+  const { data, isLoading: isLoadingTest } = useResultTest(test);
   const professionsApi = useGetProfessions();
   const [page, setPage] = useState(1);
   const t = useTranslations('ContentProfessions');
 
   const isPayload = isTestAuth(data);
+  const isLoading = professionsApi.isLoading || isLoadingTest;
 
   const professions = useMemo(
     () =>
@@ -64,15 +65,19 @@ export const ContentProfessions = () => {
       </div>
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2">
-          {professions
-            ?.slice((page - 1) * limit, page * limit)
-            ?.map((prof, i) => (
-              <NextEducational
-                key={i}
-                title={prof?.clusterName || ''}
-                href={`/profession/${prof?.id}`}
-              />
-            ))}
+          {isLoading ? (
+            <Spinner />
+          ) : (
+            professions
+              ?.slice((page - 1) * limit, page * limit)
+              ?.map((prof, i) => (
+                <NextEducational
+                  key={i}
+                  title={prof?.clusterName || ''}
+                  href={`/profession/${prof?.id}`}
+                />
+              ))
+          )}
         </div>
       </div>
       <div className="flex items-center space-x-4 my-4">
@@ -80,7 +85,7 @@ export const ContentProfessions = () => {
           variant="white"
           startIcon={<ArrowIcon className="fill-black rotate-180" />}
           rounded="full"
-          disabled={page === 1}
+          disabled={isLoading || page === 1}
           onClick={() => setPage((prev) => prev - 1)}
         >
           {t('previous')}
@@ -89,7 +94,7 @@ export const ContentProfessions = () => {
           variant="white"
           endIcon={<ArrowIcon className="fill-black" />}
           rounded="full"
-          disabled={page === Math.ceil(professions.length / limit)}
+          disabled={isLoading || page === Math.ceil(professions.length / limit)}
           onClick={() => setPage((prev) => prev + 1)}
         >
           {t('next')}
