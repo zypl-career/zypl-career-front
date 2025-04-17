@@ -4,21 +4,31 @@ import { TResponse } from '@types';
 import { Specialty } from './constants';
 import { TSpecialty } from './types';
 
-export const useGetProfessions = (
-  params?: Partial<Record<keyof TSpecialty, any>>,
-) => {
+type TGetProfessionsParams = {
+  params?: Partial<Record<keyof TSpecialty, any>>;
+  options?: Partial<{
+    uniqueProfession?: boolean;
+  }>;
+};
+
+export const useGetProfessions = (props?: TGetProfessionsParams) => {
+  const uniqueProfession = props?.options?.uniqueProfession ?? true;
   return useQuery<TResponse<TSpecialty[]>, Error, TSpecialty[]>({
-    queryKey: [Specialty.SpecialtyKey, params],
+    queryKey: [Specialty.SpecialtyKey, props?.params],
     queryFn: () =>
       apiService
-        .get(Specialty.SpecialtyPath, { params: { ...params, limit: 1239 } })
+        .get(Specialty.SpecialtyPath, {
+          params: { ...props?.params, limit: 1239 },
+        })
         .then(({ data }) => data),
     select: ({ data }) =>
-      Array.from(
-        new Map(
-          data.map((profession) => [profession.clusterName, profession]),
-        ).entries(),
-      ).map(([, profession]) => profession),
+      uniqueProfession
+        ? Array.from(
+            new Map(
+              data.map((profession) => [profession.clusterName, profession]),
+            ).entries(),
+          ).map(([, profession]) => profession)
+        : data,
   });
 };
 

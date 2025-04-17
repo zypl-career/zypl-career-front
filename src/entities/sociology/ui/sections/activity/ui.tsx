@@ -9,7 +9,8 @@ export const ActivitySociology: FC = () => {
   const params = useParams();
   const professionApi = useGetProfessionsById(String(params.id));
   const professionsApi = useGetProfessions({
-    clusterName: professionApi.data?.clusterName,
+    params: { clusterName: professionApi.data?.clusterName },
+    options: { uniqueProfession: false },
   });
 
   const isLoading = professionApi.isLoading || professionsApi.isLoading;
