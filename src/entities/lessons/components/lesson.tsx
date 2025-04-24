@@ -5,6 +5,14 @@ import { ArrowLeft, Download } from 'lucide-react';
 import { Button, If, Skeleton } from '@ui';
 import { useLessonById, useLessonId } from '../services';
 import { cn, downloadFile, Spinner } from '@/shared';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import { Document, Page, pdfjs } from 'react-pdf';
+
+// Configure pdf.js worker
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString();
 
 type LessonItemProps = {
   lessonId: string;
@@ -23,6 +31,8 @@ export const LessonShow: FC<LessonItemProps> = ({
   const { data: lesson, isLoading } = useLessonById(lessonId);
   const { data: lessons = [] } = useLessonId(courseId);
   const [isDownloading, setIsDownloading] = useState(false);
+  const [numPages, setNumPages] = useState<number | null>(null);
+  const [pageNumber, setPageNumber] = useState<number>(1);
 
   const isFirst = useMemo(
     () => lessons.findIndex((item) => item.id === lessonId) === 0,
@@ -36,6 +46,7 @@ export const LessonShow: FC<LessonItemProps> = ({
 
   const isYoutube = lesson?.description?.includes('youtube');
   const isPdf = lesson?.type === 'pdf';
+  const isVideo = lesson?.type === 'video';
 
   const handleDownload = useCallback(async () => {
     try {
@@ -48,7 +59,29 @@ export const LessonShow: FC<LessonItemProps> = ({
 
   useEffect(() => {
     setIsResourceLoading(true);
+    setPageNumber(1);
   }, [isLoading, lessonId]);
+
+  const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
+    setNumPages(numPages);
+    setIsResourceLoading(false);
+  };
+
+  const onDocumentLoadError = () => {
+    setIsResourceLoading(false);
+  };
+
+  const goToPrevPage = () => {
+    if (pageNumber > 1) {
+      setPageNumber(pageNumber - 1);
+    }
+  };
+
+  const goToNextPage = () => {
+    if (pageNumber < (numPages || 0)) {
+      setPageNumber(pageNumber + 1);
+    }
+  };
 
   return (
     <main className="flex-1 h-dvh">
@@ -87,27 +120,60 @@ export const LessonShow: FC<LessonItemProps> = ({
             </If>
             {lesson?.id ? (
               <>
-                <iframe
-                  allowFullScreen
-                  src={
-                    lesson.description === 'empty'
-                      ? `https://docs.google.com/gview?embedded=true&url=${lesson.resource}`
-                      : lesson.description.replace('/watch?v=', '/embed/')
-                  }
-                  width="100%"
-                  height="100%"
-                  className={cn('h-[calc(100dvh-180px)]', {
-                    hidden: isResourceLoading || (!isYoutube && !isPdf),
-                  })}
-                  onLoad={() => setIsResourceLoading(false)}
-                />
-                <video
-                  controls
-                  src={lesson.description}
-                  className={cn({
-                    hidden: isYoutube || isPdf || isResourceLoading,
-                  })}
-                />
+                <If condition={!!isYoutube}>
+                  <iframe
+                    allowFullScreen
+                    src={lesson.description.replace('/watch?v=', '/embed/')}
+                    width="100%"
+                    height="100%"
+                    className="h-[calc(100dvh-180px)]"
+                    onLoad={() => setIsResourceLoading(false)}
+                  />
+                </If>
+                <If condition={isPdf}>
+                  <div className="flex flex-col h-[calc(100dvh-180px)] overflow-auto">
+                    <Document
+                      file={lesson.resource}
+                      onLoadSuccess={onDocumentLoadSuccess}
+                      onLoadError={onDocumentLoadError}
+                      loading={<Spinner className="size-10 mx-auto my-10" />}
+                      className="flex flex-col items-center"
+                    >
+                      <Page
+                        pageNumber={pageNumber}
+                        renderTextLayer={false}
+                        renderAnnotationLayer={false}
+                        className="mx-auto"
+                      />
+                    </Document>
+                    {numPages && (
+                      <div className="flex justify-center items-center gap-4 my-4">
+                        <Button
+                          variant="outline"
+                          rounded="full"
+                          disabled={pageNumber <= 1}
+                          onClick={goToPrevPage}
+                        >
+                          Предыдущая страница
+                        </Button>
+                        <span className="mx-2">
+                          Страница {pageNumber} из {numPages}
+                        </span>
+                        <Button
+                          variant="outline"
+                          rounded="full"
+                          disabled={pageNumber >= (numPages || 0)}
+                          onClick={goToNextPage}
+                        >
+                          Следующая страница
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                </If>
+                <If condition={isVideo}>
+                  <video controls src={lesson.description} />
+                </If>
               </>
             ) : null}
           </>
