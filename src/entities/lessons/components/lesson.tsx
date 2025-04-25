@@ -43,7 +43,7 @@ export const LessonShow: FC<LessonItemProps> = ({
     [lessonId, lessons],
   );
 
-  const isYoutube = lesson?.description?.includes('youtube');
+  const isYoutube = lesson?.description?.includes('youtube') ?? false;
   const isPdf = lesson?.type === 'pdf';
   const isVideo = lesson?.type === 'video';
 
@@ -119,7 +119,7 @@ export const LessonShow: FC<LessonItemProps> = ({
             </If>
             {lesson?.id ? (
               <>
-                <If condition={!!isYoutube}>
+                <If condition={isYoutube}>
                   <iframe
                     allowFullScreen
                     src={lesson.description.replace('/watch?v=', '/embed/')}
