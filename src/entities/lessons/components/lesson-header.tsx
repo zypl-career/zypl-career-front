@@ -36,9 +36,6 @@ export const LessonHeader: FC<LessonHeaderProps> = ({
           <ArrowLeft size={24} />
         </Button>
         <h1 className="flex-1 line-clamp-2">{title}</h1>
-        <Button onClick={() => setIsInfoOpen(true)} variant="ghost">
-          <InfoIcon size={16} className="text-gray-400" />
-        </Button>
       </header>
       <Modal toggle={isInfoOpen} setToggle={setIsInfoOpen}>
         <div className="max-w-3xl container max-h-[600px] overflow-auto">
