@@ -8,7 +8,6 @@ import { cn, downloadFile, Spinner } from '@/shared';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import { Document, Page, pdfjs } from 'react-pdf';
 
-// Configure pdf.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
   import.meta.url,
