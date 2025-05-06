@@ -20,7 +20,7 @@ export const ToolsInspirationUI = () => {
             <Link
               href={tool.link}
               key={index}
-              className="first:col-span-full theme:border-primary border border-gray-200 w-full p-5 md:p-[32px] my-2 rounded-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
+              className="first:col-span-full last:col-span-full theme:border-primary border border-gray-200 w-full p-5 md:p-[32px] my-2 rounded-md transition-transform transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
             >
               <ToolsInspiration
                 Icons={tool.Icons}

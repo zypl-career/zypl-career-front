@@ -6,7 +6,7 @@ export const ToolsInspiration: FC<ToolsInspirationProps> = ({
   title,
   description,
 }) => {
-  const isContentLong = title.length > 20 || description.length > 100;
+  const isContentLong = title.length > 20 || description.length > 80;
 
   return (
     <div className={`cursor-pointer ${isContentLong ? 'h-auto' : 'md:h-72'}`}>

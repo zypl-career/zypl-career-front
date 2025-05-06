@@ -1,6 +1,5 @@
 import {
   CareerArticlesIcon,
-  CareerIcon,
   CoursesIcon,
   IndustriesIcon,
   ProfessionsIcon,
@@ -16,11 +15,6 @@ export const toolsData: ToolsProps[] = [
     Icons: VideoIcon,
     key: 'videoGuide',
     link: '/video-guide',
-  },
-  {
-    Icons: CareerIcon,
-    key: 'careerPath',
-    link: '/career-profiles',
   },
   {
     Icons: ProfessionsIcon,
