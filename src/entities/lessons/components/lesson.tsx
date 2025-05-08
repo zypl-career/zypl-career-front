@@ -45,7 +45,8 @@ export const LessonShow: FC<LessonItemProps> = ({
 
   const isYoutube = lesson?.description?.includes('youtube') ?? false;
   const isPdf = lesson?.type === 'pdf';
-  const isVideo = lesson?.type === 'video';
+  const isVideo =
+    lesson?.type === 'video' && !lesson?.description?.includes('youtube');
 
   const handleDownload = useCallback(async () => {
     try {
@@ -102,7 +103,7 @@ export const LessonShow: FC<LessonItemProps> = ({
           ) : (
             <Download size={24} />
           )}
-          <span>{lesson?.type === 'pdf' ? 'Скачать PDF' : 'Скачать'}</span>
+          <span>{isPdf ? 'Скачать PDF' : 'Скачать'}</span>
         </Button>
       </header>
       <div
@@ -125,7 +126,9 @@ export const LessonShow: FC<LessonItemProps> = ({
                     src={lesson.description.replace('/watch?v=', '/embed/')}
                     width="100%"
                     height="100%"
-                    className="h-[calc(100dvh-180px)]"
+                    className={cn('h-[calc(100dvh-180px)]', {
+                      hidden: isResourceLoading,
+                    })}
                     onLoad={() => setIsResourceLoading(false)}
                   />
                 </If>
@@ -135,7 +138,6 @@ export const LessonShow: FC<LessonItemProps> = ({
                       file={lesson.resource}
                       onLoadSuccess={onDocumentLoadSuccess}
                       onLoadError={onDocumentLoadError}
-                      loading={<Spinner className="size-10 mx-auto my-10" />}
                       className="flex flex-col items-center"
                     >
                       <Page
