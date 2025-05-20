@@ -1,5 +1,5 @@
 import type { InternalAxiosRequestConfig } from 'axios';
-import { getAccessToken } from '@utils';
+import { useUserStore } from '@providers';
 
 export const requestInterceptor = (config: InternalAxiosRequestConfig<any>) => {
   authInterceptor(config);
@@ -7,10 +7,11 @@ export const requestInterceptor = (config: InternalAxiosRequestConfig<any>) => {
 };
 
 const authInterceptor = (config: InternalAxiosRequestConfig<any>) => {
-  const authToken = getAccessToken();
-  if (authToken?.access) {
+  const access = useUserStore.getState().userData?.access;
+
+  if (access) {
     config.headers = Object.assign({}, config.headers, {
-      Authorization: `${authToken.access}`,
+      Authorization: `${access}`,
     });
   }
 
