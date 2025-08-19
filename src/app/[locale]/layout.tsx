@@ -8,7 +8,7 @@ import {
   NextIntlProvider,
   PostHogProvider,
 } from '@providers';
-import { locales } from 'i18n';
+import { locales } from '@/shared/i18n/request';
 import './styles/globals.css';
 
 import favicon from '../../shared/assets/icons/favicon.png';
@@ -18,9 +18,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Касби ман',
   description: 'Education platform for future professionals',
-  icons: {
-    icon: favicon.src,
-  },
+  icons: { icon: favicon.src },
   keywords: [
     'Kasbi man',
     'Касб',
@@ -45,10 +43,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
   params: { locale },
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
+}: Readonly<{ children: React.ReactNode; params: { locale: string } }>) {
   if (!locale) {
     redirect('/tj');
   }

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -12,27 +13,38 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": "./",
+    "plugins": [{ "name": "next" }],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@api": ["./src/shared/api"],
-      "@ui": ["./src/shared/ui"],
-      "@utils": ["./src/shared/utils"],
+      "@shared/*": ["./src/shared/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@widgets/*": ["./src/widgets/*"],
+      "@features/*": ["./src/features/*"],
+      "@ui/*": ["./src/shared/ui/*"],
       "@types": ["./src/shared/types"],
-      "@constants": ["./src/shared/constants"],
+      "@types/*": ["./src/shared/types/*"],
+      "@utils": ["./src/shared/utils"],
+      "@utils/*": ["./src/shared/utils/*"],
       "@providers": ["./src/shared/providers"],
-      "@stores": ["./src/shared/providers/stores"],
-      "@entities": ["./src/entities"],
-      "@features": ["./src/features"],
-      "@widgets": ["./src/widgets"],
-      "@hooks": ["./src/shared/hooks"],
+      "@providers/*": ["./src/shared/providers/*"],
       "@icons": ["./src/shared/assets/icons"],
-      "@img": ["./src/shared/assets/img"]
+      "@icons/*": ["./src/shared/assets/icons/*"],
+      "@img": ["./src/shared/assets/img"],
+      "@img/*": ["./src/shared/assets/img/*"],
+      "@stores": ["./src/shared/providers/stores"],
+      "@stores/*": ["./src/shared/providers/stores/*"],
+      "@constants": ["./src/shared/constants"],
+      "@constants/*": ["./src/shared/constants/*"],
+      "@api": ["./src/shared/api"],
+      "@api/*": ["./src/shared/api/*"],
+      "@hooks": ["./src/shared/hooks"],
+      "@hooks/*": ["./src/shared/hooks/*"],
+      "@shared": ["./src/shared"],
+      "@entities": ["./src/entities"],
+      "@widgets": ["./src/widgets"],
+      "@features": ["./src/features"],
+      "@ui": ["./src/shared/ui"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

@@ -1,10 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {
-  createReactBlockSpec,
-  FileBlockWrapper,
-  ResizeHandlesWrapper,
-} from '@blocknote/react';
+import { createReactBlockSpec, FileBlockWrapper } from '@blocknote/react';
 
 import { cn } from '@utils';
 import { ChangeEvent, useCallback, useState } from 'react';
@@ -29,12 +25,8 @@ export const Youtube = createReactBlockSpec(
   {
     type: 'youtube',
     propSchema: {
-      url: {
-        default: '' as const,
-      },
-      previewWidth: {
-        default: 560,
-      },
+      url: { default: '' as const },
+      previewWidth: { default: 560 },
     },
     content: 'none',
   },
@@ -43,7 +35,7 @@ export const Youtube = createReactBlockSpec(
       const [width, setWidth] = useState<number>(
         Math.min(
           props.block.props.previewWidth,
-          props.editor.domElement.firstElementChild?.clientWidth || 560,
+          props.editor.domElement?.firstElementChild?.clientWidth || 560,
         ),
       );
 
@@ -84,20 +76,14 @@ export const Youtube = createReactBlockSpec(
         >
           {props.block.props.url ? (
             <FileBlockWrapper {...(props as any)}>
-              <ResizeHandlesWrapper
-                {...(props as any)}
+              <iframe
                 width={width}
-                setWidth={setWidth}
-              >
-                <iframe
-                  width={width}
-                  height="315"
-                  src={props.block.props.url}
-                  title="YouTube video player"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
-                  allowFullScreen
-                />
-              </ResizeHandlesWrapper>
+                height="315"
+                src={props.block.props.url}
+                title="YouTube video player"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
+                allowFullScreen
+              />
             </FileBlockWrapper>
           ) : (
             <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
