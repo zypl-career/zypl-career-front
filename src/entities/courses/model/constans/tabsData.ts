@@ -1,4 +1,4 @@
 export const TABS_DATA = [
-  { id: 1, title: 'Рекомендованные для вас' },
-  { id: 2, title: 'Библиотека курсов' },
+  { id: 1, translationKey: 'courses.tabs.recommended' },
+  { id: 2, translationKey: 'courses.tabs.library' },
 ];

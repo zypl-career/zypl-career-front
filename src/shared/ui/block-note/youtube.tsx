@@ -32,7 +32,7 @@ export const Youtube = createReactBlockSpec(
   },
   {
     render: (props) => {
-      const [width, setWidth] = useState<number>(
+      const [width] = useState<number>(
         Math.min(
           props.block.props.previewWidth,
           props.editor.domElement?.firstElementChild?.clientWidth || 560,
